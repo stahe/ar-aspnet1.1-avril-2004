@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stahe.github.io/ar-aspnet1.1-avril-2004/sitemap.xml
