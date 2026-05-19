@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1123,47 +1125,47 @@
 <h3 id="611">6.1.1. المشكلة</h3>
 <p>يجب أن يسمح هذا التطبيق للمستخدم بحساب ضرائبه. نحن ننظر في الحالة المبسطة لمكلف ضريبي ليس لديه سوى راتبه ليبلغ عنه (أرقام عام 2004 لدخل عام 2003):</p>
 <ul>
-  <li>نحسب عدد شرائح الضرائب للموظف <b>على النحو التالي: nbParts = nbEnfants / 2 + 1 </b>إذا كان غير متزوج، و <b>nbEnfants / 2 + 2 </b>إذا كان متزوجًا، حيث <i>nbEnfants </i>هو عدد الأطفال.
+  <li>نحسب عدد شرائح الضرائب للموظف <b>على النحو التالي: <bdi dir="ltr" class="odt-ltr-term">nbParts</bdi> = <bdi dir="ltr" class="odt-ltr-term">nbEnfants</bdi> / 2 + 1 </b>إذا كان غير متزوج، و <b><bdi dir="ltr" class="odt-ltr-term">nbEnfants</bdi> / 2 + 2 </b>إذا كان متزوجًا، حيث <i><bdi dir="ltr" class="odt-ltr-term">nbEnfants</bdi> </i>هو عدد الأطفال.
   </li>
   <li>إذا كان لديه ثلاثة أطفال على الأقل، يحق له الحصول على نصف حصة إضافية
   </li>
-  <li>يُحسب دخله الخاضع للضريبة <b>R </b>على النحو التالي: <b>R = 0.72 * S، </b>حيث S هو راتبه السنوي
+  <li>يُحسب دخله الخاضع للضريبة <b><bdi dir="ltr" class="odt-ltr-term">R</bdi> </b>على النحو التالي: <b><bdi dir="ltr" class="odt-ltr-term">R</bdi> = 0.72 * <bdi dir="ltr" class="odt-ltr-term">S</bdi>، </b>حيث <bdi dir="ltr" class="odt-ltr-term">S</bdi> هو راتبه السنوي
   </li>
-  <li>نحسب معامل الأسرة <b>QF = R / nbParts</b>
+  <li>نحسب معامل الأسرة <b><bdi dir="ltr" class="odt-ltr-term">QF</bdi> = <bdi dir="ltr" class="odt-ltr-term">R</bdi> / <bdi dir="ltr" class="odt-ltr-term">nbParts</bdi></b>
   </li>
-  <li>نحسب ضريبته <b>I</b>. انظر الجدول التالي:
+  <li>نحسب ضريبته <b><bdi dir="ltr" class="odt-ltr-term">I</bdi></b>. انظر الجدول التالي:
   </li>
 </ul>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4262        </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">8382</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.0683</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">291.09</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">14,753</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.1914</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">1,322.92</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">23,888</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.2826</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">2,668.39</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">38,868</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.3738</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">4,846.98</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">47,932</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.4262</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">6,883.66</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0                </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">0.4809</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">9505.54</div></td></tr></table>
 
-<p>يحتوي كل صف على 3 حقول. لحساب الضريبة I، ابحث عن الصف الأول الذي يكون فيه <em>QF &lt;= الحقل 1</em>. على سبيل المثال، إذا كان QF = 5000، فسيكون الصف الذي تم العثور عليه هو</p>
+<p>يحتوي كل صف على 3 حقول. لحساب الضريبة <bdi dir="ltr" class="odt-ltr-term">I</bdi>، ابحث عن الصف الأول الذي يكون فيه <em><bdi dir="ltr" class="odt-ltr-term">QF</bdi> &lt;= الحقل 1</em>. على سبيل المثال، إذا كان <bdi dir="ltr" class="odt-ltr-term">QF</bdi> = 5000، فسيكون الصف الذي تم العثور عليه هو</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    8382        0.0683        291.09
 </code></pre></div>
-<p>تكون الضريبة I عندئذٍ مساوية لـ <strong>0.0683*R - 291.09*nbParts</strong>. إذا كان QF بحيث لا يتم استيفاء الشرط <em>QF&lt;=field1</em> أبدًا، يتم استخدام المعاملات من الصف الأخير. هنا:</p>
+<p>تكون الضريبة <bdi dir="ltr" class="odt-ltr-term">I</bdi> عندئذٍ مساوية لـ <strong>0.0683*<bdi dir="ltr" class="odt-ltr-term">R</bdi> - 291.09*<bdi dir="ltr" class="odt-ltr-term">nbParts</bdi></strong>. إذا كان <bdi dir="ltr" class="odt-ltr-term">QF</bdi> بحيث لا يتم استيفاء الشرط <em><bdi dir="ltr" class="odt-ltr-term">QF</bdi>&lt;=<bdi dir="ltr" class="odt-ltr-term">field1</bdi></em> أبدًا، يتم استخدام المعاملات من الصف الأخير. هنا:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    0                0.4809    9505.54
 </code></pre></div>
-<p>مما يعطي الضريبة I = 0.4809*R - 9505.54*nbParts.</p>
+<p>مما يعطي الضريبة <bdi dir="ltr" class="odt-ltr-term">I</bdi> = 0.4809*<bdi dir="ltr" class="odt-ltr-term">R</bdi> - 9505.54*<bdi dir="ltr" class="odt-ltr-term">nbParts.</bdi></p>
 <p><a id="toc68590502"></a>
 <a id="toc68683096"></a></p>
-<h3 id="612-mvc">6.1.2. هيكل MVC للتطبيق</h3>
-<p>ستكون بنية MVC للتطبيق كما يلي:</p>
+<h3 id="612-mvc">6.1.2. هيكل <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> للتطبيق</h3>
+<p>ستكون بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> للتطبيق كما يلي:</p>
 <p><img src="images/10000000000005AB00000258B0036703.png" width="680" height="281" style="width:17.999cm;height:7.444cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AB00000258B0036703.png" /></p>
-<p>ستتولى صفحة [main.aspx] دور وحدة التحكم. وستكون هناك ثلاثة إجراءات محتملة:</p>
+<p>ستتولى صفحة [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] دور وحدة التحكم. وستكون هناك ثلاثة إجراءات محتملة:</p>
 <ul>
-  <li><b>init</b>: يتوافق مع الطلب الأول للعميل. ستعرض وحدة التحكم طريقة العرض [formulaire.aspx]
+  <li><b><bdi dir="ltr" class="odt-ltr-term">init</bdi></b>: يتوافق مع الطلب الأول للعميل. ستعرض وحدة التحكم طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx</bdi>]
   </li>
-  <li><b>calcul</b>: يتوافق مع طلب حساب الضريبة. إذا كانت البيانات في نموذج الإدخال صحيحة، يتم حساب الضريبة باستخدام فئة الأعمال [impots]. يعرض وحدة التحكم عرض [form.aspx] للعميل كما تم التحقق من صحته، مع الضريبة المحسوبة. إذا كانت البيانات في نموذج الإدخال غير صحيحة، ستعرض وحدة التحكم عرض [errors.aspx] مع قائمة بالأخطاء ورابط للعودة إلى النموذج.
+  <li><b><bdi dir="ltr" class="odt-ltr-term">calcul</bdi></b>: يتوافق مع طلب حساب الضريبة. إذا كانت البيانات في نموذج الإدخال صحيحة، يتم حساب الضريبة باستخدام فئة الأعمال [<bdi dir="ltr" class="odt-ltr-term">impots</bdi>]. يعرض وحدة التحكم عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] للعميل كما تم التحقق من صحته، مع الضريبة المحسوبة. إذا كانت البيانات في نموذج الإدخال غير صحيحة، ستعرض وحدة التحكم عرض [<bdi dir="ltr" class="odt-ltr-term">errors.aspx</bdi>] مع قائمة بالأخطاء ورابط للعودة إلى النموذج.
   </li>
-  <li><b>return</b>: يتوافق مع العودة إلى النموذج بعد حدوث خطأ. يعرض وحدة التحكم عرض [form.aspx] كما تم التحقق من صحته قبل حدوث الخطأ.
+  <li><b><bdi dir="ltr" class="odt-ltr-term">return</bdi></b>: يتوافق مع العودة إلى النموذج بعد حدوث خطأ. يعرض وحدة التحكم عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] كما تم التحقق من صحته قبل حدوث الخطأ.
   </li>
 </ul>
 
-<p>لا تعرف وحدة التحكم [main.aspx] أي شيء عن حسابات الضرائب. إنها مسؤولة ببساطة عن إدارة الحوار بين العميل والخادم وتنفيذ الإجراءات التي يطلبها العميل. بالنسبة لإجراء [calculate]، ستعتمد على فئة الأعمال [tax].</p>
+<p>لا تعرف وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] أي شيء عن حسابات الضرائب. إنها مسؤولة ببساطة عن إدارة الحوار بين العميل والخادم وتنفيذ الإجراءات التي يطلبها العميل. بالنسبة لإجراء [<bdi dir="ltr" class="odt-ltr-term">calculate</bdi>]، ستعتمد على فئة الأعمال [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>].</p>
 <p><a id="toc68590503"></a>
 <a id="toc68683097"></a></p>
 <h3 id="613">6.1.3. فئة الأعمال</h3>
-<p>سيتم تعريف فئة <code>**impot</code>** على النحو التالي:</p>
+<p>سيتم تعريف فئة <code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impot&lt;/bdi&gt;</code>** على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27; imported namespaces</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
@@ -1211,11 +1213,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Namespace</span></span></span>
 </code></pre></div>
 
-<p>كائن <strong>ضريبي</strong> عن طريق تزويد منشئه بمصدر بيانات من النوع [<strong>impotsData</strong>]. تحتوي هذه الفئة على طريقة عامة [<strong>getData</strong>] تسترد مصفوفات البيانات الثلاثة اللازمة لحساب الضريبة، كما هو موضح سابقًا. يمكن لهذه الطريقة معالجة استثناء إذا تعذر استرداد البيانات أو إذا تبين أنها غير صحيحة. بمجرد إنشاء كائن [tax]، يمكن استدعاء طريقة <strong>calculate</strong> الخاصة به بشكل متكرر لحساب ضريبة دافع الضرائب بناءً على حالته الاجتماعية (متزوج أو أعزب) وعدد أطفاله وراتبه السنوي.</p>
+<p>كائن <strong>ضريبي</strong> عن طريق تزويد منشئه بمصدر بيانات من النوع [<strong><bdi dir="ltr" class="odt-ltr-term">impotsData</bdi></strong>]. تحتوي هذه الفئة على طريقة عامة [<strong><bdi dir="ltr" class="odt-ltr-term">getData</bdi></strong>] تسترد مصفوفات البيانات الثلاثة اللازمة لحساب الضريبة، كما هو موضح سابقًا. يمكن لهذه الطريقة معالجة استثناء إذا تعذر استرداد البيانات أو إذا تبين أنها غير صحيحة. بمجرد إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>]، يمكن استدعاء طريقة <strong><bdi dir="ltr" class="odt-ltr-term">calculate</bdi></strong> الخاصة به بشكل متكرر لحساب ضريبة دافع الضرائب بناءً على حالته الاجتماعية (متزوج أو أعزب) وعدد أطفاله وراتبه السنوي.</p>
 <p><a id="toc68590504"></a>
 <a id="toc68683098"></a></p>
 <h3 id="614">6.1.4. فئة الوصول إلى البيانات</h3>
-<p>فئة [impotsData] هي الفئة التي توفر الوصول إلى البيانات. وهي فئة مجردة. يجب إنشاء فئة مشتقة لكل مصدر بيانات جديد محتمل (مصفوفات، ملفات مسطحة، قواعد بيانات، وحدة التحكم، إلخ). وتعريفها كما يلي:</p>
+<p>فئة [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>] هي الفئة التي توفر الوصول إلى البيانات. وهي فئة مجردة. يجب إنشاء فئة مشتقة لكل مصدر بيانات جديد محتمل (مصفوفات، ملفات مسطحة، قواعد بيانات، وحدة التحكم، إلخ). وتعريفها كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1276,20 +1278,20 @@
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">جدول المعاملات المطبقة على عدد الأسهم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>checked
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قيمة منطقية تشير إلى ما إذا كانت البيانات (الحدود، coeffr، coeffn) قد تم التحقق منها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قيمة منطقية تشير إلى ما إذا كانت البيانات (الحدود، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>) قد تم التحقق منها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>صالح
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قيمة منطقية تشير إلى ما إذا كانت البيانات (الحدود، coeffr، coeffn) صالحة</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">قيمة منطقية تشير إلى ما إذا كانت البيانات (الحدود، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>) صالحة</div></td></tr></table>
 
-<p>لا تحتوي الفئة على منشئ. وتحتوي على طريقة مجردة [getData] يجب على الفئات المشتقة تنفيذها. الغرض من هذه الطريقة هو:</p>
+<p>لا تحتوي الفئة على منشئ. وتحتوي على طريقة مجردة [<bdi dir="ltr" class="odt-ltr-term">getData</bdi>] يجب على الفئات المشتقة تنفيذها. الغرض من هذه الطريقة هو:</p>
 <ul>
-  <li>تعيين قيم للمصفوفات الثلاثة limits و coeffr و coeffn
+  <li>تعيين قيم للمصفوفات الثلاثة <bdi dir="ltr" class="odt-ltr-term">limits</bdi> و <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi> و <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>
   </li>
   <li>إلقاء استثناء إذا تعذر الحصول على البيانات أو إذا تبين أنها غير صالحة.
   </li>
 </ul>
 
-<p>توفر الفئة الطريقتين المحميتين [checkData] و [check] اللتين تتحققان من صحة السمات (limits، coeffr، coeffn). وهذا يعفي الفئات المشتقة من الحاجة إلى تنفيذها. سيكون عليها ببساطة استخدامها.</p>
+<p>توفر الفئة الطريقتين المحميتين [<bdi dir="ltr" class="odt-ltr-term">checkData</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">check</bdi>] اللتين تتحققان من صحة السمات (<bdi dir="ltr" class="odt-ltr-term">limits</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>). وهذا يعفي الفئات المشتقة من الحاجة إلى تنفيذها. سيكون عليها ببساطة استخدامها.</p>
 <p>الفئة المشتقة الأولى التي سنستخدمها هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections</span></span>
@@ -1331,15 +1333,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Namespace</span></span></span>
 </code></pre></div>
 
-<p>تحتوي هذه الفئة، المسماة [impotsArray]، على منشئين:</p>
+<p>تحتوي هذه الفئة، المسماة [<bdi dir="ltr" class="odt-ltr-term">impotsArray</bdi>]، على منشئين:</p>
 <ul>
-  <li>منشئ بدون حجج يقوم بتهيئة سمات (limits, coeffr, coeffn) للفئة الأساسية باستخدام مصفوفات مبرمجة بشكل ثابت
+  <li>منشئ بدون حجج يقوم بتهيئة سمات (<bdi dir="ltr" class="odt-ltr-term">limits</bdi>, <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>, <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>) للفئة الأساسية باستخدام مصفوفات مبرمجة بشكل ثابت
   </li>
-  <li>منشئ يقوم بتهيئة سمات (limits، coeffr، coeffn) للفئة الأساسية باستخدام مصفوفات يتم تمريرها إليه كمعلمات
+  <li>منشئ يقوم بتهيئة سمات (<bdi dir="ltr" class="odt-ltr-term">limits</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>) للفئة الأساسية باستخدام مصفوفات يتم تمريرها إليه كمعلمات
   </li>
 </ul>
 
-<p>تقوم طريقة [getData]، التي تسمح للفئات الخارجية باسترداد المصفوفات (limits، coeffr، coeffn)، ببساطة بالتحقق من صحة المصفوفات الثلاث باستخدام طريقة [checkData] للفئة الأساسية. وتقوم بإلقاء استثناء إذا كانت البيانات غير صالحة.</p>
+<p>تقوم طريقة [<bdi dir="ltr" class="odt-ltr-term">getData</bdi>]، التي تسمح للفئات الخارجية باسترداد المصفوفات (<bdi dir="ltr" class="odt-ltr-term">limits</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>)، ببساطة بالتحقق من صحة المصفوفات الثلاث باستخدام طريقة [<bdi dir="ltr" class="odt-ltr-term">checkData</bdi>] للفئة الأساسية. وتقوم بإلقاء استثناء إذا كانت البيانات غير صالحة.</p>
 <p><a id="toc68590505"></a>
 <a id="toc68683099"></a></p>
 <h3 id="615">6.1.5. اختبار فئات الأعمال وفئات الوصول إلى البيانات</h3>
@@ -1429,7 +1431,7 @@
 
 <p>يطلب التطبيق من المستخدم إدخال المعلومات الثلاثة اللازمة لحساب الضريبة:</p>
 <ul>
-  <li>الحالة الاجتماعية: o للمتزوجين، n لغير المتزوجين
+  <li>الحالة الاجتماعية: <bdi dir="ltr" class="odt-ltr-term">o</bdi> للمتزوجين، <bdi dir="ltr" class="odt-ltr-term">n</bdi> لغير المتزوجين
   </li>
   <li>عدد الأطفال
   </li>
@@ -1437,7 +1439,7 @@
   </li>
 </ul>
 
-<p>يتم حساب الضريبة باستخدام كائن من النوع [tax] يتم إنشاؤه عند تشغيل التطبيق:</p>
+<p>يتم حساب الضريبة باستخدام كائن من النوع [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] يتم إنشاؤه عند تشغيل التطبيق:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">            &#x27; tax object creation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">Dim</span> objImpôt <span style="color:#0000ff">As</span> impot = <span style="color:#0000ff">Nothing</span></span></span>
@@ -1449,7 +1451,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">End</span> <span style="color:#0000ff">Try</span></span></span>
 </code></pre></div>
 
-<p>كمصدر للبيانات، نستخدم كائنًا من النوع [impotsArray]. يتم استخدام المنشئ بدون حجج لهذه الفئة، مما يوفر المصفوفات الثلاثة (limites، coeffr، coeffn) بقيم مبرمجة بشكل ثابت. يمكن أن يؤدي إنشاء كائن [impot] نظريًا إلى إلقاء استثناء لأن الكائن، لإنشاء نفسه، سيطلب البيانات (limites، coeffr، coeffn) من مصدر البيانات الخاص به، والذي تم تمريره إليه كمعلمة، وقد يؤدي استرداد هذه البيانات إلى إلقاء استثناء. ومع ذلك، في هذه الحالة، لا يمكن أن تتسبب الطريقة المستخدمة للحصول على البيانات (القيم المبرمجة) في حدوث استثناء. ومع ذلك، فقد تركنا معالجة الاستثناءات كما هي لتوجيه انتباه القارئ إلى احتمال إنشاء كائن [impot] بشكل غير صحيح.</p>
+<p>كمصدر للبيانات، نستخدم كائنًا من النوع [<bdi dir="ltr" class="odt-ltr-term">impotsArray</bdi>]. يتم استخدام المنشئ بدون حجج لهذه الفئة، مما يوفر المصفوفات الثلاثة (<bdi dir="ltr" class="odt-ltr-term">limites</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>) بقيم مبرمجة بشكل ثابت. يمكن أن يؤدي إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] نظريًا إلى إلقاء استثناء لأن الكائن، لإنشاء نفسه، سيطلب البيانات (<bdi dir="ltr" class="odt-ltr-term">limites</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>) من مصدر البيانات الخاص به، والذي تم تمريره إليه كمعلمة، وقد يؤدي استرداد هذه البيانات إلى إلقاء استثناء. ومع ذلك، في هذه الحالة، لا يمكن أن تتسبب الطريقة المستخدمة للحصول على البيانات (القيم المبرمجة) في حدوث استثناء. ومع ذلك، فقد تركنا معالجة الاستثناءات كما هي لتوجيه انتباه القارئ إلى احتمال إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] بشكل غير صحيح.</p>
 <p>فيما يلي مثال على البرنامج السابق قيد التشغيل:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>dos&gt;dir
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>05/04/2004  13:28                1 337 impots.vb
@@ -1457,7 +1459,7 @@
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>21/04/2004  08:26                1 634 impotsData.vb
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>21/04/2004  08:42                2 490 testimpots1.vb
 </code></pre></div>
-<p>نقوم بتجميع جميع الفئات [impot، impotsData، impotsArray] في تجميع واحد [impot.dll]:</p>
+<p>نقوم بتجميع جميع الفئات [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray</bdi>] في تجميع واحد [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>dos&gt;vbc /t:library /out:impot.dll impotsData.vb impotsArray.vb impots.vb
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Compilateur Microsoft (R) Visual Basic .NET version 7.10.3052.4
 </code></pre></div>
@@ -1491,7 +1493,7 @@
 <p><a id="toc68590506"></a>
 <a id="toc68683100"></a></p>
 <h3 id="616">6.1.6. طرق عرض تطبيق الويب</h3>
-<p>سيكون للتطبيق عرضان: [form.aspx] و [errors.aspx]. دعونا نوضح كيفية عمل التطبيق باستخدام لقطات الشاشة. يتم عرض [form.aspx] عند طلب عنوان URL [main.aspx] لأول مرة:</p>
+<p>سيكون للتطبيق عرضان: [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">errors.aspx</bdi>]. دعونا نوضح كيفية عمل التطبيق باستخدام لقطات الشاشة. يتم عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] عند طلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] لأول مرة:</p>
 <p><img src="images/1000000000000100000000FEAFB8A86F.png" width="256" height="254" style="width:6.773cm;height:6.72cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000100000000FEAFB8A86F.png" /></p>
 <p>يقوم المستخدم بملء النموذج:</p>
 <p><img src="images/10000000000000FC0000008CB3805148.png" width="252" height="140" style="width:6.668cm;height:3.704cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000008CB3805148.png" /></p>
@@ -1499,14 +1501,14 @@
 <p><img src="images/10000000000000FB000000F9BCD42AAD.png" width="251" height="249" style="width:6.641cm;height:6.588cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FB000000F9BCD42AAD.png" /></p>
 <p>قد يدخلون بيانات غير صحيحة:</p>
 <p><img src="images/10000000000000FB0000008D8C339968.png" width="251" height="141" style="width:6.641cm;height:3.731cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FB0000008D8C339968.png" /></p>
-<p>ثم يؤدي النقر فوق الزر [Calculate] إلى إرجاع استجابة مختلفة [errors.aspx]:</p>
+<p>ثم يؤدي النقر فوق الزر [<bdi dir="ltr" class="odt-ltr-term">Calculate</bdi>] إلى إرجاع استجابة مختلفة [<bdi dir="ltr" class="odt-ltr-term">errors.aspx</bdi>]:</p>
 <p><img src="images/1000000000000100000000912AC3FAD4.png" width="256" height="145" style="width:6.773cm;height:3.836cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000100000000912AC3FAD4.png" /></p>
-<p>يمكنه استخدام الرابط [Back to Form] أعلاه للعودة إلى عرض [form.aspx] كما كان قبل الخطأ:</p>
+<p>يمكنه استخدام الرابط [<bdi dir="ltr" class="odt-ltr-term">Back to Form</bdi>] أعلاه للعودة إلى عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] كما كان قبل الخطأ:</p>
 <p><img src="images/10000000000001010000008BD04534B1.png" width="257" height="139" style="width:6.8cm;height:3.678cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001010000008BD04534B1.png" /></p>
 <p><a id="toc68590507"></a>
 <a id="toc68683101"></a></p>
-<h3 id="617-formaspx">6.1.7. عرض [form.aspx]</h3>
-<p>ستكون صفحة [form.aspx] كما يلي:</p>
+<h3 id="617-formaspx">6.1.7. عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>]</h3>
+<p>ستكون صفحة [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ page src=&quot;formulaire.aspx.vb&quot; inherits=&quot;formulaire&quot; AutoEventWireup=&quot;false&quot;%&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1555,21 +1557,21 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>rdouichecked
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;checked&quot; إذا كان يجب تحديد مربع الاختيار [yes]، و&quot;&quot; في الحالات الأخرى</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;<bdi dir="ltr" class="odt-ltr-term">checked</bdi>&quot; إذا كان يجب تحديد مربع الاختيار [<bdi dir="ltr" class="odt-ltr-term">yes</bdi>]، و&quot;&quot; في الحالات الأخرى</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>rdnonchecked
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نفس الشيء بالنسبة لمربع الاختيار [لا]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>txtChildren
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">القيمة التي سيتم وضعها في حقل الإدخال [txtChildren]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">القيمة التي سيتم وضعها في حقل الإدخال [<bdi dir="ltr" class="odt-ltr-term">txtChildren</bdi>]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>txtSalary
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">القيمة التي سيتم إدخالها في حقل الإدخال [txtSalary]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">القيمة التي سيتم إدخالها في حقل الإدخال [<bdi dir="ltr" class="odt-ltr-term">txtSalary</bdi>]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>txtTax
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">القيمة التي سيتم إدخالها في حقل الإدخال [txtTax]</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">القيمة التي سيتم إدخالها في حقل الإدخال [<bdi dir="ltr" class="odt-ltr-term">txtTax</bdi>]</div></td></tr></table>
 
-<p>تحتوي الصفحة على نموذجين، كل منهما مزود بزر [submit]. زر [Calculate] هو زر [submit] للنموذج التالي:</p>
+<p>تحتوي الصفحة على نموذجين، كل منهما مزود بزر [<bdi dir="ltr" class="odt-ltr-term">submit</bdi>]. زر [<bdi dir="ltr" class="odt-ltr-term">Calculate</bdi>] هو زر [<bdi dir="ltr" class="odt-ltr-term">submit</bdi>] للنموذج التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">        &lt;<span style="color:#800000">form</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">method</span>=&quot;post&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">action</span>=&quot;main.aspx?action=calcul&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
@@ -1579,15 +1581,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        &lt;/<span style="color:#800000">form</span>&gt;</span></span>
 </code></pre></div>
 
-<p>يمكننا أن نرى أن معلمات النموذج سيتم إرسالها إلى وحدة التحكم باستخدام [action=calcul]. زر [Clear] هو زر [submit] للنموذج التالي:</p>
+<p>يمكننا أن نرى أن معلمات النموذج سيتم إرسالها إلى وحدة التحكم باستخدام [<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calcul</bdi>]. زر [<bdi dir="ltr" class="odt-ltr-term">Clear</bdi>] هو زر [<bdi dir="ltr" class="odt-ltr-term">submit</bdi>] للنموذج التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">        &lt;<span style="color:#800000">form</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">method</span>=&quot;post&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">action</span>=&quot;main.aspx?action=effacer&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                &lt;<span style="color:#800000">INPUT</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">type</span>=&quot;submit&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">value</span>=&quot;Effacer&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        &lt;/<span style="color:#800000">form</span>&gt;</span></span>
 </code></pre></div>
 
-<p>يمكننا أن نرى أن معلمات النموذج سيتم إرسالها إلى وحدة التحكم باستخدام [action=effacer]. هنا، لا يحتوي النموذج على أي معلمات. ما يهم هو الإجراء فقط.</p>
-<p>يتم حساب الحقول في [formulaire.aspx] بواسطة [formulaire.aspx.vb]:</p>
+<p>يمكننا أن نرى أن معلمات النموذج سيتم إرسالها إلى وحدة التحكم باستخدام [<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">effacer</bdi>]. هنا، لا يحتوي النموذج على أي معلمات. ما يهم هو الإجراء فقط.</p>
+<p>يتم حساب الحقول في [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx</bdi>] بواسطة [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx.vb</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections.Specialized</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1620,18 +1622,18 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>يتم حساب الحقول في [main.aspx] استنادًا إلى معلومتين يضعهما وحدة التحكم في سياق الصفحة:</p>
+<p>يتم حساب الحقول في [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] استنادًا إلى معلومتين يضعهما وحدة التحكم في سياق الصفحة:</p>
 <ul>
-  <li>Context.Items(&quot;form&quot;): قاموس NameValueCollection يحتوي على قيم حقول HTML [rdmarie،txtEnfants،txtSalaire]
+  <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">form</bdi>&quot;): قاموس <bdi dir="ltr" class="odt-ltr-term">NameValueCollection</bdi> يحتوي على قيم حقول <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdmarie</bdi>،<bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>،<bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>]
   </li>
-  <li>Context.Items(&quot;txtImpot&quot;): قيمة الضريبة
+  <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">txtImpot</bdi>&quot;): قيمة الضريبة
   </li>
 </ul>
 
 <p><a id="toc68590508"></a>
 <a id="toc68683102"></a></p>
-<h3 id="618-erreursaspx">6.1.8. طريقة العرض [erreurs.aspx]</h3>
-<p>تعرض طريقة العرض [erreurs.aspx] أي أخطاء قد تحدث أثناء تشغيل التطبيق. وفيما يلي كود العرض الخاص بها:</p>
+<h3 id="618-erreursaspx">6.1.8. طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi>]</h3>
+<p>تعرض طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi>] أي أخطاء قد تحدث أثناء تشغيل التطبيق. وفيما يلي كود العرض الخاص بها:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ page src=&quot;erreurs.aspx.vb&quot; inherits=&quot;erreurs&quot; AutoEventWireup=&quot;false&quot;%&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1655,15 +1657,15 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>HTMLErrors
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كود HTML لقائمة الأخطاء</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> لقائمة الأخطاء</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>href
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عنوان URL للرابط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للرابط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>link
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نص الرابط</div></td></tr></table>
 
-<p>يتم حساب هذه الحقول بواسطة وحدة التحكم الخاصة بالصفحة في [errors.aspx.vb]:</p>
+<p>يتم حساب هذه الحقول بواسطة وحدة التحكم الخاصة بالصفحة في [<bdi dir="ltr" class="odt-ltr-term">errors.aspx.vb</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> Microsoft.VisualBasic</span></span>
@@ -1695,10 +1697,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Context.Items(&quot;errors&quot;
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كائن ArrayList يحتوي على قائمة رسائل الخطأ المراد عرضها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كائن <bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi> يحتوي على قائمة رسائل الخطأ المراد عرضها</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Context.Items(&quot;href&quot;
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عنوان URL للرابط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للرابط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>Context.Items(&quot;link&quot;
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نص الرابط</div></td></tr></table>
@@ -1706,33 +1708,33 @@
 <p>الآن بعد أن عرفنا ما يراه مستخدم التطبيق، يمكننا الانتقال إلى كتابة وحدة التحكم الخاصة بالتطبيق.</p>
 <p><a id="toc68590509"></a>
 <a id="toc68683103"></a></p>
-<h3 id="619-globalasax-mainaspx">6.1.9. وحدات التحكم [global.asax، main.aspx]</h3>
-<p>دعونا نراجع بنية MVC لتطبيقنا:</p>
+<h3 id="619-globalasax-mainaspx">6.1.9. وحدات التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>، <bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]</h3>
+<p>دعونا نراجع بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> لتطبيقنا:</p>
 <p><img src="images/10000000000005BE0000027993D6CC27.png" width="680" height="293" style="width:17.999cm;height:7.751cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BE0000027993D6CC27.png" /></p>
 <p><span style="color: #000000">منطق التطبيق</span><span style="color: #000000">العميل</span></p>
-<p>يجب أن يتعامل وحدة التحكم [main.aspx] مع ثلاثة إجراءات:</p>
+<p>يجب أن يتعامل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] مع ثلاثة إجراءات:</p>
 <ul>
-  <li><b>init</b>: يتوافق مع الطلب الأول للعميل. تعرض وحدة التحكم طريقة العرض [formulaire.aspx]
+  <li><b><bdi dir="ltr" class="odt-ltr-term">init</bdi></b>: يتوافق مع الطلب الأول للعميل. تعرض وحدة التحكم طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx</bdi>]
   </li>
-  <li><b>calcul</b>: يتوافق مع طلب حساب الضريبة. إذا كانت البيانات في نموذج الإدخال صحيحة، يتم حساب الضريبة باستخدام فئة الأعمال [taxes]. يعرض وحدة التحكم عرض [form.aspx] للعميل كما تم التحقق من صحته، مع الضريبة المحسوبة. إذا كانت البيانات في نموذج الإدخال غير صحيحة، يعرض وحدة التحكم عرض [errors.aspx] مع قائمة بالأخطاء ورابط للعودة إلى النموذج.
+  <li><b><bdi dir="ltr" class="odt-ltr-term">calcul</bdi></b>: يتوافق مع طلب حساب الضريبة. إذا كانت البيانات في نموذج الإدخال صحيحة، يتم حساب الضريبة باستخدام فئة الأعمال [<bdi dir="ltr" class="odt-ltr-term">taxes</bdi>]. يعرض وحدة التحكم عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] للعميل كما تم التحقق من صحته، مع الضريبة المحسوبة. إذا كانت البيانات في نموذج الإدخال غير صحيحة، يعرض وحدة التحكم عرض [<bdi dir="ltr" class="odt-ltr-term">errors.aspx</bdi>] مع قائمة بالأخطاء ورابط للعودة إلى النموذج.
   </li>
-  <li><b>return</b>: يتوافق مع العودة إلى النموذج بعد حدوث خطأ. يعرض وحدة التحكم عرض [form.aspx] كما تم التحقق من صحته قبل حدوث الخطأ.
+  <li><b><bdi dir="ltr" class="odt-ltr-term">return</bdi></b>: يتوافق مع العودة إلى النموذج بعد حدوث خطأ. يعرض وحدة التحكم عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] كما تم التحقق من صحته قبل حدوث الخطأ.
   </li>
 </ul>
 
-<p>ومن المعروف أيضًا أن كل طلب موجه إلى التطبيق يمر عبر وحدة التحكم [global.asax]، إن وجدت. لذلك، لدينا، عند نقطة دخول التطبيق، سلسلة من وحدتي تحكم:</p>
+<p>ومن المعروف أيضًا أن كل طلب موجه إلى التطبيق يمر عبر وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]، إن وجدت. لذلك، لدينا، عند نقطة دخول التطبيق، سلسلة من وحدتي تحكم:</p>
 <ul>
-  <li>[global.asax]، التي تستقبل، بسبب بنية ASP.NET، جميع الطلبات الموجهة إلى التطبيق
+  <li>[<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]، التي تستقبل، بسبب بنية <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>، جميع الطلبات الموجهة إلى التطبيق
   </li>
-  <li>[main.aspx]، والتي، بناءً على اختيار المطور، تستقبل أيضًا جميع الطلبات الموجهة إلى التطبيق
+  <li>[<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]، والتي، بناءً على اختيار المطور، تستقبل أيضًا جميع الطلبات الموجهة إلى التطبيق
   </li>
 </ul>
 
-<p>تنبع الحاجة إلى [main.aspx] من حقيقة أننا سنحتاج إلى إدارة جلسة عمل. وقد رأينا أن [global.asax] غير مناسب كوحدة تحكم في هذه الحالة. يمكننا الاستغناء عن [global.asax] تمامًا هنا. ومع ذلك، سنستخدمه لتنفيذ التعليمات البرمجية عند بدء تشغيل التطبيق. يوضح مخطط MVC أعلاه أننا سنحتاج إلى إنشاء كائن [tax] لحساب الضريبة. لا داعي لإنشاء هذا الكائن عدة مرات؛ يكفي إنشاؤه مرة واحدة. لذلك سنقوم بإنشائه عند بدء تشغيل التطبيق أثناء حدث [Application_Start] الذي يتولى معالجته وحدة التحكم [global.asax]. وفيما يلي الكود الخاص بذلك:</p>
-<p>[<mark style="background-color: #ffe994">global.asax</mark>]</p>
+<p>تنبع الحاجة إلى [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] من حقيقة أننا سنحتاج إلى إدارة جلسة عمل. وقد رأينا أن [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] غير مناسب كوحدة تحكم في هذه الحالة. يمكننا الاستغناء عن [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] تمامًا هنا. ومع ذلك، سنستخدمه لتنفيذ التعليمات البرمجية عند بدء تشغيل التطبيق. يوضح مخطط <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> أعلاه أننا سنحتاج إلى إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] لحساب الضريبة. لا داعي لإنشاء هذا الكائن عدة مرات؛ يكفي إنشاؤه مرة واحدة. لذلك سنقوم بإنشائه عند بدء تشغيل التطبيق أثناء حدث [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>_Start] الذي يتولى معالجته وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]. وفيما يلي الكود الخاص بذلك:</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">global.asax</bdi></mark>]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="na">&lt;%@ Application src=&quot;Global.asax.vb&quot; Inherits=&quot;Global&quot; %&gt;</span>
 </code></pre></div>
-<p>[<mark style="background-color: #ffe994">global.asax.vb</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Web</span></span>
@@ -1759,12 +1761,12 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>بمجرد إنشائه، يتم تخزين الكائن [impot] في التطبيق. وهذا هو المكان الذي ستسترده منه الطلبات الواردة من العملاء المختلفين. ونظرًا لأن إنشاء الكائن [impot] قد يفشل، فإننا نتعامل مع أي استثناءات ونقوم بتعيين مفتاح [error] في التطبيق للإشارة إلى ما إذا كان قد حدث خطأ أم لا أثناء إنشاء الكائن [impot].</p>
-<p>سيكون كود وحدة التحكم [main.aspx، main.aspx.vb] كما يلي:</p>
-<p>[<mark style="background-color: #ffe994">main.aspx</mark>]</p>
+<p>بمجرد إنشائه، يتم تخزين الكائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] في التطبيق. وهذا هو المكان الذي ستسترده منه الطلبات الواردة من العملاء المختلفين. ونظرًا لأن إنشاء الكائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] قد يفشل، فإننا نتعامل مع أي استثناءات ونقوم بتعيين مفتاح [<bdi dir="ltr" class="odt-ltr-term">error</bdi>] في التطبيق للإشارة إلى ما إذا كان قد حدث خطأ أم لا أثناء إنشاء الكائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>].</p>
+<p>سيكون كود وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>، <bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] كما يلي:</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi></mark>]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="na">&lt;%@ page src=&quot;main.aspx.vb&quot; inherits=&quot;main&quot; AutoEventWireup=&quot;false&quot;%&gt;</span>
 </code></pre></div>
-<p>[<mark style="background-color: #ffe994">main.aspx.vb</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections.Specialized</span></span>
@@ -1908,49 +1910,49 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">End</span> <span style="color:#0000ff">If</span></span></span>
 </code></pre></div>
 
-<p>إذا اكتشف وحدة التحكم أن التطبيق فشل في التهيئة بشكل صحيح (تعذر إنشاء الكائن [import] المطلوب للحساب)، فإنه يعرض صفحة الخطأ مع المعلمات المناسبة. هنا، لا توجد حاجة لوضع رابط العودة في النموذج لأن التطبيق بأكمله غير متاح. يتم وضع رسالة خطأ عامة في [Context.Items(&quot;errors&quot;)] من النوع [ArrayList].</p>
-<p>إذا قررت وحدة التحكم أن التطبيق يعمل، فإنها تقوم بعد ذلك بتحليل الإجراء المطلوب تنفيذها عبر المعلمة [action]. لقد صادفنا هذا النمط من التشغيل عدة مرات حتى الآن. يتم تفويض معالجة كل نوع من أنواع الإجراءات إلى دالة.</p>
-<h4 id="6191-init-delete">6.1.9.1. إجراءات init و delete</h4>
+<p>إذا اكتشف وحدة التحكم أن التطبيق فشل في التهيئة بشكل صحيح (تعذر إنشاء الكائن [<bdi dir="ltr" class="odt-ltr-term">import</bdi>] المطلوب للحساب)، فإنه يعرض صفحة الخطأ مع المعلمات المناسبة. هنا، لا توجد حاجة لوضع رابط العودة في النموذج لأن التطبيق بأكمله غير متاح. يتم وضع رسالة خطأ عامة في [<bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">errors</bdi>&quot;)] من النوع [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>].</p>
+<p>إذا قررت وحدة التحكم أن التطبيق يعمل، فإنها تقوم بعد ذلك بتحليل الإجراء المطلوب تنفيذها عبر المعلمة [<bdi dir="ltr" class="odt-ltr-term">action</bdi>]. لقد صادفنا هذا النمط من التشغيل عدة مرات حتى الآن. يتم تفويض معالجة كل نوع من أنواع الإجراءات إلى دالة.</p>
+<h4 id="6191-init-delete">6.1.9.1. إجراءات <bdi dir="ltr" class="odt-ltr-term">init</bdi> و <bdi dir="ltr" class="odt-ltr-term">delete</bdi></h4>
 <p>يجب أن يعرض هذان الإجراءان نموذج الإدخال الفارغ. تذكر أن هذا النموذج (انظر العروض) يحتوي على معلمتين:</p>
 <ul>
-  <li>Context.Items(&quot;form&quot;): قاموس [NameValueCollection] يحتوي على قيم حقول HTML [rdmarie,txtEnfants,txtSalaire]
+  <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">form</bdi>&quot;): قاموس [<bdi dir="ltr" class="odt-ltr-term">NameValueCollection</bdi>] يحتوي على قيم حقول <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdmarie</bdi>,<bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>,<bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>]
   </li>
-  <li>Context.Items(&quot;txtImpot&quot;): قيمة الضريبة
+  <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">txtImpot</bdi>&quot;): قيمة الضريبة
   </li>
 </ul>
 
-<p>تقوم الدالة [initAppli] بتهيئة هذين المعلمتين لعرض نموذج فارغ.</p>
+<p>تقوم الدالة [<bdi dir="ltr" class="odt-ltr-term">initAppli</bdi>] بتهيئة هذين المعلمتين لعرض نموذج فارغ.</p>
 <h4 id="6192">6.1.9.2. إجراء الحساب</h4>
-<p>يجب أن يحسب هذا الإجراء الضريبة المستحقة بناءً على البيانات المدخلة في النموذج ويعيد النموذج مملوءًا مسبقًا بالقيم المدخلة ومبلغ الضريبة المحسوب. تبدأ الدالة [calculImpot] المسؤولة عن هذه المهمة بالتحقق من صحة بيانات النموذج:</p>
+<p>يجب أن يحسب هذا الإجراء الضريبة المستحقة بناءً على البيانات المدخلة في النموذج ويعيد النموذج مملوءًا مسبقًا بالقيم المدخلة ومبلغ الضريبة المحسوب. تبدأ الدالة [<bdi dir="ltr" class="odt-ltr-term">calculImpot</bdi>] المسؤولة عن هذه المهمة بالتحقق من صحة بيانات النموذج:</p>
 <ul>
-  <li>يجب أن يكون الحقل [rdMarie] موجودًا وأن تكون قيمته [yes] أو [no]
+  <li>يجب أن يكون الحقل [<bdi dir="ltr" class="odt-ltr-term">rdMarie</bdi>] موجودًا وأن تكون قيمته [<bdi dir="ltr" class="odt-ltr-term">yes</bdi>] أو [<bdi dir="ltr" class="odt-ltr-term">no</bdi>]
   </li>
-  <li>يجب أن يكون الحقل [txtEnfants] موجودًا وأن يكون عددًا صحيحًا &gt;=0
+  <li>يجب أن يكون الحقل [<bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>] موجودًا وأن يكون عددًا صحيحًا &gt;=0
   </li>
-  <li>يجب أن يكون الحقل [txtSalaire] موجودًا وأن يكون عددًا صحيحًا &gt;=0
+  <li>يجب أن يكون الحقل [<bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>] موجودًا وأن يكون عددًا صحيحًا &gt;=0
   </li>
 </ul>
 
-<p>إذا كانت البيانات المدخلة غير صالحة، يعرض وحدة التحكم عرض [erreurs.aspx] بعد تعيين القيم المتوقعة له أولاً في السياق:</p>
+<p>إذا كانت البيانات المدخلة غير صالحة، يعرض وحدة التحكم عرض [<bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi>] بعد تعيين القيم المتوقعة له أولاً في السياق:</p>
 <ul>
-  <li>يتم وضع رسائل الخطأ في كائن [ArrayList]، والذي يتم إضافته بعد ذلك إلى السياق [Context.Items(&quot;errors&quot;)]
+  <li>يتم وضع رسائل الخطأ في كائن [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>]، والذي يتم إضافته بعد ذلك إلى السياق [<bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">errors</bdi>&quot;)]
   </li>
-  <li>يتم أيضًا وضع عنوان URL لرابط العودة ونص هذا الرابط في السياق.
+  <li>يتم أيضًا وضع عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لرابط العودة ونص هذا الرابط في السياق.
   </li>
 </ul>
 
-<p>قبل تسليم التحكم إلى صفحة [erreurs.aspx]، التي سترسل الاستجابة إلى العميل، يتم وضع القيم التي تم إدخالها في النموذج (Request.Form) في الجلسة، مرتبطة بمفتاح &quot;form&quot;. سيسمح ذلك لطلب لاحق باستردادها.</p>
-<p>قد يتساءل المرء هنا عما إذا كان من المفيد التحقق من وجود الحقول [rdMarie، txtEnfants، txtSalaire] في الطلب المرسل من العميل. هذا غير ضروري إذا كنا متأكدين من أن عميلنا هو متصفح تلقى العرض [formulaire.aspx] الذي يحتوي على هذه الحقول. لا يمكننا أبدًا أن نكون متأكدين من ذلك. سنعرض مثالاً بعد قليل حيث يكون العميل هو تطبيق [curl] الذي سبق أن تعرفنا عليه. سنقوم باستعلام التطبيق دون إرسال الحقول التي يتوقعها ونرى كيف يتفاعل. هذه قاعدة تم ذكرها عدة مرات ونكررها هنا: يجب ألا يفترض التطبيق أبدًا أي شيء بشأن نوع العميل الذي يستعلم عنه. وللأمان، يجب أن يفترض أنه قد يتم استعلامه بواسطة تطبيق مبرمج قد يرسل له سلاسل معلمات غير متوقعة. ويجب أن يتصرف بشكل صحيح في جميع الحالات.</p>
-<p>في حالتنا، تحققنا من وجود الحقول [rdMarie، txtEnfants، txtSalaire] في الطلب ولكننا لم نتحقق مما إذا كان يمكن أن يحتوي على حقول أخرى. في هذا التطبيق، سيتم تجاهلها. ومع ذلك، وكإجراء أمني مرة أخرى، سيكون من المفيد تسجيل هذا النوع من الطلبات في ملف سجل وإرسال تنبيه إلى مسؤول التطبيق حتى يكون على علم بأن التطبيق يتلقى طلبات &quot;غريبة&quot;. من خلال تحليل هذه الطلبات في ملف السجل، يمكنهم اكتشاف هجوم محتمل على التطبيق ثم اتخاذ الإجراءات اللازمة لحمايته.</p>
-<p>إذا كانت البيانات المتوقعة صحيحة، يبدأ وحدة التحكم في حساب الضريبة باستخدام كائن [tax] المخزن في التطبيق. ثم يقوم بتخزين معلومتين متوقعتين من قبل عرض [form.aspx] في السياق:</p>
+<p>قبل تسليم التحكم إلى صفحة [<bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi>]، التي سترسل الاستجابة إلى العميل، يتم وضع القيم التي تم إدخالها في النموذج (<bdi dir="ltr" class="odt-ltr-term">Request.Form</bdi>) في الجلسة، مرتبطة بمفتاح &quot;<bdi dir="ltr" class="odt-ltr-term">form</bdi>&quot;. سيسمح ذلك لطلب لاحق باستردادها.</p>
+<p>قد يتساءل المرء هنا عما إذا كان من المفيد التحقق من وجود الحقول [<bdi dir="ltr" class="odt-ltr-term">rdMarie</bdi>، <bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>، <bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>] في الطلب المرسل من العميل. هذا غير ضروري إذا كنا متأكدين من أن عميلنا هو متصفح تلقى العرض [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx</bdi>] الذي يحتوي على هذه الحقول. لا يمكننا أبدًا أن نكون متأكدين من ذلك. سنعرض مثالاً بعد قليل حيث يكون العميل هو تطبيق [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] الذي سبق أن تعرفنا عليه. سنقوم باستعلام التطبيق دون إرسال الحقول التي يتوقعها ونرى كيف يتفاعل. هذه قاعدة تم ذكرها عدة مرات ونكررها هنا: يجب ألا يفترض التطبيق أبدًا أي شيء بشأن نوع العميل الذي يستعلم عنه. وللأمان، يجب أن يفترض أنه قد يتم استعلامه بواسطة تطبيق مبرمج قد يرسل له سلاسل معلمات غير متوقعة. ويجب أن يتصرف بشكل صحيح في جميع الحالات.</p>
+<p>في حالتنا، تحققنا من وجود الحقول [<bdi dir="ltr" class="odt-ltr-term">rdMarie</bdi>، <bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>، <bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>] في الطلب ولكننا لم نتحقق مما إذا كان يمكن أن يحتوي على حقول أخرى. في هذا التطبيق، سيتم تجاهلها. ومع ذلك، وكإجراء أمني مرة أخرى، سيكون من المفيد تسجيل هذا النوع من الطلبات في ملف سجل وإرسال تنبيه إلى مسؤول التطبيق حتى يكون على علم بأن التطبيق يتلقى طلبات &quot;غريبة&quot;. من خلال تحليل هذه الطلبات في ملف السجل، يمكنهم اكتشاف هجوم محتمل على التطبيق ثم اتخاذ الإجراءات اللازمة لحمايته.</p>
+<p>إذا كانت البيانات المتوقعة صحيحة، يبدأ وحدة التحكم في حساب الضريبة باستخدام كائن [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] المخزن في التطبيق. ثم يقوم بتخزين معلومتين متوقعتين من قبل عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] في السياق:</p>
 <ul>
-  <li>Context.Items(&quot;formulaire&quot;): قاموس [NameValueCollection] يحتوي على قيم حقول HTML [rdmarie,txtEnfants,txtSalaire]، هنا [Request.Form)]، أي القيم التي تم إدخالها مسبقًا في النموذج
+  <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">formulaire</bdi>&quot;): قاموس [<bdi dir="ltr" class="odt-ltr-term">NameValueCollection</bdi>] يحتوي على قيم حقول <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdmarie</bdi>,<bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>,<bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>]، هنا [<bdi dir="ltr" class="odt-ltr-term">Request.Form</bdi>)]، أي القيم التي تم إدخالها مسبقًا في النموذج
   </li>
-  <li>Context.Items(&quot;txtImpot&quot;): قيمة الضريبة التي تم حسابها للتو
+  <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">txtImpot</bdi>&quot;): قيمة الضريبة التي تم حسابها للتو
   </li>
 </ul>
 
-<p>قد يتساءل القارئ اليقظ أثناء قراءة ما سبق: بما أن كائن [impot] الذي تم إنشاؤه عند بدء تشغيل التطبيق مشترك بين جميع الطلبات، فهل يمكن أن تحدث تعارضات في الوصول تؤدي إلى تلف بيانات كائن [impot]؟ للإجابة على هذا السؤال، نحتاج إلى العودة إلى كود فئة [impot]. تستدعي الطلبات طريقة [impot].calculateTax للحصول على الضريبة المستحقة. لذا، هذا هو الكود الذي نحتاج إلى فحصه:</p>
+<p>قد يتساءل القارئ اليقظ أثناء قراءة ما سبق: بما أن كائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] الذي تم إنشاؤه عند بدء تشغيل التطبيق مشترك بين جميع الطلبات، فهل يمكن أن تحدث تعارضات في الوصول تؤدي إلى تلف بيانات كائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>]؟ للإجابة على هذا السؤال، نحتاج إلى العودة إلى كود فئة [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>]. تستدعي الطلبات طريقة [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>].<bdi dir="ltr" class="odt-ltr-term">calculateTax</bdi> للحصول على الضريبة المستحقة. لذا، هذا هو الكود الذي نحتاج إلى فحصه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="w">        </span><span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="nf">calculer</span><span class="p">(</span><span class="k">ByVal</span><span class="w"> </span><span class="n">marié</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Boolean</span><span class="p">,</span><span class="w"> </span><span class="k">ByVal</span><span class="w"> </span><span class="n">nbEnfants</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="p">,</span><span class="w"> </span><span class="k">ByVal</span><span class="w"> </span><span class="n">salaire</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Long</span><span class="p">)</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Long</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">            </span><span class="c">&#39; calculating the number of shares</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">            </span><span class="k">Dim</span><span class="w"> </span><span class="n">nbParts</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Decimal</span>
@@ -1983,22 +1985,22 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">Return</span> impot</span></span>
 </code></pre></div>
 
-<p>يتم مقاطعة الخيط 1، بعد حساب قيمة [impot1] للمتغير المحلي [impot]. ثم يتم تنفيذ الخيط 2 وحساب قيمة جديدة [impot2] لنفس المتغير [impot] قبل مقاطعته. يستعيد الخيط 1 السيطرة. ماذا يجد في المتغير المحلي [impot]؟ نظرًا لأن هذا المتغير محلي بالنسبة لطريقة ما، يتم تخزينه في بنية ذاكرة تسمى <strong>المكدس</strong>. هذا المكدس هو جزء من سياق الخيط، والذي يتم حفظه عند تعليق الخيط. عند بدء تشغيل الخيط 2، يتم إعداد سياقه بمكدس جديد وبالتالي متغير محلي جديد [impot]. عندما يتم تعليق الخيط 2 بدوره، سيتم حفظ سياقه أيضًا. عند إعادة تشغيل الخيط 1، يتم استعادة سياقه، بما في ذلك المكدس الخاص به. ثم يسترد المتغير المحلي [impot] الخاص به وليس المتغير الخاص بالخيط 2. لذلك نحن في موقف لا يوجد فيه تعارض في الوصول بين الطلبات. أكدت الاختبارات التي أجريت مع التوقف المؤقت لمدة 10 ثوانٍ الموصوف أعلاه أن الطلبات المتزامنة أسفرت بالفعل عن النتيجة المتوقعة.</p>
+<p>يتم مقاطعة الخيط 1، بعد حساب قيمة [<bdi dir="ltr" class="odt-ltr-term">impot1</bdi>] للمتغير المحلي [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>]. ثم يتم تنفيذ الخيط 2 وحساب قيمة جديدة [<bdi dir="ltr" class="odt-ltr-term">impot2</bdi>] لنفس المتغير [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] قبل مقاطعته. يستعيد الخيط 1 السيطرة. ماذا يجد في المتغير المحلي [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>]؟ نظرًا لأن هذا المتغير محلي بالنسبة لطريقة ما، يتم تخزينه في بنية ذاكرة تسمى <strong>المكدس</strong>. هذا المكدس هو جزء من سياق الخيط، والذي يتم حفظه عند تعليق الخيط. عند بدء تشغيل الخيط 2، يتم إعداد سياقه بمكدس جديد وبالتالي متغير محلي جديد [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>]. عندما يتم تعليق الخيط 2 بدوره، سيتم حفظ سياقه أيضًا. عند إعادة تشغيل الخيط 1، يتم استعادة سياقه، بما في ذلك المكدس الخاص به. ثم يسترد المتغير المحلي [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] الخاص به وليس المتغير الخاص بالخيط 2. لذلك نحن في موقف لا يوجد فيه تعارض في الوصول بين الطلبات. أكدت الاختبارات التي أجريت مع التوقف المؤقت لمدة 10 ثوانٍ الموصوف أعلاه أن الطلبات المتزامنة أسفرت بالفعل عن النتيجة المتوقعة.</p>
 <h4 id="6193">6.1.9.3. إجراء العودة</h4>
-<p>يتوافق هذا الإجراء مع النقر فوق الارتباط [العودة إلى النموذج] في عرض [errors.aspx] للعودة إلى عرض [form.aspx]، الذي تم ملؤه مسبقًا بالقيم التي تم إدخالها وحفظها سابقًا في الجلسة. تسترد الدالة [returnForm] هذه المعلومات. يتم تهيئة المعلمتين المتوقعين في عرض [form.aspx]:</p>
+<p>يتوافق هذا الإجراء مع النقر فوق الارتباط [العودة إلى النموذج] في عرض [<bdi dir="ltr" class="odt-ltr-term">errors.aspx</bdi>] للعودة إلى عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>]، الذي تم ملؤه مسبقًا بالقيم التي تم إدخالها وحفظها سابقًا في الجلسة. تسترد الدالة [<bdi dir="ltr" class="odt-ltr-term">returnForm</bdi>] هذه المعلومات. يتم تهيئة المعلمتين المتوقعين في عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>]:</p>
 <ul>
-  <li>Context.Items(&quot;form&quot;) بالقيم التي تم إدخالها وحفظها مسبقًا في الجلسة
+  <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">form</bdi>&quot;) بالقيم التي تم إدخالها وحفظها مسبقًا في الجلسة
   </li>
-  <li>Context.Items(&quot;txtImpot&quot;) بالسلسلة الفارغة
+  <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">txtImpot</bdi>&quot;) بالسلسلة الفارغة
   </li>
 </ul>
 
 <p><a id="toc68590510"></a>
 <a id="toc68683104"></a></p>
 <h3 id="6110">6.1.10. اختبار تطبيق الويب</h3>
-<p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;application-path&gt;. </p>
+<p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. </p>
 <p><img src="images/10000000000000870000008A85ED472C.png" width="135" height="138" style="width:3.572cm;height:3.651cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000870000008A85ED472C.png" /></p>
-<p>في هذا المجلد، يتم إنشاء مجلد فرعي [bin]، يتم فيه وضع التجميع [impot.dll] — الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [impots.vb، impotsData.vb، impotsArray.vb] —. يظهر أمر التجميع المطلوب أدناه:</p>
+<p>في هذا المجلد، يتم إنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>]، يتم فيه وضع التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>] —. يظهر أمر التجميع المطلوب أدناه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>dos&gt;vbc /t:library /out:impot.dll impotsData.vb impotsArray.vb impots.vb
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Compilateur Microsoft (R) Visual Basic .NET version 7.10.3052.4
 </code></pre></div>
@@ -2008,24 +2010,24 @@
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>21/04/2004  08:26                1 634 impotsData.vb
 <a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>21/04/2004  09:21                5 632 impot.dll
 </code></pre></div>
-<p>يجب وضع الملف [impot.dll] أعلاه في &lt;application-path&gt;\bin حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم Cassini باستخدام المعلمات (&lt;application-path&gt;,/impots1). باستخدام متصفح، نطلب عنوان URL [http://localhost/impots1/main.aspx]:</p>
+<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] أعلاه في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">bin</bdi> حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots1</bdi>). باستخدام متصفح، نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/impots1/main.aspx</bdi>]:</p>
 <p><img src="images/10000000000001E10000014AA8FEFBAB.png" width="481" height="330" style="width:12.726cm;height:8.731cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E10000014AA8FEFBAB.png" /></p>
 <p>نملأ النموذج:</p>
 <p><img src="images/10000000000000F6000000FCB8AE0EA8.png" width="246" height="252" style="width:6.509cm;height:6.668cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000FCB8AE0EA8.png" /></p>
-<p>ثم نبدأ حساب الضريبة باستخدام الزر [Calculate]. نحصل على الرد التالي:</p>
+<p>ثم نبدأ حساب الضريبة باستخدام الزر [<bdi dir="ltr" class="odt-ltr-term">Calculate</bdi>]. نحصل على الرد التالي:</p>
 <p><img src="images/100000000000021F00000145C91025FC.png" width="543" height="325" style="width:14.367cm;height:8.599cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021F00000145C91025FC.png" /></p>
 <p>ثم ندخل بيانات غير صحيحة:</p>
 <p><img src="images/10000000000000F3000000CC6307611C.png" width="243" height="204" style="width:6.429cm;height:5.398cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F3000000CC6307611C.png" /></p>
-<p>يؤدي النقر على زر [Calculate] إلى الحصول على الاستجابة التالية:</p>
+<p>يؤدي النقر على زر [<bdi dir="ltr" class="odt-ltr-term">Calculate</bdi>] إلى الحصول على الاستجابة التالية:</p>
 <p><img src="images/1000000000000221000000E3A9830B3B.png" width="545" height="227" style="width:14.42cm;height:6.006cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000221000000E3A9830B3B.png" /></p>
-<p>يؤدي النقر على رابط [Back to Form] إلى إعادتنا إلى النموذج كما كان عند إرساله:</p>
+<p>يؤدي النقر على رابط [<bdi dir="ltr" class="odt-ltr-term">Back to Form</bdi>] إلى إعادتنا إلى النموذج كما كان عند إرساله:</p>
 <p><img src="images/100000000000022800000144D8AFFFE5.png" width="552" height="324" style="width:14.605cm;height:8.573cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022800000144D8AFFFE5.png" /></p>
 <p>أخيرًا، يؤدي النقر على زر [مسح] إلى إعادة تعيين الصفحة:</p>
 <p><img src="images/100000000000022700000141046A326B.png" width="551" height="321" style="width:14.579cm;height:8.493cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022700000141046A326B.png" /></p>
 <p><a id="toc68683105"></a></p>
-<h3 id="6111-curl">6.1.11. استخدام عميل [curl]</h3>
-<p>من المهم اختبار تطبيقات الويب باستخدام عملاء غير المتصفحات. فإذا أرسلت إلى متصفح نموذجًا يحتوي على معلمات يُفترض إرسالها عند إكمال النموذج، فسيرسل المتصفح قيم تلك المعلمات إلى الخادم. وقد لا يقوم عميل آخر بذلك، وبالتالي سيتلقى الخادم طلبًا تفتقد فيه بعض المعلمات. ويجب أن يعرف الخادم كيفية التعامل مع هذه الحالة. مثال آخر هو التحقق من صحة البيانات من جانب العميل. إذا كان النموذج يحتوي على بيانات يجب التحقق من صحتها، فيمكن إجراء هذا التحقق من جانب العميل باستخدام البرامج النصية المضمنة في المستند الذي يحتوي على النموذج. لن يرسل المتصفح النموذج إلا إذا كانت جميع البيانات التي تم التحقق من صحتها من جانب العميل صالحة. قد يميل المرء عندئذ، من جانب الخادم، إلى افتراض أننا سنستقبل بيانات تم التحقق من صحتها، ولن نرغب في إجراء هذا التحقق مرة ثانية. سيكون ذلك خطأً. في الواقع، قد يرسل عميل غير المتصفح بيانات غير صالحة إلى الخادم، وقد يتصرف تطبيق الويب عندئذ بشكل غير متوقع. سنوضح هذه النقاط باستخدام عميل [curl].</p>
-<p>أولاً، نطلب عنوان URL [<mark style="background-color: #ffe994">http://localhost/impots1/main.aspx</mark>]:</p>
+<h3 id="6111-curl">6.1.11. استخدام عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>]</h3>
+<p>من المهم اختبار تطبيقات الويب باستخدام عملاء غير المتصفحات. فإذا أرسلت إلى متصفح نموذجًا يحتوي على معلمات يُفترض إرسالها عند إكمال النموذج، فسيرسل المتصفح قيم تلك المعلمات إلى الخادم. وقد لا يقوم عميل آخر بذلك، وبالتالي سيتلقى الخادم طلبًا تفتقد فيه بعض المعلمات. ويجب أن يعرف الخادم كيفية التعامل مع هذه الحالة. مثال آخر هو التحقق من صحة البيانات من جانب العميل. إذا كان النموذج يحتوي على بيانات يجب التحقق من صحتها، فيمكن إجراء هذا التحقق من جانب العميل باستخدام البرامج النصية المضمنة في المستند الذي يحتوي على النموذج. لن يرسل المتصفح النموذج إلا إذا كانت جميع البيانات التي تم التحقق من صحتها من جانب العميل صالحة. قد يميل المرء عندئذ، من جانب الخادم، إلى افتراض أننا سنستقبل بيانات تم التحقق من صحتها، ولن نرغب في إجراء هذا التحقق مرة ثانية. سيكون ذلك خطأً. في الواقع، قد يرسل عميل غير المتصفح بيانات غير صالحة إلى الخادم، وقد يتصرف تطبيق الويب عندئذ بشكل غير متوقع. سنوضح هذه النقاط باستخدام عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>].</p>
+<p>أولاً، نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/impots1/main.aspx</bdi></mark>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>dos&gt;curl --include --url http://localhost/impots1/main.aspx
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>HTTP/1.1 200 OK
@@ -2077,7 +2079,7 @@
 <a id="__codelineno-29-49" name="__codelineno-29-49" href="#__codelineno-29-49"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-29-50" name="__codelineno-29-50" href="#__codelineno-29-50"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>أرسل لنا الخادم كود HTML الخاص بالنموذج. في رؤوس HTTP، لدينا ملف تعريف ارتباط الجلسة. سنستخدمه في الطلبات اللاحقة للحفاظ على الجلسة. دعونا نطلب الإجراء [calcul] دون تقديم أي معلمات:</p>
+<p>أرسل لنا الخادم كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> الخاص بالنموذج. في رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>، لدينا ملف تعريف ارتباط الجلسة. سنستخدمه في الطلبات اللاحقة للحفاظ على الجلسة. دعونا نطلب الإجراء [<bdi dir="ltr" class="odt-ltr-term">calcul</bdi>] دون تقديم أي معلمات:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>dos&gt;curl --cookie ASP.NET_SessionId=ivthkl45tjdjrzznevqsf255 --include --url  http://localhost/impots1/main.aspx?action=calcul 
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>HTTP/1.1 200 OK
@@ -2107,7 +2109,7 @@
 <a id="__codelineno-30-27" name="__codelineno-30-27" href="#__codelineno-30-27"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-30-28" name="__codelineno-30-28" href="#__codelineno-30-28"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>يمكننا أن نرى أن تطبيق الويب أعاد عرض [errors] مع ثلاث رسائل خطأ للمعلمات الثلاثة المفقودة. الآن دعونا نرسل بعض المعلمات غير الصحيحة:</p>
+<p>يمكننا أن نرى أن تطبيق الويب أعاد عرض [<bdi dir="ltr" class="odt-ltr-term">errors</bdi>] مع ثلاث رسائل خطأ للمعلمات الثلاثة المفقودة. الآن دعونا نرسل بعض المعلمات غير الصحيحة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>dos&gt;curl --cookie ASP.NET_SessionId=ivthkl45tjdjrzznevqsf255 --include --data rdMarie=xx --data txtEnfants=xx --data txtSalaire=xx --url http://localhost/impots1/main.aspx?action=calcul 
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>HTTP/1.1 200 OK
@@ -2188,111 +2190,111 @@
 <a id="__codelineno-32-48" name="__codelineno-32-48" href="#__codelineno-32-48"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-32-49" name="__codelineno-32-49" href="#__codelineno-32-49"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>لقد نجحنا في استرداد الضريبة المستحقة: 4,300 يورو. الدرس المستفاد من هذا المثال هو أنه يجب ألا ننخدع بحقيقة أننا نكتب تطبيق ويب مخصص للعملاء الذين يستخدمون المتصفحات. تطبيق الويب هو خدمة TCP/IP، وهذا البروتوكول الشبكي لا يكشف عن طبيعة تطبيق عميل الخدمة. لذلك، لا يمكننا معرفة ما إذا كان عميل تطبيق الويب متصفحًا أم لا. ولذلك، فإننا نتبع قاعدتين:</p>
+<p>لقد نجحنا في استرداد الضريبة المستحقة: 4,300 يورو. الدرس المستفاد من هذا المثال هو أنه يجب ألا ننخدع بحقيقة أننا نكتب تطبيق ويب مخصص للعملاء الذين يستخدمون المتصفحات. تطبيق الويب هو خدمة <bdi dir="ltr" class="odt-ltr-term">TCP/IP</bdi>، وهذا البروتوكول الشبكي لا يكشف عن طبيعة تطبيق عميل الخدمة. لذلك، لا يمكننا معرفة ما إذا كان عميل تطبيق الويب متصفحًا أم لا. ولذلك، فإننا نتبع قاعدتين:</p>
 <ul>
   <li>عند تلقي طلب من عميل، لا نضع أي افتراضات بشأن العميل ونتحقق من وجود المعلمات المتوقعة في الطلب وصحتها
   </li>
-  <li>نقوم بإنشاء استجابة مخصصة للمتصفحات، والتي تتكون عمومًا من مستندات HTML
+  <li>نقوم بإنشاء استجابة مخصصة للمتصفحات، والتي تتكون عمومًا من مستندات <bdi dir="ltr" class="odt-ltr-term">HTML</bdi>
   </li>
 </ul>
 
-<p>يمكن إنشاء تطبيق ويب لخدمة عملاء مختلفين في وقت واحد، مثل المتصفحات والهواتف المحمولة. يمكننا بعد ذلك تضمين معلمة جديدة في كل طلب تشير إلى نوع العميل. وبالتالي، سيطلب المتصفح حساب الضريبة عبر طلب إلى عنوان URL<mark style="background-color: #ffe994"> http://machine/impots/main.aspx?client=navigateur&amp;action=calcul</mark>، بينما سيرسل الهاتف المحمول طلبًا إلى عنوان URL<mark style="background-color: #ffe994"> http://machine/impots/main.aspx?client=mobile&amp;action=calcul</mark>. تسهل بنية MVC تطوير مثل هذا التطبيق. وتتخذ الشكل التالي:</p>
+<p>يمكن إنشاء تطبيق ويب لخدمة عملاء مختلفين في وقت واحد، مثل المتصفحات والهواتف المحمولة. يمكننا بعد ذلك تضمين معلمة جديدة في كل طلب تشير إلى نوع العميل. وبالتالي، سيطلب المتصفح حساب الضريبة عبر طلب إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi><mark style="background-color: #ffe994"> <bdi dir="ltr" class="odt-ltr-term">http://machine/impots/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">client</bdi>=<bdi dir="ltr" class="odt-ltr-term">navigateur</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calcul</bdi></mark>، بينما سيرسل الهاتف المحمول طلبًا إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi><mark style="background-color: #ffe994"> <bdi dir="ltr" class="odt-ltr-term">http://machine/impots/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">client</bdi>=<bdi dir="ltr" class="odt-ltr-term">mobile</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">calcul</bdi></mark>. تسهل بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> تطوير مثل هذا التطبيق. وتتخذ الشكل التالي:</p>
 <p><img src="images/10000000000005B60000023E855A62E6.png" width="680" height="267" style="width:17.999cm;height:7.066cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005B60000023E855A62E6.png" /></p>
-<p>يظل كتلة [فئات الأعمال، فئات الوصول إلى البيانات] دون تغيير. وذلك لأنها مكونة لا تعتمد على نوع العميل. تتغير كتلة [وحدة التحكم] بشكل طفيف فقط، ولكن يجب أن تأخذ في الاعتبار معلمة جديدة في الطلب: المعلمة [client]، التي تشير إلى نوع العميل الذي يتم التعامل معه. يجب أن يقوم كتلة [العروض] بإنشاء عروض لكل نوع من أنواع العملاء. قد يكون من المفيد مراعاة وجود المعلمة [العميل] في الاستعلام منذ مرحلة تصميم التطبيق، حتى لو كان الهدف قصير أو متوسط المدى يقتصر على المتصفحات. إذا احتاج التطبيق لاحقًا إلى دعم نوع جديد من العملاء، فلن يتعين سوى كتابة العروض المصممة خصيصًا لهذا العميل.</p>
+<p>يظل كتلة [فئات الأعمال، فئات الوصول إلى البيانات] دون تغيير. وذلك لأنها مكونة لا تعتمد على نوع العميل. تتغير كتلة [وحدة التحكم] بشكل طفيف فقط، ولكن يجب أن تأخذ في الاعتبار معلمة جديدة في الطلب: المعلمة [<bdi dir="ltr" class="odt-ltr-term">client</bdi>]، التي تشير إلى نوع العميل الذي يتم التعامل معه. يجب أن يقوم كتلة [العروض] بإنشاء عروض لكل نوع من أنواع العملاء. قد يكون من المفيد مراعاة وجود المعلمة [العميل] في الاستعلام منذ مرحلة تصميم التطبيق، حتى لو كان الهدف قصير أو متوسط المدى يقتصر على المتصفحات. إذا احتاج التطبيق لاحقًا إلى دعم نوع جديد من العملاء، فلن يتعين سوى كتابة العروض المصممة خصيصًا لهذا العميل.</p>
 <p><a id="toc68683106"></a></p>
 <h2 id="62-2">6.2. المثال 2</h2>
 <p><a id="toc68683107"></a></p>
 <h3 id="621">6.2.1. المشكلة</h3>
-<p>هنا، نقترح معالجة نفس المشكلة السابقة ولكن عن طريق تعديل مصدر البيانات للكائن [tax] الذي أنشأه تطبيق الويب. في الإصدار السابق، كان مصدر البيانات يوفر قيمًا من مصفوفات مبرمجة بشكل ثابت في الكود. هذه المرة، سيسترد مصدر البيانات الجديد هذه القيم من مصدر بيانات ODBC مرتبط بقاعدة بيانات MySQL.</p>
+<p>هنا، نقترح معالجة نفس المشكلة السابقة ولكن عن طريق تعديل مصدر البيانات للكائن [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] الذي أنشأه تطبيق الويب. في الإصدار السابق، كان مصدر البيانات يوفر قيمًا من مصفوفات مبرمجة بشكل ثابت في الكود. هذه المرة، سيسترد مصدر البيانات الجديد هذه القيم من مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> مرتبط بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi></p>
 <p><a id="toc68683108"></a></p>
-<h3 id="622-odbc">6.2.2. مصدر بيانات ODBC</h3>
-<p>ستكون البيانات موجودة في جدول باسم [IMPOTS] في قاعدة بيانات MySQL باسم [dbimpots]. سيكون محتوى هذا الجدول كما يلي:</p>
+<h3 id="622-odbc">6.2.2. مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi></h3>
+<p>ستكون البيانات موجودة في جدول باسم [<bdi dir="ltr" class="odt-ltr-term">IMPOTS</bdi>] في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> باسم [<bdi dir="ltr" class="odt-ltr-term">dbimpots</bdi>]. سيكون محتوى هذا الجدول كما يلي:</p>
 <p><img src="images/10000000000000A8000000F29BBCE751.png" width="168" height="242" style="width:4.445cm;height:6.403cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000A8000000F29BBCE751.png" /></p>
-<p>مالك قاعدة البيانات هو المستخدم [admimpots] بكلمة مرور [mdpimpots]. نربط مصدر بيانات ODBC بقاعدة البيانات هذه. قبل القيام بذلك، دعونا أولاً نستعرض الطرق المختلفة للوصول إلى قاعدة البيانات باستخدام منصة .NET.</p>
-<p>هناك العديد من قواعد البيانات المتاحة لمنصات Windows. للوصول إليها، تستخدم التطبيقات برامج تسمى برامج التشغيل. </p>
+<p>مالك قاعدة البيانات هو المستخدم [<bdi dir="ltr" class="odt-ltr-term">admimpots</bdi>] بكلمة مرور [<bdi dir="ltr" class="odt-ltr-term">mdpimpots</bdi>]. نربط مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> بقاعدة البيانات هذه. قبل القيام بذلك، دعونا أولاً نستعرض الطرق المختلفة للوصول إلى قاعدة البيانات باستخدام منصة .<bdi dir="ltr" class="odt-ltr-term">NET.</bdi></p>
+<p>هناك العديد من قواعد البيانات المتاحة لمنصات <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> للوصول إليها، تستخدم التطبيقات برامج تسمى برامج التشغيل. </p>
 <p><img src="images/1000000000000467000001481B4C213E.png" width="563" height="164" style="width:14.908cm;height:4.339cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000467000001481B4C213E.png" /></p>
 <p>في الرسم البياني أعلاه، يحتوي برنامج التشغيل على واجهتين:</p>
 <ul>
-  <li>واجهة I1 المعروضة للتطبيق
+  <li>واجهة <bdi dir="ltr" class="odt-ltr-term">I1</bdi> المعروضة للتطبيق
   </li>
-  <li>واجهة I2 لقاعدة البيانات
+  <li>واجهة <bdi dir="ltr" class="odt-ltr-term">I2</bdi> لقاعدة البيانات
   </li>
 </ul>
 
-<p>لمنع الحاجة إلى إعادة كتابة تطبيق مكتوب لقاعدة البيانات B1 في حالة الترحيل إلى قاعدة بيانات مختلفة B2، تم بذل جهود لتوحيد واجهة I1. إذا تم استخدام قواعد بيانات تستخدم برامج تشغيل &quot;موحدة&quot;، فسيتم تزويد قاعدة البيانات B1 ببرنامج التشغيل P1، وقاعدة البيانات B2 ببرنامج التشغيل P2، وستكون واجهة I1 لهذين البرنامجين متطابقة. وبالتالي، لن تكون هناك حاجة إلى إعادة كتابة التطبيق. على سبيل المثال، يمكنك ترحيل قاعدة بيانات Access إلى قاعدة بيانات MySQL دون تغيير التطبيق.</p>
+<p>لمنع الحاجة إلى إعادة كتابة تطبيق مكتوب لقاعدة البيانات <bdi dir="ltr" class="odt-ltr-term">B1</bdi> في حالة الترحيل إلى قاعدة بيانات مختلفة <bdi dir="ltr" class="odt-ltr-term">B2</bdi>، تم بذل جهود لتوحيد واجهة <bdi dir="ltr" class="odt-ltr-term">I1.</bdi> إذا تم استخدام قواعد بيانات تستخدم برامج تشغيل &quot;موحدة&quot;، فسيتم تزويد قاعدة البيانات <bdi dir="ltr" class="odt-ltr-term">B1</bdi> ببرنامج التشغيل <bdi dir="ltr" class="odt-ltr-term">P1</bdi>، وقاعدة البيانات <bdi dir="ltr" class="odt-ltr-term">B2</bdi> ببرنامج التشغيل <bdi dir="ltr" class="odt-ltr-term">P2</bdi>، وستكون واجهة <bdi dir="ltr" class="odt-ltr-term">I1</bdi> لهذين البرنامجين متطابقة. وبالتالي، لن تكون هناك حاجة إلى إعادة كتابة التطبيق. على سبيل المثال، يمكنك ترحيل قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">Access</bdi> إلى قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> دون تغيير التطبيق.</p>
 <p>هناك نوعان من برامج التشغيل المعيارية:</p>
 <ul>
-  <li>برامج تشغيل ODBC (اتصال قاعدة البيانات المفتوحة)
+  <li>برامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> (اتصال قاعدة البيانات المفتوحة)
   </li>
-  <li>برامج تشغيل OLE DB (ربط الكائنات وتضمين قاعدة البيانات)
+  <li>برامج تشغيل <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi> (ربط الكائنات وتضمين قاعدة البيانات)
   </li>
 </ul>
 
-<p>توفر برامج تشغيل ODBC الوصول إلى قواعد البيانات. مصادر البيانات لبرامج تشغيل OLE DB أكثر تنوعًا: قواعد البيانات، وأنظمة البريد الإلكتروني، والدلائل، وما إلى ذلك. لا توجد حدود. يمكن أن يكون أي مصدر بيانات موضوعًا لبرنامج تشغيل OLE DB إذا قرر المورد ذلك. الفائدة واضحة وهامة: لديك وصول موحد إلى مجموعة متنوعة من البيانات.</p>
-<p>تأتي منصة .NET 1.1 مع ثلاثة أنواع من فئات الوصول إلى البيانات:</p>
+<p>توفر برامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> الوصول إلى قواعد البيانات. مصادر البيانات لبرامج تشغيل <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi> أكثر تنوعًا: قواعد البيانات، وأنظمة البريد الإلكتروني، والدلائل، وما إلى ذلك. لا توجد حدود. يمكن أن يكون أي مصدر بيانات موضوعًا لبرنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi> إذا قرر المورد ذلك. الفائدة واضحة وهامة: لديك وصول موحد إلى مجموعة متنوعة من البيانات.</p>
+<p>تأتي منصة .<bdi dir="ltr" class="odt-ltr-term">NET 1.1</bdi> مع ثلاثة أنواع من فئات الوصول إلى البيانات:</p>
 <ol>
-  <li>فئات SQL Server.NET، للوصول إلى قواعد بيانات Microsoft SQL Server
+  <li>فئات <bdi dir="ltr" class="odt-ltr-term">SQL Server.NET</bdi>، للوصول إلى قواعد بيانات <bdi dir="ltr" class="odt-ltr-term">Microsoft SQL Server</bdi>
   </li>
-  <li>فئات Ole Db.NET، للوصول إلى قواعد البيانات من أنظمة إدارة قواعد البيانات (DBMS) التي توفر برنامج تشغيل OLE DB
+  <li>فئات <bdi dir="ltr" class="odt-ltr-term">Ole Db.NET</bdi>، للوصول إلى قواعد البيانات من أنظمة إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) التي توفر برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">OLE DB</bdi>
   </li>
-  <li>فئات ODBC.NET، للوصول إلى قواعد البيانات من أنظمة إدارة قواعد البيانات (DBMS) التي توفر برنامج تشغيل ODBC
+  <li>فئات <bdi dir="ltr" class="odt-ltr-term">ODBC.NET</bdi>، للوصول إلى قواعد البيانات من أنظمة إدارة قواعد البيانات (<bdi dir="ltr" class="odt-ltr-term">DBMS</bdi>) التي توفر برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi>
   </li>
 </ol>
 
-<p>يحتوي نظام إدارة قواعد البيانات MySQL منذ فترة طويلة على برنامج تشغيل ODBC. وهذا هو البرنامج الذي سنستخدمه الآن. في Windows، نختار [قائمة ابدأ/لوحة التحكم/أدوات إدارية/مصادر ODBC 32 بت]. قد يختلف هذا المسار قليلاً حسب إصدار Windows. يؤدي هذا إلى فتح التطبيق التالي، الذي سيسمح لنا بإنشاء مصدر ODBC الخاص بنا:</p>
+<p>يحتوي نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> منذ فترة طويلة على برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC.</bdi> وهذا هو البرنامج الذي سنستخدمه الآن. في <bdi dir="ltr" class="odt-ltr-term">Windows</bdi>، نختار [قائمة ابدأ/لوحة التحكم/أدوات إدارية/مصادر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> 32 بت]. قد يختلف هذا المسار قليلاً حسب إصدار <bdi dir="ltr" class="odt-ltr-term">Windows.</bdi> يؤدي هذا إلى فتح التطبيق التالي، الذي سيسمح لنا بإنشاء مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> الخاص بنا:</p>
 <p><img src="images/10000000000001DF000000CAE000F30B.png" width="479" height="202" style="width:12.674cm;height:5.345cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001DF000000CAE000F30B.png" /></p>
-<p>سنقوم بإنشاء مصدر بيانات النظام، أي مصدر بيانات يمكن لأي مستخدم للجهاز استخدامه. لذلك، نختار أعلاه علامة التبويب [مصدر بيانات النظام]. تحتوي الصفحة المعروضة على زر [إضافة]، والذي نستخدمه لإنشاء مصدر بيانات ODBC جديد:</p>
+<p>سنقوم بإنشاء مصدر بيانات النظام، أي مصدر بيانات يمكن لأي مستخدم للجهاز استخدامه. لذلك، نختار أعلاه علامة التبويب [مصدر بيانات النظام]. تحتوي الصفحة المعروضة على زر [إضافة]، والذي نستخدمه لإنشاء مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> جديد:</p>
 <p><img src="images/10000000000001F60000015B763644C0.png" width="502" height="347" style="width:13.282cm;height:9.181cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F60000015B763644C0.png" /></p>
-<p>يطلب منك المعالج تحديد برنامج تشغيل ODBC المراد استخدامه. يأتي Windows مزودًا بعدد من برامج تشغيل ODBC المثبتة مسبقًا. لا يتضمن هذا المجموعة برنامج تشغيل MySQL ODBC. لذلك يجب عليك تثبيته أولاً. يمكنك العثور عليه عبر الإنترنت عن طريق كتابة مصطلحي البحث &quot;MySQL ODBC&quot; أو &quot;MyODBC&quot; في محرك البحث. هنا، قمنا بتثبيت برنامج التشغيل [MySQL ODBC 3.51]. نختاره ونضغط على [Finish]:</p>
+<p>يطلب منك المعالج تحديد برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> المراد استخدامه. يأتي <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> مزودًا بعدد من برامج تشغيل <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> المثبتة مسبقًا. لا يتضمن هذا المجموعة برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">MySQL ODBC.</bdi> لذلك يجب عليك تثبيته أولاً. يمكنك العثور عليه عبر الإنترنت عن طريق كتابة مصطلحي البحث &quot;<bdi dir="ltr" class="odt-ltr-term">MySQL ODBC</bdi>&quot; أو &quot;<bdi dir="ltr" class="odt-ltr-term">MyODBC</bdi>&quot; في محرك البحث. هنا، قمنا بتثبيت برنامج التشغيل [<bdi dir="ltr" class="odt-ltr-term">MySQL ODBC 3.51</bdi>]. نختاره ونضغط على [<bdi dir="ltr" class="odt-ltr-term">Finish</bdi>]:</p>
 <p><img src="images/1000000000000189000001730693485B.png" width="393" height="371" style="width:10.398cm;height:9.816cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000189000001730693485B.png" /></p>
 <p>ستحتاج إلى تقديم المعلومات التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>اسم مصدر البيانات
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الذي سيحدد مصدر بيانات ODBC. سيتمكن أي تطبيق Windows من الوصول إلى المصدر باستخدام هذا الاسم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الذي سيحدد مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC.</bdi> سيتمكن أي تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> من الوصول إلى المصدر باستخدام هذا الاسم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>الوصف
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">أي نص يصف مصدر البيانات</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>اسم المضيف
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم الجهاز الذي يستضيف نظام إدارة قواعد البيانات MySQL. هنا، هو الجهاز المحلي. يمكن أن يكون جهازًا بعيدًا. وهذا سيسمح لتطبيق Windows بالوصول إلى قاعدة بيانات بعيدة دون أي ترميز خاص. هذه ميزة رئيسية لمصدر ODBC.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم الجهاز الذي يستضيف نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> هنا، هو الجهاز المحلي. يمكن أن يكون جهازًا بعيدًا. وهذا سيسمح لتطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> بالوصول إلى قاعدة بيانات بعيدة دون أي ترميز خاص. هذه ميزة رئيسية لمصدر <bdi dir="ltr" class="odt-ltr-term">ODBC.</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>اسم قاعدة البيانات
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يمكن لنظام إدارة قواعد البيانات MySQL إدارة قواعد بيانات متعددة. هنا، نحدد القاعدة التي نريد إدارتها: dbimpots</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يمكن لنظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> إدارة قواعد بيانات متعددة. هنا، نحدد القاعدة التي نريد إدارتها: <bdi dir="ltr" class="odt-ltr-term">dbimpots</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>المستخدم
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم المستخدم المسجل في نظام إدارة قواعد البيانات MySQL. سيتم الوصول إلى مصدر البيانات باسم هذا المستخدم. هنا: admimpots</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">اسم المستخدم المسجل في نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> سيتم الوصول إلى مصدر البيانات باسم هذا المستخدم. هنا: <bdi dir="ltr" class="odt-ltr-term">admimpots</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>كلمة
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كلمة مرور هذا المستخدم. هنا: mdpimpots</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كلمة مرور هذا المستخدم. هنا: <bdi dir="ltr" class="odt-ltr-term">mdpimpots</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>المنفذ
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">منفذ عمل نظام إدارة قواعد البيانات MySQL. بشكل افتراضي، هذا هو المنفذ 3306. لم نقم بتغييره</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">منفذ عمل نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi> بشكل افتراضي، هذا هو المنفذ 3306. لم نقم بتغييره</div></td></tr></table>
 
 <p>بمجرد الانتهاء من ذلك، نختبر صحة إعدادات الاتصال باستخدام الزر [اختبار مصدر البيانات]:</p>
 <p><img src="images/10000000000002040000007A3C43CC77.png" width="516" height="122" style="width:13.653cm;height:3.228cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002040000007A3C43CC77.png" /></p>
-<p>وبمجرد الانتهاء من ذلك، نكون قد تأكدنا من صحة مصدر بيانات ODBC الخاص بنا. ويمكننا الآن استخدامه. نضغط على [موافق] عدة مرات حسب الحاجة للخروج من معالج ODBC.</p>
-<p>إذا لم يكن لدى القارئ نظام إدارة قواعد البيانات MySQL، فيمكنه تنزيله مجانًا من [http://www.mysql.com]. فيما يلي، نوضح الخطوات اللازمة لإنشاء مصدر ODBC باستخدام Access. الخطوات الأولى مطابقة لتلك الموضحة سابقًا. نضيف مصدر بيانات نظام جديد:</p>
+<p>وبمجرد الانتهاء من ذلك، نكون قد تأكدنا من صحة مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> الخاص بنا. ويمكننا الآن استخدامه. نضغط على [موافق] عدة مرات حسب الحاجة للخروج من معالج <bdi dir="ltr" class="odt-ltr-term">ODBC.</bdi></p>
+<p>إذا لم يكن لدى القارئ نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi>، فيمكنه تنزيله مجانًا من [<bdi dir="ltr" class="odt-ltr-term">http://www.mysql.com</bdi>]. فيما يلي، نوضح الخطوات اللازمة لإنشاء مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> باستخدام <bdi dir="ltr" class="odt-ltr-term">Access.</bdi> الخطوات الأولى مطابقة لتلك الموضحة سابقًا. نضيف مصدر بيانات نظام جديد:</p>
 <p><img src="images/10000000000001F7000000BAD905CA5C.png" width="503" height="186" style="width:13.309cm;height:4.921cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F7000000BAD905CA5C.png" /></p>
-<p>سيكون برنامج التشغيل المحدد هو [Microsoft Access Driver]. انقر فوق [Finish] للمتابعة إلى تعريف مصدر ODBC:</p>
+<p>سيكون برنامج التشغيل المحدد هو [<bdi dir="ltr" class="odt-ltr-term">Microsoft Access Driver</bdi>]. انقر فوق [<bdi dir="ltr" class="odt-ltr-term">Finish</bdi>] للمتابعة إلى تعريف مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC:</bdi></p>
 <p><img src="images/1000000000000192000000AC8D1EAA58.png" width="402" height="172" style="width:10.636cm;height:4.551cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000192000000AC8D1EAA58.png" /></p>
 <p>المعلومات المطلوب تقديمها هي كما يلي:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>اسم مصدر البيانات
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الذي سيحدد مصدر بيانات ODBC. سيتمكن أي تطبيق Windows من الوصول إلى المصدر باستخدام هذا الاسم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الذي سيحدد مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC.</bdi> سيتمكن أي تطبيق <bdi dir="ltr" class="odt-ltr-term">Windows</bdi> من الوصول إلى المصدر باستخدام هذا الاسم</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>الوصف
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">أي نص يصف مصدر البيانات</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>قاعدة البيانات
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الكامل لملف Access المراد استخدامه</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الاسم الكامل لملف <bdi dir="ltr" class="odt-ltr-term">Access</bdi> المراد استخدامه</div></td></tr></table>
 
 <p><a id="toc68683109"></a></p>
 <h3 id="623">6.2.3. فئة جديدة للوصول إلى البيانات</h3>
-<p>دعونا نراجع بنية MVC لتطبيقنا:</p>
+<p>دعونا نراجع بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> لتطبيقنا:</p>
 <p><img src="images/10000000000005C100000265922CAC84.png" width="680" height="283" style="width:17.999cm;height:7.489cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C100000265922CAC84.png" /></p>
-<p>في الرسم البياني أعلاه، تتولى فئة [impotsData] مسؤولية استرداد البيانات. في هذه الحالة، ستسترد البيانات من قاعدة بيانات MySQL [dbimpots]. كما تعلمنا في الإصدار السابق من هذا التطبيق، فإن [impotsData] هي فئة مجردة يجب اشتقاقها كلما أردنا تكييفها مع مصدر بيانات جديد. دعونا نراجع بنية هذه الفئة المجردة:</p>
+<p>في الرسم البياني أعلاه، تتولى فئة [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>] مسؤولية استرداد البيانات. في هذه الحالة، ستسترد البيانات من قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbimpots</bdi>]. كما تعلمنا في الإصدار السابق من هذا التطبيق، فإن [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>] هي فئة مجردة يجب اشتقاقها كلما أردنا تكييفها مع مصدر بيانات جديد. دعونا نراجع بنية هذه الفئة المجردة:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -2321,15 +2323,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Namespace</span></span></span>
 </code></pre></div>
 
-<p>يجب أن تنفذ الفئة المشتقة من [impotsData] طريقتين:</p>
+<p>يجب أن تنفذ الفئة المشتقة من [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>] طريقتين:</p>
 <ul>
-  <li>منشئ إذا كان المنشئ الافتراضي لـ [impotsData] غير مناسب
+  <li>منشئ إذا كان المنشئ الافتراضي لـ [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>] غير مناسب
   </li>
-  <li>طريقة [getData]، التي تُرجع المصفوفات الثلاثة (limites، coeffr، coeffn)
+  <li>طريقة [<bdi dir="ltr" class="odt-ltr-term">getData</bdi>]، التي تُرجع المصفوفات الثلاثة (<bdi dir="ltr" class="odt-ltr-term">limites</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>)
   </li>
 </ul>
 
-<p>نقوم بإنشاء فئة [impotsODBC]، التي ستسترد البيانات (limits، coeffr، coeffn) من مصدر ODBC سنحدد اسمه:</p>
+<p>نقوم بإنشاء فئة [<bdi dir="ltr" class="odt-ltr-term">impotsODBC</bdi>]، التي ستسترد البيانات (<bdi dir="ltr" class="odt-ltr-term">limits</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>) من مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> سنحدد اسمه:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Data.Odbc</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Data</span></span>
@@ -2415,9 +2417,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">End</span> <span style="color:#0000ff">Sub</span></span></span>
 </code></pre></div>
 
-<p>يأخذ كمعلمة اسم مصدر بيانات ODBC الذي يحتوي على البيانات المراد استردادها. يقوم المنشئ ببساطة بتخزين هذا الاسم. تتولى طريقة [getData] مسؤولية قراءة البيانات من الجدول [impots] ووضعها في ثلاثة مصفوفات (limites، coeffr، coeffn). دعونا نعلق على الكود:</p>
+<p>يأخذ كمعلمة اسم مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> الذي يحتوي على البيانات المراد استردادها. يقوم المنشئ ببساطة بتخزين هذا الاسم. تتولى طريقة [<bdi dir="ltr" class="odt-ltr-term">getData</bdi>] مسؤولية قراءة البيانات من الجدول [<bdi dir="ltr" class="odt-ltr-term">impots</bdi>] ووضعها في ثلاثة مصفوفات (<bdi dir="ltr" class="odt-ltr-term">limites</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>). دعونا نعلق على الكود:</p>
 <ul>
-  <li>تم تعريف المعلمات للاتصال بمصدر بيانات ODBC، ولكن الاتصال لم يتم فتحه
+  <li>تم تعريف المعلمات للاتصال بمصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi>، ولكن الاتصال لم يتم فتحه
   </li>
 </ul>
 
@@ -2427,7 +2429,7 @@
 <a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w">            </span><span class="kd">Dim</span><span class="w"> </span><span class="nv">impotsConn</span><span class="w"> </span><span class="n">As</span><span class="w"> </span><span class="n">OdbcConnection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">OdbcConnection</span><span class="p">(</span><span class="n">connectString</span><span class="p">)</span>
 </code></pre></div>
 <ul>
-  <li>تحديد ثلاثة كائنات [ArrayList] لاسترداد البيانات من الجدول [impots]:
+  <li>تحديد ثلاثة كائنات [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>] لاسترداد البيانات من الجدول [<bdi dir="ltr" class="odt-ltr-term">impots</bdi>]:
   </li>
 </ul>
 
@@ -2439,7 +2441,7 @@
 </code></pre></div>
 
 <ul>
-  <li>يتم تضمين جميع أكواد الوصول إلى قاعدة البيانات في كتلة try/catch لمعالجة أي أخطاء في الوصول. نفتح الاتصال بقاعدة البيانات:
+  <li>يتم تضمين جميع أكواد الوصول إلى قاعدة البيانات في كتلة <bdi dir="ltr" class="odt-ltr-term">try/catch</bdi> لمعالجة أي أخطاء في الوصول. نفتح الاتصال بقاعدة البيانات:
   </li>
 </ul>
 
@@ -2450,7 +2452,7 @@
 </code></pre></div>
 
 <ul>
-  <li>نقوم بتنفيذ الأمر [select] على الاتصال المفتوح. نحصل على كائن [OdbcDataReader] الذي سيسمح لنا بالتكرار عبر صفوف الجدول الناتج عن الأمر select:
+  <li>نقوم بتنفيذ الأمر [<bdi dir="ltr" class="odt-ltr-term">select</bdi>] على الاتصال المفتوح. نحصل على كائن [<bdi dir="ltr" class="odt-ltr-term">OdbcDataReader</bdi>] الذي سيسمح لنا بالتكرار عبر صفوف الجدول الناتج عن الأمر <bdi dir="ltr" class="odt-ltr-term">select:</bdi>
   </li>
 </ul>
 
@@ -2462,17 +2464,17 @@
 </code></pre></div>
 
 <ul>
-  <li>نقوم بالتكرار عبر جدول النتائج، صفًا تلو الآخر. للقيام بذلك، نستخدم طريقة [Read] الخاصة بكائن [OdbcDataReader] الذي تم الحصول عليه مسبقًا. تقوم هذه الطريقة بأمرين:
+  <li>نقوم بالتكرار عبر جدول النتائج، صفًا تلو الآخر. للقيام بذلك، نستخدم طريقة [<bdi dir="ltr" class="odt-ltr-term">Read</bdi>] الخاصة بكائن [<bdi dir="ltr" class="odt-ltr-term">OdbcDataReader</bdi>] الذي تم الحصول عليه مسبقًا. تقوم هذه الطريقة بأمرين:
     <ul>
       <li>تنتقل إلى الصف التالي في الجدول. في البداية، يتم وضع المؤشر قبل الصف الأول 
       </li>
-      <li>تُرجع القيمة المنطقية [true] إذا تمكنت من التقدم، و[false] في حالة عدم تمكنها من ذلك، حيث تشير الحالة الأخيرة إلى أنه تمت معالجة جميع الصفوف.
+      <li>تُرجع القيمة المنطقية [<bdi dir="ltr" class="odt-ltr-term">true</bdi>] إذا تمكنت من التقدم، و[<bdi dir="ltr" class="odt-ltr-term">false</bdi>] في حالة عدم تمكنها من ذلك، حيث تشير الحالة الأخيرة إلى أنه تمت معالجة جميع الصفوف.
       </li>
     </ul>
   </li>
 </ul>
 
-<p>يتم الحصول على أعمدة الصف الحالي لكائن [OdbcDataReader] عبر <a href="columnName">OdbcDataReader</a>. وهذا يعيد كائنًا يمثل قيمة العمود. نقوم بالتكرار عبر الجدول بأكمله لملء محتوياته في كائنات [ArrayList] الثلاثة:</p>
+<p>يتم الحصول على أعمدة الصف الحالي لكائن [<bdi dir="ltr" class="odt-ltr-term">OdbcDataReader</bdi>] عبر <a href="&lt;bdi dir=&quot;ltr&quot; class=&quot;odt-ltr-term&quot;&gt;columnName&lt;/bdi&gt;"><bdi dir="ltr" class="odt-ltr-term">OdbcDataReader</bdi></a>. وهذا يعيد كائنًا يمثل قيمة العمود. نقوم بالتكرار عبر الجدول بأكمله لملء محتوياته في كائنات [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>] الثلاثة:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">                &#x27; Exploitation de la table récupérée</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">                <span style="color:#0000ff">While</span> myReader.Read()</span></span>
@@ -2492,7 +2494,7 @@
 <a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>                impotsConn.Close()
 </code></pre></div>
 <ul>
-  <li>يتم نقل محتويات الكائنات الثلاثة [ArrayList] إلى ثلاثة مصفوفات قياسية:
+  <li>يتم نقل محتويات الكائنات الثلاثة [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>] إلى ثلاثة مصفوفات قياسية:
   </li>
 </ul>
 
@@ -2510,7 +2512,7 @@
 </code></pre></div>
 
 <ul>
-  <li>بمجرد تحميل البيانات من الجدول [impots] إلى المصفوفات الثلاثة، كل ما يتبقى هو التحقق من محتوياتها باستخدام طريقة [checkData] للفئة الأساسية [impotsData]:
+  <li>بمجرد تحميل البيانات من الجدول [<bdi dir="ltr" class="odt-ltr-term">impots</bdi>] إلى المصفوفات الثلاثة، كل ما يتبقى هو التحقق من محتوياتها باستخدام طريقة [<bdi dir="ltr" class="odt-ltr-term">checkData</bdi>] للفئة الأساسية [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>]:
   </li>
 </ul>
 
@@ -2627,11 +2629,11 @@
 </code></pre></div>
 <p>يتم تشغيل التطبيق باستخدام معلمة:</p>
 <ul>
-  <li>DSNimpots: اسم مصدر بيانات ODBC المراد استخدامه
+  <li><bdi dir="ltr" class="odt-ltr-term">DSNimpots:</bdi> اسم مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> المراد استخدامه
   </li>
 </ul>
 
-<p>يتم إجراء حساب الضريبة باستخدام كائن من النوع [tax] يتم إنشاؤه عند تشغيل التطبيق:</p>
+<p>يتم إجراء حساب الضريبة باستخدام كائن من النوع [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] يتم إنشاؤه عند تشغيل التطبيق:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">            &#x27; tax object creation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">Dim</span> objImpôt <span style="color:#0000ff">As</span> impot = <span style="color:#0000ff">Nothing</span></span></span>
@@ -2645,7 +2647,7 @@
 
 <p>بمجرد التهيئة، يطلب التطبيق من المستخدم بشكل متكرر إدخال المعلومات الثلاثة اللازمة لحساب الضريبة:</p>
 <ul>
-  <li>الحالة الاجتماعية: o للمتزوجين، n لغير المتزوجين
+  <li>الحالة الاجتماعية: <bdi dir="ltr" class="odt-ltr-term">o</bdi> للمتزوجين، <bdi dir="ltr" class="odt-ltr-term">n</bdi> لغير المتزوجين
   </li>
   <li>عدد الأطفال
   </li>
@@ -2676,22 +2678,22 @@
 <a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a>01/04/2004  19:34             6 144 testimpots.exe
 <a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a>01/04/2004  19:32             3 210 testimpots.vb
 </code></pre></div>
-<p>يتم تشغيل برنامج الاختبار أولاً باستخدام مصدر بيانات MySQL ODBC:</p>
+<p>يتم تشغيل برنامج الاختبار أولاً باستخدام مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL ODBC:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>dos&gt;testimpots odbc-mysql-dbimpots
 <a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>Paramètres du calcul de l&#39;impôt au format marié nbEnfants salaire ou rien pour arrêter :o 2 60000
 <a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a>impôt=4300 euro(s)
 </code></pre></div>
-<p>نقوم بتبديل مصدر ODBC إلى مصدر Access:</p>
+<p>نقوم بتبديل مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> إلى مصدر <bdi dir="ltr" class="odt-ltr-term">Access:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>dos&gt;testimpots odbc-access-dbimpots
 <a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a>Paramètres du calcul de l&#39;impôt au format marié nbEnfants salaire ou rien pour arrêter :o 2 60000
 <a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a>impôt=4300 F
 </code></pre></div>
 <p><a id="toc68683111"></a></p>
 <h3 id="625">6.2.5. طرق عرض تطبيق الويب</h3>
-<p>هذه هي نفسها الموجودة في التطبيق السابق: formulaire.aspx و erreurs.aspx</p>
+<p>هذه هي نفسها الموجودة في التطبيق السابق: <bdi dir="ltr" class="odt-ltr-term">formulaire.aspx</bdi> و <bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi></p>
 <p><a id="toc68683112"></a></p>
-<h3 id="626-globalasax-mainaspx">6.2.6. وحدات التحكم في التطبيق [global.asax، main.aspx]</h3>
-<p>يحتاج فقط وحدة التحكم [global.asax] إلى التعديل. وهي مسؤولة عن إنشاء كائن [impot] عند بدء تشغيل التطبيق. يحتوي منشئ هذا الكائن على معلمة واحدة: كائن [impotsData]، وهو مسؤول عن استرداد البيانات. وبالتالي، تتغير هذه المعلمة لكل نوع جديد من مصادر البيانات. تصبح وحدة التحكم [global.asax.vb] كما يلي:</p>
+<h3 id="626-globalasax-mainaspx">6.2.6. وحدات التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>، <bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]</h3>
+<p>يحتاج فقط وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] إلى التعديل. وهي مسؤولة عن إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] عند بدء تشغيل التطبيق. يحتوي منشئ هذا الكائن على معلمة واحدة: كائن [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>]، وهو مسؤول عن استرداد البيانات. وبالتالي، تتغير هذه المعلمة لكل نوع جديد من مصادر البيانات. تصبح وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Web</span></span>
@@ -2720,7 +2722,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>أصبح مصدر البيانات للكائن [impot] الآن كائن [impotODBC]. يأخذ هذا الكائن اسم DSN لمصدر بيانات ODBC ليتم استخدامه كمعلمة. بدلاً من ترميز هذا الاسم في الكود، نضعه في ملف تكوين [web.config] للتطبيق:</p>
+<p>أصبح مصدر البيانات للكائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] الآن كائن [<bdi dir="ltr" class="odt-ltr-term">impotODBC</bdi>]. يأخذ هذا الكائن اسم <bdi dir="ltr" class="odt-ltr-term">DSN</bdi> لمصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> ليتم استخدامه كمعلمة. بدلاً من ترميز هذا الاسم في الكود، نضعه في ملف تكوين [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] للتطبيق:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?<span style="color:#800000">xml</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">version</span>=&quot;1.0&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">encoding</span>=&quot;utf-8&quot;<span style="color:#ff00ff"> </span>?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;<span style="color:#800000">configuration</span>&gt;</span></span>
@@ -2730,8 +2732,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/<span style="color:#800000">configuration</span>&gt;</span></span>
 </code></pre></div>
 
-<p>نحن نعلم أن قيمة المفتاح C في قسم &lt;appSettings&gt; من ملف [web.config] يتم استردادها في كود التطبيق باستخدام [ConfigurationSettings.AppSettings(C)].</p>
-<p>لتحديد سبب الاستثناء، نقوم بتسجيل رسالة الاستثناء في التطبيق بحيث تظل متاحة للاستعلامات. سيتضمن عنصر التحكم [main.aspx.vb] هذه الرسالة في قائمة الأخطاء الخاصة به:</p>
+<p>نحن نعلم أن قيمة المفتاح <bdi dir="ltr" class="odt-ltr-term">C</bdi> في قسم &lt;<bdi dir="ltr" class="odt-ltr-term">appSettings</bdi>&gt; من ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] يتم استردادها في كود التطبيق باستخدام [<bdi dir="ltr" class="odt-ltr-term">ConfigurationSettings.AppSettings</bdi>(<bdi dir="ltr" class="odt-ltr-term">C</bdi>)].</p>
+<p>لتحديد سبب الاستثناء، نقوم بتسجيل رسالة الاستثناء في التطبيق بحيث تظل متاحة للاستعلامات. سيتضمن عنصر التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] هذه الرسالة في قائمة الأخطاء الخاصة به:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">Private</span> <span style="color:#0000ff">Sub</span> Page_Load(<span style="color:#0000ff">ByVal</span> sender <span style="color:#0000ff">As</span> System.Object, <span style="color:#0000ff">ByVal</span> e <span style="color:#0000ff">As</span> System.EventArgs) <span style="color:#0000ff">Handles</span> <span style="color:#0000ff">MyBase</span>.Load</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        &#x27; first of all, we check whether the application has initialized correctly</span></span>
@@ -2754,27 +2756,27 @@
 <ol>
   <li>تم إنشاء فئة جديدة للوصول إلى البيانات
   </li>
-  <li>تم تعديل وحدة التحكم [global.asax.vb] في مكانين: إنشاء كائن [import] وتسجيل الرسالة المتعلقة بأي استثناء في التطبيق
+  <li>تم تعديل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] في مكانين: إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">import</bdi>] وتسجيل الرسالة المتعلقة بأي استثناء في التطبيق
   </li>
-  <li>تم تعديل وحدة التحكم [main.aspx.vb] في مكان واحد لعرض رسالة الاستثناء السابقة 
+  <li>تم تعديل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] في مكان واحد لعرض رسالة الاستثناء السابقة 
   </li>
-  <li>تمت إضافة ملف [web.config]
+  <li>تمت إضافة ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>]
   </li>
 </ol>
 
-<p>تم إجراء أعمال التعديل بشكل أساسي في 1، أي خارج تطبيق الويب. وقد أصبح ذلك ممكنًا بفضل بنية MVC للتطبيق، التي تفصل وحدة التحكم عن فئات الأعمال. وهذا هو جوهر هذه البنية. ويمكن إثبات أنه باستخدام ملف [web.config] مناسب، كان من الممكن تجنب أي تعديل على وحدة التحكم في التطبيق. من الممكن تحديد اسم فئة الوصول إلى البيانات التي سيتم إنشاء مثيل لها ديناميكيًا في [web.config] —مثل —بالإضافة إلى المعلمات المختلفة المطلوبة لإنشاء هذا المثيل. باستخدام هذه المعلومات، يمكن لـ [global.asax] إنشاء مثيل لكائن الوصول إلى البيانات. عندئذٍ يكون تغيير مصدر البيانات هو:</p>
+<p>تم إجراء أعمال التعديل بشكل أساسي في 1، أي خارج تطبيق الويب. وقد أصبح ذلك ممكنًا بفضل بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> للتطبيق، التي تفصل وحدة التحكم عن فئات الأعمال. وهذا هو جوهر هذه البنية. ويمكن إثبات أنه باستخدام ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] مناسب، كان من الممكن تجنب أي تعديل على وحدة التحكم في التطبيق. من الممكن تحديد اسم فئة الوصول إلى البيانات التي سيتم إنشاء مثيل لها ديناميكيًا في [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] —مثل —بالإضافة إلى المعلمات المختلفة المطلوبة لإنشاء هذا المثيل. باستخدام هذه المعلومات، يمكن لـ [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] إنشاء مثيل لكائن الوصول إلى البيانات. عندئذٍ يكون تغيير مصدر البيانات هو:</p>
 <ul>
   <li>إنشاء فئة الوصول إلى البيانات لهذا المصدر إذا لم تكن موجودة بعد
   </li>
-  <li>تعديل ملف [web.config] للسماح بالإنشاء الديناميكي لمثيل لهذه الفئة في [global.asax]
+  <li>تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] للسماح بالإنشاء الديناميكي لمثيل لهذه الفئة في [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]
   </li>
 </ul>
 
 <p><a id="toc68683114"></a></p>
 <h3 id="628">6.2.8. اختبار تطبيق الويب</h3>
-<p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;application-path&gt;. </p>
+<p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. </p>
 <p><img src="images/1000000000000079000000B31E7E07C8.png" width="121" height="179" style="width:3.201cm;height:4.736cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000079000000B31E7E07C8.png" /></p>
-<p>في هذا المجلد، يتم إنشاء مجلد فرعي [bin]، يتم فيه وضع التجميع [impot.dll] — الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [impots.vb، impotsData.vb، impotsArray.vb، impotsODBC.vb] —. يظهر أمر التجميع المطلوب أدناه:</p>
+<p>في هذا المجلد، يتم إنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>]، يتم فيه وضع التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsODBC.vb</bdi>] —. يظهر أمر التجميع المطلوب أدناه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>dos&gt;vbc /r:system.dll /r:system.data.dll /t:library /out:impot.dll impots.vb impotsArray.vb impotsData.vb impotsODBC.vb
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>dos&gt;dir
@@ -2785,27 +2787,27 @@
 <a id="__codelineno-54-6" name="__codelineno-54-6" href="#__codelineno-54-6"></a>01/04/2004  19:34             2 735 impotsODBC.vb
 <a id="__codelineno-54-7" name="__codelineno-54-7" href="#__codelineno-54-7"></a>01/04/2004  19:32             3 210 testimpots.vb
 </code></pre></div>
-<p>يجب وضع الملف [impot.dll] أعلاه في &lt;application-path&gt;\bin حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم Cassini باستخدام المعلمات (&lt;application-path&gt;,/impots2). تعطي الاختبارات نفس النتائج كما في الإصدار السابق، حيث أن وجود قاعدة البيانات غير مرئي للمستخدم. ولكن لإثبات هذا الوجود، نتأكد من عدم توفر مصدر ODBC عن طريق إيقاف نظام إدارة قواعد البيانات MySQL وطلب عنوان URL [http://localhost/impots2/main.aspx]. نتلقى الرد التالي:</p>
+<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] أعلاه في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">bin</bdi> حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots2</bdi>). تعطي الاختبارات نفس النتائج كما في الإصدار السابق، حيث أن وجود قاعدة البيانات غير مرئي للمستخدم. ولكن لإثبات هذا الوجود، نتأكد من عدم توفر مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> عن طريق إيقاف نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> وطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/impots2/main.aspx</bdi>]. نتلقى الرد التالي:</p>
 <p><img src="images/10000000000003DF000000D4F145273E.png" width="680" height="146" style="width:17.979cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003DF000000D4F145273E.png" /></p>
 <p><a id="toc68683115"></a></p>
 <h2 id="63-3">6.3. المثال 3</h2>
 <p><a id="toc68683116"></a></p>
 <h3 id="631">6.3.1. المشكلة</h3>
-<p>هنا، نقترح معالجة المشكلة نفسها من خلال تعديل مصدر البيانات الخاص بكائن [impot] الذي أنشأه تطبيق الويب مرة أخرى. هذه المرة، سيكون مصدر البيانات الجديد قاعدة بيانات ACCESS يتم الوصول إليها عبر برنامج تشغيل OLEDB. هدفنا هو توضيح طريقة أخرى للوصول إلى قاعدة البيانات.</p>
+<p>هنا، نقترح معالجة المشكلة نفسها من خلال تعديل مصدر البيانات الخاص بكائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] الذي أنشأه تطبيق الويب مرة أخرى. هذه المرة، سيكون مصدر البيانات الجديد قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> يتم الوصول إليها عبر برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">OLEDB.</bdi> هدفنا هو توضيح طريقة أخرى للوصول إلى قاعدة البيانات.</p>
 <p><a id="toc68683117"></a></p>
-<h3 id="632-oledb">6.3.2. مصدر بيانات OLEDB</h3>
-<p>ستكون البيانات موجودة في جدول باسم [IMPOTS] في قاعدة بيانات ACCESS. سيكون محتوى هذا الجدول كما يلي:</p>
+<h3 id="632-oledb">6.3.2. مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi></h3>
+<p>ستكون البيانات موجودة في جدول باسم [<bdi dir="ltr" class="odt-ltr-term">IMPOTS</bdi>] في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS.</bdi> سيكون محتوى هذا الجدول كما يلي:</p>
 <p><img src="images/100000000000009D000000907940B091.png" width="157" height="144" style="width:4.154cm;height:3.81cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000009D000000907940B091.png" /></p>
 <p><a id="toc68683118"></a></p>
 <h3 id="633">6.3.3. فئة الوصول إلى البيانات</h3>
-<p>دعونا نراجع بنية MVC لتطبيقنا:</p>
+<p>دعونا نراجع بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> لتطبيقنا:</p>
 <p><img src="images/10000000000005FF0000026916CFA125.png" width="680" height="273" style="width:17.999cm;height:7.234cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005FF0000026916CFA125.png" /></p>
 <ul>
-  <li>في الرسم البياني أعلاه، تتولى فئة [impotsData] مسؤولية استرداد البيانات. هذه المرة، سيتعين عليها القيام بذلك من مصدر OLEDB.
+  <li>في الرسم البياني أعلاه، تتولى فئة [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>] مسؤولية استرداد البيانات. هذه المرة، سيتعين عليها القيام بذلك من مصدر <bdi dir="ltr" class="odt-ltr-term">OLEDB.</bdi>
   </li>
 </ul>
 
-<p>نقوم بإنشاء فئة [impotsOLEDB]، التي ستسترد البيانات (limits، coeffr، coeffn) من مصدر ODBC سنسميه:</p>
+<p>نقوم بإنشاء فئة [<bdi dir="ltr" class="odt-ltr-term">impotsOLEDB</bdi>]، التي ستسترد البيانات (<bdi dir="ltr" class="odt-ltr-term">limits</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>) من مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> سنسميه:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Data</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections</span></span>
@@ -2882,28 +2884,28 @@
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">End</span> <span style="color:#0000ff">Sub</span></span></span>
 </code></pre></div>
 
-<p>يتلقى كمعلمة سلسلة الاتصال لمصدر OLEDB الذي يحتوي على البيانات المراد استردادها. يقوم المنشئ ببساطة بتخزينها. تحتوي سلسلة الاتصال على جميع المعلمات التي يتطلبها برنامج تشغيل OLEDB للاتصال بمصدر OLEDB. وهي عادةً ما تكون معقدة للغاية. للعثور على سلسلة الاتصال لقواعد بيانات ACCESS، يمكنك استخدام أداة [WebMatrix]. قم بتشغيل هذه الأداة. فهي توفر نافذة للاتصال بمصدر البيانات:</p>
+<p>يتلقى كمعلمة سلسلة الاتصال لمصدر <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi> الذي يحتوي على البيانات المراد استردادها. يقوم المنشئ ببساطة بتخزينها. تحتوي سلسلة الاتصال على جميع المعلمات التي يتطلبها برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi> للاتصال بمصدر <bdi dir="ltr" class="odt-ltr-term">OLEDB.</bdi> وهي عادةً ما تكون معقدة للغاية. للعثور على سلسلة الاتصال لقواعد بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi>، يمكنك استخدام أداة [<bdi dir="ltr" class="odt-ltr-term">WebMatrix</bdi>]. قم بتشغيل هذه الأداة. فهي توفر نافذة للاتصال بمصدر البيانات:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D60000003A4244F3BB.png" width="214" height="58" style="display:inline-block; margin:4px;width:5.662cm;height:1.535cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D60000003A4244F3BB.png" /><img src="images/10000000000000DC000000456A862417.png" width="220" height="69" style="display:inline-block; margin:4px;width:5.821cm;height:1.826cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DC000000456A862417.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B70000003B1C86591C.png" width="183" height="59" style="display:inline-block; margin:4px;width:4.842cm;height:1.561cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B70000003B1C86591C.png" /><img src="images/100000000000019800000081FED27CA4.png" width="408" height="129" style="display:inline-block; margin:4px;width:10.795cm;height:3.413cm;" class="odt-zoomable" data-zoom-src="images/100000000000019800000081FED27CA4.png" /></td></tr></table>
 
-<p>باستخدام الرمز المشار إليه بالسهم أعلاه، يمكنك إنشاء اتصال بنوعين من قواعد بيانات Microsoft: SQL Server و ACCESS. لنختر ACCESS:</p>
+<p>باستخدام الرمز المشار إليه بالسهم أعلاه، يمكنك إنشاء اتصال بنوعين من قواعد بيانات <bdi dir="ltr" class="odt-ltr-term">Microsoft: SQL Server</bdi> و <bdi dir="ltr" class="odt-ltr-term">ACCESS.</bdi> لنختر <bdi dir="ltr" class="odt-ltr-term">ACCESS:</bdi></p>
 <p><img src="images/100000000000017D0000008B73885651.png" width="381" height="139" style="width:10.081cm;height:3.678cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017D0000008B73885651.png" /></p>
-<p>استخدمنا الزر [...] لتحديد قاعدة بيانات ACCESS. نؤكد المعالج. في علامة التبويب [Data]، تمثل الرموز الاتصال:</p>
+<p>استخدمنا الزر [...] لتحديد قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS.</bdi> نؤكد المعالج. في علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Data</bdi>]، تمثل الرموز الاتصال:</p>
 <p><img src="images/10000000000000E000000064EFAD3419.png" width="224" height="100" style="width:5.927cm;height:2.646cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E000000064EFAD3419.png" /></p>
-<p>الآن، لنقم بإنشاء ملف .aspx جديد عبر [Files/New File]:</p>
+<p>الآن، لنقم بإنشاء ملف .<bdi dir="ltr" class="odt-ltr-term">aspx</bdi> جديد عبر [<bdi dir="ltr" class="odt-ltr-term">Files/New File</bdi>]:</p>
 <p><img src="images/10000000000001D200000130BDDF7DDC.png" width="466" height="304" style="width:12.33cm;height:8.043cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D200000130BDDF7DDC.png" /></p>
 <p>نحصل على صفحة فارغة يمكننا من خلالها تصميم واجهة الويب الخاصة بنا:</p>
 <p><img src="images/10000000000001D800000050AE5936A4.png" width="472" height="80" style="width:12.488cm;height:2.117cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D800000050AE5936A4.png" /></p>
-<p>دعونا نسحب جدول [impots] من علامة التبويب [Data] إلى الورقة أعلاه. نحصل على النتيجة التالية:</p>
+<p>دعونا نسحب جدول [<bdi dir="ltr" class="odt-ltr-term">impots</bdi>] من علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Data</bdi>] إلى الورقة أعلاه. نحصل على النتيجة التالية:</p>
 <p><img src="images/10000000000001F3000000EF00FBFC49.png" width="499" height="239" style="width:13.203cm;height:6.324cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F3000000EF00FBFC49.png" /></p>
-<p>انقر بزر الماوس الأيمن على كائن [AccessDataSourceControl] أدناه للوصول إلى خصائصه:</p>
+<p>انقر بزر الماوس الأيمن على كائن [<bdi dir="ltr" class="odt-ltr-term">AccessDataSourceControl</bdi>] أدناه للوصول إلى خصائصه:</p>
 <p><img src="images/10000000000000E8000000CDD372DEE5.png" width="232" height="205" style="width:6.138cm;height:5.424cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E8000000CDD372DEE5.png" /></p>
-<p>يتم توفير سلسلة اتصال OLEDB بقاعدة بيانات ACCESS من خلال خاصية [ConnectionString] أعلاه:</p>
+<p>يتم توفير سلسلة اتصال <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi> بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> من خلال خاصية [<bdi dir="ltr" class="odt-ltr-term">ConnectionString</bdi>] أعلاه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>Provider=Microsoft.Jet.OLEDB.4.0; Ole DB Services=-4; Data Source=D:\data\serge\devel\aspnet\poly\chap5\impots\3\impots.mdb
 </code></pre></div>
-<p>يمكننا أن نرى أن هذه السلسلة تتكون من جزء ثابت وجزء متغير، وهو ببساطة اسم ملف ACCESS. سنستخدم هذه الحقيقة لإنشاء سلسلة الاتصال بمصدر بيانات OLEDB الخاص بنا. </p>
-<p>لنعد الآن إلى فئة [impotsOLEDB] الخاصة بنا. تتولى طريقة [getData] مسؤولية قراءة البيانات من الجدول [impots] ووضعها في ثلاثة مصفوفات (limites، coeffr، coeffn). دعونا نعلق على كودها:</p>
+<p>يمكننا أن نرى أن هذه السلسلة تتكون من جزء ثابت وجزء متغير، وهو ببساطة اسم ملف <bdi dir="ltr" class="odt-ltr-term">ACCESS.</bdi> سنستخدم هذه الحقيقة لإنشاء سلسلة الاتصال بمصدر بيانات <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi> الخاص بنا. </p>
+<p>لنعد الآن إلى فئة [<bdi dir="ltr" class="odt-ltr-term">impotsOLEDB</bdi>] الخاصة بنا. تتولى طريقة [<bdi dir="ltr" class="odt-ltr-term">getData</bdi>] مسؤولية قراءة البيانات من الجدول [<bdi dir="ltr" class="odt-ltr-term">impots</bdi>] ووضعها في ثلاثة مصفوفات (<bdi dir="ltr" class="odt-ltr-term">limites</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffr</bdi>، <bdi dir="ltr" class="odt-ltr-term">coeffn</bdi>). دعونا نعلق على كودها:</p>
 <ul>
-  <li>نقوم بتعريف كائن [DataAdapter]، الذي سيسمح لنا بنقل نتيجة استعلام SQL SELECT إلى الذاكرة. للقيام بذلك، نقوم بتعريف استعلام [select] المراد تنفيذه وربطه بكائن [DataAdapter]. يتطلب منشئ [DataAdapter] أيضًا سلسلة الاتصال التي سيستخدمها للاتصال بمصدر OLEDB
+  <li>نقوم بتعريف كائن [<bdi dir="ltr" class="odt-ltr-term">DataAdapter</bdi>]، الذي سيسمح لنا بنقل نتيجة استعلام <bdi dir="ltr" class="odt-ltr-term">SQL SELECT</bdi> إلى الذاكرة. للقيام بذلك، نقوم بتعريف استعلام [<bdi dir="ltr" class="odt-ltr-term">select</bdi>] المراد تنفيذه وربطه بكائن [<bdi dir="ltr" class="odt-ltr-term">DataAdapter</bdi>]. يتطلب منشئ [<bdi dir="ltr" class="odt-ltr-term">DataAdapter</bdi>] أيضًا سلسلة الاتصال التي سيستخدمها للاتصال بمصدر <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi>
   </li>
 </ul>
 
@@ -2913,7 +2915,7 @@
 </code></pre></div>
 
 <ul>
-  <li>نقوم بتنفيذ الأمر [select] باستخدام طريقة [Fill] الخاصة بكائن [DataAdapter]. يتم تحميل نتيجة [select] في كائن [DataTable] تم إنشاؤه لهذا الغرض. كائن [DataTable] هو تمثيل في الذاكرة لجدول قاعدة البيانات، أي مجموعة من الصفوف والأعمدة. نتعامل مع استثناء قد يحدث إذا كان، على سبيل المثال، سلسلة الاتصال غير صحيحة.
+  <li>نقوم بتنفيذ الأمر [<bdi dir="ltr" class="odt-ltr-term">select</bdi>] باستخدام طريقة [<bdi dir="ltr" class="odt-ltr-term">Fill</bdi>] الخاصة بكائن [<bdi dir="ltr" class="odt-ltr-term">DataAdapter</bdi>]. يتم تحميل نتيجة [<bdi dir="ltr" class="odt-ltr-term">select</bdi>] في كائن [<bdi dir="ltr" class="odt-ltr-term">DataTable</bdi>] تم إنشاؤه لهذا الغرض. كائن [<bdi dir="ltr" class="odt-ltr-term">DataTable</bdi>] هو تمثيل في الذاكرة لجدول قاعدة البيانات، أي مجموعة من الصفوف والأعمدة. نتعامل مع استثناء قد يحدث إذا كان، على سبيل المثال، سلسلة الاتصال غير صحيحة.
   </li>
 </ul>
 
@@ -2928,7 +2930,7 @@
 </code></pre></div>
 
 <ul>
-  <li>في [content]، لدينا جدول [taxes] الذي تم إرجاعه بواسطة عبارة [select]. كائن [DataTable] هو جدول، أي مجموعة من الصفوف. يمكن الوصول إليها عبر خاصية [rows] في [DataTable]:
+  <li>في [<bdi dir="ltr" class="odt-ltr-term">content</bdi>]، لدينا جدول [<bdi dir="ltr" class="odt-ltr-term">taxes</bdi>] الذي تم إرجاعه بواسطة عبارة [<bdi dir="ltr" class="odt-ltr-term">select</bdi>]. كائن [<bdi dir="ltr" class="odt-ltr-term">DataTable</bdi>] هو جدول، أي مجموعة من الصفوف. يمكن الوصول إليها عبر خاصية [<bdi dir="ltr" class="odt-ltr-term">rows</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">DataTable</bdi>]:
   </li>
 </ul>
 
@@ -2938,7 +2940,7 @@
 </code></pre></div>
 
 <ul>
-  <li>كل عنصر في مجموعة [taxRows] هو كائن [DataRow] يمثل صفًا في الجدول. يحتوي هذا الصف على أعمدة يمكن الوصول إليها عبر كائن [DataRow] من خلال خاصية [Item] الخاصة به. [DataRow].[Item(i)] هو العمود رقم i في [DataRow]. من خلال التكرار عبر مجموعة الصفوف (مجموعة DataRows في taxRows) ومجموعة الأعمدة لكل صف، يمكننا استرداد الجدول بأكمله:
+  <li>كل عنصر في مجموعة [<bdi dir="ltr" class="odt-ltr-term">taxRows</bdi>] هو كائن [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>] يمثل صفًا في الجدول. يحتوي هذا الصف على أعمدة يمكن الوصول إليها عبر كائن [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>] من خلال خاصية [<bdi dir="ltr" class="odt-ltr-term">Item</bdi>] الخاصة به. [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>].[<bdi dir="ltr" class="odt-ltr-term">Item</bdi>(<bdi dir="ltr" class="odt-ltr-term">i</bdi>)] هو العمود رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> في [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>]. من خلال التكرار عبر مجموعة الصفوف (مجموعة <bdi dir="ltr" class="odt-ltr-term">DataRows</bdi> في <bdi dir="ltr" class="odt-ltr-term">taxRows</bdi>) ومجموعة الأعمدة لكل صف، يمكننا استرداد الجدول بأكمله:
   </li>
 </ul>
 
@@ -2963,7 +2965,7 @@
 <a id="__codelineno-56-19" name="__codelineno-56-19" href="#__codelineno-56-19"></a><span class="w">            </span><span class="k">End</span><span class="w"> </span><span class="n">Try</span>
 </code></pre></div>
 <ul>
-  <li>بمجرد تحميل البيانات من جدول [taxes] إلى المصفوفات الثلاثة، كل ما يتبقى هو التحقق من محتوياتها باستخدام طريقة [checkData] الخاصة بالفئة الأساسية [taxData]:
+  <li>بمجرد تحميل البيانات من جدول [<bdi dir="ltr" class="odt-ltr-term">taxes</bdi>] إلى المصفوفات الثلاثة، كل ما يتبقى هو التحقق من محتوياتها باستخدام طريقة [<bdi dir="ltr" class="odt-ltr-term">checkData</bdi>] الخاصة بالفئة الأساسية [<bdi dir="ltr" class="odt-ltr-term">taxData</bdi>]:
   </li>
 </ul>
 
@@ -3082,11 +3084,11 @@
 </code></pre></div>
 <p>يتم تشغيل التطبيق باستخدام معلمة:</p>
 <ul>
-  <li>bdACCESS: اسم ملف ACCESS المراد استخدامه
+  <li><bdi dir="ltr" class="odt-ltr-term">bdACCESS:</bdi> اسم ملف <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> المراد استخدامه
   </li>
 </ul>
 
-<p>يتم حساب الضريبة باستخدام كائن من النوع [tax] يتم إنشاؤه عند تشغيل التطبيق:</p>
+<p>يتم حساب الضريبة باستخدام كائن من النوع [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] يتم إنشاؤه عند تشغيل التطبيق:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">            &#x27; retrieve the arguments</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">Dim</span> chemin <span style="color:#0000ff">As</span> <span style="color:#0000ff">String</span> = arguments(0)</span></span>
@@ -3103,10 +3105,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">End</span> <span style="color:#0000ff">Try</span></span></span>
 </code></pre></div>
 
-<p>تم إنشاء سلسلة الاتصال بمصدر OLEDB باستخدام المعلومات التي تم الحصول عليها بواسطة [WebMatrix].</p>
+<p>تم إنشاء سلسلة الاتصال بمصدر <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi> باستخدام المعلومات التي تم الحصول عليها بواسطة [<bdi dir="ltr" class="odt-ltr-term">WebMatrix</bdi>].</p>
 <p>بمجرد التهيئة، يطلب التطبيق من المستخدم بشكل متكرر إدخال المعلومات الثلاثة اللازمة لحساب الضريبة:</p>
 <ul>
-  <li>الحالة الاجتماعية: o للمتزوجين، n لغير المتزوجين
+  <li>الحالة الاجتماعية: <bdi dir="ltr" class="odt-ltr-term">o</bdi> للمتزوجين، <bdi dir="ltr" class="odt-ltr-term">n</bdi> لغير المتزوجين
   </li>
   <li>عدد الأطفال
   </li>
@@ -3119,21 +3121,21 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>dos&gt;vbc /r:impot.dll testimpots.vb
 </code></pre></div>
-<p>يتم وضع ملف [impots.mdb] في مجلد التطبيق التجريبي، ويتم تشغيل التطبيق على النحو التالي:</p>
+<p>يتم وضع ملف [<bdi dir="ltr" class="odt-ltr-term">impots.mdb</bdi>] في مجلد التطبيق التجريبي، ويتم تشغيل التطبيق على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>dos&gt;testimpots impots.mdb
 <a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>Paramètres du calcul de l&#39;impôt au format marié nbEnfants salaire ou rien pour arrêter :o 2 60000
 <a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a>impôt=4300 euro(s)
 </code></pre></div>
-<p>يمكنك تشغيل التطبيق بملف ACCESS غير صحيح:</p>
+<p>يمكنك تشغيل التطبيق بملف <bdi dir="ltr" class="odt-ltr-term">ACCESS</bdi> غير صحيح:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>dos&gt;testimpots xx
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>L&#39;erreur suivante s&#39;est produite : Erreur d&#39;accès à la base de données (Ficher &#39;D:\data\serge\devel\aspnet\poly\chap5\impots\3\xx&#39; introuvable.)
 </code></pre></div>
 <p><a id="toc68683120"></a></p>
 <h3 id="635">6.3.5. طرق عرض تطبيق الويب</h3>
-<p>هذه هي نفسها الموجودة في التطبيق السابق: formulaire.aspx و erreurs.aspx</p>
+<p>هذه هي نفسها الموجودة في التطبيق السابق: <bdi dir="ltr" class="odt-ltr-term">formulaire.aspx</bdi> و <bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi></p>
 <p><a id="toc68683121"></a></p>
-<h3 id="636-globalasax-mainaspx">6.3.6. وحدات التحكم في التطبيق [global.asax، main.aspx]</h3>
-<p>يحتاج فقط وحدة التحكم [global.asax] إلى التعديل. وهي مسؤولة عن إنشاء كائن [impot] عند بدء تشغيل التطبيق. يحتوي منشئ هذا الكائن على معلمة واحدة: كائن [impotsData] المسؤول عن استرداد البيانات. وبالتالي، تتغير هذه المعلمة لأننا نقوم بتبديل مصادر البيانات. تصبح وحدة التحكم [global.asax.vb] كما يلي:</p>
+<h3 id="636-globalasax-mainaspx">6.3.6. وحدات التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>، <bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]</h3>
+<p>يحتاج فقط وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] إلى التعديل. وهي مسؤولة عن إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] عند بدء تشغيل التطبيق. يحتوي منشئ هذا الكائن على معلمة واحدة: كائن [<bdi dir="ltr" class="odt-ltr-term">impotsData</bdi>] المسؤول عن استرداد البيانات. وبالتالي، تتغير هذه المعلمة لأننا نقوم بتبديل مصادر البيانات. تصبح وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Web</span></span>
@@ -3162,7 +3164,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>أصبح مصدر البيانات للكائن [impot] الآن كائن [impotOLEDB]. يأخذ هذا الكائن كمعلمة سلسلة الاتصال لمصدر بيانات OLEDB المراد استخدامه. يتم تخزين هذه السلسلة في ملف تكوين [web.config] الخاص بالتطبيق:</p>
+<p>أصبح مصدر البيانات للكائن [<bdi dir="ltr" class="odt-ltr-term">impot</bdi>] الآن كائن [<bdi dir="ltr" class="odt-ltr-term">impotOLEDB</bdi>]. يأخذ هذا الكائن كمعلمة سلسلة الاتصال لمصدر بيانات <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi> المراد استخدامه. يتم تخزين هذه السلسلة في ملف تكوين [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] الخاص بالتطبيق:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?<span style="color:#800000">xml</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">version</span>=&quot;1.0&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">encoding</span>=&quot;utf-8&quot;<span style="color:#ff00ff"> </span>?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;<span style="color:#800000">configuration</span>&gt;</span></span>
@@ -3173,27 +3175,27 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/<span style="color:#800000">configuration</span>&gt;</span></span>
 </code></pre></div>
 
-<p>يظل وحدة التحكم [main.aspx] دون تغيير.</p>
+<p>يظل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] دون تغيير.</p>
 <p><a id="toc68683122"></a></p>
 <h3 id="637">6.3.7. ملخص التغييرات</h3>
 <p>التطبيق جاهز للاختبار. دعونا نسرد التغييرات التي تم إجراؤها على الإصدار السابق:</p>
 <ol>
   <li>تم إنشاء فئة جديدة للوصول إلى البيانات
   </li>
-  <li>تم تعديل وحدة التحكم [global.asax.vb] في مكان واحد: إنشاء كائن [import]
+  <li>تم تعديل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] في مكان واحد: إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">import</bdi>]
   </li>
-  <li>تمت إضافة ملف [web.config]
+  <li>تمت إضافة ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>]
   </li>
 </ol>
 
 <p><a id="toc68683123"></a></p>
 <h3 id="638">6.3.8. اختبار تطبيق الويب</h3>
-<p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;application-path&gt;. </p>
+<p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. </p>
 <p><img src="images/100000000000007D000000C26C070768.png" width="125" height="194" style="width:3.307cm;height:5.133cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000007D000000C26C070768.png" /></p>
-<p>في هذا المجلد، يتم إنشاء مجلد فرعي [bin]، يتم فيه وضع تجميع [impot.dll] — الذي تم إنشاؤه من ترجمة ملفات فئة الأعمال: [impots.vb، impotsData.vb، impotsArray.vb، impotsOLEDB.vb] —. يظهر أمر الترجمة المطلوب أدناه:</p>
+<p>في هذا المجلد، يتم إنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>]، يتم فيه وضع تجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من ترجمة ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsOLEDB.vb</bdi>] —. يظهر أمر الترجمة المطلوب أدناه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>dos&gt;vbc /r:system.dll /r:system.data.dll /t:library /out:impot.dll impots.vb impotsArray.vb impotsData.vb impotsOLEDB.vb
 </code></pre></div>
-<p>يجب وضع الملف [impot.dll] الذي تم إنشاؤه بواسطة هذا الأمر في &lt;application-path&gt;\bin حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم Cassini باستخدام المعلمات (&lt;application-path&gt;,/impots3). تعطي الاختبارات نفس النتائج كما في الإصدار السابق.</p>
+<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الذي تم إنشاؤه بواسطة هذا الأمر في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">bin</bdi> حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots3</bdi>). تعطي الاختبارات نفس النتائج كما في الإصدار السابق.</p>
 <p><a id="toc68683124"></a></p>
 <h2 id="64-4">6.4. المثال 4</h2>
 <p><a id="toc68683125"></a></p>
@@ -3201,15 +3203,15 @@
 <p>نقترح الآن تحويل تطبيقنا إلى تطبيق محاكاة لحساب الضرائب. سيتمكن المستخدم من إجراء حسابات ضريبية متتالية، وسيتم عرضها عليه في عرض جديد يشبه هذا:</p>
 <p><img src="images/1000000000000224000000FDCE6E8A0E.png" width="548" height="253" style="width:14.499cm;height:6.694cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000224000000FDCE6E8A0E.png" /></p>
 <p><a id="toc68683126"></a></p>
-<h3 id="642-mvc">6.4.2. هيكل MVC للتطبيق</h3>
-<p>تصبح بنية MVC للتطبيق كما يلي:</p>
+<h3 id="642-mvc">6.4.2. هيكل <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> للتطبيق</h3>
+<p>تصبح بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> للتطبيق كما يلي:</p>
 <p><img src="images/10000000000005C60000026362100177.png" width="680" height="281" style="width:17.999cm;height:7.44cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C60000026362100177.png" /></p>
-<p>تظهر طريقة عرض جديدة [simulations.aspx]، وقد قدمنا للتو لقطة شاشة لها. وستكون فئة الوصول إلى البيانات هي فئة [impotsODBC] من المثال 2.</p>
+<p>تظهر طريقة عرض جديدة [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx</bdi>]، وقد قدمنا للتو لقطة شاشة لها. وستكون فئة الوصول إلى البيانات هي فئة [<bdi dir="ltr" class="odt-ltr-term">impotsODBC</bdi>] من المثال 2.</p>
 <p><a id="toc68683127"></a></p>
 <h3 id="643">6.4.3. طرق عرض تطبيق الويب</h3>
-<p>تظل طريقة العرض [erreurs.aspx] دون تغيير. تتغير طريقة العرض [formulaire.aspx] قليلاً. في الواقع، لم يعد مبلغ الضريبة يظهر في طريقة العرض هذه. إنه موجود الآن في طريقة العرض [simulations.aspx]. وبالتالي، عند بدء التشغيل، تكون الصفحة المعروضة للمستخدم كما يلي:</p>
+<p>تظل طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi>] دون تغيير. تتغير طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx</bdi>] قليلاً. في الواقع، لم يعد مبلغ الضريبة يظهر في طريقة العرض هذه. إنه موجود الآن في طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx</bdi>]. وبالتالي، عند بدء التشغيل، تكون الصفحة المعروضة للمستخدم كما يلي:</p>
 <p><img src="images/10000000000000FF000000E1926B5BF0.png" width="255" height="225" style="width:6.747cm;height:5.953cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FF000000E1926B5BF0.png" /></p>
-<p>بالإضافة إلى ذلك، تتضمن طريقة العرض [form] نصًا برمجيًا JavaScript يقوم بالتحقق من صحة البيانات المدخلة قبل إرسالها إلى الخادم، كما هو موضح في المثال التالي:</p>
+<p>بالإضافة إلى ذلك، تتضمن طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">form</bdi>] نصًا برمجيًا <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> يقوم بالتحقق من صحة البيانات المدخلة قبل إرسالها إلى الخادم، كما هو موضح في المثال التالي:</p>
 <p><img src="images/100000000000027B000000E054C5DD21.png" width="635" height="224" style="width:16.801cm;height:5.927cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000027B000000E054C5DD21.png" /></p>
 <p>فيما يلي كود العرض:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3275,18 +3277,18 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>الحقول الديناميكية في الصفحة هي نفسها الموجودة في الإصدارات السابقة. تمت إزالة الحقل الديناميكي الخاص بمبلغ الضريبة. لم يعد الزر [Calculate] زر [submit]. إنه [button]، وعند النقر عليه، يتم تنفيذ دالة JavaScript [calculate()]:</p>
+<p>الحقول الديناميكية في الصفحة هي نفسها الموجودة في الإصدارات السابقة. تمت إزالة الحقل الديناميكي الخاص بمبلغ الضريبة. لم يعد الزر [<bdi dir="ltr" class="odt-ltr-term">Calculate</bdi>] زر [<bdi dir="ltr" class="odt-ltr-term">submit</bdi>]. إنه [<bdi dir="ltr" class="odt-ltr-term">button</bdi>]، وعند النقر عليه، يتم تنفيذ دالة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> [<bdi dir="ltr" class="odt-ltr-term">calculate</bdi>()]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">                &lt;<span style="color:#800000">INPUT</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">type</span>=&quot;button&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">value</span>=&quot;Calculer&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">onclick</span>=&quot;calculer()&quot;&gt;</span></span>
 </code></pre></div>
 
-<p>لقد أطلقنا على النموذج اسم [frmImpots] حتى نتمكن من الإشارة إليه في البرنامج النصي [calculer]:</p>
+<p>لقد أطلقنا على النموذج اسم [<bdi dir="ltr" class="odt-ltr-term">frmImpots</bdi>] حتى نتمكن من الإشارة إليه في البرنامج النصي [<bdi dir="ltr" class="odt-ltr-term">calculer</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">        &lt;<span style="color:#800000">form</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">name</span>=&quot;frmImpots&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">method</span>=&quot;post&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">action</span>=&quot;main.aspx?action=calcul&quot;&gt;</span></span>
 </code></pre></div>
 
-<p>تستخدم دالة JavaScript [calculate] التعبيرات العادية للتحقق من صحة الحقول في النموذجين [document.frmImpots.txtEnfants] و [document.frmImpots.txtSalaire]. إذا كانت القيم المدخلة صحيحة، يتم إرسالها إلى الخادم عبر [document.frmImpots.submit()].</p>
-<p>تحصل صفحة العرض على حقولها الديناميكية من وحدة التحكم التالية [formulaire.aspx.vb]:</p>
+<p>تستخدم دالة <bdi dir="ltr" class="odt-ltr-term">JavaScript</bdi> [<bdi dir="ltr" class="odt-ltr-term">calculate</bdi>] التعبيرات العادية للتحقق من صحة الحقول في النموذجين [<bdi dir="ltr" class="odt-ltr-term">document.frmImpots.txtEnfants</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">document.frmImpots.txtSalaire</bdi>]. إذا كانت القيم المدخلة صحيحة، يتم إرسالها إلى الخادم عبر [<bdi dir="ltr" class="odt-ltr-term">document.frmImpots.submit</bdi>()].</p>
+<p>تحصل صفحة العرض على حقولها الديناميكية من وحدة التحكم التالية [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx.vb</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections.Specialized</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -3318,8 +3320,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>وحدة التحكم [formulaire.aspx.vb] مطابقة للإصدارات السابقة باستثناء أنها لم تعد بحاجة إلى استرداد الحقل [txtImpot] من السياق، حيث تمت إزالة هذا الحقل من الصفحة.</p>
-<p>يظهر العرض [simulations.aspx] كما يلي:</p>
+<p>وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx.vb</bdi>] مطابقة للإصدارات السابقة باستثناء أنها لم تعد بحاجة إلى استرداد الحقل [<bdi dir="ltr" class="odt-ltr-term">txtImpot</bdi>] من السياق، حيث تمت إزالة هذا الحقل من الصفحة.</p>
+<p>يظهر العرض [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx</bdi>] كما يلي:</p>
 <p><img src="images/100000000000018E000000C3B72996B3.png" width="398" height="195" style="width:10.53cm;height:5.159cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000018E000000C3B72996B3.png" /></p>
 <p>ويتوافق مع كود العرض التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -3356,15 +3358,15 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>simulationsHTML
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كود HTML لقائمة المحاكاة في شكل صفوف جدول HTML</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> لقائمة المحاكاة في شكل صفوف جدول <bdi dir="ltr" class="odt-ltr-term">HTML</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>href
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عنوان URL للرابط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للرابط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>link
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نص الرابط</div></td></tr></table>
 
-<p>يتم إنشاؤها بواسطة وحدة التحكم [simulations.aspx.vb]:</p>
+<p>يتم إنشاؤها بواسطة وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx.vb</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> Microsoft.VisualBasic</span></span>
@@ -3401,29 +3403,29 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>Context.Items(&quot;simulations&quot;)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كائن ArrayList يحتوي على قائمة المحاكاة المراد عرضها. كل عنصر عبارة عن مصفوفة من 4 سلاسل تمثل معلومات المحاكاة (متزوج، أطفال، راتب، ضريبة).</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">كائن <bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi> يحتوي على قائمة المحاكاة المراد عرضها. كل عنصر عبارة عن مصفوفة من 4 سلاسل تمثل معلومات المحاكاة (متزوج، أطفال، راتب، ضريبة).</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>Context.Items(&quot;href&quot;)
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عنوان URL للرابط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للرابط</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>Context.Items(&quot;link&quot;)
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نص الرابط</div></td></tr></table>
 
 <p><a id="toc68683128"></a></p>
-<h3 id="644-globalasax-mainaspx">6.4.4. وحدات التحكم [global.asax، main.aspx]</h3>
-<p>دعونا نستعرض بنية MVC لتطبيقنا:</p>
+<h3 id="644-globalasax-mainaspx">6.4.4. وحدات التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>، <bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]</h3>
+<p>دعونا نستعرض بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> لتطبيقنا:</p>
 <p><img src="images/10000000000005DD0000024D264B72D1.png" width="680" height="267" style="width:17.999cm;height:7.063cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DD0000024D264B72D1.png" /></p>
-<p>يجب أن يتعامل وحدة التحكم [main.aspx] مع ثلاثة إجراءات:</p>
+<p>يجب أن يتعامل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] مع ثلاثة إجراءات:</p>
 <ul>
-  <li><b>init</b>: تتوافق مع الطلب الأول للعميل. تعرض وحدة التحكم طريقة العرض [form.aspx]
+  <li><b><bdi dir="ltr" class="odt-ltr-term">init</bdi></b>: تتوافق مع الطلب الأول للعميل. تعرض وحدة التحكم طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>]
   </li>
-  <li><b>calcul</b>: يتوافق مع طلب حساب الضريبة. إذا كانت البيانات في نموذج الإدخال صحيحة، يتم حساب الضريبة باستخدام فئة الأعمال [impotsODBC]. يعرض وحدة التحكم العرض [simulations.aspx] للعميل مع نتيجة المحاكاة الحالية بالإضافة إلى جميع المحاكاة السابقة. إذا كانت البيانات في نموذج الإدخال غير صحيحة، يعرض وحدة التحكم العرض [erreurs.aspx] مع قائمة الأخطاء ورابط للعودة إلى النموذج.
+  <li><b><bdi dir="ltr" class="odt-ltr-term">calcul</bdi></b>: يتوافق مع طلب حساب الضريبة. إذا كانت البيانات في نموذج الإدخال صحيحة، يتم حساب الضريبة باستخدام فئة الأعمال [<bdi dir="ltr" class="odt-ltr-term">impotsODBC</bdi>]. يعرض وحدة التحكم العرض [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx</bdi>] للعميل مع نتيجة المحاكاة الحالية بالإضافة إلى جميع المحاكاة السابقة. إذا كانت البيانات في نموذج الإدخال غير صحيحة، يعرض وحدة التحكم العرض [<bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi>] مع قائمة الأخطاء ورابط للعودة إلى النموذج.
   </li>
-  <li><b>return</b>: يتوافق مع العودة إلى النموذج بعد حدوث خطأ. يعرض وحدة التحكم عرض [form.aspx] كما تم التحقق من صحته قبل حدوث الخطأ.
+  <li><b><bdi dir="ltr" class="odt-ltr-term">return</bdi></b>: يتوافق مع العودة إلى النموذج بعد حدوث خطأ. يعرض وحدة التحكم عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] كما تم التحقق من صحته قبل حدوث الخطأ.
   </li>
 </ul>
 
-<p>في هذا الإصدار الجديد، لم يتغير سوى الإجراء [calcul]. في الواقع، إذا كانت البيانات صالحة، فيجب أن تؤدي إلى عرض [simulations.aspx]، في حين أنها كانت تؤدي سابقًا إلى عرض [form.aspx]. يصبح وحدة التحكم [main.aspx.vb] كما يلي:</p>
+<p>في هذا الإصدار الجديد، لم يتغير سوى الإجراء [<bdi dir="ltr" class="odt-ltr-term">calcul</bdi>]. في الواقع، إذا كانت البيانات صالحة، فيجب أن تؤدي إلى عرض [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx</bdi>]، في حين أنها كانت تؤدي سابقًا إلى عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>]. يصبح وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">...</span><span style="color:#0000ff"></span></span></span>
@@ -3497,15 +3499,15 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>لقد قمنا بتضمين ما هو ضروري فقط أعلاه لفهم التغييرات الموجودة حصريًا في دالة [calculImpots]:</p>
+<p>لقد قمنا بتضمين ما هو ضروري فقط أعلاه لفهم التغييرات الموجودة حصريًا في دالة [<bdi dir="ltr" class="odt-ltr-term">calculImpots</bdi>]:</p>
 <ul>
-  <li>أولاً، تحفظ الدالة النموذج [Request.Form] في الجلسة بحيث يمكن إعادة إنشاء النموذج في الحالة التي تم التحقق من صحتها فيها. يجب القيام بذلك في جميع الحالات، لأنه سواء أسفرت العملية عن استجابة [erreurs.aspx] أو استجابة [simulations.aspx]، فإننا نعود إلى النموذج عبر الرابط [العودة إلى النموذج]. لاستعادة النموذج بشكل صحيح، يجب أن تكون قيمه قد تم حفظها في الجلسة مسبقًا.
+  <li>أولاً، تحفظ الدالة النموذج [<bdi dir="ltr" class="odt-ltr-term">Request.Form</bdi>] في الجلسة بحيث يمكن إعادة إنشاء النموذج في الحالة التي تم التحقق من صحتها فيها. يجب القيام بذلك في جميع الحالات، لأنه سواء أسفرت العملية عن استجابة [<bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi>] أو استجابة [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx</bdi>]، فإننا نعود إلى النموذج عبر الرابط [العودة إلى النموذج]. لاستعادة النموذج بشكل صحيح، يجب أن تكون قيمه قد تم حفظها في الجلسة مسبقًا.
   </li>
-  <li>إذا كانت البيانات المدخلة صحيحة، تضيف الوظيفة المحاكاة الحالية (الحالة الاجتماعية، عدد الأبناء، الراتب، الضريبة) إلى قائمة المحاكاة. وتوجد هذه القائمة في الجلسة المرتبطة بمفتاح &quot;simulations&quot;.
+  <li>إذا كانت البيانات المدخلة صحيحة، تضيف الوظيفة المحاكاة الحالية (الحالة الاجتماعية، عدد الأبناء، الراتب، الضريبة) إلى قائمة المحاكاة. وتوجد هذه القائمة في الجلسة المرتبطة بمفتاح &quot;<bdi dir="ltr" class="odt-ltr-term">simulations</bdi>&quot;.
   </li>
-  <li>يتم تخزين قائمة المحاكاة في الجلسة لاستخدامها في المستقبل. كما يتم وضعها في السياق الحالي لأن هذا هو المكان الذي تتوقع طريقة العرض [simulations.aspx] العثور عليها فيه
+  <li>يتم تخزين قائمة المحاكاة في الجلسة لاستخدامها في المستقبل. كما يتم وضعها في السياق الحالي لأن هذا هو المكان الذي تتوقع طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx</bdi>] العثور عليها فيه
   </li>
-  <li>يتم عرض عرض [simulations.aspx] بمجرد وضع المعلومات الأخرى التي يتطلبها في السياق
+  <li>يتم عرض عرض [<bdi dir="ltr" class="odt-ltr-term">simulations.aspx</bdi>] بمجرد وضع المعلومات الأخرى التي يتطلبها في السياق
   </li>
 </ul>
 
@@ -3515,34 +3517,34 @@
 <ol>
   <li>تم إنشاء عرض جديد
   </li>
-  <li>تم تعديل وحدة التحكم [main.aspx.vb] في مكان واحد: معالجة الإجراء [calcul]
+  <li>تم تعديل وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] في مكان واحد: معالجة الإجراء [<bdi dir="ltr" class="odt-ltr-term">calcul</bdi>]
   </li>
 </ol>
 
 <p><a id="toc68683130"></a></p>
 <h3 id="646">6.4.6. اختبار تطبيق الويب</h3>
-<p>ندعو القارئ إلى إجراء الاختبارات. فيما يلي تذكير بالإجراء. يتم وضع جميع ملفات التطبيق في مجلد باسم &lt;application-path&gt;. داخل هذا المجلد، يتم إنشاء مجلد فرعي [bin]، يحتوي على التجميع [impot.dll] الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [impots.vb، impotsData.vb، impotsArray.vb، impotsODBC.vb]. يجب وضع ملف [impot.dll] الناتج عن هذا الأمر في &lt;application-path&gt;\bin حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم Cassini باستخدام المعلمات (&lt;application-path&gt;,/impots4).</p>
+<p>ندعو القارئ إلى إجراء الاختبارات. فيما يلي تذكير بالإجراء. يتم وضع جميع ملفات التطبيق في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. داخل هذا المجلد، يتم إنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>]، يحتوي على التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsODBC.vb</bdi>]. يجب وضع ملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الناتج عن هذا الأمر في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">bin</bdi> حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots4</bdi>).</p>
 <h2 id="65">6.5. الخلاصة</h2>
-<p>أظهرت الأمثلة السابقة، في سيناريو ملموس، الآليات المستخدمة بشكل شائع في تطوير الويب. لقد استخدمنا بنية MVC باستمرار لقيمتها التعليمية. كان بإمكاننا التعامل مع هذه الأمثلة نفسها بطريقة مختلفة وربما أبسط بدون هذه البنية. ومع ذلك، فإنها توفر مزايا كبيرة بمجرد أن يصبح التطبيق معقدًا إلى حد ما مع وجود صفحات متعددة.</p>
+<p>أظهرت الأمثلة السابقة، في سيناريو ملموس، الآليات المستخدمة بشكل شائع في تطوير الويب. لقد استخدمنا بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> باستمرار لقيمتها التعليمية. كان بإمكاننا التعامل مع هذه الأمثلة نفسها بطريقة مختلفة وربما أبسط بدون هذه البنية. ومع ذلك، فإنها توفر مزايا كبيرة بمجرد أن يصبح التطبيق معقدًا إلى حد ما مع وجود صفحات متعددة.</p>
 <p>يمكننا مواصلة أمثلةنا بطرق مختلفة. فيما يلي بعض منها:</p>
 <ul>
-  <li>قد يرغب المستخدم في حفظ محاكاته بمرور الوقت. يمكنه تشغيل المحاكاة في اليوم D واسترجاعها في اليوم D+3، على سبيل المثال. أحد الحلول الممكنة لهذه المشكلة هو استخدام ملفات تعريف الارتباط. نعلم أن رمز الجلسة بين الخادم والعميل يتم إرساله عبر هذه الآلية. يمكننا أيضًا استخدام هذه الآلية لنقل المحاكاة بين العميل والخادم. 
+  <li>قد يرغب المستخدم في حفظ محاكاته بمرور الوقت. يمكنه تشغيل المحاكاة في اليوم <bdi dir="ltr" class="odt-ltr-term">D</bdi> واسترجاعها في اليوم <bdi dir="ltr" class="odt-ltr-term">D+3</bdi>، على سبيل المثال. أحد الحلول الممكنة لهذه المشكلة هو استخدام ملفات تعريف الارتباط. نعلم أن رمز الجلسة بين الخادم والعميل يتم إرساله عبر هذه الآلية. يمكننا أيضًا استخدام هذه الآلية لنقل المحاكاة بين العميل والخادم. 
     <ul>
-      <li>في نفس الوقت الذي يرسل فيه الخادم الصفحة التي تحتوي على نتائج المحاكاة، يرسل ملف تعريف ارتباط في رؤوس HTTP الخاصة به يحتوي على سلسلة تمثل المحاكاة. نظرًا لوجودها في كائن [ArrayList]، يجب تحويل هذا الكائن إلى [String]. سيقوم الخادم بتعيين مدة صلاحية لملف تعريف الارتباط، على سبيل المثال 30 يومًا.
+      <li>في نفس الوقت الذي يرسل فيه الخادم الصفحة التي تحتوي على نتائج المحاكاة، يرسل ملف تعريف ارتباط في رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الخاصة به يحتوي على سلسلة تمثل المحاكاة. نظرًا لوجودها في كائن [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>]، يجب تحويل هذا الكائن إلى [<bdi dir="ltr" class="odt-ltr-term">String</bdi>]. سيقوم الخادم بتعيين مدة صلاحية لملف تعريف الارتباط، على سبيل المثال 30 يومًا.
       </li>
-      <li>يخزن متصفح العميل ملفات تعريف الارتباط المستلمة في ملف ويقوم بإرسالها مرة أخرى في كل مرة يرسل فيها طلبًا إلى الخادم الذي أرسلها، بشرط أن تكون لا تزال صالحة (لم تتجاوز مدة صلاحيتها). سيتلقى الخادم سلسلة أحرف [String] للمحاكاة، والتي يجب عليه تحويلها إلى كائن [ArrayList].
+      <li>يخزن متصفح العميل ملفات تعريف الارتباط المستلمة في ملف ويقوم بإرسالها مرة أخرى في كل مرة يرسل فيها طلبًا إلى الخادم الذي أرسلها، بشرط أن تكون لا تزال صالحة (لم تتجاوز مدة صلاحيتها). سيتلقى الخادم سلسلة أحرف [<bdi dir="ltr" class="odt-ltr-term">String</bdi>] للمحاكاة، والتي يجب عليه تحويلها إلى كائن [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>].
       </li>
     </ul>
   </li>
 </ul>
 
-<p>تتم إدارة ملفات تعريف الارتباط بواسطة [Response.Cookies] عند إرسالها إلى العميل وبواسطة [Request.Cookies] عند استلامها على الخادم.</p>
+<p>تتم إدارة ملفات تعريف الارتباط بواسطة [<bdi dir="ltr" class="odt-ltr-term">Response.Cookies</bdi>] عند إرسالها إلى العميل وبواسطة [<bdi dir="ltr" class="odt-ltr-term">Request.Cookies</bdi>] عند استلامها على الخادم.</p>
 <ul>
   <li>قد تصبح الآلية الموضحة أعلاه مستهلكة للموارد بشكل كبير في حالة وجود عدد كبير من عمليات المحاكاة. علاوة على ذلك، من الشائع أن يقوم المستخدم بمسح ملفات تعريف الارتباط بشكل دوري عن طريق حذفها جميعًا، حتى لو كان يسمح لمتصفحه باستخدامها. لذلك، ستفقد ملفات تعريف الارتباط الخاصة بالمحاكاة عاجلاً أم آجلاً. لذلك قد نرغب في تخزينها على الخادم بدلاً من العميل، في قاعدة بيانات على سبيل المثال. لربط عمليات المحاكاة بمستخدم معين، يمكن أن يبدأ التطبيق بمرحلة مصادقة تتطلب اسم مستخدم وكلمة مرور، يتم تخزينهما في قاعدة بيانات أو أي نوع آخر من مستودعات البيانات.
   </li>
   <li>قد نرغب أيضًا في تأمين تشغيل تطبيقنا. يعتمد التطبيق حاليًا على افتراضين:
     <ol>
-      <li>يمر المستخدم دائمًا عبر وحدة التحكم [main.aspx]
+      <li>يمر المستخدم دائمًا عبر وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]
       </li>
       <li>وفي هذه الحالة، يستخدم دائمًا الإجراءات المتاحة على الصفحة التي تم إرسالها إليه
       </li>
@@ -3550,21 +3552,21 @@
   </li>
 </ul>
 
-<p>ماذا يحدث، على سبيل المثال، إذا طلب المستخدم مباشرةً عنوان URL [http://localhost/impots4/formulaire.aspx]؟ هذا السيناريو غير مرجح لأن المستخدم لا يعرف هذا العنوان. ومع ذلك، يجب أخذه في الاعتبار. يمكن معالجته بواسطة وحدة التحكم في التطبيق [global.asax]، التي تعالج جميع الطلبات الموجهة إلى التطبيق. وبالتالي يمكنها التحقق من أن المورد المطلوب هو بالفعل [main.aspx].</p>
-<p>السيناريو الأكثر احتمالاً هو أن المستخدم لا يستخدم الإجراءات المتاحة على الصفحة التي أرسلها إليه الخادم. على سبيل المثال، ماذا يحدث إذا طلب المستخدم عنوان URL [http://localhost/impots4/main.aspx?action=retour] مباشرةً دون ملء النموذج أولاً؟ دعونا نجرب ذلك. نحصل على الاستجابة التالية:</p>
+<p>ماذا يحدث، على سبيل المثال، إذا طلب المستخدم مباشرةً عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/impots4/formulaire.aspx</bdi>]؟ هذا السيناريو غير مرجح لأن المستخدم لا يعرف هذا العنوان. ومع ذلك، يجب أخذه في الاعتبار. يمكن معالجته بواسطة وحدة التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]، التي تعالج جميع الطلبات الموجهة إلى التطبيق. وبالتالي يمكنها التحقق من أن المورد المطلوب هو بالفعل [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>].</p>
+<p>السيناريو الأكثر احتمالاً هو أن المستخدم لا يستخدم الإجراءات المتاحة على الصفحة التي أرسلها إليه الخادم. على سبيل المثال، ماذا يحدث إذا طلب المستخدم عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/impots4/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">retour</bdi>] مباشرةً دون ملء النموذج أولاً؟ دعونا نجرب ذلك. نحصل على الاستجابة التالية:</p>
 <p><img src="images/1000000000000282000000F4C0BF5371.png" width="642" height="244" style="width:16.986cm;height:6.456cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000282000000F4C0BF5371.png" /></p>
-<p>يتعطل الخادم. وهذا أمر طبيعي. بالنسبة للإجراء [return]، يتوقع وحدة التحكم العثور على كائن [NameValueCollection] في الجلسة يمثل قيم النموذج التي يحتاج إلى عرضها. ولا يعثر عليها. توفر آلية وحدة التحكم حلاً أنيقًا لهذه المشكلة. لكل طلب، يمكن لوحدة التحكم [main.aspx] التحقق من أن الإجراء المطلوب هو بالفعل أحد الإجراءات من الصفحة التي تم إرسالها مسبقًا إلى المستخدم. يمكننا استخدام الآلية التالية:</p>
+<p>يتعطل الخادم. وهذا أمر طبيعي. بالنسبة للإجراء [<bdi dir="ltr" class="odt-ltr-term">return</bdi>]، يتوقع وحدة التحكم العثور على كائن [<bdi dir="ltr" class="odt-ltr-term">NameValueCollection</bdi>] في الجلسة يمثل قيم النموذج التي يحتاج إلى عرضها. ولا يعثر عليها. توفر آلية وحدة التحكم حلاً أنيقًا لهذه المشكلة. لكل طلب، يمكن لوحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] التحقق من أن الإجراء المطلوب هو بالفعل أحد الإجراءات من الصفحة التي تم إرسالها مسبقًا إلى المستخدم. يمكننا استخدام الآلية التالية:</p>
 <ul>
   <li>قبل إرسال استجابته إلى العميل، يقوم وحدة التحكم بتخزين المعلومات التي تحدد هذه الصفحة في جلسة عمل العميل
   </li>
   <li>عندما يتلقى طلبًا جديدًا من العميل، يتحقق من أن الإجراء المطلوب ينتمي بالفعل إلى آخر صفحة تم إرسالها إلى ذلك العميل
   </li>
-  <li>يمكن إدخال المعلومات التي تربط بين الصفحات والإجراءات المسموح بها على تلك الصفحات في ملف تكوين [web.config] الخاص بالتطبيق.
+  <li>يمكن إدخال المعلومات التي تربط بين الصفحات والإجراءات المسموح بها على تلك الصفحات في ملف تكوين [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] الخاص بالتطبيق.
   </li>
 </ul>
 
 <ul>
-  <li>تُظهر التجربة أن وحدات التحكم في التطبيقات تشترك في أساس مشترك واسع النطاق وأنه من الممكن إنشاء وحدة تحكم عامة، مع معالجة تخصصها لتطبيق معين عبر ملف تكوين. هذا هو النهج الذي تتبعه، على سبيل المثال، أداة [Struts] في مجال برمجة الويب بلغة Java.
+  <li>تُظهر التجربة أن وحدات التحكم في التطبيقات تشترك في أساس مشترك واسع النطاق وأنه من الممكن إنشاء وحدة تحكم عامة، مع معالجة تخصصها لتطبيق معين عبر ملف تكوين. هذا هو النهج الذي تتبعه، على سبيل المثال، أداة [<bdi dir="ltr" class="odt-ltr-term">Struts</bdi>] في مجال برمجة الويب بلغة <bdi dir="ltr" class="odt-ltr-term">Java.</bdi>
   </li>
 </ul>
 

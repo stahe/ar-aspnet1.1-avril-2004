@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="stylesheets/focus.css">
     
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -886,50 +888,50 @@
 
 
 <p><a id="toc69180331"></a></p>
-<h1 id="4-aspnet">4. أساسيات تطوير ASP.NET</h1>
+<h1 id="4-aspnet">4. أساسيات تطوير <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi></h1>
 <p><a id="toc69180234"></a>
 <a id="toc69180332"></a></p>
-<h2 id="41-aspnet">4.1. مفهوم تطبيق الويب ASP.NET</h2>
+<h2 id="41-aspnet">4.1. مفهوم تطبيق الويب <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi></h2>
 <p><a id="toc69180235"></a>
 <a id="toc69180333"></a></p>
 <h3 id="411">4.1.1. مقدمة</h3>
-<p>تطبيق الويب هو تطبيق يجمع بين مستندات متنوعة (HTML، كود .NET، صور، أصوات، إلخ). يجب أن تكون هذه المستندات موجودة ضمن دليل جذر واحد، يُعرف باسم جذر تطبيق الويب. يرتبط مسار افتراضي على خادم الويب بهذا الجذر. لقد تعرفنا على مفهوم الدليل الافتراضي لخادم الويب Cassini. هذا المفهوم موجود أيضًا في خادم الويب IIS. هناك فرق مهم بين الخادمين وهو أنه في أي وقت، يمكن أن يحتوي IIS على أي عدد من الدلائل الافتراضية، بينما يحتوي خادم الويب Cassini على دليل واحد فقط — وهو الدليل المحدد عند بدء التشغيل. هذا يعني أن خادم IIS يمكنه تقديم عدة تطبيقات ويب في وقت واحد، بينما يقدم خادم Cassini تطبيقًا واحدًا فقط في كل مرة. في الأمثلة السابقة، كان خادم Cassini يُشغَّل دائمًا بالمعلمات (&lt;webroot&gt;,/aspnet) التي ربطت المجلد الافتراضي /aspnet بالمجلد الفعلي &lt;webroot&gt;.  وبالتالي، كان خادم الويب يخدم دائمًا نفس تطبيق الويب. لم يمنعنا هذا من كتابة واختبار صفحات مختلفة ومستقلة داخل تطبيق الويب الفردي هذا. لكل تطبيق ويب موارده الخاصة، الموجودة تحت جذره الفعلي &lt;webroot&gt;:</p>
+<p>تطبيق الويب هو تطبيق يجمع بين مستندات متنوعة (<bdi dir="ltr" class="odt-ltr-term">HTML</bdi>، كود .<bdi dir="ltr" class="odt-ltr-term">NET</bdi>، صور، أصوات، إلخ). يجب أن تكون هذه المستندات موجودة ضمن دليل جذر واحد، يُعرف باسم جذر تطبيق الويب. يرتبط مسار افتراضي على خادم الويب بهذا الجذر. لقد تعرفنا على مفهوم الدليل الافتراضي لخادم الويب <bdi dir="ltr" class="odt-ltr-term">Cassini.</bdi> هذا المفهوم موجود أيضًا في خادم الويب <bdi dir="ltr" class="odt-ltr-term">IIS.</bdi> هناك فرق مهم بين الخادمين وهو أنه في أي وقت، يمكن أن يحتوي <bdi dir="ltr" class="odt-ltr-term">IIS</bdi> على أي عدد من الدلائل الافتراضية، بينما يحتوي خادم الويب <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> على دليل واحد فقط — وهو الدليل المحدد عند بدء التشغيل. هذا يعني أن خادم <bdi dir="ltr" class="odt-ltr-term">IIS</bdi> يمكنه تقديم عدة تطبيقات ويب في وقت واحد، بينما يقدم خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> تطبيقًا واحدًا فقط في كل مرة. في الأمثلة السابقة، كان خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> يُشغَّل دائمًا بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">webroot</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet</bdi>) التي ربطت المجلد الافتراضي /<bdi dir="ltr" class="odt-ltr-term">aspnet</bdi> بالمجلد الفعلي &lt;<bdi dir="ltr" class="odt-ltr-term">webroot</bdi>&gt;.  وبالتالي، كان خادم الويب يخدم دائمًا نفس تطبيق الويب. لم يمنعنا هذا من كتابة واختبار صفحات مختلفة ومستقلة داخل تطبيق الويب الفردي هذا. لكل تطبيق ويب موارده الخاصة، الموجودة تحت جذره الفعلي &lt;<bdi dir="ltr" class="odt-ltr-term">webroot</bdi>&gt;:</p>
 <ul>
-  <li>مجلد [bin] حيث يمكن وضع الفئات المُجمَّعة مسبقًا
+  <li>مجلد [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>] حيث يمكن وضع الفئات المُجمَّعة مسبقًا
   </li>
-  <li>ملف [global.asax] الذي يسمح لك بتهيئة تطبيق الويب ككل وكذلك بيئة التشغيل لكل مستخدم من مستخدميه
+  <li>ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] الذي يسمح لك بتهيئة تطبيق الويب ككل وكذلك بيئة التشغيل لكل مستخدم من مستخدميه
   </li>
-  <li>ملف [web.config] الذي يسمح لك بتكوين سلوك التطبيق
+  <li>ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] الذي يسمح لك بتكوين سلوك التطبيق
   </li>
-  <li>ملف [default.aspx] الذي يعمل كنقطة دخول للتطبيق
+  <li>ملف [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>] الذي يعمل كنقطة دخول للتطبيق
   </li>
   <li>...
   </li>
 </ul>
 
-<p>بمجرد أن يستخدم التطبيق أحد هذه الموارد الثلاثة، فإنه يتطلب مسارات مادية وافتراضية خاصة به. في الواقع، لا يوجد سبب لتكوين تطبيقين ويب مختلفين بنفس الطريقة. يمكن وضع جميع الأمثلة السابقة داخل نفس التطبيق (&lt;webroot&gt;,/aspnet) لأنها لم تستخدم أيًا من الموارد المذكورة أعلاه.</p>
-<p>دعونا نعيد النظر في بنية MVC الموصى بها في بداية هذا الفصل لتطوير تطبيقات الويب:</p>
+<p>بمجرد أن يستخدم التطبيق أحد هذه الموارد الثلاثة، فإنه يتطلب مسارات مادية وافتراضية خاصة به. في الواقع، لا يوجد سبب لتكوين تطبيقين ويب مختلفين بنفس الطريقة. يمكن وضع جميع الأمثلة السابقة داخل نفس التطبيق (&lt;<bdi dir="ltr" class="odt-ltr-term">webroot</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet</bdi>) لأنها لم تستخدم أيًا من الموارد المذكورة أعلاه.</p>
+<p>دعونا نعيد النظر في بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> الموصى بها في بداية هذا الفصل لتطوير تطبيقات الويب:</p>
 <p><img src="images/100000000000053900000251AE187D5C.png" width="669" height="297" style="width:17.688cm;height:7.846cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053900000251AE187D5C.png" /></p>
-<p>يتكون تطبيق الويب من ملفات الفئات (وحدة التحكم، وفئات الأعمال، وفئات الوصول إلى البيانات) وملفات العرض (مستندات HTML، والصور، والمقاطع الصوتية، وأوراق الأنماط، وما إلى ذلك). سيتم وضع جميع هذه الملفات تحت دليل جذر واحد، والذي سنشير إليه أحيانًا باسم &lt;application-path&gt;. سيتم ربط دليل الجذر هذا بمسار افتراضي &lt;application-vpath&gt;. يتم تكوين التعيين بين هذا المسار الافتراضي والمسار الفعلي عبر خادم الويب. لقد رأينا أنه بالنسبة لخادم Cassini، يحدث هذا التعيين عند تشغيل الخادم. على سبيل المثال، في نافذة موجه الأوامر، سنقوم بتشغيل Cassini باستخدام:</p>
+<p>يتكون تطبيق الويب من ملفات الفئات (وحدة التحكم، وفئات الأعمال، وفئات الوصول إلى البيانات) وملفات العرض (مستندات <bdi dir="ltr" class="odt-ltr-term">HTML</bdi>، والصور، والمقاطع الصوتية، وأوراق الأنماط، وما إلى ذلك). سيتم وضع جميع هذه الملفات تحت دليل جذر واحد، والذي سنشير إليه أحيانًا باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. سيتم ربط دليل الجذر هذا بمسار افتراضي &lt;<bdi dir="ltr" class="odt-ltr-term">application-vpath</bdi>&gt;. يتم تكوين التعيين بين هذا المسار الافتراضي والمسار الفعلي عبر خادم الويب. لقد رأينا أنه بالنسبة لخادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi>، يحدث هذا التعيين عند تشغيل الخادم. على سبيل المثال، في نافذة موجه الأوامر، سنقوم بتشغيل <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>webserver.exe /port:80 /path:&lt;application-path&gt; /vpath:&lt;application-vpath&gt;
 </code></pre></div>
-<p>في المجلد &lt;application-path&gt;، وبحسب احتياجاتنا، سنجد:</p>
+<p>في المجلد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;، وبحسب احتياجاتنا، سنجد:</p>
 <ul>
-  <li>مجلد [bin] لوضع الفئات المُجمَّعة مسبقًا (DLLs)
+  <li>مجلد [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>] لوضع الفئات المُجمَّعة مسبقًا (<bdi dir="ltr" class="odt-ltr-term">DLLs</bdi>)
   </li>
-  <li>ملف [global.asax] عندما نحتاج إلى إجراء التهيئة إما أثناء بدء تشغيل التطبيق أو أثناء جلسة المستخدم
+  <li>ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] عندما نحتاج إلى إجراء التهيئة إما أثناء بدء تشغيل التطبيق أو أثناء جلسة المستخدم
   </li>
-  <li>ملف [web.config] عندما نحتاج إلى تكوين التطبيق
+  <li>ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] عندما نحتاج إلى تكوين التطبيق
   </li>
-  <li>ملف [default.aspx] عندما نحتاج إلى صفحة افتراضية في التطبيق
+  <li>ملف [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>] عندما نحتاج إلى صفحة افتراضية في التطبيق
   </li>
 </ul>
 
-<p>للالتزام بمفهوم تطبيق الويب هذا، سيتم وضع جميع الأمثلة القادمة في مجلد &lt;application-path&gt; خاص بالتطبيق، والذي سيتم ربطه بمجلد &lt;application-vpath&gt; افتراضي، حيث يتم تشغيل خادم Cassini لربط هذين المعلمتين.</p>
+<p>للالتزام بمفهوم تطبيق الويب هذا، سيتم وضع جميع الأمثلة القادمة في مجلد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; خاص بالتطبيق، والذي سيتم ربطه بمجلد &lt;<bdi dir="ltr" class="odt-ltr-term">application-vpath</bdi>&gt; افتراضي، حيث يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> لربط هذين المعلمتين.</p>
 <p><a id="toc69180236"></a>
 <a id="toc69180334"></a></p>
 <h3 id="412">4.1.2. تكوين تطبيق ويب</h3>
-<p>إذا كان &lt;application-path&gt; هو جذر تطبيق ASP.NET، فيمكنك استخدام ملف &lt;application-path&gt;\web.config لتكوينه. هذا الملف بتنسيق XML. فيما يلي مثال:</p>
+<p>إذا كان &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; هو جذر تطبيق <bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>، فيمكنك استخدام ملف &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">web.config</bdi> لتكوينه. هذا الملف بتنسيق <bdi dir="ltr" class="odt-ltr-term">XML.</bdi> فيما يلي مثال:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">&lt;configuration&gt;</span>
@@ -939,12 +941,12 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">&lt;/appSettings&gt;</span><span class="w">   </span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nt">&lt;/configuration&gt;</span>
 </code></pre></div>
-<p>يرجى ملاحظة أن علامات XML <strong>حساسة لحالة الأحرف</strong>. يجب أن تكون جميع معلومات التكوين محاطة بعلامتي <strong>&lt;configuration&gt;</strong> و <strong>&lt;/configuration&gt;</strong>. هناك العديد من أقسام التكوين المتاحة. سنغطي قسمًا واحدًا فقط هنا: قسم <strong>&lt;appSettings&gt;</strong>، الذي يسمح لك بتهيئة البيانات باستخدام علامة <strong>&lt;add&gt;</strong>. صيغة هذه العلامة هي كما يلي:</p>
+<p>يرجى ملاحظة أن علامات <bdi dir="ltr" class="odt-ltr-term">XML</bdi> <strong>حساسة لحالة الأحرف</strong>. يجب أن تكون جميع معلومات التكوين محاطة بعلامتي <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">configuration</bdi>&gt;</strong> و <strong>&lt;/<bdi dir="ltr" class="odt-ltr-term">configuration</bdi>&gt;</strong>. هناك العديد من أقسام التكوين المتاحة. سنغطي قسمًا واحدًا فقط هنا: قسم <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">appSettings</bdi>&gt;</strong>، الذي يسمح لك بتهيئة البيانات باستخدام علامة <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">add</bdi>&gt;</strong>. صيغة هذه العلامة هي كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;add key=&quot;identificateur&quot; value=&quot;valeur&quot;/&gt;
 </code></pre></div>
-<p>عندما يقوم خادم الويب بتشغيل تطبيق، فإنه يتحقق من وجود ملف باسم web.config في &lt;application-path&gt;. إذا كان موجودًا، فإنه يقرأه ويخزن معلوماته في كائن [ConfigurationSettings]، والذي سيكون متاحًا لجميع صفحات التطبيق طالما كان نشطًا. تحتوي فئة [ConfigurationSettings] على طريقة ثابتة [AppSettings]:</p>
+<p>عندما يقوم خادم الويب بتشغيل تطبيق، فإنه يتحقق من وجود ملف باسم <bdi dir="ltr" class="odt-ltr-term">web.config</bdi> في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. إذا كان موجودًا، فإنه يقرأه ويخزن معلوماته في كائن [<bdi dir="ltr" class="odt-ltr-term">ConfigurationSettings</bdi>]، والذي سيكون متاحًا لجميع صفحات التطبيق طالما كان نشطًا. تحتوي فئة [<bdi dir="ltr" class="odt-ltr-term">ConfigurationSettings</bdi>] على طريقة ثابتة [<bdi dir="ltr" class="odt-ltr-term">AppSettings</bdi>]:</p>
 <p><img src="images/10000000000003030000007674A55588.png" width="680" height="104" style="width:17.992cm;height:2.752cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003030000007674A55588.png" /></p>
-<p>لاسترداد قيمة المفتاح C من ملف التكوين، اكتب ConfigurationSettings.AppSettings(&quot;C&quot;). يعرض هذا سلسلة. لاستخدام ملف التكوين السابق، لنقم بإنشاء صفحة باسم [default.aspx]. سيكون كود VB في ملف [default.aspx.vb] كما يلي:</p>
+<p>لاسترداد قيمة المفتاح <bdi dir="ltr" class="odt-ltr-term">C</bdi> من ملف التكوين، اكتب <bdi dir="ltr" class="odt-ltr-term">ConfigurationSettings.AppSettings</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">C</bdi>&quot;). يعرض هذا سلسلة. لاستخدام ملف التكوين السابق، لنقم بإنشاء صفحة باسم [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>]. سيكون كود <bdi dir="ltr" class="odt-ltr-term">VB</bdi> في ملف [<bdi dir="ltr" class="odt-ltr-term">default.aspx.vb</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Configuration</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -963,7 +965,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>يمكننا أن نرى أنه عند تحميل الصفحة، يتم استرداد قيم معلمات التكوين [name] و [age]. وسيتم عرضها بواسطة كود العرض في [default.aspx]:</p>
+<p>يمكننا أن نرى أنه عند تحميل الصفحة، يتم استرداد قيم معلمات التكوين [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">age</bdi>]. وسيتم عرضها بواسطة كود العرض في [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;default.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;_default&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -979,21 +981,21 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>لإجراء الاختبار، ضع ملفات [web.config] و[default.aspx] و[default.aspx.vb] في نفس المجلد:</p>
+<p>لإجراء الاختبار، ضع ملفات [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">default.aspx.vb</bdi>] في نفس المجلد:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">D</span><span class="p">:</span>\<span class="n">data</span>\<span class="n">devel</span>\<span class="n">aspnet</span>\<span class="n">poly</span>\<span class="n">chap2</span>\<span class="n">config1</span><span class="o">&gt;</span><span class="nb">dir</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="mi">30</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">2004</span>  <span class="mi">15</span><span class="p">:</span><span class="mi">06</span>                  <span class="mi">418</span> <span class="n">default</span><span class="o">.</span><span class="n">aspx</span><span class="o">.</span><span class="n">vb</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="mi">30</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">2004</span>  <span class="mi">14</span><span class="p">:</span><span class="mi">57</span>                  <span class="mi">236</span> <span class="n">default</span><span class="o">.</span><span class="n">aspx</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="mi">30</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">2004</span>  <span class="mi">14</span><span class="p">:</span><span class="mi">53</span>                  <span class="mi">186</span> <span class="n">web</span><span class="o">.</span><span class="n">config</span>
 </code></pre></div>
-<p>لنفترض أن &lt;application-path&gt; هو المجلد الذي يحتوي على ملفات التطبيق الثلاثة. يتم تشغيل خادم Cassini باستخدام المعلمات (&lt;application-path&gt;,/aspnet/config1). نطلب عنوان URL [<mark style="background-color: #ffe994">http://localhost/aspnet/config1</mark>]. نظرًا لأن [config1] هو مجلد، سيبحث خادم الويب عن ملف باسم [default.aspx] بداخله ويعرضه إذا تم العثور عليه. في هذه الحالة، سيجده:</p>
+<p>لنفترض أن &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; هو المجلد الذي يحتوي على ملفات التطبيق الثلاثة. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet/config1</bdi>). نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/aspnet/config1</bdi></mark>]. نظرًا لأن [<bdi dir="ltr" class="odt-ltr-term">config1</bdi>] هو مجلد، سيبحث خادم الويب عن ملف باسم [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>] بداخله ويعرضه إذا تم العثور عليه. في هذه الحالة، سيجده:</p>
 <p><img src="images/10000000000001AE000000923FD1205A.png" width="430" height="146" style="width:11.377cm;height:3.863cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AE000000923FD1205A.png" /></p>
 <p><a id="toc69180237"></a>
 <a id="toc69180335"></a></p>
 <h3 id="413">4.1.3. التطبيق، الجلسة، السياق</h3>
 <p><a id="toc69180238"></a>
 <a id="toc69180336"></a></p>
-<h4 id="4131-globalasax">4.1.3.1. ملف global.asax</h4>
-<p>يتم دائمًا تنفيذ الكود الموجود في ملف [global.asax] قبل تحميل الصفحة المطلوبة في الطلب الحالي. يجب أن يكون موجودًا في جذر &lt;application-path&gt; للتطبيق. إذا كان موجودًا، يتم استخدام ملف [global.asax] في أوقات مختلفة بواسطة خادم الويب:</p>
+<h4 id="4131-globalasax">4.1.3.1. ملف <bdi dir="ltr" class="odt-ltr-term">global.asax</bdi></h4>
+<p>يتم دائمًا تنفيذ الكود الموجود في ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] قبل تحميل الصفحة المطلوبة في الطلب الحالي. يجب أن يكون موجودًا في جذر &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; للتطبيق. إذا كان موجودًا، يتم استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] في أوقات مختلفة بواسطة خادم الويب:</p>
 <ol>
   <li>عند بدء تشغيل تطبيق الويب أو انتهائه
   </li>
@@ -1003,12 +1005,12 @@
   </li>
 </ol>
 
-<p>كما هو الحال مع صفحات .aspx، يمكن كتابة ملف [global.asax] بطرق مختلفة، لا سيما عن طريق فصل كود VB إلى فئة وحدة تحكم وكود عرض. هذا هو الخيار الافتراضي الذي يحدده Visual Studio، وسنفعل الشيء نفسه هنا. عادةً لا يوجد عرض للتعامل معه، حيث يتم تعيين هذه المهمة لصفحات .aspx. وبالتالي، يتم اختزال محتوى ملف [global.asax] إلى توجيه يشير إلى الملف الذي يحتوي على كود وحدة التحكم:</p>
+<p>كما هو الحال مع صفحات .<bdi dir="ltr" class="odt-ltr-term">aspx</bdi>، يمكن كتابة ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] بطرق مختلفة، لا سيما عن طريق فصل كود <bdi dir="ltr" class="odt-ltr-term">VB</bdi> إلى فئة وحدة تحكم وكود عرض. هذا هو الخيار الافتراضي الذي يحدده <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi>، وسنفعل الشيء نفسه هنا. عادةً لا يوجد عرض للتعامل معه، حيث يتم تعيين هذه المهمة لصفحات .<bdi dir="ltr" class="odt-ltr-term">aspx.</bdi> وبالتالي، يتم اختزال محتوى ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] إلى توجيه يشير إلى الملف الذي يحتوي على كود وحدة التحكم:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ <span style="font-weight:bold">Application</span> src=&quot;Global.asax.vb&quot; Inherits=&quot;Global&quot; %&gt;</span></span>
 </code></pre></div>
 
-<p>لاحظ أن التوجيه لم يعد [Page] بل [Application]. كود وحدة التحكم المرتبط [global.asax.vb]، الذي تم إنشاؤه بواسطة Visual Studio، هو كما يلي:</p>
+<p>لاحظ أن التوجيه لم يعد [<bdi dir="ltr" class="odt-ltr-term">Page</bdi>] بل [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]. كود وحدة التحكم المرتبط [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>]، الذي تم إنشاؤه بواسطة <bdi dir="ltr" class="odt-ltr-term">Visual Studio</bdi>، هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Web</span></span>
@@ -1048,38 +1050,38 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>لاحظ أن فئة وحدة التحكم مشتقة من فئة [HttpApplication]. طوال عمر التطبيق، تحدث عدة أحداث مهمة. يتم التعامل مع هذه الأحداث بواسطة إجراءات يظهر هيكلها الأساسي أعلاه.</p>
+<p>لاحظ أن فئة وحدة التحكم مشتقة من فئة [<bdi dir="ltr" class="odt-ltr-term">HttpApplication</bdi>]. طوال عمر التطبيق، تحدث عدة أحداث مهمة. يتم التعامل مع هذه الأحداث بواسطة إجراءات يظهر هيكلها الأساسي أعلاه.</p>
 <ul>
-  <li>[Application_Start]: تذكر أن تطبيق الويب &quot;موجود&quot; داخل مسار افتراضي. يبدأ التطبيق بمجرد أن يطلب العميل صفحة موجودة في هذا المسار الافتراضي. ثم يتم تنفيذ الإجراء [Application_Start]. وستكون هذه هي المرة الوحيدة. في هذا الإجراء، سنقوم بأي تهيئة ضرورية للتطبيق، مثل إنشاء كائنات تتطابق مدة حياتها مع مدة حياة التطبيق.
+  <li>[<bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi>]: تذكر أن تطبيق الويب &quot;موجود&quot; داخل مسار افتراضي. يبدأ التطبيق بمجرد أن يطلب العميل صفحة موجودة في هذا المسار الافتراضي. ثم يتم تنفيذ الإجراء [<bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi>]. وستكون هذه هي المرة الوحيدة. في هذا الإجراء، سنقوم بأي تهيئة ضرورية للتطبيق، مثل إنشاء كائنات تتطابق مدة حياتها مع مدة حياة التطبيق.
   </li>
-  <li>[Application-End]: يتم تنفيذه عند إنهاء التطبيق. يرتبط بكل تطبيق مهلة خمول، قابلة للتكوين في [web.config]، وبعدها يُعتبر التطبيق منتهياً. وبالتالي، فإن خادم الويب هو الذي يتخذ هذا القرار بناءً على إعدادات التطبيق. تُعرَّف مهلة الخمول للتطبيق بأنها الفترة التي لم يقم خلالها أي عميل بطلب مورد من موارد التطبيق.
+  <li>[<bdi dir="ltr" class="odt-ltr-term">Application-End</bdi>]: يتم تنفيذه عند إنهاء التطبيق. يرتبط بكل تطبيق مهلة خمول، قابلة للتكوين في [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>]، وبعدها يُعتبر التطبيق منتهياً. وبالتالي، فإن خادم الويب هو الذي يتخذ هذا القرار بناءً على إعدادات التطبيق. تُعرَّف مهلة الخمول للتطبيق بأنها الفترة التي لم يقم خلالها أي عميل بطلب مورد من موارد التطبيق.
   </li>
-  <li>[Session-Start]/[Session_End]: ترتبط جلسة عمل بكل عميل ما لم يتم تكوين التطبيق بحيث لا يكون له جلسات عمل. العميل ليس مستخدمًا جالسًا أمام شاشة. إذا فتح المستخدم متصفحين للتفاعل مع التطبيق، فإنهما يمثلان عميلين. يتم تحديد العميل بواسطة رمز جلسة يجب أن يرفقه مع كل طلب من طلباته. رمز الجلسة هذا هو سلسلة فريدة من الأحرف يتم إنشاؤها عشوائيًا بواسطة خادم الويب. لا يمكن أن يكون لدى عميلين رمز جلسة واحد. يتبع هذا الرمز العميل على النحو التالي:
+  <li>[<bdi dir="ltr" class="odt-ltr-term">Session-Start</bdi>]/[<bdi dir="ltr" class="odt-ltr-term">Session_End</bdi>]: ترتبط جلسة عمل بكل عميل ما لم يتم تكوين التطبيق بحيث لا يكون له جلسات عمل. العميل ليس مستخدمًا جالسًا أمام شاشة. إذا فتح المستخدم متصفحين للتفاعل مع التطبيق، فإنهما يمثلان عميلين. يتم تحديد العميل بواسطة رمز جلسة يجب أن يرفقه مع كل طلب من طلباته. رمز الجلسة هذا هو سلسلة فريدة من الأحرف يتم إنشاؤها عشوائيًا بواسطة خادم الويب. لا يمكن أن يكون لدى عميلين رمز جلسة واحد. يتبع هذا الرمز العميل على النحو التالي:
     <ul>
-      <li>لا يرسل العميل الذي يقدم طلبه الأول رمز جلسة. يتعرف خادم الويب على ذلك ويخصص له رمزًا. وهذا يمثل بداية الجلسة، ويتم تنفيذ الإجراء [Session_Start]. يحدث هذا مرة واحدة فقط.
+      <li>لا يرسل العميل الذي يقدم طلبه الأول رمز جلسة. يتعرف خادم الويب على ذلك ويخصص له رمزًا. وهذا يمثل بداية الجلسة، ويتم تنفيذ الإجراء [<bdi dir="ltr" class="odt-ltr-term">Session_Start</bdi>]. يحدث هذا مرة واحدة فقط.
       </li>
       <li>يقوم العميل بإرسال الطلبات اللاحقة عن طريق إرسال الرمز الذي يحدده. وهذا يسمح لخادم الويب باسترداد المعلومات المرتبطة بهذا الرمز. وهذا يتيح التتبع بين الطلبات المختلفة للعميل.
       </li>
-      <li>يمكن للتطبيق تزويد العميل بنموذج إنهاء الجلسة. في هذه الحالة، يبادر العميل بنفسه بإنهاء الجلسة. سيتم تنفيذ الإجراء [Session_End]. يحدث هذا مرة واحدة فقط.
+      <li>يمكن للتطبيق تزويد العميل بنموذج إنهاء الجلسة. في هذه الحالة، يبادر العميل بنفسه بإنهاء الجلسة. سيتم تنفيذ الإجراء [<bdi dir="ltr" class="odt-ltr-term">Session_End</bdi>]. يحدث هذا مرة واحدة فقط.
       </li>
-      <li>قد لا يطلب العميل أبدًا إنهاء الجلسة بنفسه. في هذه الحالة، بعد فترة معينة من عدم نشاط الجلسة — والتي يمكن أيضًا تكوينها عبر [web.config] — سيتم إنهاء الجلسة بواسطة خادم الويب. سيتم بعد ذلك تنفيذ الإجراء [Session_End].
+      <li>قد لا يطلب العميل أبدًا إنهاء الجلسة بنفسه. في هذه الحالة، بعد فترة معينة من عدم نشاط الجلسة — والتي يمكن أيضًا تكوينها عبر [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] — سيتم إنهاء الجلسة بواسطة خادم الويب. سيتم بعد ذلك تنفيذ الإجراء [<bdi dir="ltr" class="odt-ltr-term">Session_End</bdi>].
       </li>
     </ul>
   </li>
-  <li>[Application_BeginRequest]: يتم تنفيذ هذا الإجراء بمجرد وصول طلب جديد. وبالتالي، يتم تنفيذه لكل طلب من أي عميل. يعد هذا مكانًا جيدًا لفحص الطلب قبل إعادة توجيهه إلى الصفحة المطلوبة. يمكنك حتى أن تقرر إعادة توجيهه إلى صفحة أخرى.
+  <li>[<bdi dir="ltr" class="odt-ltr-term">Application_BeginRequest</bdi>]: يتم تنفيذ هذا الإجراء بمجرد وصول طلب جديد. وبالتالي، يتم تنفيذه لكل طلب من أي عميل. يعد هذا مكانًا جيدًا لفحص الطلب قبل إعادة توجيهه إلى الصفحة المطلوبة. يمكنك حتى أن تقرر إعادة توجيهه إلى صفحة أخرى.
   </li>
-  <li>[Application_Error]: يتم تنفيذه كلما حدث خطأ لم يتم معالجته صراحةً بواسطة الكود الموجود في وحدة التحكم [global.asax.vb]. هنا، يمكنك إعادة توجيه طلب العميل إلى صفحة تشرح سبب الخطأ.
+  <li>[<bdi dir="ltr" class="odt-ltr-term">Application_Error</bdi>]: يتم تنفيذه كلما حدث خطأ لم يتم معالجته صراحةً بواسطة الكود الموجود في وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>]. هنا، يمكنك إعادة توجيه طلب العميل إلى صفحة تشرح سبب الخطأ.
   </li>
 </ul>
 
-<p>إذا لم تكن هناك حاجة لمعالجة أي من هذه الأحداث، فيمكن تجاهل ملف [global.asax]. وهذا ما تم فعله في الأمثلة الأولى من هذا الفصل. </p>
+<p>إذا لم تكن هناك حاجة لمعالجة أي من هذه الأحداث، فيمكن تجاهل ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]. وهذا ما تم فعله في الأمثلة الأولى من هذا الفصل. </p>
 <p><a id="toc69180239"></a>
 <a id="toc69180337"></a></p>
 <h4 id="4132-1">4.1.3.2. المثال 1</h4>
-<p>لنقم بتطوير تطبيق لفهم اللحظات الثلاث الرئيسية بشكل أفضل: بدء تشغيل التطبيق، وبدء الجلسة، وطلب العميل. سيبدو ملف [global.asax] كما يلي:</p>
+<p>لنقم بتطوير تطبيق لفهم اللحظات الثلاث الرئيسية بشكل أفضل: بدء تشغيل التطبيق، وبدء الجلسة، وطلب العميل. سيبدو ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="na">&lt;%@ Application src=&quot;Global.asax.vb&quot; Inherits=&quot;global&quot; %&gt;</span>
 </code></pre></div>
-<p>سيكون ملف [global.asax.vb] المرتبط كما يلي:</p>
+<p>سيكون ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] المرتبط كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Web</span></span>
@@ -1115,31 +1117,31 @@
 
 <p>النقاط الرئيسية في الكود هي كما يلي:</p>
 <ul>
-  <li>يتيح خادم الويب عددًا من الكائنات لفئة [HttpApplication] في [global.asax.vb]:
+  <li>يتيح خادم الويب عددًا من الكائنات لفئة [<bdi dir="ltr" class="odt-ltr-term">HttpApplication</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>]:
     <ul>
-      <li><b>Application </b>من النوع [HttpApplicationState]—يمثل تطبيق الويب—يوفر الوصول إلى قاموس كائنات [Application.Item] التي يمكن لجميع عملاء التطبيق الوصول إليها—يمكّن من مشاركة المعلومات بين العملاء المختلفين—يتطلب الوصول المتزامن للقراءة/الكتابة من قبل عملاء متعددين إلى نفس البيانات مزامنة العملاء.
+      <li><b><bdi dir="ltr" class="odt-ltr-term">Application</bdi> </b>من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpApplicationState</bdi>]—يمثل تطبيق الويب—يوفر الوصول إلى قاموس كائنات [<bdi dir="ltr" class="odt-ltr-term">Application.Item</bdi>] التي يمكن لجميع عملاء التطبيق الوصول إليها—يمكّن من مشاركة المعلومات بين العملاء المختلفين—يتطلب الوصول المتزامن للقراءة/الكتابة من قبل عملاء متعددين إلى نفس البيانات مزامنة العملاء.
       </li>
-      <li><b>جلسة </b>من النوع [HttpSessionState] — تمثل عميلاً معينًا — توفر الوصول إلى قاموس كائنات [Session.Item] التي يمكن لجميع الطلبات من ذلك العميل الوصول إليها — تسمح بتخزين المعلومات المتعلقة بالعميل، والتي يمكن بعد ذلك استردادها عبر طلبات العميل.
+      <li><b>جلسة </b>من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpSessionState</bdi>] — تمثل عميلاً معينًا — توفر الوصول إلى قاموس كائنات [<bdi dir="ltr" class="odt-ltr-term">Session.Item</bdi>] التي يمكن لجميع الطلبات من ذلك العميل الوصول إليها — تسمح بتخزين المعلومات المتعلقة بالعميل، والتي يمكن بعد ذلك استردادها عبر طلبات العميل.
       </li>
-      <li><b>طلب</b> من النوع [HttpRequest] — يمثل طلب HTTP الحالي للعميل
+      <li><b>طلب</b> من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpRequest</bdi>] — يمثل طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الحالي للعميل
       </li>
-      <li><b>استجابة</b> من النوع [HttpResponse] — تمثل استجابة HTTP التي يقوم الخادم بإنشائها حاليًا للعميل
+      <li><b>استجابة</b> من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpResponse</bdi>] — تمثل استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> التي يقوم الخادم بإنشائها حاليًا للعميل
       </li>
-      <li><b>خادم </b>من النوع [HttpServerUtility] — يوفر طرقًا مساعدة، خاصةً لإعادة توجيه الطلب إلى صفحة أخرى غير تلك المقصودة في الأصل.
+      <li><b>خادم </b>من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpServerUtility</bdi>] — يوفر طرقًا مساعدة، خاصةً لإعادة توجيه الطلب إلى صفحة أخرى غير تلك المقصودة في الأصل.
       </li>
-      <li><b>سياق </b>من النوع [HttpContext] — يتم إعادة إنشاء هذا الكائن مع كل طلب جديد ولكنه مشترك بين جميع الصفحات المشاركة في معالجة الطلب — يسمح بتمرير المعلومات من صفحة إلى أخرى أثناء معالجة الطلب عبر قاموس <b>العناصر</b> الخاص به.
+      <li><b>سياق </b>من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpContext</bdi>] — يتم إعادة إنشاء هذا الكائن مع كل طلب جديد ولكنه مشترك بين جميع الصفحات المشاركة في معالجة الطلب — يسمح بتمرير المعلومات من صفحة إلى أخرى أثناء معالجة الطلب عبر قاموس <b>العناصر</b> الخاص به.
       </li>
     </ul>
   </li>
-  <li>تسجل الإجراء [Application_Start] بدء تشغيل التطبيق في متغير مخزن في قاموس يمكن الوصول إليه على مستوى التطبيق
+  <li>تسجل الإجراء [<bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi>] بدء تشغيل التطبيق في متغير مخزن في قاموس يمكن الوصول إليه على مستوى التطبيق
   </li>
-  <li>يسجل الإجراء [Session_Start] بداية الجلسة في متغير مخزن في قاموس يمكن الوصول إليه على مستوى الجلسة
+  <li>يسجل الإجراء [<bdi dir="ltr" class="odt-ltr-term">Session_Start</bdi>] بداية الجلسة في متغير مخزن في قاموس يمكن الوصول إليه على مستوى الجلسة
   </li>
-  <li>يسجل الإجراء [Application_BeginRequest] بداية الطلب في متغير مخزن في قاموس يمكن الوصول إليه على مستوى الطلب (أي متاح طوال معالجته ولكنه يضيع في نهايته)
+  <li>يسجل الإجراء [<bdi dir="ltr" class="odt-ltr-term">Application_BeginRequest</bdi>] بداية الطلب في متغير مخزن في قاموس يمكن الوصول إليه على مستوى الطلب (أي متاح طوال معالجته ولكنه يضيع في نهايته)
   </li>
 </ul>
 
-<p>ستكون الصفحة المستهدفة هي الصفحة [main.aspx] التالية:</p>
+<p>ستكون الصفحة المستهدفة هي الصفحة [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] التالية:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1159,7 +1161,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>تعرض صفحة العرض هذه القيم التي تم حسابها بواسطة وحدة التحكم الخاصة بها [main.aspx.vb]:</p>
+<p>تعرض صفحة العرض هذه القيم التي تم حسابها بواسطة وحدة التحكم الخاصة بها [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">main</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
@@ -1178,18 +1180,18 @@
 <a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
 <a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
-<p>يقوم جهاز التحكم ببساطة باسترداد المعلومات الثلاث المخزنة في التطبيق والجلسة والسياق بواسطة [global.asax.vb].</p>
+<p>يقوم جهاز التحكم ببساطة باسترداد المعلومات الثلاث المخزنة في التطبيق والجلسة والسياق بواسطة [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>].</p>
 <p>نقوم باختبار التطبيق على النحو التالي:</p>
 <ol>
-  <li>يتم تجميع الملفات في مجلد واحد &lt;application-path&gt;
+  <li>يتم تجميع الملفات في مجلد واحد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;
   </li>
 </ol>
 
 <p><img src="images/100000000000014100000093CEC9CEA2.png" width="321" height="147" style="width:8.493cm;height:3.889cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014100000093CEC9CEA2.png" /></p>
 <ol>
-  <li>يتم تشغيل خادم Cassini باستخدام المعلمات (&lt;application-path&gt;,/aspnet/globalasax1)
+  <li>يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet/globalasax1</bdi>)
   </li>
-  <li>يطلب العميل الأول عنوان URL [http://localhost/aspnet/globalasax1/main.aspx] ويتلقى النتيجة التالية:
+  <li>يطلب العميل الأول عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/aspnet/globalasax1/main.aspx</bdi>] ويتلقى النتيجة التالية:
   </li>
 </ol>
 
@@ -1202,23 +1204,23 @@
 <p><img src="images/10000000000001FA000000A18132D2D7.png" width="506" height="161" style="width:13.388cm;height:4.26cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FA000000A18132D2D7.png" /></p>
 <p>يمكننا ملاحظة أن وقت الطلب هو الوحيد الذي تغير. وهذا يشير إلى أمرين:</p>
 <ul>
-  <li>لم يتم تنفيذ الإجراءات [Application_Start] و [Session_Start] في [global.asax] أثناء الطلب الثاني.
+  <li>لم يتم تنفيذ الإجراءات [<bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Session_Start</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] أثناء الطلب الثاني.
   </li>
-  <li>لا تزال كائنات [Application] و [Session]، حيث تم تخزين أوقات بدء التطبيق والجلسة، متاحة للطلب الثاني.
+  <li>لا تزال كائنات [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>]، حيث تم تخزين أوقات بدء التطبيق والجلسة، متاحة للطلب الثاني.
   </li>
 </ul>
 
 <ol>
-  <li>نقوم بتشغيل متصفح ثانٍ لإنشاء عميل ثانٍ وطلب نفس عنوان URL مرة أخرى:
+  <li>نقوم بتشغيل متصفح ثانٍ لإنشاء عميل ثانٍ وطلب نفس عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> مرة أخرى:
   </li>
 </ol>
 
 <p><img src="images/10000000000001840000008DBD0E2685.png" width="388" height="141" style="width:10.266cm;height:3.731cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001840000008DBD0E2685.png" /></p>
 <p>هذه المرة، نرى أن وقت الجلسة قد تغير. تم التعامل مع المتصفح الثاني، على الرغم من وجوده على نفس الجهاز، كعميل ثانٍ، وتم إنشاء جلسة جديدة له. يمكننا أن نرى أن العميلين لا يمتلكان رمز الجلسة نفسه. لم يتغير وقت بدء التطبيق، مما يعني أن:</p>
 <ul>
-  <li>لم يتم تنفيذ الإجراء [Application_Start] في [global.asax.vb]
+  <li>لم يتم تنفيذ الإجراء [<bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi>] في [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>]
   </li>
-  <li>يمكن للعميل الثاني الوصول إلى الكائن [Application]، حيث تم تخزين وقت بدء التطبيق. لذلك، هذا هو الكائن الذي يجب تخزين المعلومات التي يجب مشاركتها بين مختلف عملاء التطبيق فيه، بينما يُستخدم الكائن [Session] لتخزين المعلومات التي يجب مشاركتها بين الطلبات الواردة من <b>نفس العميل</b>.
+  <li>يمكن للعميل الثاني الوصول إلى الكائن [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>]، حيث تم تخزين وقت بدء التطبيق. لذلك، هذا هو الكائن الذي يجب تخزين المعلومات التي يجب مشاركتها بين مختلف عملاء التطبيق فيه، بينما يُستخدم الكائن [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>] لتخزين المعلومات التي يجب مشاركتها بين الطلبات الواردة من <b>نفس العميل</b>.
   </li>
 </ul>
 
@@ -1227,25 +1229,25 @@
 <h4 id="4133">4.1.3.3. نظرة عامة</h4>
 <p>بناءً على ما تعلمناه حتى الآن، يمكننا إنشاء مخطط أولي يشرح كيفية عمل خادم الويب وتطبيقات الويب التي يخدمها:</p>
 <p><img src="images/10000000000005C5000003897323D62A.png" width="680" height="417" style="width:17.999cm;height:11.028cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C5000003897323D62A.png" /></p>
-<p>يُظهر الرسم البياني أعلاه خادمًا يخدم تطبيقين يُسميان A و B، لكل منهما عميلان. خادم الويب قادر على خدمة تطبيقات ويب متعددة في وقت واحد. هذه التطبيقات مستقلة تمامًا عن بعضها البعض. سنركز على التطبيق A. ستتم معالجة طلب من العميل 1A إلى التطبيق A على النحو التالي:</p>
+<p>يُظهر الرسم البياني أعلاه خادمًا يخدم تطبيقين يُسميان <bdi dir="ltr" class="odt-ltr-term">A</bdi> و <bdi dir="ltr" class="odt-ltr-term">B</bdi>، لكل منهما عميلان. خادم الويب قادر على خدمة تطبيقات ويب متعددة في وقت واحد. هذه التطبيقات مستقلة تمامًا عن بعضها البعض. سنركز على التطبيق <bdi dir="ltr" class="odt-ltr-term">A.</bdi> ستتم معالجة طلب من العميل 1A إلى التطبيق <bdi dir="ltr" class="odt-ltr-term">A</bdi> على النحو التالي:</p>
 <ul>
-  <li>يطلب العميل 1A موردًا من خادم الويب ينتمي إلى مجال التطبيق A. وهذا يعني أنه يطلب عنوان URL بالصيغة [<mark style="background-color: #ffe994">http://machine:port/VA/ressource</mark>]، حيث VA هو المسار الافتراضي للتطبيق A.
+  <li>يطلب العميل 1A موردًا من خادم الويب ينتمي إلى مجال التطبيق <bdi dir="ltr" class="odt-ltr-term">A.</bdi> وهذا يعني أنه يطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بالصيغة [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://machine:port/VA/ressource</bdi></mark>]، حيث <bdi dir="ltr" class="odt-ltr-term">VA</bdi> هو المسار الافتراضي للتطبيق <bdi dir="ltr" class="odt-ltr-term">A.</bdi>
   </li>
-  <li>إذا اكتشف خادم الويب أن هذا هو الطلب الأول لمورد ما من التطبيق «A»، فإنه يقوم بتشغيل الحدث [Application_Start] في ملف [global.asax] الخاص بالتطبيق «A». وسيتم إنشاء كائن [ApplicationA] من النوع [HttpApplicationState]. وستقوم الأجزاء المختلفة من التطبيق بتخزين البيانات ذات نطاق [Application] في هذا الكائن، أي البيانات المتعلقة بجميع المستخدمين. سيظل كائن [ApplicationA] موجودًا حتى يقوم خادم الويب بإلغاء تحميل التطبيق A.
+  <li>إذا اكتشف خادم الويب أن هذا هو الطلب الأول لمورد ما من التطبيق «<bdi dir="ltr" class="odt-ltr-term">A</bdi>»، فإنه يقوم بتشغيل الحدث [<bdi dir="ltr" class="odt-ltr-term">Application_Start</bdi>] في ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] الخاص بالتطبيق «<bdi dir="ltr" class="odt-ltr-term">A</bdi>». وسيتم إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">ApplicationA</bdi>] من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpApplicationState</bdi>]. وستقوم الأجزاء المختلفة من التطبيق بتخزين البيانات ذات نطاق [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] في هذا الكائن، أي البيانات المتعلقة بجميع المستخدمين. سيظل كائن [<bdi dir="ltr" class="odt-ltr-term">ApplicationA</bdi>] موجودًا حتى يقوم خادم الويب بإلغاء تحميل التطبيق <bdi dir="ltr" class="odt-ltr-term">A.</bdi>
   </li>
-  <li>إذا اكتشف خادم الويب أيضًا أنه يتعامل مع عميل جديد للتطبيق A، فسيطلق الحدث [Session_Start] في ملف [global.asax] الخاص بالتطبيق A. سيتم إنشاء كائن [Session-1A] من النوع [HttpSessionState]. سيسمح هذا الكائن للتطبيق A بتخزين كائنات نطاق [Session]، أي الكائنات التي تنتمي إلى عميل معين. سيظل الكائن [Session-1A] موجودًا طالما أن العميل 1A يقدم طلبات. وسيسمح ذلك بتتبع هذا العميل. يكتشف خادم الويب أنه يتعامل مع عميل جديد في حالتين:
+  <li>إذا اكتشف خادم الويب أيضًا أنه يتعامل مع عميل جديد للتطبيق <bdi dir="ltr" class="odt-ltr-term">A</bdi>، فسيطلق الحدث [<bdi dir="ltr" class="odt-ltr-term">Session_Start</bdi>] في ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] الخاص بالتطبيق <bdi dir="ltr" class="odt-ltr-term">A.</bdi> سيتم إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">Session-1A</bdi>] من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpSessionState</bdi>]. سيسمح هذا الكائن للتطبيق <bdi dir="ltr" class="odt-ltr-term">A</bdi> بتخزين كائنات نطاق [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>]، أي الكائنات التي تنتمي إلى عميل معين. سيظل الكائن [<bdi dir="ltr" class="odt-ltr-term">Session-1A</bdi>] موجودًا طالما أن العميل 1A يقدم طلبات. وسيسمح ذلك بتتبع هذا العميل. يكتشف خادم الويب أنه يتعامل مع عميل جديد في حالتين:
     <ul>
-      <li>لم يرسل العميل رمز جلسة في رؤوس HTTP لطلبه
+      <li>لم يرسل العميل رمز جلسة في رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لطلبه
       </li>
-      <li>أرسل العميل رمز جلسة عمل غير موجود (خلل في العميل أو محاولة اختراق) أو لم يعد موجودًا. تنتهي صلاحية رمز جلسة العمل بعد فترة معينة من عدم نشاط العميل (20 دقيقة بشكل افتراضي مع IIS). يمكن تكوين فترة انتهاء الصلاحية هذه.
+      <li>أرسل العميل رمز جلسة عمل غير موجود (خلل في العميل أو محاولة اختراق) أو لم يعد موجودًا. تنتهي صلاحية رمز جلسة العمل بعد فترة معينة من عدم نشاط العميل (20 دقيقة بشكل افتراضي مع <bdi dir="ltr" class="odt-ltr-term">IIS</bdi>). يمكن تكوين فترة انتهاء الصلاحية هذه.
       </li>
     </ul>
   </li>
-  <li>في جميع الحالات، سيقوم خادم الويب بتشغيل الحدث [Application_BeginRequest] في ملف [global.asax]. يبدأ هذا الحدث معالجة طلب العميل. من الشائع عدم معالجة هذا الحدث وتمرير التحكم إلى الصفحة التي طلبها العميل، والتي ستقوم بعد ذلك بمعالجة الطلب. يمكننا أيضًا استخدام هذا الحدث لتحليل الطلب ومعالجته وتحديد الصفحة التي يجب إرسالها كاستجابة. سنستخدم هذه التقنية لتنفيذ تطبيق يتبع بنية MVC التي ناقشناها.
+  <li>في جميع الحالات، سيقوم خادم الويب بتشغيل الحدث [<bdi dir="ltr" class="odt-ltr-term">Application_BeginRequest</bdi>] في ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]. يبدأ هذا الحدث معالجة طلب العميل. من الشائع عدم معالجة هذا الحدث وتمرير التحكم إلى الصفحة التي طلبها العميل، والتي ستقوم بعد ذلك بمعالجة الطلب. يمكننا أيضًا استخدام هذا الحدث لتحليل الطلب ومعالجته وتحديد الصفحة التي يجب إرسالها كاستجابة. سنستخدم هذه التقنية لتنفيذ تطبيق يتبع بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> التي ناقشناها.
   </li>
-  <li>بمجرد تجاوز المرشح في [global.asax]، يتم تمرير طلب العميل إلى صفحة .aspx ستقوم بمعالجة الطلب. سنرى لاحقًا أنه من الممكن تمرير الطلب عبر مرشح يتكون من عدة صفحات. وستكون الصفحة الأخيرة مسؤولة عن إرسال الاستجابة إلى العميل. يمكن للصفحات إضافة المعلومات التي قامت بحسابها إلى الطلب الأولي للعميل. ويمكنها تخزين هذه المعلومات في مجموعة<b> Context.Items</b>. في الواقع، تتمتع جميع الصفحات المشاركة في معالجة طلب العميل بإمكانية الوصول إلى مجموعة البيانات هذه.
+  <li>بمجرد تجاوز المرشح في [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]، يتم تمرير طلب العميل إلى صفحة .<bdi dir="ltr" class="odt-ltr-term">aspx</bdi> ستقوم بمعالجة الطلب. سنرى لاحقًا أنه من الممكن تمرير الطلب عبر مرشح يتكون من عدة صفحات. وستكون الصفحة الأخيرة مسؤولة عن إرسال الاستجابة إلى العميل. يمكن للصفحات إضافة المعلومات التي قامت بحسابها إلى الطلب الأولي للعميل. ويمكنها تخزين هذه المعلومات في مجموعة<b> <bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi></b>. في الواقع، تتمتع جميع الصفحات المشاركة في معالجة طلب العميل بإمكانية الوصول إلى مجموعة البيانات هذه.
   </li>
-  <li>يتمتع كود الصفحات المختلفة بإمكانية الوصول إلى مستودعات البيانات التي تمثلها الكائنات [ApplicationA] و[Session-1A]... من المهم تذكر أن خادم الويب يعالج في وقت واحد عدة عملاء للتطبيق A. يتمتع جميع هؤلاء العملاء بإمكانية الوصول إلى كائن [Application A]. إذا احتاجوا إلى تعديل البيانات في هذا الكائن، فسيكون من الضروري إجراء مزامنة العملاء. يتمتع كل عميل XA أيضًا بإمكانية الوصول إلى مجموعة البيانات [Session-XA]. ونظرًا لأن هذه المجموعة مخصصة لهم، فلا حاجة إلى المزامنة هنا.
+  <li>يتمتع كود الصفحات المختلفة بإمكانية الوصول إلى مستودعات البيانات التي تمثلها الكائنات [<bdi dir="ltr" class="odt-ltr-term">ApplicationA</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Session-1A</bdi>]... من المهم تذكر أن خادم الويب يعالج في وقت واحد عدة عملاء للتطبيق <bdi dir="ltr" class="odt-ltr-term">A.</bdi> يتمتع جميع هؤلاء العملاء بإمكانية الوصول إلى كائن [<bdi dir="ltr" class="odt-ltr-term">Application A</bdi>]. إذا احتاجوا إلى تعديل البيانات في هذا الكائن، فسيكون من الضروري إجراء مزامنة العملاء. يتمتع كل عميل <bdi dir="ltr" class="odt-ltr-term">XA</bdi> أيضًا بإمكانية الوصول إلى مجموعة البيانات [<bdi dir="ltr" class="odt-ltr-term">Session-XA</bdi>]. ونظرًا لأن هذه المجموعة مخصصة لهم، فلا حاجة إلى المزامنة هنا.
   </li>
   <li>يخدم خادم الويب تطبيقات ويب متعددة في وقت واحد. ولا يوجد أي تداخل بين عملاء هذه التطبيقات المختلفة.
   </li>
@@ -1253,17 +1255,17 @@
 
 <p>من هذه التفسيرات، يمكننا تلخيص النقاط التالية:</p>
 <ul>
-  <li>في أي وقت معين، يخدم خادم الويب عدة عملاء في وقت واحد. وهذا يعني أنه لا ينتظر انتهاء طلب واحد قبل معالجة طلب آخر. في الوقت T، هناك بالتالي عدة طلبات قيد المعالجة تنتمي إلى عملاء مختلفين لتطبيقات مختلفة. يُشار أحيانًا إلى كود المعالجة الذي يعمل في وقت واحد داخل خادم الويب باسم خيوط التنفيذ.
+  <li>في أي وقت معين، يخدم خادم الويب عدة عملاء في وقت واحد. وهذا يعني أنه لا ينتظر انتهاء طلب واحد قبل معالجة طلب آخر. في الوقت <bdi dir="ltr" class="odt-ltr-term">T</bdi>، هناك بالتالي عدة طلبات قيد المعالجة تنتمي إلى عملاء مختلفين لتطبيقات مختلفة. يُشار أحيانًا إلى كود المعالجة الذي يعمل في وقت واحد داخل خادم الويب باسم خيوط التنفيذ.
   </li>
   <li>لا تتداخل خيوط التنفيذ الخاصة بالعملاء <b>من تطبيقات الويب المختلفة </b>مع بعضها البعض. هناك عزل.
   </li>
   <li>قد تحتاج خيوط التنفيذ من عملاء <b>نفس التطبيق </b>إلى مشاركة البيانات:
     <ul>
-      <li>يمكن لخيوط التنفيذ الخاصة بالطلبات <b>الواردة من عميلين مختلفين </b>(ليس نفس رمز الجلسة) مشاركة البيانات عبر كائن [<b>Application</b>].
+      <li>يمكن لخيوط التنفيذ الخاصة بالطلبات <b>الواردة من عميلين مختلفين </b>(ليس نفس رمز الجلسة) مشاركة البيانات عبر كائن [<b><bdi dir="ltr" class="odt-ltr-term">Application</bdi></b>].
       </li>
-      <li>يمكن لخيوط التنفيذ للطلبات المتتالية <b>من نفس العميل </b>مشاركة البيانات عبر كائن [<b>Session</b>].
+      <li>يمكن لخيوط التنفيذ للطلبات المتتالية <b>من نفس العميل </b>مشاركة البيانات عبر كائن [<b><bdi dir="ltr" class="odt-ltr-term">Session</bdi></b>].
       </li>
-      <li>يمكن لخيوط التنفيذ الخاصة بالصفحات المتتالية التي تعالج <b>نفس الطلب </b>من عميل معين مشاركة البيانات عبر كائن [<b>Context</b>].
+      <li>يمكن لخيوط التنفيذ الخاصة بالصفحات المتتالية التي تعالج <b>نفس الطلب </b>من عميل معين مشاركة البيانات عبر كائن [<b><bdi dir="ltr" class="odt-ltr-term">Context</bdi></b>].
       </li>
     </ul>
   </li>
@@ -1273,10 +1275,10 @@
 <a id="toc69180339"></a></p>
 <h4 id="4134-2">4.1.3.4. المثال 2</h4>
 <p>لنطور مثالًا جديدًا يوضح ما تناولناه للتو. سنضع الملفات التالية في نفس المجلد:</p>
-<p>[<strong>global.asax</strong>]</p>
+<p>[<strong><bdi dir="ltr" class="odt-ltr-term">global.asax</bdi></strong>]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="na">&lt;%@ Application src=&quot;Global.asax.vb&quot; Inherits=&quot;global&quot; %&gt;</span>
 </code></pre></div>
-<p>[<strong>global.asax.vb</strong>]</p>
+<p>[<strong><bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi></strong>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Web</span></span>
@@ -1299,8 +1301,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>الغرض من التطبيق هو حساب العدد الإجمالي للطلبات الموجهة إلى التطبيق وعدد الطلبات لكل عميل. عند بدء تشغيل التطبيق [Application_Start]، يتم تعيين عداد الطلبات الموجهة إلى التطبيق على 0. يتم وضع هذا العداد في نطاق [Application] لأنه يجب أن يتم زيادته بواسطة جميع العملاء. عندما يتصل عميل لأول مرة [Session_Start]، نضبط عداد الطلبات المقدمة من هذا العميل على 0. يتم وضع هذا العداد في نطاق [Session] لأنه ينطبق فقط على عميل معين.</p>
-<p>بمجرد تنفيذ [global.asax]، سيتم تنفيذ ملف [main.aspx] التالي:</p>
+<p>الغرض من التطبيق هو حساب العدد الإجمالي للطلبات الموجهة إلى التطبيق وعدد الطلبات لكل عميل. عند بدء تشغيل التطبيق [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>_Start]، يتم تعيين عداد الطلبات الموجهة إلى التطبيق على 0. يتم وضع هذا العداد في نطاق [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] لأنه يجب أن يتم زيادته بواسطة جميع العملاء. عندما يتصل عميل لأول مرة [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>_Start]، نضبط عداد الطلبات المقدمة من هذا العميل على 0. يتم وضع هذا العداد في نطاق [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>] لأنه ينطبق فقط على عميل معين.</p>
+<p>بمجرد تنفيذ [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]، سيتم تنفيذ ملف [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1323,15 +1325,15 @@
 
 <p>يعرض ثلاث معلومات يتم حسابها بواسطة وحدة التحكم الخاصة به:</p>
 <ol>
-  <li>هوية العميل عبر رمز الجلسة الخاص به: [token]
+  <li>هوية العميل عبر رمز الجلسة الخاص به: [<bdi dir="ltr" class="odt-ltr-term">token</bdi>]
   </li>
-  <li>العدد الإجمالي للطلبات الموجهة إلى التطبيق: [nbRequêtesApplication]
+  <li>العدد الإجمالي للطلبات الموجهة إلى التطبيق: [<bdi dir="ltr" class="odt-ltr-term">nbRequêtesApplication</bdi>]
   </li>
-  <li>العدد الإجمالي للطلبات التي قدمها العميل المحدد برقم 1: [nbClientRequests]
+  <li>العدد الإجمالي للطلبات التي قدمها العميل المحدد برقم 1: [<bdi dir="ltr" class="odt-ltr-term">nbClientRequests</bdi>]
   </li>
 </ol>
 
-<p>يتم حساب هذه المعلومات الثلاث في [main.aspx.vb]:</p>
+<p>يتم حساب هذه المعلومات الثلاث في [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">main</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
@@ -1351,20 +1353,20 @@
 <a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 <a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
-<p>عند تنفيذ [main.aspx.vb]، نقوم بمعالجة طلب من عميل معين. نستخدم كائن [Application] لزيادة عدد الطلبات للتطبيق وكائن [Session] لزيادة عدد الطلبات للعميل الذي نقوم بمعالجة طلبه حاليًا. تذكر أنه بينما يتشارك جميع عملاء التطبيق نفسه كائن [Application] نفسه، فإن لكل منهم كائن [Session] خاص به.</p>
-<p>نقوم باختبار التطبيق عن طريق وضع الملفات الأربعة السابقة في مجلد نسميه &lt;application-path&gt;، ثم نُشغّل خادم Cassini باستخدام المعلمات (&lt;application-path&gt;,/aspnet/webapplia). نفتح متصفحًا وننتقل إلى عنوان URL [<mark style="background-color: #ffe994">http://localhost/aspnet/webapplia/main.aspx</mark>]:</p>
+<p>عند تنفيذ [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]، نقوم بمعالجة طلب من عميل معين. نستخدم كائن [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] لزيادة عدد الطلبات للتطبيق وكائن [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>] لزيادة عدد الطلبات للعميل الذي نقوم بمعالجة طلبه حاليًا. تذكر أنه بينما يتشارك جميع عملاء التطبيق نفسه كائن [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>] نفسه، فإن لكل منهم كائن [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>] خاص به.</p>
+<p>نقوم باختبار التطبيق عن طريق وضع الملفات الأربعة السابقة في مجلد نسميه &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;، ثم نُشغّل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet/webapplia</bdi>). نفتح متصفحًا وننتقل إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/aspnet/webapplia/main.aspx</bdi></mark>]:</p>
 <p><img src="images/10000000000001F300000087B41AA38C.png" width="499" height="135" style="width:13.203cm;height:3.572cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F300000087B41AA38C.png" /></p>
-<p>نقوم بإجراء طلب ثانٍ باستخدام زر [Reload]:</p>
+<p>نقوم بإجراء طلب ثانٍ باستخدام زر [<bdi dir="ltr" class="odt-ltr-term">Reload</bdi>]:</p>
 <p><img src="images/10000000000001F8000000845D4E249E.png" width="504" height="132" style="width:13.335cm;height:3.493cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F8000000845D4E249E.png" /></p>
-<p>نفتح متصفحًا ثانيًا لطلب نفس عنوان URL. بالنسبة لخادم الويب، يعد هذا عميلًا جديدًا:</p>
+<p>نفتح متصفحًا ثانيًا لطلب نفس عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> بالنسبة لخادم الويب، يعد هذا عميلًا جديدًا:</p>
 <p><img src="images/100000000000016B000000719DDF5D39.png" width="363" height="113" style="width:9.604cm;height:2.99cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000016B000000719DDF5D39.png" /></p>
-<p>يمكننا ملاحظة أن رمز الجلسة قد تغير، مما يشير إلى وجود عميل جديد. وينعكس ذلك في عدد طلبات العملاء. والآن، لنعد إلى المتصفح الأول ونطلب نفس عنوان URL مرة أخرى:</p>
+<p>يمكننا ملاحظة أن رمز الجلسة قد تغير، مما يشير إلى وجود عميل جديد. وينعكس ذلك في عدد طلبات العملاء. والآن، لنعد إلى المتصفح الأول ونطلب نفس عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> مرة أخرى:</p>
 <p><img src="images/10000000000001FC0000008DC0779ED7.png" width="508" height="141" style="width:13.441cm;height:3.731cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FC0000008DC0779ED7.png" /></p>
 <p>يتم حساب عدد الطلبات الموجهة إلى التطبيق بشكل صحيح.</p>
 <p><a id="toc69180242"></a>
 <a id="toc69180340"></a></p>
 <h4 id="4135">4.1.3.5. الحاجة إلى مزامنة عملاء التطبيق</h4>
-<p>في التطبيق السابق، يتم زيادة عداد الطلبات الموجهة إلى التطبيق في إجراء [Form_Load] في صفحة [main.aspx] على النحو التالي:</p>
+<p>في التطبيق السابق، يتم زيادة عداد الطلبات الموجهة إلى التطبيق في إجراء [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>_Load] في صفحة [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>        &#39; une requête de plus pour l&#39;application
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>        Application.Item(&quot;nbRequêtes&quot;) = CType(Application.Item(&quot;nbRequêtes&quot;), Integer) + 1
 </code></pre></div>
@@ -1378,12 +1380,12 @@
   </li>
 </ol>
 
-<p>يعمل خادم الويب على جهاز متعدد المهام، مما يعني أن كل مهمة تحصل على المعالج لبضع ميلي ثوانٍ قبل أن تفقده ثم تستعيده بعد أن تحصل جميع المهام الأخرى على حصتها من الوقت. لنفترض أن عميلين، A و B، يقدمان طلبًا إلى خادم الويب في نفس الوقت. لنفترض أن العميل A يبدأ أولاً، ويدخل الإجراء [Form_Load] في [main.aspx.vb]، ويقرأ العداد (=100)، ثم يتم مقاطعته لأن شريحة الوقت الخاصة به قد انتهت. الآن لنفترض أن الدور قد حان للعميل B وأن العميل B يواجه نفس المصير: يصل إلى الأسلوب <code></code>، ويقرأ قيمة العداد (=100)، ولكن لا يتوفر له الوقت لزيادة قيمته. يحتوي كل من العميلين A و B على قيمة عداد تبلغ 100. لنفترض أن الدور عاد للعميل A مرة أخرى: يقوم بزيادة عداده، ويضبطه على 101، ثم ينهي العملية. الآن جاء دور العميل B، الذي يمتلك قيمة العداد القديمة، وليس الجديدة. لذلك يقوم هو أيضًا بضبط قيمة العداد على 101 وينهي العملية. أصبحت قيمة عداد طلبات التطبيق الآن غير صحيحة.</p>
+<p>يعمل خادم الويب على جهاز متعدد المهام، مما يعني أن كل مهمة تحصل على المعالج لبضع ميلي ثوانٍ قبل أن تفقده ثم تستعيده بعد أن تحصل جميع المهام الأخرى على حصتها من الوقت. لنفترض أن عميلين، <bdi dir="ltr" class="odt-ltr-term">A</bdi> و <bdi dir="ltr" class="odt-ltr-term">B</bdi>، يقدمان طلبًا إلى خادم الويب في نفس الوقت. لنفترض أن العميل <bdi dir="ltr" class="odt-ltr-term">A</bdi> يبدأ أولاً، ويدخل الإجراء [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>_Load] في [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]، ويقرأ العداد (=100)، ثم يتم مقاطعته لأن شريحة الوقت الخاصة به قد انتهت. الآن لنفترض أن الدور قد حان للعميل <bdi dir="ltr" class="odt-ltr-term">B</bdi> وأن العميل <bdi dir="ltr" class="odt-ltr-term">B</bdi> يواجه نفس المصير: يصل إلى الأسلوب <code></code>، ويقرأ قيمة العداد (=100)، ولكن لا يتوفر له الوقت لزيادة قيمته. يحتوي كل من العميلين <bdi dir="ltr" class="odt-ltr-term">A</bdi> و <bdi dir="ltr" class="odt-ltr-term">B</bdi> على قيمة عداد تبلغ 100. لنفترض أن الدور عاد للعميل <bdi dir="ltr" class="odt-ltr-term">A</bdi> مرة أخرى: يقوم بزيادة عداده، ويضبطه على 101، ثم ينهي العملية. الآن جاء دور العميل <bdi dir="ltr" class="odt-ltr-term">B</bdi>، الذي يمتلك قيمة العداد القديمة، وليس الجديدة. لذلك يقوم هو أيضًا بضبط قيمة العداد على 101 وينهي العملية. أصبحت قيمة عداد طلبات التطبيق الآن غير صحيحة.</p>
 <p>لتوضيح هذه المشكلة، سنعود إلى التطبيق السابق ونعدله على النحو التالي:</p>
 <ul>
-  <li>تظل الملفات [global.asax] و[global.asax.vb] و[main.aspx] دون تغيير
+  <li>تظل الملفات [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] دون تغيير
   </li>
-  <li>يصبح ملف [main.aspx.vb] كما يلي:
+  <li>يصبح ملف [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] كما يلي:
   </li>
 </ul>
 
@@ -1428,8 +1430,8 @@
   </li>
 </ol>
 
-<p>لننظر مرة أخرى إلى عميلينا، A و B. بين مرحلة القراءة ومرحلة زيادة عدادات الطلبات، نجبر مؤشر الترابط التنفيذي على التوقف لمدة 5 ثوانٍ. والنتيجة المباشرة لذلك هي أنه سيفقد المعالج، الذي سيتم تخصيصه بعد ذلك لمهمة أخرى. لنفترض أن العميل A يبدأ أولاً. سيقرأ قيمة العداد N وسيتم مقاطعته لمدة 5 ثوانٍ. إذا تمكن العميل B من الوصول إلى وحدة المعالجة المركزية خلال تلك الفترة، فمن المفترض أن يقرأ نفس قيمة العداد N. في النهاية، من المفترض أن يعرض كلا العميلين نفس قيمة العداد، وهو ما يعتبر أمراً غير طبيعي. </p>
-<p>نقوم باختبار التطبيق عن طريق وضع الملفات الأربعة السابقة في مجلد نسميه &lt;application-path&gt; وتشغيل خادم Cassini بالمعلمات (&lt;application-path&gt;,/aspnet/webapplib). نقوم بإعداد متصفحين مختلفين بعنوان URL [<mark style="background-color: #ffe994">http://localhost/aspnet/webapplib/main.aspx</mark>]. نطلق المتصفح الأول لطلب عنوان URL، ثم، دون انتظار الرد الذي سيصل بعد 5 ثوانٍ، نطلق المتصفح الثاني. بعد ما يزيد قليلاً عن 5 ثوانٍ، نحصل على النتيجة التالية:</p>
+<p>لننظر مرة أخرى إلى عميلينا، <bdi dir="ltr" class="odt-ltr-term">A</bdi> و <bdi dir="ltr" class="odt-ltr-term">B.</bdi> بين مرحلة القراءة ومرحلة زيادة عدادات الطلبات، نجبر مؤشر الترابط التنفيذي على التوقف لمدة 5 ثوانٍ. والنتيجة المباشرة لذلك هي أنه سيفقد المعالج، الذي سيتم تخصيصه بعد ذلك لمهمة أخرى. لنفترض أن العميل <bdi dir="ltr" class="odt-ltr-term">A</bdi> يبدأ أولاً. سيقرأ قيمة العداد <bdi dir="ltr" class="odt-ltr-term">N</bdi> وسيتم مقاطعته لمدة 5 ثوانٍ. إذا تمكن العميل <bdi dir="ltr" class="odt-ltr-term">B</bdi> من الوصول إلى وحدة المعالجة المركزية خلال تلك الفترة، فمن المفترض أن يقرأ نفس قيمة العداد <bdi dir="ltr" class="odt-ltr-term">N.</bdi> في النهاية، من المفترض أن يعرض كلا العميلين نفس قيمة العداد، وهو ما يعتبر أمراً غير طبيعي. </p>
+<p>نقوم باختبار التطبيق عن طريق وضع الملفات الأربعة السابقة في مجلد نسميه &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; وتشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet/webapplib</bdi>). نقوم بإعداد متصفحين مختلفين بعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/aspnet/webapplib/main.aspx</bdi></mark>]. نطلق المتصفح الأول لطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>، ثم، دون انتظار الرد الذي سيصل بعد 5 ثوانٍ، نطلق المتصفح الثاني. بعد ما يزيد قليلاً عن 5 ثوانٍ، نحصل على النتيجة التالية:</p>
 <p><img src="images/10000000000002CB000001AE1B2659D4.png" width="680" height="409" style="width:17.992cm;height:10.821cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002CB000001AE1B2659D4.png" /></p>
 <p>نرى:</p>
 <ul>
@@ -1441,7 +1443,7 @@
   </li>
 </ul>
 
-<p>الآن، دعونا نجرب تجربة أخرى. باستخدام نفس المتصفح، نرسل خمسة طلبات إلى عنوان URL [<mark style="background-color: #ffe994">http://localhost/aspnet/webapplib/main.aspx</mark>]. مرة أخرى، نرسلها واحدًا تلو الآخر دون انتظار النتائج. بمجرد تنفيذ جميع الطلبات، نحصل على النتيجة التالية للطلب الأخير:</p>
+<p>الآن، دعونا نجرب تجربة أخرى. باستخدام نفس المتصفح، نرسل خمسة طلبات إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/aspnet/webapplib/main.aspx</bdi></mark>]. مرة أخرى، نرسلها واحدًا تلو الآخر دون انتظار النتائج. بمجرد تنفيذ جميع الطلبات، نحصل على النتيجة التالية للطلب الأخير:</p>
 <p><img src="images/10000000000001F4000000A29DAB5B22.png" width="500" height="162" style="width:13.229cm;height:4.286cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F4000000A29DAB5B22.png" /></p>
 <p>يمكننا ملاحظة:</p>
 <ul>
@@ -1455,7 +1457,7 @@
 <p><a id="toc69180243"></a>
 <a id="toc69180341"></a></p>
 <h4 id="4136">4.1.3.6. مزامنة العملاء</h4>
-<p>المشكلة التي تم تسليط الضوء عليها في التطبيق السابق هي مشكلة كلاسيكية (ولكن ليس من السهل حلها) تتعلق بالوصول الحصري إلى مورد ما. في حالتنا المحددة، يجب أن نتأكد من أن عميلين، A و B، لا يمكن أن يكونا في تسلسل الكود في نفس الوقت:</p>
+<p>المشكلة التي تم تسليط الضوء عليها في التطبيق السابق هي مشكلة كلاسيكية (ولكن ليس من السهل حلها) تتعلق بالوصول الحصري إلى مورد ما. في حالتنا المحددة، يجب أن نتأكد من أن عميلين، <bdi dir="ltr" class="odt-ltr-term">A</bdi> و <bdi dir="ltr" class="odt-ltr-term">B</bdi>، لا يمكن أن يكونا في تسلسل الكود في نفس الوقت:</p>
 <ol>
   <li>قراءة العداد
   </li>
@@ -1465,45 +1467,45 @@
   </li>
 </ol>
 
-<p>يُطلق على تسلسل التعليمات البرمجية هذا اسم &quot;القسم الحرج&quot;. وهو يتطلب مزامنة الخيوط التي تنفذه في وقت واحد. توفر منصة .NET أدوات متنوعة لضمان ذلك. هنا، سنستخدم فئة [Mutex].</p>
+<p>يُطلق على تسلسل التعليمات البرمجية هذا اسم &quot;القسم الحرج&quot;. وهو يتطلب مزامنة الخيوط التي تنفذه في وقت واحد. توفر منصة .<bdi dir="ltr" class="odt-ltr-term">NET</bdi> أدوات متنوعة لضمان ذلك. هنا، سنستخدم فئة [<bdi dir="ltr" class="odt-ltr-term">Mutex</bdi>].</p>
 <p><img src="images/1000000000000227000000D09EE4EEDC.png" width="551" height="208" style="width:14.579cm;height:5.503cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000227000000D09EE4EEDC.png" /></p>
 <p>هنا، سنستخدم فقط المنشئات والأساليب التالية:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>public Mutex()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينشئ كائن تزامن M</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">ينشئ كائن تزامن <bdi dir="ltr" class="odt-ltr-term">M</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>public bool WaitOne()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يطلب الخيط T1، الذي ينفذ عملية<i> M.WaitOne()</i>، ملكية كائن التزامن M. إذا لم يكن أي خيط يمتلك Mutex M (الحالة الأولية)، يتم &quot;منحه&quot; للخيط T1 الذي طلبه. إذا قام الخيط T2، بعد ذلك بقليل، بتنفيذ نفس العملية، فسيتم حظره. وذلك لأن الموتكس يمكن أن ينتمي إلى خيط واحد فقط في كل مرة. وسيتم تحريره عندما يقوم الخيط T1 بتحرير الموتكس M الذي يحتفظ به. وبالتالي، قد يتم حظر عدة خيوط أثناء انتظار الموتكس M.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يطلب الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi>، الذي ينفذ عملية<i> <bdi dir="ltr" class="odt-ltr-term">M.WaitOne</bdi>()</i>، ملكية كائن التزامن <bdi dir="ltr" class="odt-ltr-term">M.</bdi> إذا لم يكن أي خيط يمتلك <bdi dir="ltr" class="odt-ltr-term">Mutex M</bdi> (الحالة الأولية)، يتم &quot;منحه&quot; للخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> الذي طلبه. إذا قام الخيط <bdi dir="ltr" class="odt-ltr-term">T2</bdi>، بعد ذلك بقليل، بتنفيذ نفس العملية، فسيتم حظره. وذلك لأن الموتكس يمكن أن ينتمي إلى خيط واحد فقط في كل مرة. وسيتم تحريره عندما يقوم الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> بتحرير الموتكس <bdi dir="ltr" class="odt-ltr-term">M</bdi> الذي يحتفظ به. وبالتالي، قد يتم حظر عدة خيوط أثناء انتظار الموتكس <bdi dir="ltr" class="odt-ltr-term">M.</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>public void ReleaseMutex()
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتخلى الخيط T1 الذي يقوم بعملية<i> M.ReleaseMutex() </i>عن ملكية الموتكس M. عندما يفقد الخيط T1 المعالج، يمكن للنظام تخصيصه لأحد الخيوط التي تنتظر الموتكس M. سيحصل عليه واحد فقط بالترتيب؛ بينما تظل الخيوط الأخرى التي تنتظر M محجوبة </div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يتخلى الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> الذي يقوم بعملية<i> <bdi dir="ltr" class="odt-ltr-term">M.ReleaseMutex</bdi>() </i>عن ملكية الموتكس <bdi dir="ltr" class="odt-ltr-term">M.</bdi> عندما يفقد الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> المعالج، يمكن للنظام تخصيصه لأحد الخيوط التي تنتظر الموتكس <bdi dir="ltr" class="odt-ltr-term">M.</bdi> سيحصل عليه واحد فقط بالترتيب؛ بينما تظل الخيوط الأخرى التي تنتظر <bdi dir="ltr" class="odt-ltr-term">M</bdi> محجوبة </div></td></tr></table>
 
-<p>يدير الموتكس M الوصول إلى المورد المشترك R. يطلب الخيط المورد R عبر <em>M.WaitOne()</em> ويحرره عبر <em>M.ReleaseMutex()</em>. يعد الجزء الحرج من الكود الذي يجب تنفيذه بواسطة خيط واحد فقط في كل مرة موردًا مشتركًا. يمكن تحقيق تزامن تنفيذ الجزء الحرج على النحو التالي:</p>
+<p>يدير الموتكس <bdi dir="ltr" class="odt-ltr-term">M</bdi> الوصول إلى المورد المشترك <bdi dir="ltr" class="odt-ltr-term">R.</bdi> يطلب الخيط المورد <bdi dir="ltr" class="odt-ltr-term">R</bdi> عبر <em><bdi dir="ltr" class="odt-ltr-term">M.WaitOne</bdi>()</em> ويحرره عبر <em><bdi dir="ltr" class="odt-ltr-term">M.ReleaseMutex</bdi>()</em>. يعد الجزء الحرج من الكود الذي يجب تنفيذه بواسطة خيط واحد فقط في كل مرة موردًا مشتركًا. يمكن تحقيق تزامن تنفيذ الجزء الحرج على النحو التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>M.WaitOne()
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>&#39; le thread est seul à entrer ici
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>&#39; section critique
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>....
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>M.ReleaseMutex()
 </code></pre></div>
-<p>حيث M هو كائن <em>Mutex</em>. بالطبع، يجب ألا تنسى أبدًا تحرير <em>Mutex</em> الذي لم يعد مطلوبًا، حتى يتمكن مؤشر ترابط آخر من الدخول إلى القسم الحرج بدوره؛ وإلا، فإن مؤشرات الترابط التي تنتظر Mutex الذي لم يتم تحريره أبدًا لن تتمكن أبدًا من الوصول إلى المعالج. علاوة على ذلك، يجب تجنب حالة التعطل التي ينتظر فيها مؤشرا ترابط بعضهما البعض. ضع في اعتبارك الإجراءات التالية التي تحدث بالتسلسل:</p>
+<p>حيث <bdi dir="ltr" class="odt-ltr-term">M</bdi> هو كائن <em><bdi dir="ltr" class="odt-ltr-term">Mutex</bdi></em>. بالطبع، يجب ألا تنسى أبدًا تحرير <em><bdi dir="ltr" class="odt-ltr-term">Mutex</bdi></em> الذي لم يعد مطلوبًا، حتى يتمكن مؤشر ترابط آخر من الدخول إلى القسم الحرج بدوره؛ وإلا، فإن مؤشرات الترابط التي تنتظر <bdi dir="ltr" class="odt-ltr-term">Mutex</bdi> الذي لم يتم تحريره أبدًا لن تتمكن أبدًا من الوصول إلى المعالج. علاوة على ذلك، يجب تجنب حالة التعطل التي ينتظر فيها مؤشرا ترابط بعضهما البعض. ضع في اعتبارك الإجراءات التالية التي تحدث بالتسلسل:</p>
 <ul>
-  <li>يستحوذ الخيط T1 على ملكية Mutex M1 للوصول إلى المورد المشترك R1
+  <li>يستحوذ الخيط <bdi dir="ltr" class="odt-ltr-term">T1</bdi> على ملكية <bdi dir="ltr" class="odt-ltr-term">Mutex M1</bdi> للوصول إلى المورد المشترك <bdi dir="ltr" class="odt-ltr-term">R1</bdi>
   </li>
-  <li>يستحوذ الخيط T2 على Mutex M2 للوصول إلى مورد مشترك R2
+  <li>يستحوذ الخيط <bdi dir="ltr" class="odt-ltr-term">T2</bdi> على <bdi dir="ltr" class="odt-ltr-term">Mutex M2</bdi> للوصول إلى مورد مشترك <bdi dir="ltr" class="odt-ltr-term">R2</bdi>
   </li>
-  <li>يطلب الخيط T1 Mutex M2. يتم حظره.
+  <li>يطلب الخيط <bdi dir="ltr" class="odt-ltr-term">T1 Mutex M2.</bdi> يتم حظره.
   </li>
-  <li>يطلب الخيط T2 Mutex M1. يتم حظره.
+  <li>يطلب الخيط <bdi dir="ltr" class="odt-ltr-term">T2 Mutex M1.</bdi> يتم حظره.
   </li>
 </ul>
 
-<p>هنا، ينتظر الخيطان T1 و T2 بعضهما البعض. تحدث هذه الحالة عندما يحتاج الخيطان إلى موردين مشتركين: المورد R1 الذي يتحكم فيه Mutex M1 والمورد R2 الذي يتحكم فيه Mutex M2. أحد الحلول الممكنة هو طلب كلا الموردين في نفس الوقت باستخدام Mutex M واحد. لكن هذا ليس ممكنًا دائمًا، خاصةً إذا أدى ذلك إلى قفل طويل لمورد مكلف. حل آخر هو أن يقوم الخيط الذي يحمل M1 والذي لا يمكنه الحصول على M2 بتحرير M1 لتجنب حالة التعطل. </p>
+<p>هنا، ينتظر الخيطان <bdi dir="ltr" class="odt-ltr-term">T1</bdi> و <bdi dir="ltr" class="odt-ltr-term">T2</bdi> بعضهما البعض. تحدث هذه الحالة عندما يحتاج الخيطان إلى موردين مشتركين: المورد <bdi dir="ltr" class="odt-ltr-term">R1</bdi> الذي يتحكم فيه <bdi dir="ltr" class="odt-ltr-term">Mutex M1</bdi> والمورد <bdi dir="ltr" class="odt-ltr-term">R2</bdi> الذي يتحكم فيه <bdi dir="ltr" class="odt-ltr-term">Mutex M2.</bdi> أحد الحلول الممكنة هو طلب كلا الموردين في نفس الوقت باستخدام <bdi dir="ltr" class="odt-ltr-term">Mutex M</bdi> واحد. لكن هذا ليس ممكنًا دائمًا، خاصةً إذا أدى ذلك إلى قفل طويل لمورد مكلف. حل آخر هو أن يقوم الخيط الذي يحمل <bdi dir="ltr" class="odt-ltr-term">M1</bdi> والذي لا يمكنه الحصول على <bdi dir="ltr" class="odt-ltr-term">M2</bdi> بتحرير <bdi dir="ltr" class="odt-ltr-term">M1</bdi> لتجنب حالة التعطل. </p>
 <p>إذا طبقنا ما تعلمناه للتو، فسيصبح تطبيقنا كما يلي:</p>
 <ul>
-  <li>يظل ملفا [global.asax] و [main.aspx] دون تغيير
+  <li>يظل ملفا [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] دون تغيير
   </li>
-  <li>يصبح ملف [global.asax.vb] كما يلي:
+  <li>يصبح ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] كما يلي:
   </li>
 </ul>
 
@@ -1532,9 +1534,9 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>الميزة الجديدة الوحيدة هي إنشاء [Mutex] الذي سيستخدمه العملاء للمزامنة. ونظرًا لأنه يجب أن يكون متاحًا لجميع العملاء، يتم وضعه في كائن [Application].</p>
+<p>الميزة الجديدة الوحيدة هي إنشاء [<bdi dir="ltr" class="odt-ltr-term">Mutex</bdi>] الذي سيستخدمه العملاء للمزامنة. ونظرًا لأنه يجب أن يكون متاحًا لجميع العملاء، يتم وضعه في كائن [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>].</p>
 <ul>
-  <li>يصبح ملف [main.aspx.vb] كما يلي:
+  <li>يصبح ملف [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] كما يلي:
   </li>
 </ul>
 
@@ -1577,11 +1579,11 @@
 <ul>
   <li>يطلب الدخول إلى القسم الحرج بمفرده. وللقيام بذلك، يطلب الملكية الحصرية للموتكس [القفل]
   </li>
-  <li>يحرر Mutex [lock] في نهاية القسم الحرج حتى يتمكن عميل آخر من الدخول إلى القسم الحرج بدوره.
+  <li>يحرر <bdi dir="ltr" class="odt-ltr-term">Mutex</bdi> [<bdi dir="ltr" class="odt-ltr-term">lock</bdi>] في نهاية القسم الحرج حتى يتمكن عميل آخر من الدخول إلى القسم الحرج بدوره.
   </li>
 </ul>
 
-<p>نختبر التطبيق عن طريق وضع الملفات الأربعة السابقة في مجلد نسميه &lt;application-path&gt; ونقوم بتشغيل خادم Cassini بالمعلمات (&lt;application-path&gt;,/aspnet/webapplic). نفتح متصفحين مختلفين باستخدام عنوان URL [<mark style="background-color: #ffe994">http://localhost/aspnet/webapplic/main.aspx</mark>]. نطلق المتصفح الأول لطلب عنوان URL، ثم، دون انتظار الرد الذي سيصل بعد 5 ثوانٍ، نطلق المتصفح الثاني. بعد ما يزيد قليلاً عن 5 ثوانٍ، نحصل على النتيجة التالية:</p>
+<p>نختبر التطبيق عن طريق وضع الملفات الأربعة السابقة في مجلد نسميه &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ونقوم بتشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet/webapplic</bdi>). نفتح متصفحين مختلفين باستخدام عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/aspnet/webapplic/main.aspx</bdi></mark>]. نطلق المتصفح الأول لطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>، ثم، دون انتظار الرد الذي سيصل بعد 5 ثوانٍ، نطلق المتصفح الثاني. بعد ما يزيد قليلاً عن 5 ثوانٍ، نحصل على النتيجة التالية:</p>
 <p><img src="images/10000000000002D1000001C5C8FE5699.png" width="680" height="427" style="width:17.992cm;height:11.298cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D1000001C5C8FE5699.png" /></p>
 <p>هذه المرة، عداد طلبات التطبيق صحيح.</p>
 <p>النتيجة الرئيسية المستخلصة من هذا العرض التوضيحي المطول هي الضرورة المطلقة لمزامنة عملاء نفس التطبيق الويب إذا كانوا بحاجة إلى تحديث العناصر المشتركة بين جميع العملاء.</p>
@@ -1592,13 +1594,13 @@
 <ul>
   <li>يقوم العميل بإرسال طلب أولي إلى الخادم. ولا يرسل رمز الجلسة.
   </li>
-  <li>نظرًا لعدم وجود رمز الجلسة في الطلب، يتعرف الخادم على عميل جديد ويخصص له رمزًا. يرتبط بهذا الرمز كائن [Session] الذي سيُستخدم لتخزين المعلومات الخاصة بهذا العميل. سيصاحب الرمز جميع طلبات هذا العميل. وسيتم تضمينه في رؤوس HTTP للاستجابة لطلب العميل الأول.
+  <li>نظرًا لعدم وجود رمز الجلسة في الطلب، يتعرف الخادم على عميل جديد ويخصص له رمزًا. يرتبط بهذا الرمز كائن [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>] الذي سيُستخدم لتخزين المعلومات الخاصة بهذا العميل. سيصاحب الرمز جميع طلبات هذا العميل. وسيتم تضمينه في رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للاستجابة لطلب العميل الأول.
   </li>
-  <li>يعرف العميل الآن رمز الجلسة الخاص به. وسيقوم بإرساله مرة أخرى في رؤوس HTTP لكل طلب لاحق يقدمه إلى خادم الويب. وبفضل الرمز، سيتمكن الخادم من استرداد كائن [Session] المرتبط بالعميل.
+  <li>يعرف العميل الآن رمز الجلسة الخاص به. وسيقوم بإرساله مرة أخرى في رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لكل طلب لاحق يقدمه إلى خادم الويب. وبفضل الرمز، سيتمكن الخادم من استرداد كائن [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>] المرتبط بالعميل.
   </li>
 </ul>
 
-<p>لتوضيح هذه الآلية، سنعود إلى التطبيق السابق، مع تعديل ملف [main.aspx.vb] فقط:</p>
+<p>لتوضيح هذه الآلية، سنعود إلى التطبيق السابق، مع تعديل ملف [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] فقط:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Threading</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
@@ -1640,26 +1642,26 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>عند حدوث الحدث [Page_Init]، نقوم بحفظ طلب العميل في دليل التطبيق. دعونا نستعرض بعض النقاط:</p>
+<p>عند حدوث الحدث [<bdi dir="ltr" class="odt-ltr-term">Page</bdi>_Init]، نقوم بحفظ طلب العميل في دليل التطبيق. دعونا نستعرض بعض النقاط:</p>
 <ul>
-  <li>يمثل [TemplateSourceDirectory] المسار الافتراضي للصفحة قيد التشغيل حاليًا،
+  <li>يمثل [<bdi dir="ltr" class="odt-ltr-term">TemplateSourceDirectory</bdi>] المسار الافتراضي للصفحة قيد التشغيل حاليًا،
   </li>
-  <li>MapPath(TemplateSourceDirectory) يمثل المسار الفعلي المقابل. وهذا يسمح لنا بإنشاء المسار الفعلي للملف المراد إنشاؤه،
+  <li><bdi dir="ltr" class="odt-ltr-term">MapPath</bdi>(<bdi dir="ltr" class="odt-ltr-term">TemplateSourceDirectory</bdi>) يمثل المسار الفعلي المقابل. وهذا يسمح لنا بإنشاء المسار الفعلي للملف المراد إنشاؤه،
   </li>
-  <li>[Request] هو كائن يمثل الطلب الذي تتم معالجته حاليًا. تم إنشاء هذا الكائن من خلال معالجة الطلب الأولي المرسل من العميل، أي سلسلة من الأسطر النصية بالشكل التالي:
+  <li>[<bdi dir="ltr" class="odt-ltr-term">Request</bdi>] هو كائن يمثل الطلب الذي تتم معالجته حاليًا. تم إنشاء هذا الكائن من خلال معالجة الطلب الأولي المرسل من العميل، أي سلسلة من الأسطر النصية بالشكل التالي:
   </li>
 </ul>
 
 <p><img src="images/10000000000002020000015C1116A3E3.png" width="257" height="174" style="width:6.8cm;height:4.604cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002020000015C1116A3E3.png" /></p>
 <ul>
-  <li>Request.Save([FileName]) يحفظ طلب العميل بالكامل (رؤوس HTTP، وإذا أمكن، المستند الذي يليها) في ملف يتم تمرير مساره كمعلمة.
+  <li><bdi dir="ltr" class="odt-ltr-term">Request.Save</bdi>([<bdi dir="ltr" class="odt-ltr-term">FileName</bdi>]) يحفظ طلب العميل بالكامل (رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>، وإذا أمكن، المستند الذي يليها) في ملف يتم تمرير مساره كمعلمة.
   </li>
 </ul>
 
-<p>وبالتالي، سنتمكن من معرفة طلب العميل بالضبط. نختبر التطبيق عن طريق وضع الملفات الأربعة السابقة في مجلد نسميه &lt;application-path&gt; ونبدأ تشغيل خادم Cassini بالمعلمات (&lt;application-path&gt;,/aspnet/session1). ثم، باستخدام متصفح، نطلب عنوان URL</p>
-<p>[<mark style="background-color: #ffe994">http://localhost/aspnet/session1/main.aspx</mark>]. نحصل على النتيجة التالية:</p>
+<p>وبالتالي، سنتمكن من معرفة طلب العميل بالضبط. نختبر التطبيق عن طريق وضع الملفات الأربعة السابقة في مجلد نسميه &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ونبدأ تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet/session1</bdi>). ثم، باستخدام متصفح، نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi></p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/aspnet/session1/main.aspx</bdi></mark>]. نحصل على النتيجة التالية:</p>
 <p><img src="images/10000000000001F0000000ABE3598D16.png" width="496" height="171" style="width:13.123cm;height:4.524cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F0000000ABE3598D16.png" /></p>
-<p>نستخدم ملف [request.txt] الذي تم حفظه بواسطة [main.aspx.vb] للوصول إلى طلب المتصفح:</p>
+<p>نستخدم ملف [<bdi dir="ltr" class="odt-ltr-term">request.txt</bdi>] الذي تم حفظه بواسطة [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] للوصول إلى طلب المتصفح:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">GET</span> <span class="o">/</span><span class="n">aspnet</span><span class="o">/</span><span class="n">session1</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">aspx</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span> <span class="nb">max</span><span class="o">-</span><span class="n">age</span><span class="o">=</span><span class="mi">0</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
@@ -1671,9 +1673,9 @@
 <a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="n">Host</span><span class="p">:</span> <span class="n">localhost</span>
 <a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span> <span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="n">Windows</span><span class="p">;</span> <span class="n">U</span><span class="p">;</span> <span class="n">Windows</span> <span class="n">NT</span> <span class="mf">5.0</span><span class="p">;</span> <span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span> <span class="n">rv</span><span class="p">:</span><span class="mf">1.7</span><span class="n">b</span><span class="p">)</span> <span class="n">Gecko</span><span class="o">/</span><span class="mi">20040316</span>
 </code></pre></div>
-<p>نرى أن المتصفح أرسل طلبًا لعنوان URL [/aspnet/session1/main.aspx] وأرسل معلومات أخرى ناقشناها في الفصل السابق. لا يوجد رمز جلسة عمل مرئي هنا. تُظهر الصفحة التي تم استلامها كاستجابة أن الخادم أنشأ رمز جلسة عمل. لا نعرف بعد ما إذا كان المتصفح قد استلمه أم لا. لنقم الآن بإرسال طلب ثانٍ باستخدام نفس المتصفح (إعادة التحميل). نتلقى الاستجابة الجديدة التالية:</p>
+<p>نرى أن المتصفح أرسل طلبًا لعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [/<bdi dir="ltr" class="odt-ltr-term">aspnet/session1/main.aspx</bdi>] وأرسل معلومات أخرى ناقشناها في الفصل السابق. لا يوجد رمز جلسة عمل مرئي هنا. تُظهر الصفحة التي تم استلامها كاستجابة أن الخادم أنشأ رمز جلسة عمل. لا نعرف بعد ما إذا كان المتصفح قد استلمه أم لا. لنقم الآن بإرسال طلب ثانٍ باستخدام نفس المتصفح (إعادة التحميل). نتلقى الاستجابة الجديدة التالية:</p>
 <p><img src="images/10000000000001EA000000AB220A2A25.png" width="490" height="171" style="width:12.965cm;height:4.524cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EA000000AB220A2A25.png" /></p>
-<p>يعمل تتبع الجلسة بالفعل، حيث تمت زيادة عدد طلبات الجلسة بشكل صحيح. لنلقِ نظرة الآن على محتويات ملف [request.txt]:</p>
+<p>يعمل تتبع الجلسة بالفعل، حيث تمت زيادة عدد طلبات الجلسة بشكل صحيح. لنلقِ نظرة الآن على محتويات ملف [<bdi dir="ltr" class="odt-ltr-term">request.txt</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">GET</span> <span class="o">/</span><span class="n">aspnet</span><span class="o">/</span><span class="n">session1</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">aspx</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span> <span class="nb">max</span><span class="o">-</span><span class="n">age</span><span class="o">=</span><span class="mi">0</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
@@ -1686,10 +1688,10 @@
 <a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="n">Host</span><span class="p">:</span> <span class="n">localhost</span>
 <a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span> <span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="n">Windows</span><span class="p">;</span> <span class="n">U</span><span class="p">;</span> <span class="n">Windows</span> <span class="n">NT</span> <span class="mf">5.0</span><span class="p">;</span> <span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span> <span class="n">rv</span><span class="p">:</span><span class="mf">1.7</span><span class="n">b</span><span class="p">)</span> <span class="n">Gecko</span><span class="o">/</span><span class="mi">20040316</span>
 </code></pre></div>
-<p>يمكننا أن نرى أنه، بالنسبة لهذا الطلب الثاني، أرسل المتصفح إلى الخادم رأس HTTP جديد [Cookie:] يحدد معلومة تسمى [ASP.NET_SessionId] بقيمة تساوي رمز الجلسة الذي ظهر في الاستجابة للطلب الأول. باستخدام هذا الرمز، سيربط خادم الويب هذا الطلب الجديد بكائن [Session] المحدد بالرمز [y153tk45sise0lrhdzrf22m3] ويسترد عداد الطلبات المرتبط.</p>
-<p>ما زلنا لا نعرف الآلية التي استخدمها الخادم لإرسال الرمز إلى العميل، حيث لا يمكننا الوصول إلى استجابة HTTP الصادرة عن الخادم. تذكر أن هذه الاستجابة لها نفس بنية طلب العميل، أي مجموعة من الأسطر النصية بالصيغة التالية:</p>
+<p>يمكننا أن نرى أنه، بالنسبة لهذا الطلب الثاني، أرسل المتصفح إلى الخادم رأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> جديد [<bdi dir="ltr" class="odt-ltr-term">Cookie:</bdi>] يحدد معلومة تسمى [<bdi dir="ltr" class="odt-ltr-term">ASP.NET</bdi>_SessionId] بقيمة تساوي رمز الجلسة الذي ظهر في الاستجابة للطلب الأول. باستخدام هذا الرمز، سيربط خادم الويب هذا الطلب الجديد بكائن [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>] المحدد بالرمز [<bdi dir="ltr" class="odt-ltr-term">y153tk45sise0lrhdzrf22m3</bdi>] ويسترد عداد الطلبات المرتبط.</p>
+<p>ما زلنا لا نعرف الآلية التي استخدمها الخادم لإرسال الرمز إلى العميل، حيث لا يمكننا الوصول إلى استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الصادرة عن الخادم. تذكر أن هذه الاستجابة لها نفس بنية طلب العميل، أي مجموعة من الأسطر النصية بالصيغة التالية:</p>
 <p><img src="images/100000000000021D000001471844F490.png" width="271" height="164" style="width:7.158cm;height:4.327cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021D000001471844F490.png" /></p>
-<p>استخدمنا سابقًا عميل ويب أتاح لنا الوصول إلى استجابة HTTP لخادم الويب: عميل curl. سنستخدمه مرة أخرى، في نافذة سطر الأوامر، للاستعلام عن نفس عنوان URL الذي استخدمه المتصفح السابق:</p>
+<p>استخدمنا سابقًا عميل ويب أتاح لنا الوصول إلى استجابة <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> لخادم الويب: عميل <bdi dir="ltr" class="odt-ltr-term">curl.</bdi> سنستخدمه مرة أخرى، في نافذة سطر الأوامر، للاستعلام عن نفس عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي استخدمه المتصفح السابق:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>E:\curl&gt;curl --include http://localhost/aspnet/session1/main.aspx
 <a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>HTTP/1.1 200 OK
 <a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Server: Microsoft ASP.NET Web Matrix Server/0.6.0.0
@@ -1719,7 +1721,7 @@
 <a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>لدينا إجابة على سؤالنا. يرسل خادم الويب رمز الجلسة في شكل رأس HTTP [Set-Cookie:]:</p>
+<p>لدينا إجابة على سؤالنا. يرسل خادم الويب رمز الجلسة في شكل رأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> [<bdi dir="ltr" class="odt-ltr-term">Set-Cookie:</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Set-Cookie: ASP.NET_SessionId=qxnxmqmvhde3al55kzsmx445; path=/
 </code></pre></div>
 <p>دعونا نرسل الطلب نفسه دون إرسال رمز الجلسة. نحصل على الرد التالي:</p>
@@ -1752,7 +1754,7 @@
 <a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>نظرًا لأننا لم نرسل رمز الجلسة مرة أخرى، لم يتمكن الخادم من التعرف علينا وأصدر رمزًا جديدًا. لمواصلة الجلسة الحالية، يجب على العميل إرسال رمز الجلسة الذي تلقّاه إلى الخادم. سنقوم بذلك هنا باستخدام خيار [--cookie key=value] في curl، والذي سيُنشئ رأس HTTP [Cookie: key=value]. وقد رأينا أن المتصفح أرسل رأس HTTP هذا في طلبه الثاني.</p>
+<p>نظرًا لأننا لم نرسل رمز الجلسة مرة أخرى، لم يتمكن الخادم من التعرف علينا وأصدر رمزًا جديدًا. لمواصلة الجلسة الحالية، يجب على العميل إرسال رمز الجلسة الذي تلقّاه إلى الخادم. سنقوم بذلك هنا باستخدام خيار [--<bdi dir="ltr" class="odt-ltr-term">cookie key</bdi>=<bdi dir="ltr" class="odt-ltr-term">value</bdi>] في <bdi dir="ltr" class="odt-ltr-term">curl</bdi>، والذي سيُنشئ رأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> [<bdi dir="ltr" class="odt-ltr-term">Cookie: key</bdi>=<bdi dir="ltr" class="odt-ltr-term">value</bdi>]. وقد رأينا أن المتصفح أرسل رأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> هذا في طلبه الثاني.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>E:\curl&gt;curl --include --cookie ASP.NET_SessionId=cs2p12mehdiz5v55ihev1kaz http://localhost/aspnet/session1/main.aspx
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>HTTP/1.1 200 OK
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>Server: Microsoft ASP.NET Web Matrix Server/0.6.0.0
@@ -1787,11 +1789,11 @@
   </li>
   <li>رمز الجلسة المعروض على الصفحة هو بالفعل الرمز الذي أرسلناه
   </li>
-  <li>لم يعد رمز الجلسة موجودًا في رؤوس HTTP المرسلة من خادم الويب. في الواقع، يرسله الخادم مرة واحدة فقط: عند إنشاء الرمز في بداية جلسة جديدة. بمجرد حصول العميل على الرمز، فإن الأمر متروك للعميل لاستخدامه متى أراد أن يتم التعرف عليه.
+  <li>لم يعد رمز الجلسة موجودًا في رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> المرسلة من خادم الويب. في الواقع، يرسله الخادم مرة واحدة فقط: عند إنشاء الرمز في بداية جلسة جديدة. بمجرد حصول العميل على الرمز، فإن الأمر متروك للعميل لاستخدامه متى أراد أن يتم التعرف عليه.
   </li>
 </ul>
 
-<p>لا شيء يمنع العميل من استخدام عدة رموز جلسة، كما هو موضح في المثال التالي باستخدام [curl]، حيث نستخدم الرمز الذي تم الحصول عليه خلال طلبنا الأول (الطلب رقم 1):</p>
+<p>لا شيء يمنع العميل من استخدام عدة رموز جلسة، كما هو موضح في المثال التالي باستخدام [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>]، حيث نستخدم الرمز الذي تم الحصول عليه خلال طلبنا الأول (الطلب رقم 1):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>E:\curl&gt;curl --include --cookie ASP.NET_SessionId=qxnxmqmvhde3al55kzsmx445 http://localhost/aspnet/session1/main.aspx
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>HTTP/1.1 200 OK
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Server: Microsoft ASP.NET Web Matrix Server/0.6.0.0
@@ -1820,8 +1822,8 @@
 <a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>ماذا يعني هذا المثال؟ لقد أرسلنا رمزًا تم الحصول عليه مسبقًا. عندما ينشئ خادم الويب رمزًا، فإنه يحتفظ به طالما استمر العميل المرتبط بهذا الرمز في إرسال الطلبات إليه. بعد فترة معينة من عدم النشاط (20 دقيقة بشكل افتراضي مع IIS)، يتم حذف الرمز. يوضح المثال السابق أننا استخدمنا رمزًا كان لا يزال نشطًا.</p>
-<p>قد تكون مهتمًا بمعرفة طلبات HTTP التي أرسلها عميل [curl] خلال كل هذه العمليات. نعلم أنها تم تسجيلها في ملف [request.txt]. إليك آخرها:</p>
+<p>ماذا يعني هذا المثال؟ لقد أرسلنا رمزًا تم الحصول عليه مسبقًا. عندما ينشئ خادم الويب رمزًا، فإنه يحتفظ به طالما استمر العميل المرتبط بهذا الرمز في إرسال الطلبات إليه. بعد فترة معينة من عدم النشاط (20 دقيقة بشكل افتراضي مع <bdi dir="ltr" class="odt-ltr-term">IIS</bdi>)، يتم حذف الرمز. يوضح المثال السابق أننا استخدمنا رمزًا كان لا يزال نشطًا.</p>
+<p>قد تكون مهتمًا بمعرفة طلبات <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> التي أرسلها عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] خلال كل هذه العمليات. نعلم أنها تم تسجيلها في ملف [<bdi dir="ltr" class="odt-ltr-term">request.txt</bdi>]. إليك آخرها:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>GET /aspnet/session1/main.aspx HTTP/1.1
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Pragma: no-cache
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*
@@ -1829,35 +1831,35 @@
 <a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Host: localhost
 <a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>User-Agent: curl/7.10.8 (win32) libcurl/7.10.8 OpenSSL/0.9.7a zlib/1.1.4
 </code></pre></div>
-<p>إن رأس HTTP الذي يرسل رمز الجلسة موجود بالفعل.</p>
-<p>تسمى المعلومات التي يرسلها الخادم عبر رأس HTTP [Set-Cookie:] <strong>ملف تعريف الارتباط</strong>. يمكن للخادم استخدام هذه الآلية لنقل معلومات أخرى غير رمز الجلسة. عندما يرسل الخادم S ملف تعريف ارتباط إلى عميل، فإنه يحدد أيضًا مدة صلاحية ملف تعريف الارتباط D وعنوان URL المرتبط U. وهذا يعني أنه عندما يطلب العميل عنوان URL بالصيغة /U/path من الخادم S في ، قد يعيد الخادم ملف تعريف الارتباط إذا لم يتلقه العميل لفترة أطول من D. لا شيء يمنع العميل من تجاهل قواعد السلوك هذه. ومع ذلك، فإن المتصفحات تلتزم بها. توفر بعض المتصفحات إمكانية الوصول إلى محتويات ملفات تعريف الارتباط التي تتلقاها. هذا هو الحال مع متصفح Mozilla. فيما يلي، على سبيل المثال، المعلومات المتعلقة بملف تعريف الارتباط الذي أرسله الخادم في المثال السابق:</p>
+<p>إن رأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الذي يرسل رمز الجلسة موجود بالفعل.</p>
+<p>تسمى المعلومات التي يرسلها الخادم عبر رأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> [<bdi dir="ltr" class="odt-ltr-term">Set-Cookie:</bdi>] <strong>ملف تعريف الارتباط</strong>. يمكن للخادم استخدام هذه الآلية لنقل معلومات أخرى غير رمز الجلسة. عندما يرسل الخادم <bdi dir="ltr" class="odt-ltr-term">S</bdi> ملف تعريف ارتباط إلى عميل، فإنه يحدد أيضًا مدة صلاحية ملف تعريف الارتباط <bdi dir="ltr" class="odt-ltr-term">D</bdi> وعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المرتبط <bdi dir="ltr" class="odt-ltr-term">U.</bdi> وهذا يعني أنه عندما يطلب العميل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بالصيغة /<bdi dir="ltr" class="odt-ltr-term">U/path</bdi> من الخادم <bdi dir="ltr" class="odt-ltr-term">S</bdi> في ، قد يعيد الخادم ملف تعريف الارتباط إذا لم يتلقه العميل لفترة أطول من <bdi dir="ltr" class="odt-ltr-term">D.</bdi> لا شيء يمنع العميل من تجاهل قواعد السلوك هذه. ومع ذلك، فإن المتصفحات تلتزم بها. توفر بعض المتصفحات إمكانية الوصول إلى محتويات ملفات تعريف الارتباط التي تتلقاها. هذا هو الحال مع متصفح <bdi dir="ltr" class="odt-ltr-term">Mozilla.</bdi> فيما يلي، على سبيل المثال، المعلومات المتعلقة بملف تعريف الارتباط الذي أرسله الخادم في المثال السابق:</p>
 <p><img src="images/100000000000015600000123B52147C3.png" width="342" height="291" style="width:9.049cm;height:7.699cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000015600000123B52147C3.png" /></p>
 <p>وهي تتضمن:</p>
 <ul>
-  <li>اسم ملف تعريف الارتباط [ASP.NET_SessionId]
+  <li>اسم ملف تعريف الارتباط [<bdi dir="ltr" class="odt-ltr-term">ASP.NET_SessionId</bdi>]
   </li>
-  <li>قيمته [y153...m3]
+  <li>قيمته [<bdi dir="ltr" class="odt-ltr-term">y153...m3</bdi>]
   </li>
-  <li>الجهاز المرتبط به [localhost]
+  <li>الجهاز المرتبط به [<bdi dir="ltr" class="odt-ltr-term">localhost</bdi>]
   </li>
-  <li>عنوان URL المرتبط به [/]
+  <li>عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المرتبط به [/]
   </li>
   <li>مدة صلاحيته [في نهاية الجلسة]
   </li>
 </ul>
 
-<p>وبالتالي، سيرسل المتصفح رمز الجلسة في كل مرة يطلب فيها عنوان URL بالصيغة [http://localhost/...], أي في كل مرة يطلب فيها عنوان URL من خادم الويب على الجهاز [localhost]. مدة صلاحية ملف تعريف الارتباط هي مدة الجلسة. بالنسبة للمتصفح، هذا يعني أن ملف تعريف الارتباط لا تنتهي صلاحيته أبدًا. وسيرسله في كل مرة يطلب فيها عنوان URL من الجهاز [localhost]. وبالتالي، إذا تلقى المتصفح رمز الجلسة في اليوم D، وأغلقه، وأعاد فتحه في اليوم التالي، فسوف يعيد إرسال رمز الجلسة (الذي تم تخزينه في ملف). سيتلقى الخادم هذا الرمز، الذي لم يعد موجودًا لديه، لأن رمز الجلسة له عمر محدود على الخادم (20 دقيقة على IIS). وبالتالي، سيبدأ جلسة جديدة.</p>
-<p>من الممكن تعطيل ملفات تعريف الارتباط في المتصفح. في هذه الحالة، يتلقى العميل رمز الجلسة ولكنه لا يرسله مرة أخرى، مما يمنع تتبع الجلسة. لتوضيح ذلك، نقوم بتعطيل ملفات تعريف الارتباط في متصفحنا (Mozilla في هذه الحالة):</p>
+<p>وبالتالي، سيرسل المتصفح رمز الجلسة في كل مرة يطلب فيها عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بالصيغة [<bdi dir="ltr" class="odt-ltr-term">http://localhost/...</bdi>], أي في كل مرة يطلب فيها عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> من خادم الويب على الجهاز [<bdi dir="ltr" class="odt-ltr-term">localhost</bdi>]. مدة صلاحية ملف تعريف الارتباط هي مدة الجلسة. بالنسبة للمتصفح، هذا يعني أن ملف تعريف الارتباط لا تنتهي صلاحيته أبدًا. وسيرسله في كل مرة يطلب فيها عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> من الجهاز [<bdi dir="ltr" class="odt-ltr-term">localhost</bdi>]. وبالتالي، إذا تلقى المتصفح رمز الجلسة في اليوم <bdi dir="ltr" class="odt-ltr-term">D</bdi>، وأغلقه، وأعاد فتحه في اليوم التالي، فسوف يعيد إرسال رمز الجلسة (الذي تم تخزينه في ملف). سيتلقى الخادم هذا الرمز، الذي لم يعد موجودًا لديه، لأن رمز الجلسة له عمر محدود على الخادم (20 دقيقة على <bdi dir="ltr" class="odt-ltr-term">IIS</bdi>). وبالتالي، سيبدأ جلسة جديدة.</p>
+<p>من الممكن تعطيل ملفات تعريف الارتباط في المتصفح. في هذه الحالة، يتلقى العميل رمز الجلسة ولكنه لا يرسله مرة أخرى، مما يمنع تتبع الجلسة. لتوضيح ذلك، نقوم بتعطيل ملفات تعريف الارتباط في متصفحنا (<bdi dir="ltr" class="odt-ltr-term">Mozilla</bdi> في هذه الحالة):</p>
 <p><img src="images/10000000000001EF0000013AB1E002B0.png" width="495" height="314" style="width:13.097cm;height:8.308cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EF0000013AB1E002B0.png" /></p>
 <p>بالإضافة إلى ذلك، نقوم بحذف جميع ملفات تعريف الارتباط الموجودة:</p>
 <p><img src="images/100000000000017A0000008320113D96.png" width="378" height="131" style="width:10.001cm;height:3.466cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017A0000008320113D96.png" /></p>
-<p>بمجرد الانتهاء من ذلك، نعيد تشغيل خادم Cassini للبدء من الصفر، وباستخدام المتصفح، نطلب عنوان URL [http://localhost/aspnet/session1/main.aspx] مرة أخرى:</p>
+<p>بمجرد الانتهاء من ذلك، نعيد تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> للبدء من الصفر، وباستخدام المتصفح، نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/aspnet/session1/main.aspx</bdi>] مرة أخرى:</p>
 <p><img src="images/10000000000001E3000000A3255A1017.png" width="483" height="163" style="width:12.779cm;height:4.313cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E3000000A3255A1017.png" /></p>
 <p>لنرى ما إذا كان متصفحنا قد خزن ملف تعريف ارتباط: </p>
 <p><img src="images/100000000000017A00000080ACB6AB4E.png" width="378" height="128" style="width:10.001cm;height:3.387cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017A00000080ACB6AB4E.png" /></p>
-<p>نرى أن المتصفح لم يخزن ملف تعريف الارتباط الخاص برمز الجلسة الذي أرسله الخادم. لذلك، يمكننا توقع عدم وجود تتبع للجلسة. نطلب نفس عنوان URL مرة أخرى (إعادة التحميل):</p>
+<p>نرى أن المتصفح لم يخزن ملف تعريف الارتباط الخاص برمز الجلسة الذي أرسله الخادم. لذلك، يمكننا توقع عدم وجود تتبع للجلسة. نطلب نفس عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> مرة أخرى (إعادة التحميل):</p>
 <p><img src="images/10000000000001EB000000AA82B5EB09.png" width="491" height="170" style="width:12.991cm;height:4.498cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB000000AA82B5EB09.png" /></p>
-<p>هذا هو بالضبط ما توقعناه. لم يرسل المتصفح رمز الجلسة، على الرغم من أنه تلقى الرمز ولكنه لم يخزنه. لذلك بدأ الخادم جلسة جديدة برمز جديد. الدرس المستفاد من هذا المثال هو أن سياسة تتبع الجلسة لدينا تتعرض للخطر إذا قام المستخدم بتعطيل ملفات تعريف الارتباط في متصفحه. ومع ذلك، هناك طريقة أخرى إلى جانب ملفات تعريف الارتباط لتبادل رمز الجلسة بين الخادم والعميل. من الممكن بالفعل إخطار خادم الويب بأن التطبيق يعمل بدون ملفات تعريف الارتباط. يتم ذلك باستخدام ملف التكوين [web.config]:</p>
+<p>هذا هو بالضبط ما توقعناه. لم يرسل المتصفح رمز الجلسة، على الرغم من أنه تلقى الرمز ولكنه لم يخزنه. لذلك بدأ الخادم جلسة جديدة برمز جديد. الدرس المستفاد من هذا المثال هو أن سياسة تتبع الجلسة لدينا تتعرض للخطر إذا قام المستخدم بتعطيل ملفات تعريف الارتباط في متصفحه. ومع ذلك، هناك طريقة أخرى إلى جانب ملفات تعريف الارتباط لتبادل رمز الجلسة بين الخادم والعميل. من الممكن بالفعل إخطار خادم الويب بأن التطبيق يعمل بدون ملفات تعريف الارتباط. يتم ذلك باستخدام ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?<span style="color:#800000">xml</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">version</span>=&quot;1.0&quot;<span style="color:#ff00ff"> </span><span style="color:#ff0000">encoding</span>=&quot;UTF-8&quot;<span style="color:#ff00ff"> </span>?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;<span style="color:#800000">configuration</span>&gt;</span></span>
@@ -1867,19 +1869,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/<span style="color:#800000">configuration</span>&gt;</span></span>
 </code></pre></div>
 
-<p>يشير ملف التكوين أعلاه إلى أن التطبيق سيعمل بدون ملفات تعريف الارتباط (cookieless=&quot;true&quot;) وأن المدة القصوى لعدم النشاط لرمز الجلسة هي 10 دقائق (timeout=&quot;10&quot;). بعد هذه المدة، يتم إنهاء الجلسة المرتبطة بالرمز. تتم عملية تبادل رمز الجلسة بين الخادم والعميل على النحو التالي:</p>
+<p>يشير ملف التكوين أعلاه إلى أن التطبيق سيعمل بدون ملفات تعريف الارتباط (<bdi dir="ltr" class="odt-ltr-term">cookieless</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">true</bdi>&quot;) وأن المدة القصوى لعدم النشاط لرمز الجلسة هي 10 دقائق (<bdi dir="ltr" class="odt-ltr-term">timeout</bdi>=&quot;10&quot;). بعد هذه المدة، يتم إنهاء الجلسة المرتبطة بالرمز. تتم عملية تبادل رمز الجلسة بين الخادم والعميل على النحو التالي:</p>
 <ol>
-  <li>يطلب العميل عنوان URL [<mark style="background-color: #ffe994">http://machine:port/V/chemin</mark>]، حيث V هو دليل افتراضي على خادم الويب
+  <li>يطلب العميل عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://machine:port/V/chemin</bdi></mark>]، حيث <bdi dir="ltr" class="odt-ltr-term">V</bdi> هو دليل افتراضي على خادم الويب
   </li>
-  <li>يقوم الخادم بإنشاء رمز J ويوجه العميل لإعادة التوجيه إلى عنوان URL [<mark style="background-color: #ffe994">http://machine:port/V/(J)/path</mark>]. وبالتالي، فقد وضع الرمز في عنوان URL المطلوب، مباشرة بعد الدليل الافتراضي V
+  <li>يقوم الخادم بإنشاء رمز <bdi dir="ltr" class="odt-ltr-term">J</bdi> ويوجه العميل لإعادة التوجيه إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://machine:port/V/</bdi>(<bdi dir="ltr" class="odt-ltr-term">J</bdi>)/<bdi dir="ltr" class="odt-ltr-term">path</bdi></mark>]. وبالتالي، فقد وضع الرمز في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب، مباشرة بعد الدليل الافتراضي <bdi dir="ltr" class="odt-ltr-term">V</bdi>
   </li>
-  <li>يتبع العميل عملية إعادة التوجيه هذه ويطلب عنوان URL الجديد [<mark style="background-color: #ffe994">http://machine:port/V/(J)/path</mark>].
+  <li>يتبع العميل عملية إعادة التوجيه هذه ويطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الجديد [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://machine:port/V/</bdi>(<bdi dir="ltr" class="odt-ltr-term">J</bdi>)/<bdi dir="ltr" class="odt-ltr-term">path</bdi></mark>].
   </li>
   <li>يستجيب الخادم لهذا الطلب ويرسل صفحة استجابة.
   </li>
 </ol>
 
-<p>دعونا نوضح هذه النقاط المختلفة. نضع التطبيق السابق بأكمله في مجلد جديد &lt;application-path&gt;. نضع ملف [web.config] السابق في هذا المجلد نفسه. بالإضافة إلى ذلك، نقوم بتعديل كود العرض [main.aspx] لتضمين رابط:</p>
+<p>دعونا نوضح هذه النقاط المختلفة. نضع التطبيق السابق بأكمله في مجلد جديد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. نضع ملف [<bdi dir="ltr" class="odt-ltr-term">web.config</bdi>] السابق في هذا المجلد نفسه. بالإضافة إلى ذلك، نقوم بتعديل كود العرض [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] لتضمين رابط:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1901,7 +1903,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>يشير هذا الرابط إلى صفحة [main.aspx]، وبالتالي فهو يعادل زر (إعادة التحميل) في المتصفح. يتم تشغيل خادم Cassini باستخدام المعلمات (&lt;application-path&gt;,/session2). نحن نحيد عن ممارستنا المعتادة المتمثلة في تحديد الدليل الظاهري [/aspnet/XX]. ويرجع ذلك إلى أنه، بسبب إدراج رمز الجلسة في عنوان URL، يجب أن يحتوي الدليل الظاهري على المكون /XX فقط. نستخدم أولاً عميل [curl] لطلب عنوان URL [<mark style="background-color: #ffe994">http://localhost/session2/main.aspx</mark>]:</p>
+<p>يشير هذا الرابط إلى صفحة [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]، وبالتالي فهو يعادل زر (إعادة التحميل) في المتصفح. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">session2</bdi>). نحن نحيد عن ممارستنا المعتادة المتمثلة في تحديد الدليل الظاهري [/<bdi dir="ltr" class="odt-ltr-term">aspnet/XX</bdi>]. ويرجع ذلك إلى أنه، بسبب إدراج رمز الجلسة في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>، يجب أن يحتوي الدليل الظاهري على المكون /<bdi dir="ltr" class="odt-ltr-term">XX</bdi> فقط. نستخدم أولاً عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] لطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/session2/main.aspx</bdi></mark>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>E:\curl&gt;curl --include http://localhost/session2/main.aspx
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>HTTP/1.1 302 Found
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Server: Microsoft ASP.NET Web Matrix Server/0.6.0.0
@@ -1917,24 +1919,24 @@
 <a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Object moved to <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#39;/session2/(hinadjag3bt0u155g5hqe245)/main.aspx&#39;</span><span class="p">&gt;</span>here
 <a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>نلاحظ أن الخادم يرد برأس HTTP [HTTP/1.1 302 Found] بدلاً من [HTTP/1.1 200 OK]. يوجه هذا الرأس العميل إلى إعادة التوجيه إلى عنوان URL المحدد بواسطة رأس HTTP Location [<mark style="background-color: #ffe994">Location: /session2/(hinadjag3bt0u155g5hqe245)/main.aspx</mark>]. يمكننا رؤية رمز الجلسة الذي تم إدراجه في عنوان URL لإعادة التوجيه. يطلب المتصفح الذي يتلقى هذا الرد عنوان URL الجديد بشكل شفاف للمستخدم، الذي لا يرى الطلب الجديد. في حالة عدم قيام المتصفح بمعالجة إعادة التوجيه بنفسه، يتم إرسال مستند HTML مع رمز HTTP أعلاه. يحتوي على رابط إلى عنوان URL لإعادة التوجيه، والذي يمكن للمستخدم النقر عليه.</p>
-<p>الآن، لنفعل الشيء نفسه مع متصفح تم تعطيل ملفات تعريف الارتباط فيه. نطلب عنوان URL [<mark style="background-color: #ffe994">http://localhost/session2/main.aspx</mark>] مرة أخرى. نتلقى الاستجابة التالية من الخادم:</p>
+<p>نلاحظ أن الخادم يرد برأس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> [<bdi dir="ltr" class="odt-ltr-term">HTTP/1.1</bdi> 302 <bdi dir="ltr" class="odt-ltr-term">Found</bdi>] بدلاً من [<bdi dir="ltr" class="odt-ltr-term">HTTP/1.1</bdi> 200 <bdi dir="ltr" class="odt-ltr-term">OK</bdi>]. يوجه هذا الرأس العميل إلى إعادة التوجيه إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المحدد بواسطة رأس <bdi dir="ltr" class="odt-ltr-term">HTTP Location</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">Location:</bdi> /<bdi dir="ltr" class="odt-ltr-term">session2/</bdi>(<bdi dir="ltr" class="odt-ltr-term">hinadjag3bt0u155g5hqe245</bdi>)/<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi></mark>]. يمكننا رؤية رمز الجلسة الذي تم إدراجه في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لإعادة التوجيه. يطلب المتصفح الذي يتلقى هذا الرد عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الجديد بشكل شفاف للمستخدم، الذي لا يرى الطلب الجديد. في حالة عدم قيام المتصفح بمعالجة إعادة التوجيه بنفسه، يتم إرسال مستند <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> مع رمز <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> أعلاه. يحتوي على رابط إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لإعادة التوجيه، والذي يمكن للمستخدم النقر عليه.</p>
+<p>الآن، لنفعل الشيء نفسه مع متصفح تم تعطيل ملفات تعريف الارتباط فيه. نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/session2/main.aspx</bdi></mark>] مرة أخرى. نتلقى الاستجابة التالية من الخادم:</p>
 <p><img src="images/1000000000000258000000C1FB53004B.png" width="600" height="193" style="width:15.875cm;height:5.106cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000258000000C1FB53004B.png" /></p>
-<p>أولاً، لاحظ أن عنوان URL الذي يعرضه المتصفح ليس هو العنوان الذي طلبناه. وهذا يشير إلى حدوث إعادة توجيه. في الواقع، يعرض المتصفح دائمًا عنوان URL لآخر مستند تم استلامه. لذا، إذا لم يعرض عنوان URL [<mark style="background-color: #ffe994">http://localhost/session2/main.aspx</mark>]، فهذا يعني أنه تلقى تعليمات بإعادة التوجيه إلى عنوان URL آخر. قد تكون هناك عمليات إعادة توجيه متعددة. وعنوان URL الذي يعرضه المتصفح هو عنوان URL لآخر عملية إعادة توجيه. يمكننا أن نرى أن رمز الجلسة موجود في عنوان URL الذي يعرضه المتصفح. يمكننا رؤية ذلك لأن هذا الرمز يتم عرضه أيضًا بواسطة برنامجنا على الصفحة.</p>
+<p>أولاً، لاحظ أن عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يعرضه المتصفح ليس هو العنوان الذي طلبناه. وهذا يشير إلى حدوث إعادة توجيه. في الواقع، يعرض المتصفح دائمًا عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لآخر مستند تم استلامه. لذا، إذا لم يعرض عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/session2/main.aspx</bdi></mark>]، فهذا يعني أنه تلقى تعليمات بإعادة التوجيه إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> آخر. قد تكون هناك عمليات إعادة توجيه متعددة. وعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يعرضه المتصفح هو عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> لآخر عملية إعادة توجيه. يمكننا أن نرى أن رمز الجلسة موجود في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يعرضه المتصفح. يمكننا رؤية ذلك لأن هذا الرمز يتم عرضه أيضًا بواسطة برنامجنا على الصفحة.</p>
 <p>دعونا نستذكر كود الرابط الذي تم وضعه على الصفحة:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">&lt;</span><span style="color:#800000">a</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">href</span><span style="color:#0000ff">=&quot;main.aspx&quot;&gt;</span>Recharger l&#x27;application<span style="color:#0000ff">&lt;/</span><span style="color:#800000">a</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>هذا رابط نسبي لأنه لا يبدأ بالحرف /، الذي من شأنه أن يجعله رابطًا مطلقًا. نسبي بالنسبة إلى ماذا؟ لفهم ذلك، نحتاج إلى النظر إلى عنوان URL للوثيقة المعروضة حاليًا: [<mark style="background-color: #ffe994">http://localhost/session2/(gu5ee455pkpffn554e3b1a32)/main.aspx</mark>]. أي روابط نسبية موجودة في هذا المستند ستكون نسبية بالنسبة للمسار [<mark style="background-color: #ffe994">http://localhost/session2/(gu5ee455pkpffn554e3b1a32)</mark>]. وبالتالي، فإن الرابط أعلاه يعادل الرابط:</p>
+<p>هذا رابط نسبي لأنه لا يبدأ بالحرف /، الذي من شأنه أن يجعله رابطًا مطلقًا. نسبي بالنسبة إلى ماذا؟ لفهم ذلك، نحتاج إلى النظر إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> للوثيقة المعروضة حاليًا: [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/session2/</bdi>(<bdi dir="ltr" class="odt-ltr-term">gu5ee455pkpffn554e3b1a32</bdi>)/<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi></mark>]. أي روابط نسبية موجودة في هذا المستند ستكون نسبية بالنسبة للمسار [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/session2/</bdi>(<bdi dir="ltr" class="odt-ltr-term">gu5ee455pkpffn554e3b1a32</bdi>)</mark>]. وبالتالي، فإن الرابط أعلاه يعادل الرابط:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">&lt;</span><span style="color:#800000">a</span><span style="color:#ff00ff"> </span><span style="color:#ff0000">href</span><span style="color:#0000ff">=&quot;</span> http://localhost/session2/(gu5ee455pkpffn554e3b1a32)/<span style="color:#0000ff">main.aspx&quot;&gt;</span>Recharger l&#x27;application<span style="color:#0000ff">&lt;/</span><span style="color:#800000">a</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
 <p>هذا ما يعرضه المتصفح لنا عند تمرير المؤشر فوق الرابط:</p>
 <p><img src="images/10000000000001FA000000723EDFED48.png" width="506" height="114" style="width:13.388cm;height:3.016cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FA000000723EDFED48.png" /></p>
-<p>إذا نقرنا على رابط [إعادة تحميل التطبيق]، فسيتم استدعاء عنوان URL</p>
-<p>[<mark style="background-color: #ffe994">http://localhost/session2/(gu5ee455pkpffn554e3b1a32)/main.aspx</mark>] الذي يتم استدعاؤه. وبالتالي، سيتلقى الخادم رمز الجلسة وسيكون قادرًا على استرداد المعلومات المرتبطة به. هذا ما يظهره لنا رد الخادم:</p>
+<p>إذا نقرنا على رابط [إعادة تحميل التطبيق]، فسيتم استدعاء عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi></p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/session2/</bdi>(<bdi dir="ltr" class="odt-ltr-term">gu5ee455pkpffn554e3b1a32</bdi>)/<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi></mark>] الذي يتم استدعاؤه. وبالتالي، سيتلقى الخادم رمز الجلسة وسيكون قادرًا على استرداد المعلومات المرتبطة به. هذا ما يظهره لنا رد الخادم:</p>
 <p><img src="images/1000000000000258000000BABD10CD5D.png" width="600" height="186" style="width:15.875cm;height:4.921cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000258000000BABD10CD5D.png" /></p>
 <p>يجب أن نلاحظ أنه إذا كنا بحاجة إلى تتبع جلسة عمل في تطبيق ويب ولم نكن متأكدين مما إذا كانت متصفحات العملاء لهذا التطبيق ستسمح باستخدام ملفات تعريف الارتباط، </p>
 <ul>
@@ -1954,22 +1956,22 @@
 <p><img src="images/10000000000005AC000001C9B49A634E.png" width="680" height="214" style="width:17.999cm;height:5.664cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AC000001C9B49A634E.png" /></p>
 <p>تتم معالجة طلب العميل لتطبيق ويب على النحو التالي:</p>
 <ol>
-  <li>يفتح العميل اتصال TCP/IP بالمنفذ P لخدمة الويب على الجهاز M الذي يستضيف تطبيق الويب
+  <li>يفتح العميل اتصال <bdi dir="ltr" class="odt-ltr-term">TCP/IP</bdi> بالمنفذ <bdi dir="ltr" class="odt-ltr-term">P</bdi> لخدمة الويب على الجهاز <bdi dir="ltr" class="odt-ltr-term">M</bdi> الذي يستضيف تطبيق الويب
   </li>
-  <li>يرسل سلسلة من الأسطر النصية عبر هذا الاتصال وفقًا لبروتوكول HTTP. تشكل هذه المجموعة من الأسطر ما يُسمى بطلب العميل. وهي تأخذ الشكل التالي:
+  <li>يرسل سلسلة من الأسطر النصية عبر هذا الاتصال وفقًا لبروتوكول <bdi dir="ltr" class="odt-ltr-term">HTTP.</bdi> تشكل هذه المجموعة من الأسطر ما يُسمى بطلب العميل. وهي تأخذ الشكل التالي:
   </li>
 </ol>
 
 <p><img src="images/100000000000021F0000015254793FE4.png" width="271" height="169" style="width:7.183cm;height:4.471cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021F0000015254793FE4.png" /></p>
 <p>بمجرد إرسال الطلب، ينتظر العميل الرد.</p>
 <ol>
-  <li>يحدد السطر الأول من رؤوس HTTP الإجراء المطلوب من خادم الويب. ويمكن أن يتخذ عدة أشكال:
+  <li>يحدد السطر الأول من رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الإجراء المطلوب من خادم الويب. ويمكن أن يتخذ عدة أشكال:
     <ul>
-      <li>GET HTTP URL/&lt;version&gt;، حيث &lt;version&gt; هي حاليًا 1.0 أو 1.1. في هذه الحالة، لا يتضمن الطلب قسم [Document]
+      <li><bdi dir="ltr" class="odt-ltr-term">GET HTTP URL/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt;، حيث &lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt; هي حاليًا 1.0 أو 1.1. في هذه الحالة، لا يتضمن الطلب قسم [<bdi dir="ltr" class="odt-ltr-term">Document</bdi>]
       </li>
-      <li>POST HTTP URL/&lt;version&gt;. في هذه الحالة، يتضمن الطلب قسم [Document]، وغالبًا ما يكون قائمة بالمعلومات المخصصة لتطبيق الويب
+      <li><bdi dir="ltr" class="odt-ltr-term">POST HTTP URL/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt;. في هذه الحالة، يتضمن الطلب قسم [<bdi dir="ltr" class="odt-ltr-term">Document</bdi>]، وغالبًا ما يكون قائمة بالمعلومات المخصصة لتطبيق الويب
       </li>
-      <li>PUT HTTP URL/&lt;version&gt;. يرسل العميل مستندًا في قسم [Document] ويريد تخزينه على الخادم على عنوان URL
+      <li><bdi dir="ltr" class="odt-ltr-term">PUT HTTP URL/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt;. يرسل العميل مستندًا في قسم [<bdi dir="ltr" class="odt-ltr-term">Document</bdi>] ويريد تخزينه على الخادم على عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>
       </li>
     </ul>
   </li>
@@ -1979,53 +1981,53 @@
 <ul>
   <li>(تابع)
     <ul>
-      <li>يكون طلبه هو [GET enriched_url HTTP/&lt;version&gt;] حيث يكون enriched_url بالشكل [url?param1=val1&amp;param2=val2&amp;...]. بالإضافة إلى عنوان URL، ينقل العميل سلسلة من المعلومات بالشكل [key=value].
+      <li>يكون طلبه هو [<bdi dir="ltr" class="odt-ltr-term">GET enriched_url HTTP/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt;] حيث يكون <bdi dir="ltr" class="odt-ltr-term">enriched_url</bdi> بالشكل [<bdi dir="ltr" class="odt-ltr-term">url</bdi>?<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;...]. بالإضافة إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>، ينقل العميل سلسلة من المعلومات بالشكل [<bdi dir="ltr" class="odt-ltr-term">key</bdi>=<bdi dir="ltr" class="odt-ltr-term">value</bdi>].
       </li>
-      <li>طلبهم هو [POST enriched-url HTTP/&lt;version&gt;]. في قسم [Document]، يرسلون المعلومات بنفس التنسيق السابق: [param1=val1&amp;param2=val2&amp;...].
+      <li>طلبهم هو [<bdi dir="ltr" class="odt-ltr-term">POST enriched-url HTTP/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt;]. في قسم [<bdi dir="ltr" class="odt-ltr-term">Document</bdi>]، يرسلون المعلومات بنفس التنسيق السابق: [<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;...].
       </li>
     </ul>
   </li>
 </ul>
 <ol>
-  <li>على الخادم، تتمتع سلسلة معالجة طلب العميل بأكملها بإمكانية الوصول إلى الطلب عبر كائن عام يسمى <b>Request</b>. وقد وضع خادم الويب طلب العميل بأكمله في هذا الكائن بتنسيق سنستكشفه بعد قليل. وسيقوم التطبيق المطلوب بمعالجة هذا الكائن وإنشاء استجابة للعميل. وتكون هذه الاستجابة متاحة في كائن عام يسمى <b>Response</b>. يتمثل دور تطبيق الويب في إنشاء كائن [<b>Response</b>] من كائن [<b>Request</b>] المستلم. تحتوي سلسلة المعالجة أيضًا على الكائنين العالميين [<b>Application</b>] و[<b>Session</b>]، اللذين ناقشناهما بالفعل واللذين سيسمحان لها بمشاركة البيانات بين عملاء مختلفين (Application) أو بين الطلبات المتتالية من نفس العميل (Session).
+  <li>على الخادم، تتمتع سلسلة معالجة طلب العميل بأكملها بإمكانية الوصول إلى الطلب عبر كائن عام يسمى <b><bdi dir="ltr" class="odt-ltr-term">Request</bdi></b>. وقد وضع خادم الويب طلب العميل بأكمله في هذا الكائن بتنسيق سنستكشفه بعد قليل. وسيقوم التطبيق المطلوب بمعالجة هذا الكائن وإنشاء استجابة للعميل. وتكون هذه الاستجابة متاحة في كائن عام يسمى <b><bdi dir="ltr" class="odt-ltr-term">Response</bdi></b>. يتمثل دور تطبيق الويب في إنشاء كائن [<b><bdi dir="ltr" class="odt-ltr-term">Response</bdi></b>] من كائن [<b><bdi dir="ltr" class="odt-ltr-term">Request</bdi></b>] المستلم. تحتوي سلسلة المعالجة أيضًا على الكائنين العالميين [<b><bdi dir="ltr" class="odt-ltr-term">Application</bdi></b>] و[<b><bdi dir="ltr" class="odt-ltr-term">Session</bdi></b>]، اللذين ناقشناهما بالفعل واللذين سيسمحان لها بمشاركة البيانات بين عملاء مختلفين (<bdi dir="ltr" class="odt-ltr-term">Application</bdi>) أو بين الطلبات المتتالية من نفس العميل (<bdi dir="ltr" class="odt-ltr-term">Session</bdi>).
   </li>
-  <li>سيقوم التطبيق بإرسال استجابته إلى الخادم باستخدام كائن [Response]. وبمجرد وصولها إلى الشبكة، سيكون لهذه الاستجابة تنسيق HTTP التالي:
+  <li>سيقوم التطبيق بإرسال استجابته إلى الخادم باستخدام كائن [<bdi dir="ltr" class="odt-ltr-term">Response</bdi>]. وبمجرد وصولها إلى الشبكة، سيكون لهذه الاستجابة تنسيق <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> التالي:
   </li>
 </ol>
 
 <p><img src="images/10000000000001FB0000014E08298782.png" width="253" height="167" style="width:6.706cm;height:4.419cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001FB0000014E08298782.png" /></p>
 <p>بمجرد إرسال هذا الرد، سيقوم الخادم بإغلاق اتصال الشبكة الوارد (ما لم يطلب العميل منه عدم القيام بذلك).</p>
 <ol>
-  <li>سيتلقى العميل الرد وسيقوم بدوره بإغلاق الاتصال (على الجانب الصادر). يعتمد ما يتم فعله بهذا الرد على نوع العميل. إذا كان العميل متصفحًا وكان المستند المستلم مستند HTML، فسيتم عرضه. إذا كان العميل برنامجًا، فسيتم تحليل الرد ومعالجته.
+  <li>سيتلقى العميل الرد وسيقوم بدوره بإغلاق الاتصال (على الجانب الصادر). يعتمد ما يتم فعله بهذا الرد على نوع العميل. إذا كان العميل متصفحًا وكان المستند المستلم مستند <bdi dir="ltr" class="odt-ltr-term">HTML</bdi>، فسيتم عرضه. إذا كان العميل برنامجًا، فسيتم تحليل الرد ومعالجته.
   </li>
-  <li>إن حقيقة أن الاتصال الذي يربط العميل بالخادم يُغلق بعد انتهاء دورة الطلب والاستجابة تجعل من HTTP بروتوكولاً عديم الحالة. وأثناء الطلب التالي، سيقوم العميل بإنشاء اتصال شبكي جديد بنفس الخادم. وبما أن هذا الاتصال الشبكي لم يعد هو نفسه، فلا توجد لدى الخادم أي وسيلة (على مستويي TCP/IP وHTTP) لربط هذا الاتصال الجديد بأي اتصال سابق. ونظام رموز الجلسة هو الذي سيمكّن من إجراء هذا الربط.
+  <li>إن حقيقة أن الاتصال الذي يربط العميل بالخادم يُغلق بعد انتهاء دورة الطلب والاستجابة تجعل من <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> بروتوكولاً عديم الحالة. وأثناء الطلب التالي، سيقوم العميل بإنشاء اتصال شبكي جديد بنفس الخادم. وبما أن هذا الاتصال الشبكي لم يعد هو نفسه، فلا توجد لدى الخادم أي وسيلة (على مستويي <bdi dir="ltr" class="odt-ltr-term">TCP/IP</bdi> و<bdi dir="ltr" class="odt-ltr-term">HTTP</bdi>) لربط هذا الاتصال الجديد بأي اتصال سابق. ونظام رموز الجلسة هو الذي سيمكّن من إجراء هذا الربط.
   </li>
 </ol>
 
 <p><a id="toc69180247"></a>
 <a id="toc69180345"></a></p>
 <h3 id="422">4.2.2. استرداد المعلومات المرسلة من العميل</h3>
-<p>سنقوم الآن بفحص بعض خصائص وأساليب كائن [Request] التي تسمح لرمز التطبيق بالوصول إلى طلب العميل وبالتالي إلى المعلومات التي أرسلها. كائن [Request] هو من النوع [HttpRequest]:</p>
+<p>سنقوم الآن بفحص بعض خصائص وأساليب كائن [<bdi dir="ltr" class="odt-ltr-term">Request</bdi>] التي تسمح لرمز التطبيق بالوصول إلى طلب العميل وبالتالي إلى المعلومات التي أرسلها. كائن [<bdi dir="ltr" class="odt-ltr-term">Request</bdi>] هو من النوع [<bdi dir="ltr" class="odt-ltr-term">HttpRequest</bdi>]:</p>
 <p><img src="images/10000000000001540000004975AC4BB4.png" width="340" height="73" style="width:8.996cm;height:1.931cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001540000004975AC4BB4.png" /></p>
-<p>تحتوي هذه الفئة على العديد من الخصائص والأساليب. نحن مهتمون بخصائص <strong>HttpMethod</strong> و <strong>QueryString</strong> و <strong>Form</strong> و <strong>Params</strong>، والتي ستسمح لنا بالوصول إلى عناصر سلسلة المعلومات [param1=val1&amp;param2=val2&amp;...].</p>
+<p>تحتوي هذه الفئة على العديد من الخصائص والأساليب. نحن مهتمون بخصائص <strong><bdi dir="ltr" class="odt-ltr-term">HttpMethod</bdi></strong> و <strong><bdi dir="ltr" class="odt-ltr-term">QueryString</bdi></strong> و <strong><bdi dir="ltr" class="odt-ltr-term">Form</bdi></strong> و <strong><bdi dir="ltr" class="odt-ltr-term">Params</bdi></strong>، والتي ستسمح لنا بالوصول إلى عناصر سلسلة المعلومات [<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;...].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>HttpMethod كسلسلة
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طريقة طلب العميل: GET، POST، HEAD، ...</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">طريقة طلب العميل: <bdi dir="ltr" class="odt-ltr-term">GET</bdi>، <bdi dir="ltr" class="odt-ltr-term">POST</bdi>، <bdi dir="ltr" class="odt-ltr-term">HEAD</bdi>، ...</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>QueryString كـ NameValueCollection
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مجموعة من العناصر من سلسلة الاستعلام param1=val1&amp;param2=val2&amp;... من السطر الأول HTTP [method]?param1=val1&amp;param2=val2&amp;... حيث يمكن أن تكون [method] هي GET، POST، HEAD.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مجموعة من العناصر من سلسلة الاستعلام <bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;... من السطر الأول <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> [<bdi dir="ltr" class="odt-ltr-term">method</bdi>]?<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;... حيث يمكن أن تكون [<bdi dir="ltr" class="odt-ltr-term">method</bdi>] هي <bdi dir="ltr" class="odt-ltr-term">GET</bdi>، <bdi dir="ltr" class="odt-ltr-term">POST</bdi>، <bdi dir="ltr" class="odt-ltr-term">HEAD.</bdi></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Form كـ NameValueCollection
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مجموعة من العناصر من سلسلة الاستعلام param1=val1&amp;param2=val2&amp;.. الموجودة في جزء [Document] من الطلب (طريقة POST).</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">مجموعة من العناصر من سلسلة الاستعلام <bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;.. الموجودة في جزء [<bdi dir="ltr" class="odt-ltr-term">Document</bdi>] من الطلب (طريقة <bdi dir="ltr" class="odt-ltr-term">POST</bdi>).</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Params كـ NameValueCollection
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يجمع عدة مجموعات: QueryString و Form و ServerVariables و Cookies في مجموعة واحدة.</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">يجمع عدة مجموعات: <bdi dir="ltr" class="odt-ltr-term">QueryString</bdi> و <bdi dir="ltr" class="odt-ltr-term">Form</bdi> و <bdi dir="ltr" class="odt-ltr-term">ServerVariables</bdi> و <bdi dir="ltr" class="odt-ltr-term">Cookies</bdi> في مجموعة واحدة.</div></td></tr></table>
 
 <p><a id="toc69180248"></a>
 <a id="toc69180346"></a></p>
 <h3 id="423-1">4.2.3. مثال 1</h3>
-<p>دعونا نطبق هذه العناصر في المثال الأول. سيحتوي التطبيق على عنصر واحد فقط [main.aspx]. سيكون كود العرض [main.aspx] كما يلي:</p>
+<p>دعونا نطبق هذه العناصر في المثال الأول. سيحتوي التطبيق على عنصر واحد فقط [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]. سيكون كود العرض [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2046,7 +2048,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>تعرض الصفحة ثلاث معلومات [method، name، age] تم حسابها بواسطة وحدة التحكم الخاصة بها [main.aspx.vb]:</p>
+<p>تعرض الصفحة ثلاث معلومات [<bdi dir="ltr" class="odt-ltr-term">method</bdi>، <bdi dir="ltr" class="odt-ltr-term">name</bdi>، <bdi dir="ltr" class="odt-ltr-term">age</bdi>] تم حسابها بواسطة وحدة التحكم الخاصة بها [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">main</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
@@ -2071,10 +2073,10 @@
 <a id="__codelineno-26-22" name="__codelineno-26-22" href="#__codelineno-26-22"></a>
 <a id="__codelineno-26-23" name="__codelineno-26-23" href="#__codelineno-26-23"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
-<p>عند تحميل الصفحة (Form_Load)، يتم استرداد معلومات [name, age] من طلب العميل. نبحث عنها في المجموعتين [QueryString] و [Form]. . بالإضافة إلى ذلك، في [Page_Init]، نقوم بتخزين طلب العميل حتى نتمكن من التحقق مما تم إرساله. نضع هذين الملفين في مجلد &lt;application-path&gt; ونبدأ تشغيل خادم Cassini بالمعلمات (&lt;application-path&gt;,/request1)، ثم نطلب عنوان URL</p>
-<p>[<mark style="background-color: #ffe994">http://localhost/request1/main.aspx?nom=tintin&amp;age=27</mark>] . نتلقى الرد التالي:</p>
+<p>عند تحميل الصفحة (<bdi dir="ltr" class="odt-ltr-term">Form</bdi>_Load)، يتم استرداد معلومات [<bdi dir="ltr" class="odt-ltr-term">name</bdi>, <bdi dir="ltr" class="odt-ltr-term">age</bdi>] من طلب العميل. نبحث عنها في المجموعتين [<bdi dir="ltr" class="odt-ltr-term">QueryString</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. . بالإضافة إلى ذلك، في [<bdi dir="ltr" class="odt-ltr-term">Page</bdi>_Init]، نقوم بتخزين طلب العميل حتى نتمكن من التحقق مما تم إرساله. نضع هذين الملفين في مجلد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ونبدأ تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">request1</bdi>)، ثم نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi></p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">nom</bdi>=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">age</bdi>=27</mark>] . نتلقى الرد التالي:</p>
 <p><img src="images/1000000000000246000000C92291CE07.png" width="582" height="201" style="width:15.399cm;height:5.318cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000246000000C92291CE07.png" /></p>
-<p>تم استرداد المعلومات المرسلة من العميل بشكل صحيح. طلب المتصفح المخزن في ملف [request.txt] هو كما يلي:</p>
+<p>تم استرداد المعلومات المرسلة من العميل بشكل صحيح. طلب المتصفح المخزن في ملف [<bdi dir="ltr" class="odt-ltr-term">request.txt</bdi>] هو كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">GET</span> <span class="o">/</span><span class="n">request1</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">aspx</span><span class="err">?</span><span class="n">nom</span><span class="o">=</span><span class="n">tintin</span><span class="o">&amp;</span><span class="n">age</span><span class="o">=</span><span class="mi">27</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">Cache</span><span class="o">-</span><span class="n">Control</span><span class="p">:</span> <span class="nb">max</span><span class="o">-</span><span class="n">age</span><span class="o">=</span><span class="mi">0</span>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="n">Connection</span><span class="p">:</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span>
@@ -2086,16 +2088,16 @@
 <a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="n">Host</span><span class="p">:</span> <span class="n">localhost</span>
 <a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="n">User</span><span class="o">-</span><span class="n">Agent</span><span class="p">:</span> <span class="n">Mozilla</span><span class="o">/</span><span class="mf">5.0</span> <span class="p">(</span><span class="n">Windows</span><span class="p">;</span> <span class="n">U</span><span class="p">;</span> <span class="n">Windows</span> <span class="n">NT</span> <span class="mf">5.1</span><span class="p">;</span> <span class="n">en</span><span class="o">-</span><span class="n">US</span><span class="p">;</span> <span class="n">rv</span><span class="p">:</span><span class="mf">1.7</span><span class="n">b</span><span class="p">)</span> <span class="n">Gecko</span><span class="o">/</span><span class="mi">20040316</span>
 </code></pre></div>
-<p>يمكننا أن نرى أن المتصفح أرسل طلب GET. لإرسال طلب POST، سنستخدم عميل [curl]. في نافذة DOS، نكتب الأمر التالي:</p>
+<p>يمكننا أن نرى أن المتصفح أرسل طلب <bdi dir="ltr" class="odt-ltr-term">GET.</bdi> لإرسال طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi>، سنستخدم عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>]. في نافذة <bdi dir="ltr" class="odt-ltr-term">DOS</bdi>، نكتب الأمر التالي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>C:\curl&gt;curl --include --data nom=tintin --data age=27 http://localhost/request1/main.aspx
 </code></pre></div>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>--include
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لعرض رؤوس HTTP للاستجابة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لعرض رؤوس <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> للاستجابة</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>--data param=value
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لإرسال معلومات param=value عبر طلب POST</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">لإرسال معلومات <bdi dir="ltr" class="odt-ltr-term">param</bdi>=<bdi dir="ltr" class="odt-ltr-term">value</bdi> عبر طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi></div></td></tr></table>
 
 <p>استجابة الخادم هي كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>HTTP/1.1 200 OK
@@ -2124,7 +2126,7 @@
 <a id="__codelineno-31-24" name="__codelineno-31-24" href="#__codelineno-31-24"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-31-25" name="__codelineno-31-25" href="#__codelineno-31-25"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>مرة أخرى، نجح الخادم في استرداد المعلمات المرسلة هذه المرة عبر طلب POST. للتأكد من ذلك، يمكنك التحقق من محتويات ملف [request.txt]:</p>
+<p>مرة أخرى، نجح الخادم في استرداد المعلمات المرسلة هذه المرة عبر طلب <bdi dir="ltr" class="odt-ltr-term">POST.</bdi> للتأكد من ذلك، يمكنك التحقق من محتويات ملف [<bdi dir="ltr" class="odt-ltr-term">request.txt</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>POST /request1/main.aspx HTTP/1.1
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>Pragma: no-cache
 <a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>Content-Length: 17
@@ -2135,10 +2137,10 @@
 <a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>
 <a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>nom=tintin&amp;age=27
 </code></pre></div>
-<p>أرسل عميل [curl] طلب POST بنجاح. الآن، دعونا نجمع بين طريقتي تمرير المعلومات. سنضع [age] في عنوان URL المطلوب و[name] في البيانات المرسلة:</p>
+<p>أرسل عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi> بنجاح. الآن، دعونا نجمع بين طريقتي تمرير المعلومات. سنضع [<bdi dir="ltr" class="odt-ltr-term">age</bdi>] في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب و[<bdi dir="ltr" class="odt-ltr-term">name</bdi>] في البيانات المرسلة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>E:\curl&gt;curl --include --data nom=&quot;tintin&quot; http://localhost/request1/main.aspx?age=27
 </code></pre></div>
-<p>الطلب الذي أرسله [curl] هو كما يلي (request.txt):</p>
+<p>الطلب الذي أرسله [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] هو كما يلي (<bdi dir="ltr" class="odt-ltr-term">request.txt</bdi>):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>POST /request1/main.aspx?age=27 HTTP/1.1
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>Pragma: no-cache
 <a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>Content-Length: 10
@@ -2149,7 +2151,7 @@
 <a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a>
 <a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>nom=tintin
 </code></pre></div>
-<p>يمكننا أن نرى أن العمر تم تمريره في عنوان URL المطلوب. سنسترده من مجموعة [QueryString]. تم تمرير الاسم في المستند المرسل إلى عنوان URL هذا. سنسترده من مجموعة [Form]. الاستجابة التي تلقاها العميل [curl]:</p>
+<p>يمكننا أن نرى أن العمر تم تمريره في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب. سنسترده من مجموعة [<bdi dir="ltr" class="odt-ltr-term">QueryString</bdi>]. تم تمرير الاسم في المستند المرسل إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> هذا. سنسترده من مجموعة [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. الاستجابة التي تلقاها العميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>                <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Requête client<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -2196,18 +2198,18 @@
 <a id="__codelineno-36-26" name="__codelineno-36-26" href="#__codelineno-36-26"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-36-27" name="__codelineno-36-27" href="#__codelineno-36-27"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>يُنصح القارئ بمراجعة كود وحدة التحكم [main.aspx.vb] لفهم هذا الرد.</p>
+<p>يُنصح القارئ بمراجعة كود وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] لفهم هذا الرد.</p>
 <p><a id="toc69180249"></a>
 <a id="toc69180347"></a></p>
 <h3 id="424-2">4.2.4. المثال 2</h3>
-<p>يمكن للعميل إرسال قيم متعددة لنفس المفتاح. فماذا يحدث إذا طلبنا، في المثال السابق، عنوان URL [<mark style="background-color: #ffe994">http://localhost/request1/main.aspx?nom=tintin&amp;age=27&amp;nom=milou</mark>]، حيث يظهر المفتاح [name] مرتين؟ لنجرب ذلك في متصفح:</p>
+<p>يمكن للعميل إرسال قيم متعددة لنفس المفتاح. فماذا يحدث إذا طلبنا، في المثال السابق، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">nom</bdi>=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">age</bdi>=27&amp;<bdi dir="ltr" class="odt-ltr-term">nom</bdi>=<bdi dir="ltr" class="odt-ltr-term">milou</bdi></mark>]، حيث يظهر المفتاح [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] مرتين؟ لنجرب ذلك في متصفح:</p>
 <p><img src="images/100000000000028D000000A9B8968247.png" width="653" height="169" style="width:17.277cm;height:4.471cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000028D000000A9B8968247.png" /></p>
-<p>نجح تطبيقنا في استرداد القيمتين المرتبطتين بالمفتاح [name]. العرض مضلل بعض الشيء. تم الحصول عليه باستخدام العبارة </p>
+<p>نجح تطبيقنا في استرداد القيمتين المرتبطتين بالمفتاح [<bdi dir="ltr" class="odt-ltr-term">name</bdi>]. العرض مضلل بعض الشيء. تم الحصول عليه باستخدام العبارة </p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">        <span style="color:#0000ff">If</span> <span style="color:#0000ff">Not</span> Request.QueryString(&quot;nom&quot;) <span style="color:#0000ff">Is</span> <span style="color:#0000ff">Nothing</span> <span style="color:#0000ff">Then</span> nom = Request.QueryString(&quot;nom&quot;).ToString</span></span>
 </code></pre></div>
 
-<p>أنتجت الطريقة [ToString] السلسلة [tintin,milou]، والتي تم عرضها. وهي تخفي حقيقة أن الكائن [Request.QueryString(&quot;name&quot;)] هو في الواقع مصفوفة من السلاسل {&quot;tintin&quot;,&quot;milou&quot;}. يوضح المثال التالي هذه النقطة. ستبدو صفحة العرض [main.aspx] كما يلي:</p>
+<p>أنتجت الطريقة [<bdi dir="ltr" class="odt-ltr-term">ToString</bdi>] السلسلة [<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>,<bdi dir="ltr" class="odt-ltr-term">milou</bdi>]، والتي تم عرضها. وهي تخفي حقيقة أن الكائن [<bdi dir="ltr" class="odt-ltr-term">Request.QueryString</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">name</bdi>&quot;)] هو في الواقع مصفوفة من السلاسل {&quot;<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&quot;,&quot;<bdi dir="ltr" class="odt-ltr-term">milou</bdi>&quot;}. يوضح المثال التالي هذه النقطة. ستبدو صفحة العرض [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2226,19 +2228,19 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>توجد بعض الميزات الجديدة في هذه الصفحة التي تستخدم ما يُسمى عناصر التحكم في الخادم. يتم تحديدها بواسطة السمة [runat=&quot;server&quot;]. من المبكر جدًا تقديم مفهوم عناصر التحكم في الخادم. في الوقت الحالي، ما عليك سوى معرفة أن:</p>
+<p>توجد بعض الميزات الجديدة في هذه الصفحة التي تستخدم ما يُسمى عناصر التحكم في الخادم. يتم تحديدها بواسطة السمة [<bdi dir="ltr" class="odt-ltr-term">runat</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">server</bdi>&quot;]. من المبكر جدًا تقديم مفهوم عناصر التحكم في الخادم. في الوقت الحالي، ما عليك سوى معرفة أن:</p>
 <ul>
-  <li>تحتوي الصفحة على قائمتين (علامات &lt;asp:listbox&gt;)
+  <li>تحتوي الصفحة على قائمتين (علامات &lt;<bdi dir="ltr" class="odt-ltr-term">asp:listbox</bdi>&gt;)
   </li>
-  <li>هذه القوائم هي كائنات (lstQueryString، lstForm) من النوع [ListBox] سيتم إنشاؤها بواسطة وحدة التحكم في الصفحة
+  <li>هذه القوائم هي كائنات (<bdi dir="ltr" class="odt-ltr-term">lstQueryString</bdi>، <bdi dir="ltr" class="odt-ltr-term">lstForm</bdi>) من النوع [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] سيتم إنشاؤها بواسطة وحدة التحكم في الصفحة
   </li>
-  <li>توجد هذه الكائنات فقط داخل خادم الويب. عند إرسال الاستجابة، يتم تحويلها إلى علامات HTML قياسية يمكن للعميل فهمها. وبالتالي، يتم تحويل كائن [listbox] (أو &quot;عرضه&quot;) إلى علامات HTML &lt;select&gt; و &lt;option&gt;.
+  <li>توجد هذه الكائنات فقط داخل خادم الويب. عند إرسال الاستجابة، يتم تحويلها إلى علامات <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> قياسية يمكن للعميل فهمها. وبالتالي، يتم تحويل كائن [<bdi dir="ltr" class="odt-ltr-term">listbox</bdi>] (أو &quot;عرضه&quot;) إلى علامات <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> &lt;<bdi dir="ltr" class="odt-ltr-term">select</bdi>&gt; و &lt;<bdi dir="ltr" class="odt-ltr-term">option</bdi>&gt;.
   </li>
-  <li>أن الغرض الرئيسي من هذه الكائنات هو إزالة كل كود VB من طبقة العرض، وتركها محصورة في وحدة التحكم.
+  <li>أن الغرض الرئيسي من هذه الكائنات هو إزالة كل كود <bdi dir="ltr" class="odt-ltr-term">VB</bdi> من طبقة العرض، وتركها محصورة في وحدة التحكم.
   </li>
 </ul>
 
-<p>وحدة التحكم [main.aspx.vb] المسؤولة عن إنشاء الكائنين [lstQueryString] و [lstForm] هي كما يلي:</p>
+<p>وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] المسؤولة عن إنشاء الكائنين [<bdi dir="ltr" class="odt-ltr-term">lstQueryString</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">lstForm</bdi>] هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Collections</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
@@ -2296,28 +2298,28 @@
 
 <p>النقاط الرئيسية في هذا الكود هي كما يلي:</p>
 <ul>
-  <li>في [Form_Load]، تسترد الصفحة المجموعتين [QueryString] و [Form]. وتستخدم دالة [getValues] لوضع محتويات هاتين المجموعتين في كائنين [ArrayList]، اللذين سيحتويان على سلاسل من النوع [key=value] إذا كان مفتاح المجموعة مرتبطًا بقيمة واحدة، أو [key(i)=value] إذا كان المفتاح مرتبطًا بقيم متعددة.
+  <li>في [<bdi dir="ltr" class="odt-ltr-term">Form_Load</bdi>]، تسترد الصفحة المجموعتين [<bdi dir="ltr" class="odt-ltr-term">QueryString</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. وتستخدم دالة [<bdi dir="ltr" class="odt-ltr-term">getValues</bdi>] لوضع محتويات هاتين المجموعتين في كائنين [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>]، اللذين سيحتويان على سلاسل من النوع [<bdi dir="ltr" class="odt-ltr-term">key</bdi>=<bdi dir="ltr" class="odt-ltr-term">value</bdi>] إذا كان مفتاح المجموعة مرتبطًا بقيمة واحدة، أو [<bdi dir="ltr" class="odt-ltr-term">key</bdi>(<bdi dir="ltr" class="odt-ltr-term">i</bdi>)=<bdi dir="ltr" class="odt-ltr-term">value</bdi>] إذا كان المفتاح مرتبطًا بقيم متعددة.
   </li>
-  <li>ثم يتم ربط كل كائن من كائنات [ArrayList] بأحد كائنات [ListBox] في صفحة العرض باستخدام جملتين:
+  <li>ثم يتم ربط كل كائن من كائنات [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>] بأحد كائنات [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] في صفحة العرض باستخدام جملتين:
     <ul>
-      <li>[ListBox.DataSource=ArrayList] و [ListBox.DataBind]. ينقل الأمر الأخير العناصر من [DataSource] إلى مجموعة [Items] الخاصة بكائن [ListBox]
+      <li>[<bdi dir="ltr" class="odt-ltr-term">ListBox.DataSource</bdi>=<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">ListBox.DataBind</bdi>]. ينقل الأمر الأخير العناصر من [<bdi dir="ltr" class="odt-ltr-term">DataSource</bdi>] إلى مجموعة [<bdi dir="ltr" class="odt-ltr-term">Items</bdi>] الخاصة بكائن [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>]
       </li>
     </ul>
   </li>
 </ul>
 
-<p>لاحظ أنه لم يتم إنشاء أي من كائني [ListBox] بشكل صريح بواسطة عملية [New]. يمكننا أن نستنتج أنه عند وجود العلامة &lt;asp:listbox id=&quot;xx&quot;&gt;...&lt;asp:listbox/&gt;، يقوم خادم الويب نفسه بإنشاء كائن [ListBox] المشار إليه بواسطة سمة [id] للعلامة.</p>
+<p>لاحظ أنه لم يتم إنشاء أي من كائني [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] بشكل صريح بواسطة عملية [<bdi dir="ltr" class="odt-ltr-term">New</bdi>]. يمكننا أن نستنتج أنه عند وجود العلامة &lt;<bdi dir="ltr" class="odt-ltr-term">asp:listbox id</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">xx</bdi>&quot;&gt;...&lt;<bdi dir="ltr" class="odt-ltr-term">asp:listbox/</bdi>&gt;، يقوم خادم الويب نفسه بإنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] المشار إليه بواسطة سمة [<bdi dir="ltr" class="odt-ltr-term">id</bdi>] للعلامة.</p>
 <ul>
-  <li>تستخدم الدالة [getValeurs] كائن [NameValueCollection] الذي تم تمريره إليها كمعلمة لإرجاع نتيجة من النوع [ArrayList].
+  <li>تستخدم الدالة [<bdi dir="ltr" class="odt-ltr-term">getValeurs</bdi>] كائن [<bdi dir="ltr" class="odt-ltr-term">NameValueCollection</bdi>] الذي تم تمريره إليها كمعلمة لإرجاع نتيجة من النوع [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>].
   </li>
 </ul>
 
-<p>نضع الملفين السابقين في مجلد باسم &lt;application-path&gt; ونبدأ تشغيل خادم Cassini بالمعلمات (&lt;application-path&gt;,/request2)، ثم نطلب عنوان URL</p>
-<p>[<mark style="background-color: #ffe994">http://localhost/request2/main.aspx?nom=tintin&amp;age=27</mark>]. نحصل على الاستجابة التالية:</p>
+<p>نضع الملفين السابقين في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ونبدأ تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">request2</bdi>)، ثم نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi></p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request2/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">nom</bdi>=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">age</bdi>=27</mark>]. نحصل على الاستجابة التالية:</p>
 <p><img src="images/100000000000023000000172314CF95B.png" width="560" height="370" style="width:14.817cm;height:9.79cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000023000000172314CF95B.png" /></p>
-<p>نطلب الآن عنوان URL حيث يظهر المفتاح [nom] مرتين:</p>
+<p>نطلب الآن عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> حيث يظهر المفتاح [<bdi dir="ltr" class="odt-ltr-term">nom</bdi>] مرتين:</p>
 <p><img src="images/100000000000027F00000118235BCCF2.png" width="639" height="280" style="width:16.907cm;height:7.408cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000027F00000118235BCCF2.png" /></p>
-<p>نلاحظ أن الكائن [Request.QueryString(&quot;nom&quot;)] كان بالفعل مصفوفة. هنا، تم إجراء الطلبات باستخدام طريقة GET. نستخدم عميل [curl] لإجراء طلب POST:</p>
+<p>نلاحظ أن الكائن [<bdi dir="ltr" class="odt-ltr-term">Request.QueryString</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">nom</bdi>&quot;)] كان بالفعل مصفوفة. هنا، تم إجراء الطلبات باستخدام طريقة <bdi dir="ltr" class="odt-ltr-term">GET.</bdi> نستخدم عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] لإجراء طلب <bdi dir="ltr" class="odt-ltr-term">POST:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>E:\curl&gt;curl --data nom=milou --data nom=tintin --data age=14 --data age=27 http://localhost/request2/main.aspx
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
@@ -2345,12 +2347,12 @@
 <a id="__codelineno-37-25" name="__codelineno-37-25" href="#__codelineno-37-25"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <a id="__codelineno-37-26" name="__codelineno-37-26" href="#__codelineno-37-26"></a><span class="p">&lt;/</span><span class="nt">HTML</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>يمكننا أن نرى أن العميل يتلقى كود HTML قياسي للقائمتين الموجودتين على الصفحة. تظهر معلومات لم نقم بإدراجها بأنفسنا، مثل الحقل المخفي [_VIEWSTATE]. تم إنشاء هذه المعلومات بواسطة علامات &lt;asp:xx runat=&quot;server&quot;&gt;. سنحتاج إلى تعلم كيفية استخدامها بفعالية.</p>
+<p>يمكننا أن نرى أن العميل يتلقى كود <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> قياسي للقائمتين الموجودتين على الصفحة. تظهر معلومات لم نقم بإدراجها بأنفسنا، مثل الحقل المخفي [_VIEWSTATE]. تم إنشاء هذه المعلومات بواسطة علامات &lt;<bdi dir="ltr" class="odt-ltr-term">asp:xx runat</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">server</bdi>&quot;&gt;. سنحتاج إلى تعلم كيفية استخدامها بفعالية.</p>
 <p><a id="toc69180250"></a>
 <a id="toc69180348"></a></p>
-<h2 id="43-mvc">4.3. تنفيذ بنية MVC</h2>
+<h2 id="43-mvc">4.3. تنفيذ بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi></h2>
 <h3 id="431">4.3.1. المفهوم</h3>
-<p>لنختتم هذا الفصل الطويل بتنفيذ تطبيق تم إنشاؤه وفقًا لنمط MVC (Model-View-Controller). يبدو تطبيق الويب المصمم وفقًا لهذا النمط كما يلي:</p>
+<p>لنختتم هذا الفصل الطويل بتنفيذ تطبيق تم إنشاؤه وفقًا لنمط <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> (<bdi dir="ltr" class="odt-ltr-term">Model-View-Controller</bdi>). يبدو تطبيق الويب المصمم وفقًا لهذا النمط كما يلي:</p>
 <p><img src="images/100000000000054F00000275D3C16A15.png" width="680" height="314" style="width:17.979cm;height:8.32cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000054F00000275D3C16A15.png" /></p>
 <ul>
   <li>يرسل العميل طلباته إلى مكون معين من التطبيق يسمى وحدة التحكم
@@ -2362,22 +2364,22 @@
 </ul>
 
 <p>في نموذجنا، تمر جميع الطلبات عبر وحدة تحكم واحدة، والتي تعمل كمنسق لتطبيق الويب بأكمله. وتتمثل ميزة هذا النموذج في أنه يمكن تجميع كل ما يجب القيام به قبل كل طلب داخل وحدة التحكم. لنفترض، على سبيل المثال، أن التطبيق يتطلب المصادقة. يتم تنفيذ ذلك مرة واحدة فقط. بمجرد نجاحها، سيقوم التطبيق بتخزين المعلومات المتعلقة بالمستخدم الذي تم مصادقته للتو في الجلسة. نظرًا لأن العميل يمكنه استدعاء صفحة في التطبيق مباشرةً دون مصادقة، فسيتعين على كل صفحة بالتالي التحقق في الجلسة من أن المصادقة قد اكتملت بالفعل. إذا مرت جميع الطلبات عبر وحدة تحكم واحدة، فإن وحدة التحكم هي التي يمكنها تنفيذ هذه المهمة. لن تضطر الصفحات التي يتم تمرير الطلب إليها في النهاية إلى القيام بذلك.</p>
-<h3 id="432-mvc">4.3.2. التحكم في تطبيق MVC بدون جلسة</h3>
-<p>مما رأيناه حتى الآن، قد يعتقد المرء أن ملف [global.asax] يمكن أن يعمل كوحدة تحكم. في الواقع، نحن نعلم أن جميع الطلبات تمر عبره. لذلك فهو في وضع جيد للتحكم في كل شيء. يستخدم التطبيق التالي هذا الملف لهذا الغرض. سيكون مساره الافتراضي [http://localhost/mvc1/main.aspx]. لتحديد ما يريده، سيقوم العميل بإلحاق معلمة action=value إلى عنوان URL. اعتمادًا على قيمة معلمة [action]، ستقوم وحدة التحكم [global.asax] بتوجيه الطلب إلى صفحة محددة:</p>
+<h3 id="432-mvc">4.3.2. التحكم في تطبيق <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> بدون جلسة</h3>
+<p>مما رأيناه حتى الآن، قد يعتقد المرء أن ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] يمكن أن يعمل كوحدة تحكم. في الواقع، نحن نعلم أن جميع الطلبات تمر عبره. لذلك فهو في وضع جيد للتحكم في كل شيء. يستخدم التطبيق التالي هذا الملف لهذا الغرض. سيكون مساره الافتراضي [<bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>]. لتحديد ما يريده، سيقوم العميل بإلحاق معلمة <bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">value</bdi> إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> اعتمادًا على قيمة معلمة [<bdi dir="ltr" class="odt-ltr-term">action</bdi>]، ستقوم وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] بتوجيه الطلب إلى صفحة محددة:</p>
 <ol>
-  <li>[main.aspx] إذا لم يتم تعريف المعلمة action أو إذا كانت action=main
+  <li>[<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] إذا لم يتم تعريف المعلمة <bdi dir="ltr" class="odt-ltr-term">action</bdi> أو إذا كانت <bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">main</bdi>
   </li>
-  <li>[action1.aspx] إذا كانت action=action1
+  <li>[<bdi dir="ltr" class="odt-ltr-term">action1.aspx</bdi>] إذا كانت <bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">action1</bdi>
   </li>
-  <li>[unknown.aspx] إذا لم تندرج action ضمن الحالتين 1 و 2
+  <li>[<bdi dir="ltr" class="odt-ltr-term">unknown.aspx</bdi>] إذا لم تندرج <bdi dir="ltr" class="odt-ltr-term">action</bdi> ضمن الحالتين 1 و 2
   </li>
 </ol>
 
-<p>تعرض الصفحات [main.aspx، action1.aspx، unknown.aspx] ببساطة قيمة [action] التي أدت إلى عرضها. ندرج أدناه الملفات الثمانية في هذا التطبيق ونقدم تعليقات عند الضرورة:</p>
-<p>[<mark style="background-color: #ffe994">global.asax</mark>]</p>
+<p>تعرض الصفحات [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>، <bdi dir="ltr" class="odt-ltr-term">action1.aspx</bdi>، <bdi dir="ltr" class="odt-ltr-term">unknown.aspx</bdi>] ببساطة قيمة [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] التي أدت إلى عرضها. ندرج أدناه الملفات الثمانية في هذا التطبيق ونقدم تعليقات عند الضرورة:</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">global.asax</bdi></mark>]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="na">&lt;%@ Application src=&quot;Global.asax.vb&quot; Inherits=&quot;Global&quot; %&gt;</span>
 </code></pre></div>
-<p>[<mark style="background-color: #ffe994">global.asax.vb</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Web</span></span>
@@ -2411,17 +2413,17 @@
 
 <p>نقاط يجب ملاحظتها:</p>
 <ul>
-  <li>نقوم باعتراض جميع طلبات العميل في الإجراء [Application_BeginRequest]، الذي يتم تنفيذه تلقائيًا عند بدء كل طلب جديد يتم إرساله إلى التطبيق. 
+  <li>نقوم باعتراض جميع طلبات العميل في الإجراء [<bdi dir="ltr" class="odt-ltr-term">Application_BeginRequest</bdi>]، الذي يتم تنفيذه تلقائيًا عند بدء كل طلب جديد يتم إرساله إلى التطبيق. 
   </li>
-  <li>في هذا الإجراء، يمكننا الوصول إلى كائن [Request]، الذي يمثل طلب HTTP الخاص بالعميل. نظرًا لأننا نتوقع عنوان URL بالصيغة [<mark style="background-color: #ffe994">http://localhost/mvc1/main.aspx?action=xx</mark>]، فإننا نبحث عن مفتاح باسم [action] في مجموعة [Request.QueryString]. إذا لم يكن موجودًا، فإننا نعيّن القيمة الافتراضية لـ [action] إلى &quot;main&quot;.
+  <li>في هذا الإجراء، يمكننا الوصول إلى كائن [<bdi dir="ltr" class="odt-ltr-term">Request</bdi>]، الذي يمثل طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الخاص بالعميل. نظرًا لأننا نتوقع عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بالصيغة [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi></mark>]، فإننا نبحث عن مفتاح باسم [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] في مجموعة [<bdi dir="ltr" class="odt-ltr-term">Request.QueryString</bdi>]. إذا لم يكن موجودًا، فإننا نعيّن القيمة الافتراضية لـ [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] إلى &quot;<bdi dir="ltr" class="odt-ltr-term">main</bdi>&quot;.
   </li>
-  <li>يتم وضع قيمة المعلمة [action] في كائن [Context]. مثل كائنات [Application، Session، Request، Response، Server]، هذا الكائن عالمي ويمكن الوصول إليه من أي كود. يتم تمرير هذا الكائن من صفحة إلى أخرى إذا تمت معالجة الطلب بواسطة عدة صفحات، كما هو الحال هنا. يتم حذفه بمجرد إرسال الاستجابة إلى العميل. وبالتالي، فإن مدة صلاحيته تقتصر على مدة معالجة الطلب.
+  <li>يتم وضع قيمة المعلمة [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] في كائن [<bdi dir="ltr" class="odt-ltr-term">Context</bdi>]. مثل كائنات [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>، <bdi dir="ltr" class="odt-ltr-term">Session</bdi>، <bdi dir="ltr" class="odt-ltr-term">Request</bdi>، <bdi dir="ltr" class="odt-ltr-term">Response</bdi>، <bdi dir="ltr" class="odt-ltr-term">Server</bdi>]، هذا الكائن عالمي ويمكن الوصول إليه من أي كود. يتم تمرير هذا الكائن من صفحة إلى أخرى إذا تمت معالجة الطلب بواسطة عدة صفحات، كما هو الحال هنا. يتم حذفه بمجرد إرسال الاستجابة إلى العميل. وبالتالي، فإن مدة صلاحيته تقتصر على مدة معالجة الطلب.
   </li>
-  <li>اعتمادًا على قيمة المعلمة [action]، يتم تمرير الطلب إلى الصفحة المناسبة. للقيام بذلك، نستخدم الكائن العام [Server]، الذي يسمح لنا، بفضل طريقته، بنقل الطلب الحالي إلى صفحة أخرى. المعلمة الأولى هي اسم الصفحة المستهدفة، والثانية هي قيمة منطقية تشير إلى ما إذا كان سيتم نقل مجموعتي [QueryString] و[Form] إلى الصفحة المستهدفة أم لا. هنا، الإجابة هي نعم.
+  <li>اعتمادًا على قيمة المعلمة [<bdi dir="ltr" class="odt-ltr-term">action</bdi>]، يتم تمرير الطلب إلى الصفحة المناسبة. للقيام بذلك، نستخدم الكائن العام [<bdi dir="ltr" class="odt-ltr-term">Server</bdi>]، الذي يسمح لنا، بفضل طريقته، بنقل الطلب الحالي إلى صفحة أخرى. المعلمة الأولى هي اسم الصفحة المستهدفة، والثانية هي قيمة منطقية تشير إلى ما إذا كان سيتم نقل مجموعتي [<bdi dir="ltr" class="odt-ltr-term">QueryString</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">Form</bdi>] إلى الصفحة المستهدفة أم لا. هنا، الإجابة هي نعم.
   </li>
 </ul>
 
-<p>ملفان [main.aspx] و [main.aspx.vb]:</p>
+<p>ملفان [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2445,8 +2447,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">End Class</span></span>
 </code></pre></div>
 
-<p>يقوم وحدة التحكم [main.aspx.vb] ببساطة باسترداد قيمة مفتاح [action] من السياق؛ ويتم عرض هذه القيمة بواسطة كود العرض. الهدف هنا هو توضيح تمرير كائن [Context] بين الصفحات المختلفة التي تتعامل مع نفس طلب العميل. تعمل الصفحتان [action1.aspx] و [inconnu.aspx] بشكل مشابه:</p>
-<p>[<mark style="background-color: #ffe994">action1.aspx</mark>]</p>
+<p>يقوم وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>] ببساطة باسترداد قيمة مفتاح [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] من السياق؛ ويتم عرض هذه القيمة بواسطة كود العرض. الهدف هنا هو توضيح تمرير كائن [<bdi dir="ltr" class="odt-ltr-term">Context</bdi>] بين الصفحات المختلفة التي تتعامل مع نفس طلب العميل. تعمل الصفحتان [<bdi dir="ltr" class="odt-ltr-term">action1.aspx</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">inconnu.aspx</bdi>] بشكل مشابه:</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">action1.aspx</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;action1.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;action1&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2459,7 +2461,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>[<mark style="background-color: #ffe994">action1.aspx.vb</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">action1.aspx.vb</bdi></mark>]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">action1</span>
 <a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
@@ -2471,7 +2473,7 @@
 <a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 <a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
-<p>[<mark style="background-color: #ffe994">unknown.aspx</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">unknown.aspx</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;inconnu.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;inconnu&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2484,7 +2486,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>[<mark style="background-color: #ffe994">unknown.aspx.vb</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">unknown.aspx.vb</bdi></mark>]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">inconnu</span>
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
@@ -2496,16 +2498,16 @@
 <a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 <a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
-<p>لإجراء الاختبار، يتم وضع الملفات السابقة في مجلد &lt;application-path&gt; ويتم تشغيل Cassini باستخدام المعلمات (&lt;application-path&gt;,/mvc1). نطلب عنوان URL [<mark style="background-color: #ffe994">http://localhost/mvc1/main.aspx</mark>]:</p>
+<p>لإجراء الاختبار، يتم وضع الملفات السابقة في مجلد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ويتم تشغيل <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">mvc1</bdi>). نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi></mark>]:</p>
 <p><img src="images/10000000000001BC000000B2E263F6C4.png" width="444" height="178" style="width:11.748cm;height:4.71cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BC000000B2E263F6C4.png" /></p>
-<p>لم يرسل الطلب أي معلمة [action]. قام كود وحدة التحكم في التطبيق [global.asax.vb] بعرض الصفحة [main.aspx]. الآن نطلب عنوان URL [http://localhost/mvc1/main.aspx?action=action1]:</p>
+<p>لم يرسل الطلب أي معلمة [<bdi dir="ltr" class="odt-ltr-term">action</bdi>]. قام كود وحدة التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] بعرض الصفحة [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]. الآن نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">action1</bdi>]:</p>
 <p><img src="images/1000000000000201000000AE0EA4A6BE.png" width="513" height="174" style="width:13.573cm;height:4.604cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000201000000AE0EA4A6BE.png" /></p>
-<p>قام كود وحدة التحكم في التطبيق [global.asax.vb] بتقديم الصفحة [action1.aspx]. الآن نطلب عنوان URL [<mark style="background-color: #ffe994">http://localhost/mvc1/main.aspx?action=xx</mark>]:</p>
+<p>قام كود وحدة التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] بتقديم الصفحة [<bdi dir="ltr" class="odt-ltr-term">action1.aspx</bdi>]. الآن نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi></mark>]:</p>
 <p><img src="images/10000000000001E3000000B12B50CB68.png" width="483" height="177" style="width:12.779cm;height:4.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E3000000B12B50CB68.png" /></p>
-<p>لم يتم التعرف على الإجراء، وقام وحدة التحكم [global.asax.vb] بعرض الصفحة [unknown.aspx].</p>
-<h3 id="433-mvc">4.3.3. التحكم في تطبيق MVC باستخدام الجلسات</h3>
-<p>في معظم الأحيان، تحتاج الطلبات المختلفة التي يرسلها العميل إلى التطبيق إلى مشاركة المعلومات. وقد رأينا حلاً محتملاً لهذه المشكلة: تخزين المعلومات المراد مشاركتها في كائن [Session] الخاص بالطلب. يتم مشاركة هذا الكائن بالفعل بين جميع الطلبات، وهو قادر على تخزين المعلومات في شكل (مفتاح، قيمة)، حيث يكون المفتاح من النوع [String] والقيمة من أي نوع مشتق من [Object].</p>
-<p>في المثال السابق، تم استدعاء الصفحات المختلفة المرتبطة بالإجراءات المختلفة في الإجراء [Application_BeginRequest] في ملف [global.asax.vb]:</p>
+<p>لم يتم التعرف على الإجراء، وقام وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] بعرض الصفحة [<bdi dir="ltr" class="odt-ltr-term">unknown.aspx</bdi>].</p>
+<h3 id="433-mvc">4.3.3. التحكم في تطبيق <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> باستخدام الجلسات</h3>
+<p>في معظم الأحيان، تحتاج الطلبات المختلفة التي يرسلها العميل إلى التطبيق إلى مشاركة المعلومات. وقد رأينا حلاً محتملاً لهذه المشكلة: تخزين المعلومات المراد مشاركتها في كائن [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>] الخاص بالطلب. يتم مشاركة هذا الكائن بالفعل بين جميع الطلبات، وهو قادر على تخزين المعلومات في شكل (مفتاح، قيمة)، حيث يكون المفتاح من النوع [<bdi dir="ltr" class="odt-ltr-term">String</bdi>] والقيمة من أي نوع مشتق من [<bdi dir="ltr" class="odt-ltr-term">Object</bdi>].</p>
+<p>في المثال السابق، تم استدعاء الصفحات المختلفة المرتبطة بالإجراءات المختلفة في الإجراء [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>_BeginRequest] في ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">Sub</span> Application_BeginRequest(<span style="color:#0000ff">ByVal</span> sender <span style="color:#0000ff">As</span> <span style="color:#0000ff">Object</span>, <span style="color:#0000ff">ByVal</span> e <span style="color:#0000ff">As</span> EventArgs)</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">        &#x27; retrieve the action to be performed</span></span>
@@ -2529,11 +2531,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#0000ff">End</span> <span style="color:#0000ff">Sub</span></span></span>
 </code></pre></div>
 
-<p>اتضح أنه في الإجراء [Application_BeginRequest]، لا يمكن الوصول إلى كائن [Session]. وينطبق الأمر نفسه على الصفحة التي يتم نقل التنفيذ إليها. لذلك، لا يمكن استخدام هذا النموذج لتطبيق يحتوي على جلسة عمل. يمكننا تعيين دور وحدة التحكم لأي صفحة، على سبيل المثال [default.aspx]. ثم تتم إزالة الملفات [global.asax، global.asax.vb] واستبدالها بالملفات [default.aspx، default.aspx.vb]:</p>
-<p>[<mark style="background-color: #ffe994">default.aspx</mark>]</p>
+<p>اتضح أنه في الإجراء [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>_BeginRequest]، لا يمكن الوصول إلى كائن [<bdi dir="ltr" class="odt-ltr-term">Session</bdi>]. وينطبق الأمر نفسه على الصفحة التي يتم نقل التنفيذ إليها. لذلك، لا يمكن استخدام هذا النموذج لتطبيق يحتوي على جلسة عمل. يمكننا تعيين دور وحدة التحكم لأي صفحة، على سبيل المثال [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>]. ثم تتم إزالة الملفات [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>، <bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] واستبدالها بالملفات [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>، <bdi dir="ltr" class="odt-ltr-term">default.aspx.vb</bdi>]:</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi></mark>]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="o">&lt;%@</span> <span class="n">Page</span> <span class="n">codebehind</span><span class="o">=</span><span class="s2">&quot;default.aspx.vb&quot;</span> <span class="n">Inherits</span><span class="o">=</span><span class="s2">&quot;vs.controleur&quot;</span> <span class="o">%&gt;</span>
 </code></pre></div>
-<p>[<mark style="background-color: #ffe994">default.aspx.vb</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">default.aspx.vb</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System.Web</span></span>
@@ -2572,20 +2574,20 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>لتسليط الضوء على آلية الجلسة، ستعرض الصفحات المختلفة ليس فقط الإجراء الحالي بل الإجراء السابق أيضًا. بالنسبة لسلسلة الإجراءات A1، A2، ...، An، عند حدوث الإجراء Ai، يقوم وحدة التحكم أعلاه بما يلي:</p>
+<p>لتسليط الضوء على آلية الجلسة، ستعرض الصفحات المختلفة ليس فقط الإجراء الحالي بل الإجراء السابق أيضًا. بالنسبة لسلسلة الإجراءات <bdi dir="ltr" class="odt-ltr-term">A1</bdi>، <bdi dir="ltr" class="odt-ltr-term">A2</bdi>، ...، <bdi dir="ltr" class="odt-ltr-term">An</bdi>، عند حدوث الإجراء <bdi dir="ltr" class="odt-ltr-term">Ai</bdi>، يقوم وحدة التحكم أعلاه بما يلي:</p>
 <ul>
-  <li>تضع الإجراء الحالي Ai في السياق
+  <li>تضع الإجراء الحالي <bdi dir="ltr" class="odt-ltr-term">Ai</bdi> في السياق
   </li>
-  <li>تسترد الإجراء السابق Ai-1 من الجلسة. إذا لم يكن هناك أي إجراء (كما في حالة الإجراء A1)، فإنها تحدد الإجراء السابق على أنه سلسلة فارغة.
+  <li>تسترد الإجراء السابق <bdi dir="ltr" class="odt-ltr-term">Ai-1</bdi> من الجلسة. إذا لم يكن هناك أي إجراء (كما في حالة الإجراء <bdi dir="ltr" class="odt-ltr-term">A1</bdi>)، فإنها تحدد الإجراء السابق على أنه سلسلة فارغة.
   </li>
-  <li>تضع الإجراء الحالي Ai في الجلسة لتحل محل Ai-1
+  <li>تضع الإجراء الحالي <bdi dir="ltr" class="odt-ltr-term">Ai</bdi> في الجلسة لتحل محل <bdi dir="ltr" class="odt-ltr-term">Ai-1</bdi>
   </li>
   <li>تنقل التنفيذ إلى الصفحة المناسبة
   </li>
 </ul>
 
 <p>الصفحات الثلاث للتطبيق هي كما يلي:</p>
-<p>[<mark style="background-color: #ffe994">main.aspx</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2603,7 +2605,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>[<mark style="background-color: #ffe994">action1.aspx</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">action1.aspx</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2620,7 +2622,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>[<mark style="background-color: #ffe994">unknown.aspx</mark>]</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">unknown.aspx</bdi></mark>]</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;main.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;main&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -2638,7 +2640,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">HTML</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>نظرًا لأن الصفحات الثلاث تعرض نفس المعلومات [action، actionPrec]، فيمكنها جميعًا مشاركة نفس وحدة التحكم في الصفحة. ولذلك، جعلناها جميعًا مشتقة من الفئة [main] في الملف [main.aspx.vb]:</p>
+<p>نظرًا لأن الصفحات الثلاث تعرض نفس المعلومات [<bdi dir="ltr" class="odt-ltr-term">action</bdi>، <bdi dir="ltr" class="odt-ltr-term">actionPrec</bdi>]، فيمكنها جميعًا مشاركة نفس وحدة التحكم في الصفحة. ولذلك، جعلناها جميعًا مشتقة من الفئة [<bdi dir="ltr" class="odt-ltr-term">main</bdi>] في الملف [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">main</span>
 <a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>
@@ -2653,15 +2655,15 @@
 <a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">Sub</span>
 <a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
-<p>يسترد الكود أعلاه ببساطة المعلومات الموضوعة في السياق بواسطة وحدة التحكم في التطبيق [default.aspx.vb]. </p>
-<p>يتم وضع جميع هذه الملفات في &lt;application-path&gt; ويتم تشغيل Cassini باستخدام المعلمات (&lt;application-path&gt;,/mvc2). نطلب أولاً عنوان URL [http://localhost/mvc2]:</p>
+<p>يسترد الكود أعلاه ببساطة المعلومات الموضوعة في السياق بواسطة وحدة التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">default.aspx.vb</bdi>]. </p>
+<p>يتم وضع جميع هذه الملفات في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ويتم تشغيل <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">mvc2</bdi>). نطلب أولاً عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc2</bdi>]:</p>
 <p><img src="images/10000000000001AF000000DCC66AB736.png" width="431" height="220" style="width:11.404cm;height:5.821cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AF000000DCC66AB736.png" /></p>
-<p>يشير عنوان URL [http://localhost/mvc2] إلى مجلد. ونعلم أنه في هذه الحالة، يقوم الخادم بإرجاع المستند [default.aspx] من هذا المجلد، إذا كان موجودًا. هنا، لم يتم تحديد أي إجراء. لذلك، تم تنفيذ الإجراء [main]. لننتقل إلى الإجراء [action1]:</p>
+<p>يشير عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc2</bdi>] إلى مجلد. ونعلم أنه في هذه الحالة، يقوم الخادم بإرجاع المستند [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>] من هذا المجلد، إذا كان موجودًا. هنا، لم يتم تحديد أي إجراء. لذلك، تم تنفيذ الإجراء [<bdi dir="ltr" class="odt-ltr-term">main</bdi>]. لننتقل إلى الإجراء [<bdi dir="ltr" class="odt-ltr-term">action1</bdi>]:</p>
 <p><img src="images/10000000000001EB000000C3891EE7BD.png" width="491" height="195" style="width:12.991cm;height:5.159cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB000000C3891EE7BD.png" /></p>
-<p>تم تحديد الإجراء الحالي والإجراء السابق بشكل صحيح. لننتقل إلى الإجراء [xx]:</p>
+<p>تم تحديد الإجراء الحالي والإجراء السابق بشكل صحيح. لننتقل إلى الإجراء [<bdi dir="ltr" class="odt-ltr-term">xx</bdi>]:</p>
 <p><img src="images/10000000000001D7000000C8F4011A2D.png" width="471" height="200" style="width:12.462cm;height:5.292cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D7000000C8F4011A2D.png" /></p>
 <h2 id="44">4.4. الخلاصة</h2>
-<p>لدينا الآن العناصر الأساسية التي يُبنى عليها كل تطبيق ASP.NET. ومع ذلك، هناك مفهوم مهم واحد متبقي لتقديمه: النموذج. وهذا هو موضوع الفصل التالي.</p>
+<p>لدينا الآن العناصر الأساسية التي يُبنى عليها كل تطبيق <bdi dir="ltr" class="odt-ltr-term">ASP.NET.</bdi> ومع ذلك، هناك مفهوم مهم واحد متبقي لتقديمه: النموذج. وهذا هو موضوع الفصل التالي.</p>
 
 
 
