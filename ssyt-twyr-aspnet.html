@@ -897,7 +897,7 @@
 <h3 id="411">4.1.1. مقدمة</h3>
 <p>تطبيق الويب هو تطبيق يجمع بين مستندات متنوعة (<bdi dir="ltr" class="odt-ltr-term">HTML</bdi>، كود .<bdi dir="ltr" class="odt-ltr-term">NET</bdi>، صور، أصوات، إلخ). يجب أن تكون هذه المستندات موجودة ضمن دليل جذر واحد، يُعرف باسم جذر تطبيق الويب. يرتبط مسار افتراضي على خادم الويب بهذا الجذر. لقد تعرفنا على مفهوم الدليل الافتراضي لخادم الويب <bdi dir="ltr" class="odt-ltr-term">Cassini.</bdi> هذا المفهوم موجود أيضًا في خادم الويب <bdi dir="ltr" class="odt-ltr-term">IIS.</bdi> هناك فرق مهم بين الخادمين وهو أنه في أي وقت، يمكن أن يحتوي <bdi dir="ltr" class="odt-ltr-term">IIS</bdi> على أي عدد من الدلائل الافتراضية، بينما يحتوي خادم الويب <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> على دليل واحد فقط — وهو الدليل المحدد عند بدء التشغيل. هذا يعني أن خادم <bdi dir="ltr" class="odt-ltr-term">IIS</bdi> يمكنه تقديم عدة تطبيقات ويب في وقت واحد، بينما يقدم خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> تطبيقًا واحدًا فقط في كل مرة. في الأمثلة السابقة، كان خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> يُشغَّل دائمًا بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">webroot</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">aspnet</bdi>) التي ربطت المجلد الافتراضي /<bdi dir="ltr" class="odt-ltr-term">aspnet</bdi> بالمجلد الفعلي &lt;<bdi dir="ltr" class="odt-ltr-term">webroot</bdi>&gt;.  وبالتالي، كان خادم الويب يخدم دائمًا نفس تطبيق الويب. لم يمنعنا هذا من كتابة واختبار صفحات مختلفة ومستقلة داخل تطبيق الويب الفردي هذا. لكل تطبيق ويب موارده الخاصة، الموجودة تحت جذره الفعلي &lt;<bdi dir="ltr" class="odt-ltr-term">webroot</bdi>&gt;:</p>
 <ul>
-  <li>مجلد [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>] حيث يمكن وضع الفئات المُجمَّعة مسبقًا
+  <li>مجلد [bin] حيث يمكن وضع الفئات المُجمَّعة مسبقًا
   </li>
   <li>ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] الذي يسمح لك بتهيئة تطبيق الويب ككل وكذلك بيئة التشغيل لكل مستخدم من مستخدميه
   </li>
@@ -917,7 +917,7 @@
 </code></pre></div>
 <p>في المجلد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;، وبحسب احتياجاتنا، سنجد:</p>
 <ul>
-  <li>مجلد [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>] لوضع الفئات المُجمَّعة مسبقًا (<bdi dir="ltr" class="odt-ltr-term">DLLs</bdi>)
+  <li>مجلد [bin] لوضع الفئات المُجمَّعة مسبقًا (<bdi dir="ltr" class="odt-ltr-term">DLLs</bdi>)
   </li>
   <li>ملف [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] عندما نحتاج إلى إجراء التهيئة إما أثناء بدء تشغيل التطبيق أو أثناء جلسة المستخدم
   </li>
@@ -941,7 +941,7 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">&lt;/appSettings&gt;</span><span class="w">   </span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nt">&lt;/configuration&gt;</span>
 </code></pre></div>
-<p>يرجى ملاحظة أن علامات <bdi dir="ltr" class="odt-ltr-term">XML</bdi> <strong>حساسة لحالة الأحرف</strong>. يجب أن تكون جميع معلومات التكوين محاطة بعلامتي <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">configuration</bdi>&gt;</strong> و <strong>&lt;/<bdi dir="ltr" class="odt-ltr-term">configuration</bdi>&gt;</strong>. هناك العديد من أقسام التكوين المتاحة. سنغطي قسمًا واحدًا فقط هنا: قسم <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">appSettings</bdi>&gt;</strong>، الذي يسمح لك بتهيئة البيانات باستخدام علامة <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">add</bdi>&gt;</strong>. صيغة هذه العلامة هي كما يلي:</p>
+<p>يرجى ملاحظة أن علامات <bdi dir="ltr" class="odt-ltr-term">XML</bdi> <strong>حساسة لحالة الأحرف</strong>. يجب أن تكون جميع معلومات التكوين محاطة بعلامتي <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">configuration</bdi>&gt;</strong> و <strong>&lt;/<bdi dir="ltr" class="odt-ltr-term">configuration</bdi>&gt;</strong>. هناك العديد من أقسام التكوين المتاحة. سنغطي قسمًا واحدًا فقط هنا: قسم <strong>&lt;<bdi dir="ltr" class="odt-ltr-term">appSettings</bdi>&gt;</strong>، الذي يسمح لك بتهيئة البيانات باستخدام علامة <strong>&lt;add&gt;</strong>. صيغة هذه العلامة هي كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;add key=&quot;identificateur&quot; value=&quot;valeur&quot;/&gt;
 </code></pre></div>
 <p>عندما يقوم خادم الويب بتشغيل تطبيق، فإنه يتحقق من وجود ملف باسم <bdi dir="ltr" class="odt-ltr-term">web.config</bdi> في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. إذا كان موجودًا، فإنه يقرأه ويخزن معلوماته في كائن [<bdi dir="ltr" class="odt-ltr-term">ConfigurationSettings</bdi>]، والذي سيكون متاحًا لجميع صفحات التطبيق طالما كان نشطًا. تحتوي فئة [<bdi dir="ltr" class="odt-ltr-term">ConfigurationSettings</bdi>] على طريقة ثابتة [<bdi dir="ltr" class="odt-ltr-term">AppSettings</bdi>]:</p>
@@ -965,7 +965,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Class</span></span></span>
 </code></pre></div>
 
-<p>يمكننا أن نرى أنه عند تحميل الصفحة، يتم استرداد قيم معلمات التكوين [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">age</bdi>]. وسيتم عرضها بواسطة كود العرض في [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>]:</p>
+<p>يمكننا أن نرى أنه عند تحميل الصفحة، يتم استرداد قيم معلمات التكوين [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] و [age]. وسيتم عرضها بواسطة كود العرض في [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>]:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;%@ Page src=&quot;default.aspx.vb&quot; Language=&quot;vb&quot; AutoEventWireup=&quot;false&quot; Inherits=&quot;_default&quot; %&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
@@ -1981,7 +1981,7 @@
 <ul>
   <li>(تابع)
     <ul>
-      <li>يكون طلبه هو [<bdi dir="ltr" class="odt-ltr-term">GET enriched_url HTTP/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt;] حيث يكون <bdi dir="ltr" class="odt-ltr-term">enriched_url</bdi> بالشكل [<bdi dir="ltr" class="odt-ltr-term">url</bdi>?<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;...]. بالإضافة إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>، ينقل العميل سلسلة من المعلومات بالشكل [<bdi dir="ltr" class="odt-ltr-term">key</bdi>=<bdi dir="ltr" class="odt-ltr-term">value</bdi>].
+      <li>يكون طلبه هو [<bdi dir="ltr" class="odt-ltr-term">GET enriched_url HTTP/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt;] حيث يكون <bdi dir="ltr" class="odt-ltr-term">enriched_url</bdi> بالشكل [url?<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;...]. بالإضافة إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi>، ينقل العميل سلسلة من المعلومات بالشكل [key=<bdi dir="ltr" class="odt-ltr-term">value</bdi>].
       </li>
       <li>طلبهم هو [<bdi dir="ltr" class="odt-ltr-term">POST enriched-url HTTP/</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">version</bdi>&gt;]. في قسم [<bdi dir="ltr" class="odt-ltr-term">Document</bdi>]، يرسلون المعلومات بنفس التنسيق السابق: [<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">val1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">val2</bdi>&amp;...].
       </li>
@@ -2048,7 +2048,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">&lt;/</span><span style="color:#800000">html</span><span style="color:#0000ff">&gt;</span></span></span>
 </code></pre></div>
 
-<p>تعرض الصفحة ثلاث معلومات [<bdi dir="ltr" class="odt-ltr-term">method</bdi>، <bdi dir="ltr" class="odt-ltr-term">name</bdi>، <bdi dir="ltr" class="odt-ltr-term">age</bdi>] تم حسابها بواسطة وحدة التحكم الخاصة بها [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]:</p>
+<p>تعرض الصفحة ثلاث معلومات [<bdi dir="ltr" class="odt-ltr-term">method</bdi>، <bdi dir="ltr" class="odt-ltr-term">name</bdi>، age] تم حسابها بواسطة وحدة التحكم الخاصة بها [<bdi dir="ltr" class="odt-ltr-term">main.aspx.vb</bdi>]:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">Public</span><span class="w"> </span><span class="k">Class</span><span class="w"> </span><span class="nc">main</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span><span class="k">Inherits</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
@@ -2073,8 +2073,8 @@
 <a id="__codelineno-26-22" name="__codelineno-26-22" href="#__codelineno-26-22"></a>
 <a id="__codelineno-26-23" name="__codelineno-26-23" href="#__codelineno-26-23"></a><span class="k">End</span><span class="w"> </span><span class="k">Class</span>
 </code></pre></div>
-<p>عند تحميل الصفحة (<bdi dir="ltr" class="odt-ltr-term">Form</bdi>_Load)، يتم استرداد معلومات [<bdi dir="ltr" class="odt-ltr-term">name</bdi>, <bdi dir="ltr" class="odt-ltr-term">age</bdi>] من طلب العميل. نبحث عنها في المجموعتين [<bdi dir="ltr" class="odt-ltr-term">QueryString</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. . بالإضافة إلى ذلك، في [<bdi dir="ltr" class="odt-ltr-term">Page</bdi>_Init]، نقوم بتخزين طلب العميل حتى نتمكن من التحقق مما تم إرساله. نضع هذين الملفين في مجلد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ونبدأ تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">request1</bdi>)، ثم نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi></p>
-<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">nom</bdi>=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">age</bdi>=27</mark>] . نتلقى الرد التالي:</p>
+<p>عند تحميل الصفحة (<bdi dir="ltr" class="odt-ltr-term">Form</bdi>_Load)، يتم استرداد معلومات [<bdi dir="ltr" class="odt-ltr-term">name</bdi>, age] من طلب العميل. نبحث عنها في المجموعتين [<bdi dir="ltr" class="odt-ltr-term">QueryString</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. . بالإضافة إلى ذلك، في [<bdi dir="ltr" class="odt-ltr-term">Page</bdi>_Init]، نقوم بتخزين طلب العميل حتى نتمكن من التحقق مما تم إرساله. نضع هذين الملفين في مجلد &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ونبدأ تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">request1</bdi>)، ثم نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi></p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request1/main.aspx</bdi>?nom=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;age=27</mark>] . نتلقى الرد التالي:</p>
 <p><img src="images/1000000000000246000000C92291CE07.png" width="582" height="201" style="width:15.399cm;height:5.318cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000246000000C92291CE07.png" /></p>
 <p>تم استرداد المعلومات المرسلة من العميل بشكل صحيح. طلب المتصفح المخزن في ملف [<bdi dir="ltr" class="odt-ltr-term">request.txt</bdi>] هو كما يلي:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">GET</span> <span class="o">/</span><span class="n">request1</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">aspx</span><span class="err">?</span><span class="n">nom</span><span class="o">=</span><span class="n">tintin</span><span class="o">&amp;</span><span class="n">age</span><span class="o">=</span><span class="mi">27</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
@@ -2137,7 +2137,7 @@
 <a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>
 <a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>nom=tintin&amp;age=27
 </code></pre></div>
-<p>أرسل عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi> بنجاح. الآن، دعونا نجمع بين طريقتي تمرير المعلومات. سنضع [<bdi dir="ltr" class="odt-ltr-term">age</bdi>] في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب و[<bdi dir="ltr" class="odt-ltr-term">name</bdi>] في البيانات المرسلة:</p>
+<p>أرسل عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] طلب <bdi dir="ltr" class="odt-ltr-term">POST</bdi> بنجاح. الآن، دعونا نجمع بين طريقتي تمرير المعلومات. سنضع [age] في عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب و[<bdi dir="ltr" class="odt-ltr-term">name</bdi>] في البيانات المرسلة:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>E:\curl&gt;curl --include --data nom=&quot;tintin&quot; http://localhost/request1/main.aspx?age=27
 </code></pre></div>
 <p>الطلب الذي أرسله [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] هو كما يلي (<bdi dir="ltr" class="odt-ltr-term">request.txt</bdi>):</p>
@@ -2202,7 +2202,7 @@
 <p><a id="toc69180249"></a>
 <a id="toc69180347"></a></p>
 <h3 id="424-2">4.2.4. المثال 2</h3>
-<p>يمكن للعميل إرسال قيم متعددة لنفس المفتاح. فماذا يحدث إذا طلبنا، في المثال السابق، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">nom</bdi>=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">age</bdi>=27&amp;<bdi dir="ltr" class="odt-ltr-term">nom</bdi>=<bdi dir="ltr" class="odt-ltr-term">milou</bdi></mark>]، حيث يظهر المفتاح [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] مرتين؟ لنجرب ذلك في متصفح:</p>
+<p>يمكن للعميل إرسال قيم متعددة لنفس المفتاح. فماذا يحدث إذا طلبنا، في المثال السابق، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request1/main.aspx</bdi>?nom=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;age=27&amp;nom=<bdi dir="ltr" class="odt-ltr-term">milou</bdi></mark>]، حيث يظهر المفتاح [<bdi dir="ltr" class="odt-ltr-term">name</bdi>] مرتين؟ لنجرب ذلك في متصفح:</p>
 <p><img src="images/100000000000028D000000A9B8968247.png" width="653" height="169" style="width:17.277cm;height:4.471cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000028D000000A9B8968247.png" /></p>
 <p>نجح تطبيقنا في استرداد القيمتين المرتبطتين بالمفتاح [<bdi dir="ltr" class="odt-ltr-term">name</bdi>]. العرض مضلل بعض الشيء. تم الحصول عليه باستخدام العبارة </p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -2298,7 +2298,7 @@
 
 <p>النقاط الرئيسية في هذا الكود هي كما يلي:</p>
 <ul>
-  <li>في [<bdi dir="ltr" class="odt-ltr-term">Form_Load</bdi>]، تسترد الصفحة المجموعتين [<bdi dir="ltr" class="odt-ltr-term">QueryString</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. وتستخدم دالة [<bdi dir="ltr" class="odt-ltr-term">getValues</bdi>] لوضع محتويات هاتين المجموعتين في كائنين [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>]، اللذين سيحتويان على سلاسل من النوع [<bdi dir="ltr" class="odt-ltr-term">key</bdi>=<bdi dir="ltr" class="odt-ltr-term">value</bdi>] إذا كان مفتاح المجموعة مرتبطًا بقيمة واحدة، أو [<bdi dir="ltr" class="odt-ltr-term">key</bdi>(<bdi dir="ltr" class="odt-ltr-term">i</bdi>)=<bdi dir="ltr" class="odt-ltr-term">value</bdi>] إذا كان المفتاح مرتبطًا بقيم متعددة.
+  <li>في [<bdi dir="ltr" class="odt-ltr-term">Form_Load</bdi>]، تسترد الصفحة المجموعتين [<bdi dir="ltr" class="odt-ltr-term">QueryString</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">Form</bdi>]. وتستخدم دالة [<bdi dir="ltr" class="odt-ltr-term">getValues</bdi>] لوضع محتويات هاتين المجموعتين في كائنين [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>]، اللذين سيحتويان على سلاسل من النوع [key=<bdi dir="ltr" class="odt-ltr-term">value</bdi>] إذا كان مفتاح المجموعة مرتبطًا بقيمة واحدة، أو [key(i)=<bdi dir="ltr" class="odt-ltr-term">value</bdi>] إذا كان المفتاح مرتبطًا بقيم متعددة.
   </li>
   <li>ثم يتم ربط كل كائن من كائنات [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>] بأحد كائنات [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] في صفحة العرض باستخدام جملتين:
     <ul>
@@ -2308,18 +2308,18 @@
   </li>
 </ul>
 
-<p>لاحظ أنه لم يتم إنشاء أي من كائني [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] بشكل صريح بواسطة عملية [<bdi dir="ltr" class="odt-ltr-term">New</bdi>]. يمكننا أن نستنتج أنه عند وجود العلامة &lt;<bdi dir="ltr" class="odt-ltr-term">asp:listbox id</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">xx</bdi>&quot;&gt;...&lt;<bdi dir="ltr" class="odt-ltr-term">asp:listbox/</bdi>&gt;، يقوم خادم الويب نفسه بإنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] المشار إليه بواسطة سمة [<bdi dir="ltr" class="odt-ltr-term">id</bdi>] للعلامة.</p>
+<p>لاحظ أنه لم يتم إنشاء أي من كائني [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] بشكل صريح بواسطة عملية [<bdi dir="ltr" class="odt-ltr-term">New</bdi>]. يمكننا أن نستنتج أنه عند وجود العلامة &lt;<bdi dir="ltr" class="odt-ltr-term">asp:listbox id</bdi>=&quot;xx&quot;&gt;...&lt;<bdi dir="ltr" class="odt-ltr-term">asp:listbox/</bdi>&gt;، يقوم خادم الويب نفسه بإنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">ListBox</bdi>] المشار إليه بواسطة سمة [id] للعلامة.</p>
 <ul>
   <li>تستخدم الدالة [<bdi dir="ltr" class="odt-ltr-term">getValeurs</bdi>] كائن [<bdi dir="ltr" class="odt-ltr-term">NameValueCollection</bdi>] الذي تم تمريره إليها كمعلمة لإرجاع نتيجة من النوع [<bdi dir="ltr" class="odt-ltr-term">ArrayList</bdi>].
   </li>
 </ul>
 
 <p>نضع الملفين السابقين في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt; ونبدأ تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> بالمعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">request2</bdi>)، ثم نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi></p>
-<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request2/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">nom</bdi>=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">age</bdi>=27</mark>]. نحصل على الاستجابة التالية:</p>
+<p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/request2/main.aspx</bdi>?nom=<bdi dir="ltr" class="odt-ltr-term">tintin</bdi>&amp;age=27</mark>]. نحصل على الاستجابة التالية:</p>
 <p><img src="images/100000000000023000000172314CF95B.png" width="560" height="370" style="width:14.817cm;height:9.79cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000023000000172314CF95B.png" /></p>
-<p>نطلب الآن عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> حيث يظهر المفتاح [<bdi dir="ltr" class="odt-ltr-term">nom</bdi>] مرتين:</p>
+<p>نطلب الآن عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> حيث يظهر المفتاح [nom] مرتين:</p>
 <p><img src="images/100000000000027F00000118235BCCF2.png" width="639" height="280" style="width:16.907cm;height:7.408cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000027F00000118235BCCF2.png" /></p>
-<p>نلاحظ أن الكائن [<bdi dir="ltr" class="odt-ltr-term">Request.QueryString</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">nom</bdi>&quot;)] كان بالفعل مصفوفة. هنا، تم إجراء الطلبات باستخدام طريقة <bdi dir="ltr" class="odt-ltr-term">GET.</bdi> نستخدم عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] لإجراء طلب <bdi dir="ltr" class="odt-ltr-term">POST:</bdi></p>
+<p>نلاحظ أن الكائن [<bdi dir="ltr" class="odt-ltr-term">Request.QueryString</bdi>(&quot;nom&quot;)] كان بالفعل مصفوفة. هنا، تم إجراء الطلبات باستخدام طريقة <bdi dir="ltr" class="odt-ltr-term">GET.</bdi> نستخدم عميل [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] لإجراء طلب <bdi dir="ltr" class="odt-ltr-term">POST:</bdi></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>E:\curl&gt;curl --data nom=milou --data nom=tintin --data age=14 --data age=27 http://localhost/request2/main.aspx
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="p">&lt;</span><span class="nt">HTML</span><span class="p">&gt;</span>
@@ -2415,7 +2415,7 @@
 <ul>
   <li>نقوم باعتراض جميع طلبات العميل في الإجراء [<bdi dir="ltr" class="odt-ltr-term">Application_BeginRequest</bdi>]، الذي يتم تنفيذه تلقائيًا عند بدء كل طلب جديد يتم إرساله إلى التطبيق. 
   </li>
-  <li>في هذا الإجراء، يمكننا الوصول إلى كائن [<bdi dir="ltr" class="odt-ltr-term">Request</bdi>]، الذي يمثل طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الخاص بالعميل. نظرًا لأننا نتوقع عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بالصيغة [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi></mark>]، فإننا نبحث عن مفتاح باسم [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] في مجموعة [<bdi dir="ltr" class="odt-ltr-term">Request.QueryString</bdi>]. إذا لم يكن موجودًا، فإننا نعيّن القيمة الافتراضية لـ [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] إلى &quot;<bdi dir="ltr" class="odt-ltr-term">main</bdi>&quot;.
+  <li>في هذا الإجراء، يمكننا الوصول إلى كائن [<bdi dir="ltr" class="odt-ltr-term">Request</bdi>]، الذي يمثل طلب <bdi dir="ltr" class="odt-ltr-term">HTTP</bdi> الخاص بالعميل. نظرًا لأننا نتوقع عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بالصيغة [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=xx</mark>]، فإننا نبحث عن مفتاح باسم [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] في مجموعة [<bdi dir="ltr" class="odt-ltr-term">Request.QueryString</bdi>]. إذا لم يكن موجودًا، فإننا نعيّن القيمة الافتراضية لـ [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] إلى &quot;<bdi dir="ltr" class="odt-ltr-term">main</bdi>&quot;.
   </li>
   <li>يتم وضع قيمة المعلمة [<bdi dir="ltr" class="odt-ltr-term">action</bdi>] في كائن [<bdi dir="ltr" class="odt-ltr-term">Context</bdi>]. مثل كائنات [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>، <bdi dir="ltr" class="odt-ltr-term">Session</bdi>، <bdi dir="ltr" class="odt-ltr-term">Request</bdi>، <bdi dir="ltr" class="odt-ltr-term">Response</bdi>، <bdi dir="ltr" class="odt-ltr-term">Server</bdi>]، هذا الكائن عالمي ويمكن الوصول إليه من أي كود. يتم تمرير هذا الكائن من صفحة إلى أخرى إذا تمت معالجة الطلب بواسطة عدة صفحات، كما هو الحال هنا. يتم حذفه بمجرد إرسال الاستجابة إلى العميل. وبالتالي، فإن مدة صلاحيته تقتصر على مدة معالجة الطلب.
   </li>
@@ -2502,7 +2502,7 @@
 <p><img src="images/10000000000001BC000000B2E263F6C4.png" width="444" height="178" style="width:11.748cm;height:4.71cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001BC000000B2E263F6C4.png" /></p>
 <p>لم يرسل الطلب أي معلمة [<bdi dir="ltr" class="odt-ltr-term">action</bdi>]. قام كود وحدة التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] بعرض الصفحة [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>]. الآن نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">action1</bdi>]:</p>
 <p><img src="images/1000000000000201000000AE0EA4A6BE.png" width="513" height="174" style="width:13.573cm;height:4.604cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000201000000AE0EA4A6BE.png" /></p>
-<p>قام كود وحدة التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] بتقديم الصفحة [<bdi dir="ltr" class="odt-ltr-term">action1.aspx</bdi>]. الآن نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=<bdi dir="ltr" class="odt-ltr-term">xx</bdi></mark>]:</p>
+<p>قام كود وحدة التحكم في التطبيق [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] بتقديم الصفحة [<bdi dir="ltr" class="odt-ltr-term">action1.aspx</bdi>]. الآن نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc1/main.aspx</bdi>?<bdi dir="ltr" class="odt-ltr-term">action</bdi>=xx</mark>]:</p>
 <p><img src="images/10000000000001E3000000B12B50CB68.png" width="483" height="177" style="width:12.779cm;height:4.683cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E3000000B12B50CB68.png" /></p>
 <p>لم يتم التعرف على الإجراء، وقام وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax.vb</bdi>] بعرض الصفحة [<bdi dir="ltr" class="odt-ltr-term">unknown.aspx</bdi>].</p>
 <h3 id="433-mvc">4.3.3. التحكم في تطبيق <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> باستخدام الجلسات</h3>
@@ -2660,7 +2660,7 @@
 <p><img src="images/10000000000001AF000000DCC66AB736.png" width="431" height="220" style="width:11.404cm;height:5.821cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AF000000DCC66AB736.png" /></p>
 <p>يشير عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/mvc2</bdi>] إلى مجلد. ونعلم أنه في هذه الحالة، يقوم الخادم بإرجاع المستند [<bdi dir="ltr" class="odt-ltr-term">default.aspx</bdi>] من هذا المجلد، إذا كان موجودًا. هنا، لم يتم تحديد أي إجراء. لذلك، تم تنفيذ الإجراء [<bdi dir="ltr" class="odt-ltr-term">main</bdi>]. لننتقل إلى الإجراء [<bdi dir="ltr" class="odt-ltr-term">action1</bdi>]:</p>
 <p><img src="images/10000000000001EB000000C3891EE7BD.png" width="491" height="195" style="width:12.991cm;height:5.159cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EB000000C3891EE7BD.png" /></p>
-<p>تم تحديد الإجراء الحالي والإجراء السابق بشكل صحيح. لننتقل إلى الإجراء [<bdi dir="ltr" class="odt-ltr-term">xx</bdi>]:</p>
+<p>تم تحديد الإجراء الحالي والإجراء السابق بشكل صحيح. لننتقل إلى الإجراء [xx]:</p>
 <p><img src="images/10000000000001D7000000C8F4011A2D.png" width="471" height="200" style="width:12.462cm;height:5.292cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D7000000C8F4011A2D.png" /></p>
 <h2 id="44">4.4. الخلاصة</h2>
 <p>لدينا الآن العناصر الأساسية التي يُبنى عليها كل تطبيق <bdi dir="ltr" class="odt-ltr-term">ASP.NET.</bdi> ومع ذلك، هناك مفهوم مهم واحد متبقي لتقديمه: النموذج. وهذا هو موضوع الفصل التالي.</p>

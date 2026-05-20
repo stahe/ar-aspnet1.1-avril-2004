@@ -1161,11 +1161,11 @@
   </li>
 </ul>
 
-<p>لا تعرف وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] أي شيء عن حسابات الضرائب. إنها مسؤولة ببساطة عن إدارة الحوار بين العميل والخادم وتنفيذ الإجراءات التي يطلبها العميل. بالنسبة لإجراء [<bdi dir="ltr" class="odt-ltr-term">calculate</bdi>]، ستعتمد على فئة الأعمال [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>].</p>
+<p>لا تعرف وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] أي شيء عن حسابات الضرائب. إنها مسؤولة ببساطة عن إدارة الحوار بين العميل والخادم وتنفيذ الإجراءات التي يطلبها العميل. بالنسبة لإجراء [<bdi dir="ltr" class="odt-ltr-term">calculate</bdi>]، ستعتمد على فئة الأعمال [tax].</p>
 <p><a id="toc68590503"></a>
 <a id="toc68683097"></a></p>
 <h3 id="613">6.1.3. فئة الأعمال</h3>
-<p>سيتم تعريف فئة <code>**&lt;bdi dir="ltr" class="odt-ltr-term"&gt;impot&lt;/bdi&gt;</code>** على النحو التالي:</p>
+<p>سيتم تعريف فئة <code>**impot</code>** على النحو التالي:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vb.net">
 <span class="odt-code-line"><span class="odt-code-line-content">&#x27; imported namespaces</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">Imports</span> System</span></span>
@@ -1213,7 +1213,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">End</span> <span style="color:#0000ff">Namespace</span></span></span>
 </code></pre></div>
 
-<p>كائن <strong>ضريبي</strong> عن طريق تزويد منشئه بمصدر بيانات من النوع [<strong><bdi dir="ltr" class="odt-ltr-term">impotsData</bdi></strong>]. تحتوي هذه الفئة على طريقة عامة [<strong><bdi dir="ltr" class="odt-ltr-term">getData</bdi></strong>] تسترد مصفوفات البيانات الثلاثة اللازمة لحساب الضريبة، كما هو موضح سابقًا. يمكن لهذه الطريقة معالجة استثناء إذا تعذر استرداد البيانات أو إذا تبين أنها غير صحيحة. بمجرد إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>]، يمكن استدعاء طريقة <strong><bdi dir="ltr" class="odt-ltr-term">calculate</bdi></strong> الخاصة به بشكل متكرر لحساب ضريبة دافع الضرائب بناءً على حالته الاجتماعية (متزوج أو أعزب) وعدد أطفاله وراتبه السنوي.</p>
+<p>كائن <strong>ضريبي</strong> عن طريق تزويد منشئه بمصدر بيانات من النوع [<strong><bdi dir="ltr" class="odt-ltr-term">impotsData</bdi></strong>]. تحتوي هذه الفئة على طريقة عامة [<strong><bdi dir="ltr" class="odt-ltr-term">getData</bdi></strong>] تسترد مصفوفات البيانات الثلاثة اللازمة لحساب الضريبة، كما هو موضح سابقًا. يمكن لهذه الطريقة معالجة استثناء إذا تعذر استرداد البيانات أو إذا تبين أنها غير صحيحة. بمجرد إنشاء كائن [tax]، يمكن استدعاء طريقة <strong><bdi dir="ltr" class="odt-ltr-term">calculate</bdi></strong> الخاصة به بشكل متكرر لحساب ضريبة دافع الضرائب بناءً على حالته الاجتماعية (متزوج أو أعزب) وعدد أطفاله وراتبه السنوي.</p>
 <p><a id="toc68590504"></a>
 <a id="toc68683098"></a></p>
 <h3 id="614">6.1.4. فئة الوصول إلى البيانات</h3>
@@ -1431,7 +1431,7 @@
 
 <p>يطلب التطبيق من المستخدم إدخال المعلومات الثلاثة اللازمة لحساب الضريبة:</p>
 <ul>
-  <li>الحالة الاجتماعية: <bdi dir="ltr" class="odt-ltr-term">o</bdi> للمتزوجين، <bdi dir="ltr" class="odt-ltr-term">n</bdi> لغير المتزوجين
+  <li>الحالة الاجتماعية: o للمتزوجين، n لغير المتزوجين
   </li>
   <li>عدد الأطفال
   </li>
@@ -1439,7 +1439,7 @@
   </li>
 </ul>
 
-<p>يتم حساب الضريبة باستخدام كائن من النوع [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] يتم إنشاؤه عند تشغيل التطبيق:</p>
+<p>يتم حساب الضريبة باستخدام كائن من النوع [tax] يتم إنشاؤه عند تشغيل التطبيق:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">            &#x27; tax object creation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">Dim</span> objImpôt <span style="color:#0000ff">As</span> impot = <span style="color:#0000ff">Nothing</span></span></span>
@@ -1557,7 +1557,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>rdouichecked
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;<bdi dir="ltr" class="odt-ltr-term">checked</bdi>&quot; إذا كان يجب تحديد مربع الاختيار [<bdi dir="ltr" class="odt-ltr-term">yes</bdi>]، و&quot;&quot; في الحالات الأخرى</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;<bdi dir="ltr" class="odt-ltr-term">checked</bdi>&quot; إذا كان يجب تحديد مربع الاختيار [yes]، و&quot;&quot; في الحالات الأخرى</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>rdnonchecked
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">نفس الشيء بالنسبة لمربع الاختيار [لا]</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1730,7 +1730,7 @@
   </li>
 </ul>
 
-<p>تنبع الحاجة إلى [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] من حقيقة أننا سنحتاج إلى إدارة جلسة عمل. وقد رأينا أن [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] غير مناسب كوحدة تحكم في هذه الحالة. يمكننا الاستغناء عن [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] تمامًا هنا. ومع ذلك، سنستخدمه لتنفيذ التعليمات البرمجية عند بدء تشغيل التطبيق. يوضح مخطط <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> أعلاه أننا سنحتاج إلى إنشاء كائن [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] لحساب الضريبة. لا داعي لإنشاء هذا الكائن عدة مرات؛ يكفي إنشاؤه مرة واحدة. لذلك سنقوم بإنشائه عند بدء تشغيل التطبيق أثناء حدث [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>_Start] الذي يتولى معالجته وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]. وفيما يلي الكود الخاص بذلك:</p>
+<p>تنبع الحاجة إلى [<bdi dir="ltr" class="odt-ltr-term">main.aspx</bdi>] من حقيقة أننا سنحتاج إلى إدارة جلسة عمل. وقد رأينا أن [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] غير مناسب كوحدة تحكم في هذه الحالة. يمكننا الاستغناء عن [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>] تمامًا هنا. ومع ذلك، سنستخدمه لتنفيذ التعليمات البرمجية عند بدء تشغيل التطبيق. يوضح مخطط <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> أعلاه أننا سنحتاج إلى إنشاء كائن [tax] لحساب الضريبة. لا داعي لإنشاء هذا الكائن عدة مرات؛ يكفي إنشاؤه مرة واحدة. لذلك سنقوم بإنشائه عند بدء تشغيل التطبيق أثناء حدث [<bdi dir="ltr" class="odt-ltr-term">Application</bdi>_Start] الذي يتولى معالجته وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">global.asax</bdi>]. وفيما يلي الكود الخاص بذلك:</p>
 <p>[<mark style="background-color: #ffe994"><bdi dir="ltr" class="odt-ltr-term">global.asax</bdi></mark>]</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="na">&lt;%@ Application src=&quot;Global.asax.vb&quot; Inherits=&quot;Global&quot; %&gt;</span>
 </code></pre></div>
@@ -1925,7 +1925,7 @@
 <h4 id="6192">6.1.9.2. إجراء الحساب</h4>
 <p>يجب أن يحسب هذا الإجراء الضريبة المستحقة بناءً على البيانات المدخلة في النموذج ويعيد النموذج مملوءًا مسبقًا بالقيم المدخلة ومبلغ الضريبة المحسوب. تبدأ الدالة [<bdi dir="ltr" class="odt-ltr-term">calculImpot</bdi>] المسؤولة عن هذه المهمة بالتحقق من صحة بيانات النموذج:</p>
 <ul>
-  <li>يجب أن يكون الحقل [<bdi dir="ltr" class="odt-ltr-term">rdMarie</bdi>] موجودًا وأن تكون قيمته [<bdi dir="ltr" class="odt-ltr-term">yes</bdi>] أو [<bdi dir="ltr" class="odt-ltr-term">no</bdi>]
+  <li>يجب أن يكون الحقل [<bdi dir="ltr" class="odt-ltr-term">rdMarie</bdi>] موجودًا وأن تكون قيمته [yes] أو [no]
   </li>
   <li>يجب أن يكون الحقل [<bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>] موجودًا وأن يكون عددًا صحيحًا &gt;=0
   </li>
@@ -1944,7 +1944,7 @@
 <p>قبل تسليم التحكم إلى صفحة [<bdi dir="ltr" class="odt-ltr-term">erreurs.aspx</bdi>]، التي سترسل الاستجابة إلى العميل، يتم وضع القيم التي تم إدخالها في النموذج (<bdi dir="ltr" class="odt-ltr-term">Request.Form</bdi>) في الجلسة، مرتبطة بمفتاح &quot;<bdi dir="ltr" class="odt-ltr-term">form</bdi>&quot;. سيسمح ذلك لطلب لاحق باستردادها.</p>
 <p>قد يتساءل المرء هنا عما إذا كان من المفيد التحقق من وجود الحقول [<bdi dir="ltr" class="odt-ltr-term">rdMarie</bdi>، <bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>، <bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>] في الطلب المرسل من العميل. هذا غير ضروري إذا كنا متأكدين من أن عميلنا هو متصفح تلقى العرض [<bdi dir="ltr" class="odt-ltr-term">formulaire.aspx</bdi>] الذي يحتوي على هذه الحقول. لا يمكننا أبدًا أن نكون متأكدين من ذلك. سنعرض مثالاً بعد قليل حيث يكون العميل هو تطبيق [<bdi dir="ltr" class="odt-ltr-term">curl</bdi>] الذي سبق أن تعرفنا عليه. سنقوم باستعلام التطبيق دون إرسال الحقول التي يتوقعها ونرى كيف يتفاعل. هذه قاعدة تم ذكرها عدة مرات ونكررها هنا: يجب ألا يفترض التطبيق أبدًا أي شيء بشأن نوع العميل الذي يستعلم عنه. وللأمان، يجب أن يفترض أنه قد يتم استعلامه بواسطة تطبيق مبرمج قد يرسل له سلاسل معلمات غير متوقعة. ويجب أن يتصرف بشكل صحيح في جميع الحالات.</p>
 <p>في حالتنا، تحققنا من وجود الحقول [<bdi dir="ltr" class="odt-ltr-term">rdMarie</bdi>، <bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>، <bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>] في الطلب ولكننا لم نتحقق مما إذا كان يمكن أن يحتوي على حقول أخرى. في هذا التطبيق، سيتم تجاهلها. ومع ذلك، وكإجراء أمني مرة أخرى، سيكون من المفيد تسجيل هذا النوع من الطلبات في ملف سجل وإرسال تنبيه إلى مسؤول التطبيق حتى يكون على علم بأن التطبيق يتلقى طلبات &quot;غريبة&quot;. من خلال تحليل هذه الطلبات في ملف السجل، يمكنهم اكتشاف هجوم محتمل على التطبيق ثم اتخاذ الإجراءات اللازمة لحمايته.</p>
-<p>إذا كانت البيانات المتوقعة صحيحة، يبدأ وحدة التحكم في حساب الضريبة باستخدام كائن [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] المخزن في التطبيق. ثم يقوم بتخزين معلومتين متوقعتين من قبل عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] في السياق:</p>
+<p>إذا كانت البيانات المتوقعة صحيحة، يبدأ وحدة التحكم في حساب الضريبة باستخدام كائن [tax] المخزن في التطبيق. ثم يقوم بتخزين معلومتين متوقعتين من قبل عرض [<bdi dir="ltr" class="odt-ltr-term">form.aspx</bdi>] في السياق:</p>
 <ul>
   <li><bdi dir="ltr" class="odt-ltr-term">Context.Items</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">formulaire</bdi>&quot;): قاموس [<bdi dir="ltr" class="odt-ltr-term">NameValueCollection</bdi>] يحتوي على قيم حقول <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> [<bdi dir="ltr" class="odt-ltr-term">rdmarie</bdi>,<bdi dir="ltr" class="odt-ltr-term">txtEnfants</bdi>,<bdi dir="ltr" class="odt-ltr-term">txtSalaire</bdi>]، هنا [<bdi dir="ltr" class="odt-ltr-term">Request.Form</bdi>)]، أي القيم التي تم إدخالها مسبقًا في النموذج
   </li>
@@ -2000,7 +2000,7 @@
 <h3 id="6110">6.1.10. اختبار تطبيق الويب</h3>
 <p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. </p>
 <p><img src="images/10000000000000870000008A85ED472C.png" width="135" height="138" style="width:3.572cm;height:3.651cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000870000008A85ED472C.png" /></p>
-<p>في هذا المجلد، يتم إنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>]، يتم فيه وضع التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>] —. يظهر أمر التجميع المطلوب أدناه:</p>
+<p>في هذا المجلد، يتم إنشاء مجلد فرعي [bin]، يتم فيه وضع التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>] —. يظهر أمر التجميع المطلوب أدناه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>dos&gt;vbc /t:library /out:impot.dll impotsData.vb impotsArray.vb impots.vb
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Compilateur Microsoft (R) Visual Basic .NET version 7.10.3052.4
 </code></pre></div>
@@ -2010,7 +2010,7 @@
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>21/04/2004  08:26                1 634 impotsData.vb
 <a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>21/04/2004  09:21                5 632 impot.dll
 </code></pre></div>
-<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] أعلاه في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">bin</bdi> حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots1</bdi>). باستخدام متصفح، نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/impots1/main.aspx</bdi>]:</p>
+<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] أعلاه في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\bin حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots1</bdi>). باستخدام متصفح، نطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/impots1/main.aspx</bdi>]:</p>
 <p><img src="images/10000000000001E10000014AA8FEFBAB.png" width="481" height="330" style="width:12.726cm;height:8.731cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001E10000014AA8FEFBAB.png" /></p>
 <p>نملأ النموذج:</p>
 <p><img src="images/10000000000000F6000000FCB8AE0EA8.png" width="246" height="252" style="width:6.509cm;height:6.668cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000FCB8AE0EA8.png" /></p>
@@ -2205,7 +2205,7 @@
 <h2 id="62-2">6.2. المثال 2</h2>
 <p><a id="toc68683107"></a></p>
 <h3 id="621">6.2.1. المشكلة</h3>
-<p>هنا، نقترح معالجة نفس المشكلة السابقة ولكن عن طريق تعديل مصدر البيانات للكائن [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] الذي أنشأه تطبيق الويب. في الإصدار السابق، كان مصدر البيانات يوفر قيمًا من مصفوفات مبرمجة بشكل ثابت في الكود. هذه المرة، سيسترد مصدر البيانات الجديد هذه القيم من مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> مرتبط بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi></p>
+<p>هنا، نقترح معالجة نفس المشكلة السابقة ولكن عن طريق تعديل مصدر البيانات للكائن [tax] الذي أنشأه تطبيق الويب. في الإصدار السابق، كان مصدر البيانات يوفر قيمًا من مصفوفات مبرمجة بشكل ثابت في الكود. هذه المرة، سيسترد مصدر البيانات الجديد هذه القيم من مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> مرتبط بقاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL.</bdi></p>
 <p><a id="toc68683108"></a></p>
 <h3 id="622-odbc">6.2.2. مصدر بيانات <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi></h3>
 <p>ستكون البيانات موجودة في جدول باسم [<bdi dir="ltr" class="odt-ltr-term">IMPOTS</bdi>] في قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> باسم [<bdi dir="ltr" class="odt-ltr-term">dbimpots</bdi>]. سيكون محتوى هذا الجدول كما يلي:</p>
@@ -2633,7 +2633,7 @@
   </li>
 </ul>
 
-<p>يتم إجراء حساب الضريبة باستخدام كائن من النوع [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] يتم إنشاؤه عند تشغيل التطبيق:</p>
+<p>يتم إجراء حساب الضريبة باستخدام كائن من النوع [tax] يتم إنشاؤه عند تشغيل التطبيق:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">            &#x27; tax object creation</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">Dim</span> objImpôt <span style="color:#0000ff">As</span> impot = <span style="color:#0000ff">Nothing</span></span></span>
@@ -2647,7 +2647,7 @@
 
 <p>بمجرد التهيئة، يطلب التطبيق من المستخدم بشكل متكرر إدخال المعلومات الثلاثة اللازمة لحساب الضريبة:</p>
 <ul>
-  <li>الحالة الاجتماعية: <bdi dir="ltr" class="odt-ltr-term">o</bdi> للمتزوجين، <bdi dir="ltr" class="odt-ltr-term">n</bdi> لغير المتزوجين
+  <li>الحالة الاجتماعية: o للمتزوجين، n لغير المتزوجين
   </li>
   <li>عدد الأطفال
   </li>
@@ -2776,7 +2776,7 @@
 <h3 id="628">6.2.8. اختبار تطبيق الويب</h3>
 <p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. </p>
 <p><img src="images/1000000000000079000000B31E7E07C8.png" width="121" height="179" style="width:3.201cm;height:4.736cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000079000000B31E7E07C8.png" /></p>
-<p>في هذا المجلد، يتم إنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>]، يتم فيه وضع التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsODBC.vb</bdi>] —. يظهر أمر التجميع المطلوب أدناه:</p>
+<p>في هذا المجلد، يتم إنشاء مجلد فرعي [bin]، يتم فيه وضع التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsODBC.vb</bdi>] —. يظهر أمر التجميع المطلوب أدناه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>dos&gt;vbc /r:system.dll /r:system.data.dll /t:library /out:impot.dll impots.vb impotsArray.vb impotsData.vb impotsODBC.vb
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>dos&gt;dir
@@ -2787,7 +2787,7 @@
 <a id="__codelineno-54-6" name="__codelineno-54-6" href="#__codelineno-54-6"></a>01/04/2004  19:34             2 735 impotsODBC.vb
 <a id="__codelineno-54-7" name="__codelineno-54-7" href="#__codelineno-54-7"></a>01/04/2004  19:32             3 210 testimpots.vb
 </code></pre></div>
-<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] أعلاه في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">bin</bdi> حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots2</bdi>). تعطي الاختبارات نفس النتائج كما في الإصدار السابق، حيث أن وجود قاعدة البيانات غير مرئي للمستخدم. ولكن لإثبات هذا الوجود، نتأكد من عدم توفر مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> عن طريق إيقاف نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> وطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/impots2/main.aspx</bdi>]. نتلقى الرد التالي:</p>
+<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] أعلاه في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\bin حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots2</bdi>). تعطي الاختبارات نفس النتائج كما في الإصدار السابق، حيث أن وجود قاعدة البيانات غير مرئي للمستخدم. ولكن لإثبات هذا الوجود، نتأكد من عدم توفر مصدر <bdi dir="ltr" class="odt-ltr-term">ODBC</bdi> عن طريق إيقاف نظام إدارة قواعد البيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> وطلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [<bdi dir="ltr" class="odt-ltr-term">http://localhost/impots2/main.aspx</bdi>]. نتلقى الرد التالي:</p>
 <p><img src="images/10000000000003DF000000D4F145273E.png" width="680" height="146" style="width:17.979cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003DF000000D4F145273E.png" /></p>
 <p><a id="toc68683115"></a></p>
 <h2 id="63-3">6.3. المثال 3</h2>
@@ -2940,7 +2940,7 @@
 </code></pre></div>
 
 <ul>
-  <li>كل عنصر في مجموعة [<bdi dir="ltr" class="odt-ltr-term">taxRows</bdi>] هو كائن [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>] يمثل صفًا في الجدول. يحتوي هذا الصف على أعمدة يمكن الوصول إليها عبر كائن [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>] من خلال خاصية [<bdi dir="ltr" class="odt-ltr-term">Item</bdi>] الخاصة به. [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>].[<bdi dir="ltr" class="odt-ltr-term">Item</bdi>(<bdi dir="ltr" class="odt-ltr-term">i</bdi>)] هو العمود رقم <bdi dir="ltr" class="odt-ltr-term">i</bdi> في [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>]. من خلال التكرار عبر مجموعة الصفوف (مجموعة <bdi dir="ltr" class="odt-ltr-term">DataRows</bdi> في <bdi dir="ltr" class="odt-ltr-term">taxRows</bdi>) ومجموعة الأعمدة لكل صف، يمكننا استرداد الجدول بأكمله:
+  <li>كل عنصر في مجموعة [<bdi dir="ltr" class="odt-ltr-term">taxRows</bdi>] هو كائن [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>] يمثل صفًا في الجدول. يحتوي هذا الصف على أعمدة يمكن الوصول إليها عبر كائن [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>] من خلال خاصية [<bdi dir="ltr" class="odt-ltr-term">Item</bdi>] الخاصة به. [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>].[<bdi dir="ltr" class="odt-ltr-term">Item</bdi>(i)] هو العمود رقم i في [<bdi dir="ltr" class="odt-ltr-term">DataRow</bdi>]. من خلال التكرار عبر مجموعة الصفوف (مجموعة <bdi dir="ltr" class="odt-ltr-term">DataRows</bdi> في <bdi dir="ltr" class="odt-ltr-term">taxRows</bdi>) ومجموعة الأعمدة لكل صف، يمكننا استرداد الجدول بأكمله:
   </li>
 </ul>
 
@@ -3088,7 +3088,7 @@
   </li>
 </ul>
 
-<p>يتم حساب الضريبة باستخدام كائن من النوع [<bdi dir="ltr" class="odt-ltr-term">tax</bdi>] يتم إنشاؤه عند تشغيل التطبيق:</p>
+<p>يتم حساب الضريبة باستخدام كائن من النوع [tax] يتم إنشاؤه عند تشغيل التطبيق:</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span class="odt-code-line-content">            &#x27; retrieve the arguments</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">            <span style="color:#0000ff">Dim</span> chemin <span style="color:#0000ff">As</span> <span style="color:#0000ff">String</span> = arguments(0)</span></span>
@@ -3108,7 +3108,7 @@
 <p>تم إنشاء سلسلة الاتصال بمصدر <bdi dir="ltr" class="odt-ltr-term">OLEDB</bdi> باستخدام المعلومات التي تم الحصول عليها بواسطة [<bdi dir="ltr" class="odt-ltr-term">WebMatrix</bdi>].</p>
 <p>بمجرد التهيئة، يطلب التطبيق من المستخدم بشكل متكرر إدخال المعلومات الثلاثة اللازمة لحساب الضريبة:</p>
 <ul>
-  <li>الحالة الاجتماعية: <bdi dir="ltr" class="odt-ltr-term">o</bdi> للمتزوجين، <bdi dir="ltr" class="odt-ltr-term">n</bdi> لغير المتزوجين
+  <li>الحالة الاجتماعية: o للمتزوجين، n لغير المتزوجين
   </li>
   <li>عدد الأطفال
   </li>
@@ -3192,10 +3192,10 @@
 <h3 id="638">6.3.8. اختبار تطبيق الويب</h3>
 <p>يتم وضع جميع الملفات المذكورة أعلاه في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. </p>
 <p><img src="images/100000000000007D000000C26C070768.png" width="125" height="194" style="width:3.307cm;height:5.133cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000007D000000C26C070768.png" /></p>
-<p>في هذا المجلد، يتم إنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>]، يتم فيه وضع تجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من ترجمة ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsOLEDB.vb</bdi>] —. يظهر أمر الترجمة المطلوب أدناه:</p>
+<p>في هذا المجلد، يتم إنشاء مجلد فرعي [bin]، يتم فيه وضع تجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] — الذي تم إنشاؤه من ترجمة ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsOLEDB.vb</bdi>] —. يظهر أمر الترجمة المطلوب أدناه:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>dos&gt;vbc /r:system.dll /r:system.data.dll /t:library /out:impot.dll impots.vb impotsArray.vb impotsData.vb impotsOLEDB.vb
 </code></pre></div>
-<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الذي تم إنشاؤه بواسطة هذا الأمر في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">bin</bdi> حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots3</bdi>). تعطي الاختبارات نفس النتائج كما في الإصدار السابق.</p>
+<p>يجب وضع الملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الذي تم إنشاؤه بواسطة هذا الأمر في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\bin حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots3</bdi>). تعطي الاختبارات نفس النتائج كما في الإصدار السابق.</p>
 <p><a id="toc68683124"></a></p>
 <h2 id="64-4">6.4. المثال 4</h2>
 <p><a id="toc68683125"></a></p>
@@ -3523,7 +3523,7 @@
 
 <p><a id="toc68683130"></a></p>
 <h3 id="646">6.4.6. اختبار تطبيق الويب</h3>
-<p>ندعو القارئ إلى إجراء الاختبارات. فيما يلي تذكير بالإجراء. يتم وضع جميع ملفات التطبيق في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. داخل هذا المجلد، يتم إنشاء مجلد فرعي [<bdi dir="ltr" class="odt-ltr-term">bin</bdi>]، يحتوي على التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsODBC.vb</bdi>]. يجب وضع ملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الناتج عن هذا الأمر في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\<bdi dir="ltr" class="odt-ltr-term">bin</bdi> حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots4</bdi>).</p>
+<p>ندعو القارئ إلى إجراء الاختبارات. فيما يلي تذكير بالإجراء. يتم وضع جميع ملفات التطبيق في مجلد باسم &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;. داخل هذا المجلد، يتم إنشاء مجلد فرعي [bin]، يحتوي على التجميع [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الذي تم إنشاؤه من تجميع ملفات فئة الأعمال: [<bdi dir="ltr" class="odt-ltr-term">impots.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsData.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsArray.vb</bdi>، <bdi dir="ltr" class="odt-ltr-term">impotsODBC.vb</bdi>]. يجب وضع ملف [<bdi dir="ltr" class="odt-ltr-term">impot.dll</bdi>] الناتج عن هذا الأمر في &lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;\bin حتى يتمكن تطبيق الويب من الوصول إليه. يتم تشغيل خادم <bdi dir="ltr" class="odt-ltr-term">Cassini</bdi> باستخدام المعلمات (&lt;<bdi dir="ltr" class="odt-ltr-term">application-path</bdi>&gt;,/<bdi dir="ltr" class="odt-ltr-term">impots4</bdi>).</p>
 <h2 id="65">6.5. الخلاصة</h2>
 <p>أظهرت الأمثلة السابقة، في سيناريو ملموس، الآليات المستخدمة بشكل شائع في تطوير الويب. لقد استخدمنا بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> باستمرار لقيمتها التعليمية. كان بإمكاننا التعامل مع هذه الأمثلة نفسها بطريقة مختلفة وربما أبسط بدون هذه البنية. ومع ذلك، فإنها توفر مزايا كبيرة بمجرد أن يصبح التطبيق معقدًا إلى حد ما مع وجود صفحات متعددة.</p>
 <p>يمكننا مواصلة أمثلةنا بطرق مختلفة. فيما يلي بعض منها:</p>
